@@ -1,0 +1,82 @@
+\documentclass[chapters]{IEEEtran}
+% \IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{caption}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\usepackage{biblatex}
+
+\graphicspath{ {./figures/} }
+\addbibresource{reference.bib}
+
+\begin{document}
+
+\section{Methodology}
+
+\subsection{Fine-tuning}
+
+The Large Language Models (LLM) used for this paper are pre-trained, meaning that the model learned how words relates to each other, the model is trained to understand a language. This process is computationally expensive and requires large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. This is called fine-tuning, in this case was used to teach the model to classify two types of texts: health-related and misinformation-related. 
+\newline
+\newline
+The health-related dataset consists of over 12,000 tweets extracted by the previous THS project. Said dataset was classified on three category: related, unrelated, and ambiguous tweets. A second dataset was created with data from different sources such as news, social medias, and blogs classified as misinformation and non-misinformation \textbf{\textit{[Insert References]}}. 
+
+The models used for the classification process were Bert, T5, and LLaMa-2. 
+
+\subsubsection{Health-Related Classification}
+
+
+\subsubsection{Misinformation Classification}
+
+
+2. Misinformation classification
+
+LR, Batch size, seed, and epochs are static.
+
+- Each model was fine-tune twice.
+
+    1. Sequence classification: 1, 2, or 3; 1 or 2.
+
+    2. Classification with text generation: Related, Unrelated, or Ambiguous; Misinformation or Not Misinformation.
+
+- Weighted average added for the sequence classification.
+
+\subsection{Misinformation Rebuttal Pipeline}
+
+
+
+
+- Scraper extract links from PubMed
+
+- Save links in temporary file and upload to a consumer to 
+process link information.
+
+- Data is divided into different tables
+
+- Papers context is broken into chunks and uploaded into a vectored database.
+
+- Chunks are mapped to relational database metadata.
+    + Add ERD Schema
+    
+- LLM sends query into vector database.
+
+- Id and context is retrieved and process. Id is sent to relational database to retrieve source.
+
+- Model respond with full rebuttal and offical link.
+    + Add pipeline image
+
+\subsection{Hardware and Software}
+\list{-}
+    \item V100 machines: 32Gb VRAM, and 80-ish RAM
+    \item Cuda 11.7
+    \item Python 3.9.19
+    \item Pytorch 2.0.1
+    \item Transformers 4.34.0
+
+\end{document}

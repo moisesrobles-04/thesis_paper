@@ -1,0 +1,18 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdftex 2024.10.1)  1 OCT 2024 10:23
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Chap3_Architecture.tex
+(./Chap3_Architecture.tex
+./Chap3_Architecture.tex:1: Undefined control sequence.
+l.1 \documentclass
+                  [chapters]{IEEEtran}
+? 
+./Chap3_Architecture.tex:1: Emergency stop.
+l.1 
+    
+End of file on the terminal!
+
+./Chap3_Architecture.tex:1:  ==> Fatal error occurred, no output PDF file produ
+ced!
