@@ -15,22 +15,36 @@
 \item Validate results
 \end{enumerate} 
 
-
 \section{Objectives}
 
 \noindent
-This is how you add indented descriptive paragraphs. This thesis consists of 6 chapters which are briefly summarized below:
-
-
+The objectives of this project are as follows:
+\begin{itemize}
+	\item Identify and extract information from official health sources: This data will be stored in a vector database that the model will use as context to rebut the misinformation. The model will cite official health sources related to the tweets to sustain their classification.
+	\item Identify and finetune a Large Language Model: Select an appropriate base Large Language Model architecture that will:
+	\begin{enumerate}
+		\item Detect if a text is health related.
+		\item Determine if a text is misinformation.
+		\item Use official health sources texts to combat the texts classified as misinformation and cite from the gather data.
+	\end{enumerate}
+	\item Compare with the previous version of THS: To measure the effectiveness of the classification with the LLM, we are going to compare it with the previous THS results and validate the advantages of a Large Language Model on solving Natural Language Processing problems. 
+\end{itemize}
 
 \section{Contributions}
 \noindent
-This is how you add indented descriptive paragraphs. This thesis consists of 6 chapters which are briefly summarized below:
+\begin{itemize}
+	\item \textbf{Finetune Large Language Models for health classification on social media:} Large Language Models are being used for different fields nowadays. However, these do not focus on health misinformation on social medias. We present Large Language Models as a solution
+	to classify and rebut health misinformation texts on social medias, and use research papers extracted from PubMed as context for the LLM.
+	\item \textbf{} 
+	\item \textbf{Pending Contribution Title:} We used 12,441 texts for the health-related classification labeled as related, unrelated, or ambiguous. For the misinformation-classification we had 8,772 texts labeled as misinformation or not misinformation. For the model rebuttal, we extracted
+	56,365 papers from PubMed.
+	
+\end{itemize}
 
 \section{Outlines}
 \noindent
-This paper has the following organization. Chapter 2 contains the literature review on Transformer and Large Language Models,
-and the different use cases of these models for classification. Additionally, we describe the importance of disinformation on social medias.
+This paper has the following organization. Chapter 2 contains the literature review on Transformers, Large Language Models,
+ the different use cases of these models for classification, and misinformation on social media. Additionally, we describe the importance of disinformation on social medias.
 For chapter 3, we can observe the problem description and methodology. Later, on chapter 4, we have the experiment, and the projects pipeline
 for the training and classification. Chapter 5 presents our results based on accuracy and performance. In Chapter 6, related works
 are presented, with our conclusion and suggestions for future work.
