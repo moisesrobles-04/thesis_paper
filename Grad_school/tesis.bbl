@@ -53,6 +53,53 @@ H.~W. Chung, L.~Hou, S.~Longpre, B.~Zoph, Y.~Tay, W.~Fedus, Y.~Li, X.~Wang,
   J.~Dean, J.~Devlin, A.~Roberts, D.~Zhou, Q.~V. Le, and J.~Wei, ``Scaling
   instruction-finetuned language models,'' 2022.
 
+\bibitem{koh2023groundinglanguagemodelsimages}
+J.~Y. Koh, R.~Salakhutdinov, and D.~Fried, ``Grounding language models to
+  images for multimodal inputs and outputs,'' 2023.
+
+\bibitem{inproceedings}
+X.~Deng, V.~Bashlovkina, F.~Han, S.~Baumgartner, and M.~Bendersky, ``Llms to
+  the moon? reddit market sentiment analysis with large language models,''
+  pp.~1014--1019, 04 2023.
+
+\bibitem{article}
+S.~T and S.~Mathew, ``The disaster of misinformation: a review of research in
+  social media,'' {\em International Journal of Data Science and Analytics},
+  vol.~13, pp.~1--15, 05 2022.
+
+\bibitem{encyclopedia3040099}
+S.~Benaissa~Pedriza, ``Disinformation perception by digital and social
+  audiences: Threat awareness, decision-making and trust in media
+  organizations,'' {\em Encyclopedia}, vol.~3, no.~4, pp.~1387--1400, 2023.
+
+\bibitem{9906925}
+T.~Yilmaz and {\"O}.~Ulusoy, ``Misinformation propagation in online social
+  networks: Game theoretic and reinforcement learning approaches,'' {\em IEEE
+  Transactions on Computational Social Systems}, vol.~10, no.~6,
+  pp.~3321--3332, 2023.
+
+\bibitem{10100054}
+A.~Harbola, M.~Manchanda, and D.~Negi, ``Misinformation classification using
+  lstm and bert model,'' in {\em 2023 International Conference on Innovative
+  Data Communication Technologies and Application (ICIDCA)}, pp.~1073--1077,
+  2023.
+
+\bibitem{Ayoobi_2023}
+N.~Ayoobi, S.~Shahriar, and A.~Mukherjee, ``The looming threat of fake and
+  llm-generated linkedin profiles: Challenges and opportunities for detection
+  and prevention,'' in {\em Proceedings of the 34th ACM Conference on Hypertext
+  and Social Media}, HT ’23, ACM, Sept. 2023.
+
+\bibitem{8622504}
+C.~C. Garzón-Alfonso and M.~Rodríguez-Martínez, ``Twitter health
+  surveillance (ths) system,'' in {\em 2018 IEEE International Conference on
+  Big Data (Big Data)}, pp.~1647--1654, 2018.
+
+\bibitem{9581175}
+D.~Villanueva-Vega and M.~Rodriguez-Martinez, ``Finding similar tweets in
+  health related topics,'' in {\em 2021 IEEE International Conference on
+  Digital Health (ICDH)}, pp.~184--190, 2021.
+
 \bibitem{dirac}
 P.~A.~M. Dirac, {\em The Principles of Quantum Mechanics}.
 \newblock International series of monographs on physics, Clarendon Press, 1981.

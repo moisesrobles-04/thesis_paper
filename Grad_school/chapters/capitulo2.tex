@@ -80,13 +80,15 @@ Also, the result must follow a specific format. This process of instructions is 
 
 Moreover, LLMs that completed training with no additional modifications are known as based models. The response from this model will most likely make no sense with the premises it receives.
 This happens because the model is trained on excessive texts to find patterns between them, but this pattern might not be on par with the input. For the model to return a coherent response, it must go
-through a finetuning process. Finetuning consists of making a model perform specific tasks, such as chatting, summarization, chatbots, and others. To finetune a model, it must undergo another training process, but now the training data relates to the tasks it will perform. 
+through a finetuning process. Finetuning consists of making a model perform specific tasks, such as chatting, summarization, chatbots, and others.
+To finetune a model, it must undergo another training process, but now the training data relates to the tasks it will perform. 
 
-The authors in \textbf{[REFERENCE]} created a model to understand images and give a text description or a combination of text and image. The model was trained on images and captions of those
-images using zero-shot. Their resulting model was used to create a chatbot that identifies images, answers questions, or gives visual examples about them. Another experiment was \textbf{[REFERENCE]},
-where the authors trained a model to identify sentiments on financial market decisions. The advantage of in-context learning of the model resulted in a 70\% accuracy on sentiment prediction,
-failing mostly on neutral posts. That experiment showed the problems that users face when they use social media to make decisions. They clarified the importance of not taking the model for granted
-and how social media can cause a user to make a poor decision.  
+The authors in \cite{koh2023groundinglanguagemodelsimages} trained a based LLM model to understand images and give a text description or a combination of text and image. The training process for
+the model used images and captions of those images as their data and the zero-shot learning strategy. Their resulting model was used as a chatbot that identifies images, answers questions, or gives
+visual examples about them. Another experiment was \cite{inproceedings}, where the authors trained a model to identify sentiments on financial market decisions. In this case, they used prompting, also called in-context learning, for 
+the model to answer the sentiment of the texts. In-context learning does not require to update any parameter of the original model. Their model resulted in a 70\% accuracy on sentiment prediction, failing mostly on neutral posts.
+A possible problem with the neutral post is that prompting does not train the model to perform a specific tasks. That experiment showed the problems that users face when they use social media to make decisions.
+They clarified the importance of not taking the model for granted and how social media can cause a user to make a poor decision.
 
 
 \section{Misinformation in Social Media}
@@ -95,13 +97,13 @@ validation. On occasion, these can be fake, misleading, or wrong. When this happ
 when it is intentional to provide wrong information, this is known as disinformation. For simplification, both terms will be used interchangeably.
 
 Misinformation has been dangerous during critical events like natural disasters or health crises. For instance, during the COVID-19 pandemic, falsehood arose saying that the vaccine had
-microchips, which led many people to die \textbf{[REFERENCE]} because they refused to get vaccinated out of fear. A problem with disinformation is that the audience does not always detect it. When misinformation
-spreads and is not clarified early on, it can be confused as fact. Older audiences and people with less education are more likely to share and believe fake or misleading news \textbf{[REFERENCE]}. 
+microchips, which led many people to die \cite{article} because they refused to get vaccinated out of fear. A problem with disinformation is that the audience does not always detect it. When misinformation
+spreads and is not clarified early on, it can be confused as fact. Older audiences and people with less education are more likely to share and believe fake or misleading news \cite{encyclopedia3040099}. 
 
-There has been various research on reducing the propagation of misinformation. Misinformation was seen as a game-theoretic in \textbf{[REFERENCE]}, where some players spread fake news, and others tried
+There has been various research on reducing the propagation of misinformation. Misinformation was seen as a game-theoretic in \cite{9906925}, where some players spread fake news, and others tried
 to stop it. They created an agent at the network level to combat misinformation in a simulation. However, they could not conclude the efficiency of their model because of the lack of a pattern. On
-the other hand, in \textbf{[REFERENCE]} the authors used LSTM and BERT to classify misinformation from the different news sources. They proved that BERT outperformed LSTM, achieving an accuracy of 64.88\% against 60.59\%. 
-Another approach to detecting fake information was on \textbf{[REFERENCE]}, where they detected fake LinkedIn profiles. On this occasion, the dataset used for training included real and AI-generated profiles. They tested multiple
+the other hand, in \cite{10100054} the authors used LSTM and BERT to classify misinformation from the different news sources. They proved that BERT outperformed LSTM, achieving an accuracy of 64.88\% against 60.59\%. 
+Another approach to detecting fake information was on \cite{Ayoobi_2023}, where they detected fake LinkedIn profiles. On this occasion, the dataset used for training included real and AI-generated profiles. They tested multiple
 LLMs, but BERT resulted in the highest accuracy of 95.67\%. These investigations prove the efficiency of Large Language Models for Natural Language Processing in the misinformation field. Regardless,
 none of these studies addresses health-related misinformation on social media.
 
@@ -110,7 +112,7 @@ none of these studies addresses health-related misinformation on social media.
 
 
 \section{Twitter Health Surveillance (THS)}
-The THS system classified tweets related to health issues \textbf{[REFERENCE]}. The experiment utilized LSTM and GRU to classify tweets as being medical related, medical unrelated, or ambiguous. THS
+The THS system classified tweets related to health issues \cite{8622504}. The experiment utilized LSTM and GRU to classify tweets as being medical related, medical unrelated, or ambiguous. THS
 data extraction pipeline can be found on Figure \ref{ths_architecture}. First they extracted data from the Twitter API and sent that data to an Apache Kafka queue. Then, a consumer sent it to Apache Spark
 to process the data and store it in a Hive warehouse. Later, a preprocessing phase for each tweet occurred, which removed hashtags, mentions, emojis, and web links. The agent trained with the resulting
 plain text. This version used recurrent neural network (RNN) because of its advantages with sequential data. They tested various combination architectures, but the one with the highest result was an
@@ -124,7 +126,7 @@ LSTM layer, with no attention, and a GRU layer; it had an F1 score of 86\%, a re
 \end{figure}
 
  
-Later the project was updated to find similarities between tweets \textbf{[REFERENCE]}. This new version tested convolutional neural networks (CNN) and recurrent neural networks to classify how closely related are two different tweets.
+Later the project was updated to find similarities between tweets \cite{9581175}. This new version tested convolutional neural networks (CNN) and recurrent neural networks to classify how closely related are two different tweets.
 They used a ranking method that gave a higher score if two randomly selected tweets were similar. The agent received an input of triplets where the first element was compared against the other two elements.
 The system trained on two data types: raw tweets and cleaned tweets. This latter had stop-words removed and a lemmatization process. Cleaned tweets proved a higher accuracy in the recurrent neural network
 for regular LSTM and bidirectional networks; in contrast, the raw tweet had a better result in CNN validation. All three models had similar results; the highest validation accuracy was the regular LSTM with 90\%,

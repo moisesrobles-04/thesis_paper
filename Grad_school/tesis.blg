@@ -15,44 +15,46 @@ A level-1 auxiliary file: chapters/capitulo6.aux
 A level-1 auxiliary file: chapters/capitulo7.aux
 A level-1 auxiliary file: chapters/conclusion.aux
 Database file #1: referencias.bib
-You've used 14 entries,
+Warning--empty booktitle in inproceedings
+You've used 23 entries,
             1876 wiz_defined-function locations,
-            560 strings with 7764 characters,
-and the built_in function-call counts, 4006 in all, are:
-= -- 221
-> -- 463
+            607 strings with 9512 characters,
+and the built_in function-call counts, 6816 in all, are:
+= -- 499
+> -- 549
 < -- 0
-+ -- 160
-- -- 146
-* -- 385
-:= -- 722
-add.period$ -- 16
-call.type$ -- 14
-change.case$ -- 12
++ -- 192
+- -- 169
+* -- 570
+:= -- 1079
+add.period$ -- 25
+call.type$ -- 23
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 109
-empty$ -- 283
-format.name$ -- 146
-if$ -- 846
+cite$ -- 24
+duplicate$ -- 265
+empty$ -- 569
+format.name$ -- 169
+if$ -- 1560
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 9
-newline$ -- 47
-num.names$ -- 14
-pop$ -- 71
+int.to.str$ -- 23
+missing$ -- 17
+newline$ -- 74
+num.names$ -- 23
+pop$ -- 115
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 67
+skip$ -- 189
 stack$ -- 0
-substring$ -- 68
-swap$ -- 25
+substring$ -- 295
+swap$ -- 94
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 19
-width$ -- 16
-write$ -- 118
+warning$ -- 1
+while$ -- 43
+width$ -- 25
+write$ -- 202
+(There was 1 warning)
