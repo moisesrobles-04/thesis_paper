@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.1}Motivation}{1}{}%
 \contentsline {section}{\numberline {1.2}Objectives}{1}{}%
 \contentsline {section}{\numberline {1.3}Contributions}{2}{}%
-\contentsline {section}{\numberline {1.4}Outlines}{3}{}%
+\contentsline {section}{\numberline {1.4}Outline}{3}{}%
 \contentsline {chapter}{\numberline {2}Literature Review}{4}{}%
 \contentsline {section}{\numberline {2.1}Introduction}{4}{}%
 \contentsline {section}{\numberline {2.2}Large Language Models (LLM)}{4}{}%
@@ -14,42 +14,43 @@
 \contentsline {subsection}{\numberline {2.2.2}Encoder-only models}{7}{}%
 \contentsline {subsection}{\numberline {2.2.3}Encoder-Decoder models}{7}{}%
 \contentsline {subsection}{\numberline {2.2.4}Classification tasks}{8}{}%
-\contentsline {chapter}{\numberline {3}Citations, Images, and Equations}{10}{}%
-\contentsline {section}{\numberline {3.1}How to incorporate citations in your document}{10}{}%
-\contentsline {subsection}{\numberline {3.1.1}Citation Styles}{10}{}%
-\contentsline {section}{\numberline {3.2}Using Images}{11}{}%
-\contentsline {subsection}{\numberline {3.2.1}Adding Subfigures}{11}{}%
-\contentsline {chapter}{\numberline {4}System Architecture}{13}{}%
-\contentsline {section}{\numberline {4.1}System Overview}{13}{}%
-\contentsline {section}{\numberline {4.2}Fine-tuning}{13}{}%
-\contentsline {subsection}{\numberline {4.2.1}Health-Related Classification}{14}{}%
-\contentsline {subsection}{\numberline {4.2.2}Misinformation Classification}{14}{}%
-\contentsline {section}{\numberline {4.3}Paper ETL Pipeline}{15}{}%
-\contentsline {section}{\numberline {4.4}Misinformation Rebuttal Pipeline}{16}{}%
-\contentsline {section}{\numberline {4.5}Hardware and Software}{18}{}%
-\contentsline {chapter}{\numberline {5}Literature Review}{19}{}%
-\contentsline {section}{\numberline {5.1}Section}{19}{}%
-\contentsline {subsection}{\numberline {5.1.1}Subsection}{19}{}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}Subsubsection}{19}{}%
-\contentsline {subsection}{\numberline {5.1.2}Subsection}{20}{}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}Subsubsection}{20}{}%
-\contentsline {section}{\numberline {5.2}Section}{20}{}%
-\contentsline {subsection}{\numberline {5.2.1}Subsection}{21}{}%
-\contentsline {chapter}{\numberline {6}Methodology}{22}{}%
-\contentsline {section}{\numberline {6.1}Section}{22}{}%
-\contentsline {subsection}{\numberline {6.1.1}Subsection}{22}{}%
-\contentsline {subsubsection}{\numberline {6.1.1.1}Subsubsection}{22}{}%
-\contentsline {subsection}{\numberline {6.1.2}Subsection}{23}{}%
-\contentsline {chapter}{\numberline {7}Results}{24}{}%
-\contentsline {section}{\numberline {7.1}Section}{24}{}%
-\contentsline {subsection}{\numberline {7.1.1}Subsection}{24}{}%
-\contentsline {subsubsection}{\numberline {7.1.1.1}Subsubsection}{24}{}%
-\contentsline {subsection}{\numberline {7.1.2}Subsection}{25}{}%
-\contentsline {subsubsection}{\numberline {7.1.2.1}Subsubsection}{25}{}%
-\contentsline {section}{\numberline {7.2}Section}{25}{}%
-\contentsline {subsection}{\numberline {7.2.1}Subsection}{26}{}%
-\contentsline {chapter}{\numberline {8}Conclusions}{27}{}%
-\contentsline {section}{\numberline {8.1}Section}{27}{}%
-\contentsline {subsection}{\numberline {8.1.1}Subsection}{27}{}%
-\contentsline {subsection}{\numberline {8.1.2}Subsection}{28}{}%
-\contentsline {chapter}{References}{30}{}%
+\contentsline {section}{\numberline {2.3}Misinformation in Social Media}{9}{}%
+\contentsline {chapter}{\numberline {3}Citations, Images, and Equations}{11}{}%
+\contentsline {section}{\numberline {3.1}How to incorporate citations in your document}{11}{}%
+\contentsline {subsection}{\numberline {3.1.1}Citation Styles}{11}{}%
+\contentsline {section}{\numberline {3.2}Using Images}{12}{}%
+\contentsline {subsection}{\numberline {3.2.1}Adding Subfigures}{12}{}%
+\contentsline {chapter}{\numberline {4}System Architecture}{14}{}%
+\contentsline {section}{\numberline {4.1}System Overview}{14}{}%
+\contentsline {section}{\numberline {4.2}Fine-tuning}{14}{}%
+\contentsline {subsection}{\numberline {4.2.1}Health-Related Classification}{15}{}%
+\contentsline {subsection}{\numberline {4.2.2}Misinformation Classification}{15}{}%
+\contentsline {section}{\numberline {4.3}Paper ETL Pipeline}{16}{}%
+\contentsline {section}{\numberline {4.4}Misinformation Rebuttal Pipeline}{17}{}%
+\contentsline {section}{\numberline {4.5}Hardware and Software}{19}{}%
+\contentsline {chapter}{\numberline {5}Literature Review}{21}{}%
+\contentsline {section}{\numberline {5.1}Section}{21}{}%
+\contentsline {subsection}{\numberline {5.1.1}Subsection}{21}{}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Subsubsection}{21}{}%
+\contentsline {subsection}{\numberline {5.1.2}Subsection}{22}{}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}Subsubsection}{22}{}%
+\contentsline {section}{\numberline {5.2}Section}{22}{}%
+\contentsline {subsection}{\numberline {5.2.1}Subsection}{23}{}%
+\contentsline {chapter}{\numberline {6}Methodology}{24}{}%
+\contentsline {section}{\numberline {6.1}Section}{24}{}%
+\contentsline {subsection}{\numberline {6.1.1}Subsection}{24}{}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Subsubsection}{24}{}%
+\contentsline {subsection}{\numberline {6.1.2}Subsection}{25}{}%
+\contentsline {chapter}{\numberline {7}Results}{26}{}%
+\contentsline {section}{\numberline {7.1}Section}{26}{}%
+\contentsline {subsection}{\numberline {7.1.1}Subsection}{26}{}%
+\contentsline {subsubsection}{\numberline {7.1.1.1}Subsubsection}{26}{}%
+\contentsline {subsection}{\numberline {7.1.2}Subsection}{27}{}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}Subsubsection}{27}{}%
+\contentsline {section}{\numberline {7.2}Section}{27}{}%
+\contentsline {subsection}{\numberline {7.2.1}Subsection}{28}{}%
+\contentsline {chapter}{\numberline {8}Conclusions}{29}{}%
+\contentsline {section}{\numberline {8.1}Section}{29}{}%
+\contentsline {subsection}{\numberline {8.1.1}Subsection}{29}{}%
+\contentsline {subsection}{\numberline {8.1.2}Subsection}{30}{}%
+\contentsline {chapter}{References}{33}{}%

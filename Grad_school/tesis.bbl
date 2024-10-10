@@ -1,51 +1,78 @@
-\begin{thebibliography}{6}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{10}
 
-\bibitem[Comeau et~al.(2019)Comeau, Wei, Islamaj~Doğan, and
-  Lu]{bioinformatics}
-Donald~C Comeau, Chih-Hsuan Wei, Rezarta Islamaj~Doğan, and Zhiyong Lu.
-\newblock {PMC text mining subset in BioC: about three million full-text
-  articles and growing}.
-\newblock \emph{Bioinformatics}, 35\penalty0 (18):\penalty0 3533--3535, 01
-  2019.
-\newblock ISSN 1367-4803.
-\newblock \doi{10.1093/bioinformatics/btz070}.
-\newblock URL \url{https://doi.org/10.1093/bioinformatics/btz070}.
+\bibitem{naveed2024comprehensiveoverviewlargelanguage}
+H.~Naveed, A.~U. Khan, S.~Qiu, M.~Saqib, S.~Anwar, M.~Usman, N.~Akhtar,
+  N.~Barnes, and A.~Mian, ``A comprehensive overview of large language
+  models,'' 2024.
 
-\bibitem[Dirac(1981)]{dirac}
-Paul Adrien~Maurice Dirac.
-\newblock \emph{The Principles of Quantum Mechanics}.
-\newblock International series of monographs on physics. Clarendon Press, 1981.
-\newblock ISBN 9780198520115.
+\bibitem{vaswani2023attentionneed}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+  L.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' 2023.
 
-\bibitem[Einstein(1905)]{einstein}
-Albert Einstein.
-\newblock {Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the
-  electrodynamics of moving bodies].
-\newblock \emph{Annalen der Physik}, 322\penalty0 (10):\penalty0 891--921,
-  1905.
-\newblock \doi{http://dx.doi.org/10.1002/andp.19053221004}.
+\bibitem{DBLP:journals/corr/abs-2005-14165}
+T.~B. Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, S.~Agarwal,
+  A.~Herbert{-}Voss, G.~Krueger, T.~Henighan, R.~Child, A.~Ramesh, D.~M.
+  Ziegler, J.~Wu, C.~Winter, C.~Hesse, M.~Chen, E.~Sigler, M.~Litwin, S.~Gray,
+  B.~Chess, J.~Clark, C.~Berner, S.~McCandlish, A.~Radford, I.~Sutskever, and
+  D.~Amodei, ``Language models are few-shot learners,'' {\em CoRR},
+  vol.~abs/2005.14165, 2020.
 
-\bibitem[Knuth(1973)]{knuth-fa}
-Donald~E. Knuth.
-\newblock \emph{Fundamental Algorithms}, chapter 1.2.
+\bibitem{jiang2023mistral7b}
+A.~Q. Jiang, A.~Sablayrolles, A.~Mensch, C.~Bamford, D.~S. Chaplot, D.~de~las
+  Casas, F.~Bressand, G.~Lengyel, G.~Lample, L.~Saulnier, L.~R. Lavaud, M.-A.
+  Lachaux, P.~Stock, T.~L. Scao, T.~Lavril, T.~Wang, T.~Lacroix, and W.~E.
+  Sayed, ``Mistral 7b,'' 2023.
+
+\bibitem{touvron2023llamaopenefficientfoundation}
+H.~Touvron, T.~Lavril, G.~Izacard, X.~Martinet, M.-A. Lachaux, T.~Lacroix,
+  B.~Rozière, N.~Goyal, E.~Hambro, F.~Azhar, A.~Rodriguez, A.~Joulin,
+  E.~Grave, and G.~Lample, ``Llama: Open and efficient foundation language
+  models,'' 2023.
+
+\bibitem{DBLP:journals/corr/abs-1810-04805}
+J.~Devlin, M.~Chang, K.~Lee, and K.~Toutanova, ``{BERT:} pre-training of deep
+  bidirectional transformers for language understanding,'' {\em CoRR},
+  vol.~abs/1810.04805, 2018.
+
+\bibitem{liu2019robertarobustlyoptimizedbert}
+Y.~Liu, M.~Ott, N.~Goyal, J.~Du, M.~Joshi, D.~Chen, O.~Levy, M.~Lewis,
+  L.~Zettlemoyer, and V.~Stoyanov, ``Roberta: A robustly optimized bert
+  pretraining approach,'' 2019.
+
+\bibitem{lewis2019bartdenoisingsequencetosequencepretraining}
+M.~Lewis, Y.~Liu, N.~Goyal, M.~Ghazvininejad, A.~Mohamed, O.~Levy, V.~Stoyanov,
+  and L.~Zettlemoyer, ``Bart: Denoising sequence-to-sequence pre-training for
+  natural language generation, translation, and comprehension,'' 2019.
+
+\bibitem{chung2022scalinginstructionfinetunedlanguagemodels}
+H.~W. Chung, L.~Hou, S.~Longpre, B.~Zoph, Y.~Tay, W.~Fedus, Y.~Li, X.~Wang,
+  M.~Dehghani, S.~Brahma, A.~Webson, S.~S. Gu, Z.~Dai, M.~Suzgun, X.~Chen,
+  A.~Chowdhery, A.~Castro-Ros, M.~Pellat, K.~Robinson, D.~Valter, S.~Narang,
+  G.~Mishra, A.~Yu, V.~Zhao, Y.~Huang, A.~Dai, H.~Yu, S.~Petrov, E.~H. Chi,
+  J.~Dean, J.~Devlin, A.~Roberts, D.~Zhou, Q.~V. Le, and J.~Wei, ``Scaling
+  instruction-finetuned language models,'' 2022.
+
+\bibitem{dirac}
+P.~A.~M. Dirac, {\em The Principles of Quantum Mechanics}.
+\newblock International series of monographs on physics, Clarendon Press, 1981.
+
+\bibitem{einstein}
+A.~Einstein, ``{Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the
+  electrodynamics of moving bodies],'' {\em Annalen der Physik}, vol.~322,
+  no.~10, pp.~891--921, 1905.
+
+\bibitem{knuth-fa}
+D.~E. Knuth, {\em Fundamental Algorithms}, ch.~1.2.
 \newblock Addison-Wesley, 1973.
 
-\bibitem[L\'opez and Soderstrom(1983)]{radiation2}
-A.M. L\'opez and K.G. Soderstrom.
-\newblock Insolation in {P}uerto {R}ico.
-\newblock \emph{Journal of Solar Energy Engineering}, 1983.
+\bibitem{radiation2}
+A.~L\'opez and K.~Soderstrom, ``Insolation in {P}uerto {R}ico,'' {\em Journal
+  of Solar Energy Engineering}, 1983.
 
-\bibitem[Yilmaz and Ulusoy(2023)]{9906925}
-Tolga Yilmaz and {\"O}zg{\"u}r Ulusoy.
-\newblock Misinformation propagation in online social networks: Game theoretic
-  and reinforcement learning approaches.
-\newblock \emph{IEEE Transactions on Computational Social Systems}, 10\penalty0
-  (6):\penalty0 3321--3332, 2023.
-\newblock \doi{10.1109/TCSS.2022.3208793}.
+\bibitem{bioinformatics}
+D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
+  subset in BioC: about three million full-text articles and growing},'' {\em
+  Bioinformatics}, vol.~35, pp.~3533--3535, 01 2019.
 
 \end{thebibliography}
