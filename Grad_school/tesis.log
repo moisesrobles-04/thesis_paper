@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  9 OCT 2024 21:46
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  9 OCT 2024 23:57
  restricted system commands enabled.
  file:line:error style messages enabled.
 **tesis.tex
@@ -1164,23 +1164,45 @@ File: images/LLM_Arch_text_generation.png Graphic file (type png)
 Package luatex.def Info: images/LLM_Arch_text_generation.png  used on input lin
 e 36.
 (luatex.def)             Requested size: 443.57848pt x 207.83177pt.
- [6<./images/LLM_Arch_text_generation.png>] [7] [8] [9]) [10]
+ [6<./images/LLM_Arch_text_generation.png>] [7]
+<images/gpt_example.png, id=78, 341.77687pt x 198.7425pt>
+File: images/gpt_example.png Graphic file (type png)
+<use images/gpt_example.png>
+Package luatex.def Info: images/gpt_example.png  used on input line 75.
+(luatex.def)             Requested size: 399.21791pt x 232.16083pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8] [9<./images/gpt_example.png>] [10]
+<images/ths_architecture.png, id=89, 469.755pt x 195.58069pt>
+File: images/ths_architecture.png Graphic file (type png)
+<use images/ths_architecture.png>
+Package luatex.def Info: images/ths_architecture.png  used on input line 121.
+(luatex.def)             Requested size: 443.57848pt x 184.68147pt.
+ [11<./images/ths_architecture.png>]
+<images/base_gpt_health.png, id=94, 318.18875pt x 163.61125pt>
+File: images/base_gpt_health.png Graphic file (type png)
+<use images/base_gpt_health.png>
+Package luatex.def Info: images/base_gpt_health.png  used on input line 136.
+(luatex.def)             Requested size: 354.86412pt x 182.46942pt.
+)
+[12<./images/base_gpt_health.png>]
 \openout2 = chapters/capitulo3.aux
- (./chapters/capit
-ulo3.tex
+ (./chapters/capitulo3.tex
 Chapter 3.
-[11
+[13
 
 
 
 
 ]
-<images/GRIC.png, id=91, 795.4518pt x 492.6405pt>
+<images/GRIC.png, id=103, 795.4518pt x 492.6405pt>
 File: images/GRIC.png Graphic file (type png)
 <use images/GRIC.png>
 Package luatex.def Info: images/GRIC.png  used on input line 27.
 (luatex.def)             Requested size: 133.07489pt x 82.41725pt.
-<images/2.jpg, id=92, 963.6pt x 642.4pt>
+<images/2.jpg, id=104, 963.6pt x 642.4pt>
 File: images/2.jpg Graphic file (type jpg)
 <use images/2.jpg>
 Package luatex.def Info: images/2.jpg  used on input line 43.
@@ -1215,28 +1237,28 @@ Overfull \hbox (2.60799pt too wide) in paragraph at lines 61--89
 [] [] 
  []
 
-[12<./images/GRIC.png><./images/2.jpg>]) [13]
+[14<./images/GRIC.png><./images/2.jpg>]) [15]
 \openout2 = chapters/capitulo4.aux
  (./chapters/capitulo4.tex
 Chapter 4.
-[14
+[16
 
 
 
 
 ]
-<images/ETL_Pipeline.png, id=103, 247.97644pt x 292.6935pt>
+<images/ETL_Pipeline.png, id=115, 247.97644pt x 292.6935pt>
 File: images/ETL_Pipeline.png Graphic file (type png)
 <use images/ETL_Pipeline.png>
 Package luatex.def Info: images/ETL_Pipeline.png  used on input line 38.
 (luatex.def)             Requested size: 332.68385pt x 392.68512pt.
- [15] [16<./images/ETL_Pipeline.png>] [17]
-<images/LLM_Pipeline.png, id=116, 287.72495pt x 393.41982pt>
+ [17] [18<./images/ETL_Pipeline.png>] [19]
+<images/LLM_Pipeline.png, id=128, 287.72495pt x 393.41982pt>
 File: images/LLM_Pipeline.png Graphic file (type png)
 <use images/LLM_Pipeline.png>
 Package luatex.def Info: images/LLM_Pipeline.png  used on input line 87.
 (luatex.def)             Requested size: 332.68385pt x 454.90254pt.
- [18] [19<./images/LLM_Pipeline.png>]) [20]
+ [20] [21<./images/LLM_Pipeline.png>]) [22]
 \openout2 = chapters/capitulo5.aux
  (./chapters/capitulo5.tex
 Chapter 5.
@@ -1247,49 +1269,49 @@ Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
 (lipsum)                With LuaTeX, lipsum requires babel to get proper
 (lipsum)                hyphenation (you can use \usepackage[base]{babel}).
 
-[21
+[23
 
 
 
 
-]) [22] [23]
+]) [24] [25]
 \openout2 = chapters/capitulo6.aux
  (./chapters/capitulo6.tex
 Chapter 6.
-[24
-
-
-
-
-]) [25]
-\openout2 = chapters/capitulo7.aux
- (./chapters/capitulo7.tex
-Chapter 7.
 [26
 
 
 
 
-] [27]) [28]
+]) [27]
+\openout2 = chapters/capitulo7.aux
+ (./chapters/capitulo7.tex
+Chapter 7.
+[28
+
+
+
+
+] [29]) [30]
 \openout2 = chapters/conclusion.aux
  (./chapters/conclusion.tex
 Chapter 8.
-[29
+[31
 
 
 
 
-]) [30] (./tesis.bbl [31
+]) [32] (./tesis.bbl [33
 
 
 
-] [32]) [33] [34
+] [34]) [35] [36
 
-] [35] [36
+] [37] [38
 
-] [37
+] [39
 
-] [38
+] [40
 
 ] (./tesis.aux
 (./prelim/portada3.aux) (./prelim/abstract.aux) (./prelim/acknowledgment.aux)
@@ -1301,16 +1323,20 @@ Chapter 8.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 )
 
 Here is how much of LuaTeX's memory you used:
- 31018 strings out of 476447
+ 31051 strings out of 476447
  100000,1977958 words of node,token memory allocated
  831 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 119 glue_spec
 , 7 attribute_list, 1 shape, 2 write nodes
-   avail lists: 2:599,3:235,4:48,5:213,6:61,7:4666,8:1,9:366,10:21,11:358
- 51953 multiletter control sequences out of 65536+600000
+   avail lists: 2:614,3:235,4:48,5:255,6:61,7:5688,8:1,9:380,10:21,11:461
+ 51977 multiletter control sequences out of 65536+600000
  44 fonts using 3288551 bytes
  99i,12n,102p,785b,553s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bolditali
@@ -1320,10 +1346,10 @@ egular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman1
 2-italic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroma
 n12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmr
 oman12-bold.otf>
-Output written on tesis.pdf (52 pages, 846745 bytes).
+Output written on tesis.pdf (54 pages, 1044320 bytes).
 
-PDF statistics: 223 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
+PDF statistics: 235 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

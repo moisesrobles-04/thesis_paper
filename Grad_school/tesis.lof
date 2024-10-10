@@ -2,13 +2,16 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The Transformer Architecture}}{5}{}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces LLM Architecture and Comparison}}{6}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Zero-shot example of GPT-3}}{9}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces THS Architecture}}{11}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces ChatGPT Classification Example – Health Related}}{12}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces GRIC logo!!}}{12}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Put your caption here}}{12}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Put your caption here}}{13}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces GRIC logo!!}}{14}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Put your caption here}}{14}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Put your caption here}}{15}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Medical Data Extraction Pipeline}}{16}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Misinformation Rebuttal LLM System Architecture}}{19}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Medical Data Extraction Pipeline}}{18}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Misinformation Rebuttal LLM System Architecture}}{21}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
