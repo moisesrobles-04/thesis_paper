@@ -4,16 +4,32 @@
 
 \section{Motivation}
 
-\noindent This project was created because
+\noindent 	Nowadays, technology has advanced to the point that anyone can find any information in just a few seconds. Social media has been an essential element
+in the search for information. The issue with this is that anyone can find, search, share, and even write anything, accurate or not. However, this dilemma has caused
+problems in this modern era. If anyone can share anything, how can you be sure what is true? Users are susceptible to disinformation or misinformation. In this context,
+misinformation refers to messages with false information dispersed because the author misunderstood facts. In contrast, disinformation refers to messages with false information
+that are intentionally dispersed by the author of the message with the intent of forming opinions based on false data. In either case, false information spreads to readers as
+facts. Most social media platforms recommend readers read from experts or official news outlets, but with an overwhelming amount of data, it is complicated to keep up with everything.
 
-	
-\noindent Example of numbered items. The work is divided in three phases: 
+Currently, social media such as X (formerly known as Twitter) have "Community Notes" which clarify tweets that are misleading or disinforming. However, this system
+depends totally on human interaction and is a slow and intricate process. On most occasions, when a "Community Note" is added to a tweet, the disinformation has
+already been spread. The issue of detecting and preventing the spread of misinformation has not been an easy task, especially in the health field. Another important
+factor mentioned in \textbf{[REFERENCE]} is that health-related misinformation is more engaging if they are textual compared to pictorial. 
 
-\begin{enumerate}
-\item Collect data
-\item Build model
-\item Validate results
-\end{enumerate} 
+In recent times, it has been challenging for health officials to achieve the prevention of endemic or pandemics. Most of the time, these officials tend to make educational
+campaigns for the population. However, social media misinformation can reduce the effectiveness of these campaigns. In addition, this is harder to counteract because
+these can spread for longer times and reach different users \textbf{[REFERENCE]}. Some problems these experts have faced in the past years were misinformation
+about vaccines, users invalidating safe measurements, and other issues.
+
+Is not easy to find training data about this topic because of the informality in social media, slang terms, or special characters. However, we use the data from the THS
+project from the University of Puerto Rico Mayag\"uez Campus (UPRM) as our primary source for the health classification dataset. On the other hand, the misinformation
+dataset contains social media posts, articles, websites, and others. For this classification process, we use Large Language Models (LLM). An LLM is a computational
+model with high capability in the Natural Language Processing (NLP) field, thanks to its ability to make statistical relationships with texts. These models have made
+breakthroughs in how computers interpret the human language. Thus, we can train them to classify and make inferences from a text.
+
+For this project, we investigate and implement Large Language Models to: 1) detect if a text is health-related, 2) if it is related, then determine if it contains misinformation,
+and 3) rebut texts that are misinformation using research papers gathered from official health sources as context. With the use of a vector database, we retrieve chunks of
+the research papers that are related to the classified text. Finally, the system cites the papers it used for the rebuttal process to ensure that the users receive a result as accurately as possible.
 
 \section{Objectives}
 
@@ -35,16 +51,17 @@ The objectives of this project are as follows:
 \begin{itemize}
 	\item \textbf{Finetune Large Language Models for health classification on social media:} Large Language Models are being used for different fields nowadays. However, these do not focus on health misinformation on social medias. We present Large Language Models as a solution
 	to classify and rebut health misinformation texts on social medias, and use research papers extracted from PubMed as context for the LLM.
-	\item \textbf{} 
 	\item \textbf{Pending Contribution Title:} We used 12,441 texts for the health-related classification labeled as related, unrelated, or ambiguous. For the misinformation-classification we had 8,772 texts labeled as misinformation or not misinformation. For the model rebuttal, we extracted
 	56,365 papers from PubMed.
+	\item \textbf{Present a novel solution to misinformation rebuttal:} For misinformation rebuttal is necessary to have an understanding of what needs to be fact checked. Also, it is important to have the necessary context to make the correction. We extracted research papers that were added into a
+	vector database. The database helped find similar chunks of texts to use as context for the misinformation rebuttal. 
 	
 \end{itemize}
 
 \section{Outline}
 \noindent
 This paper has the following organization. Chapter 2 contains the literature review on Transformers, Large Language Models,
-the different use cases of these models for classification, and misinformation on social media. Additionally, we describe the
+the different use cases of these models for classification, misinformation on social media, and the THS project. Additionally, we describe the
 importance of disinformation on social medias. For Chapter 3, we can observe the problem description and methodology.
 Later, on Chapter 4, we have the experiment, and the projects pipeline for the training and classification. Chapter 5 presents
 our results based on accuracy and performance. In Chapter 6, related works are presented, with our conclusion and suggestions 

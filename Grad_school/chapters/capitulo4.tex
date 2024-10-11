@@ -41,14 +41,15 @@ LR, Batch size, seed, and epochs are static.
 	\label{fig:etl}
 \end{figure}
 
-For our models to be able to rebut the misinformation, it needs to use credible sources. We identified PubMed to extract the papers and stored them in a vector database.
-To extract these papers, we used the BioC API \cite{bioinformatics} that contains the PubMed papers. However, the API needs the research papers' identifiers.
+For our models to be able to rebut the misinformation, it needs to use credible sources. We identified PubMed \textbf{[REFERENCES]} to extract the papers and stored them in a vector database.
+To extract these papers, we used the BioC API \cite{bioinformatics} that contains the PubMed papers. However, the API needs the research papers' identifiers, called PubMed Central (PMC) identifieer.
 To get these identifiers a scraper was designed to extract the PubMed Central (PMC) identifier. The pipeline in The pipeline in Figure \ref{fig:etl} goes as follows:
 \begin{enumerate}
-	\item Extract papers identifier: We selected 14 different keywords for the papers that would be extracted. For each keyword, we retrieved 5,000 PMC identifiers and stored them in CSV files. 
-	\item Paper requests: After retrieving the identifier, the system made requests to the API and the results were saved locally in JSON format. Each JSON was preprocessed to only contain text.
-	\item Vectorizing data: The research paper's contexts were broken into chunks, vectorized by an LLM \textbf{REFERENCES}, and stored in a chroma database. Each chunk was given a unique identifier to be paired with the original text. 
-	\item Storing metadata: With all papers vectorized, the paper's metadata and the chunk's unique identifiers were stored in a Postgres database. Duplicate records and researchs that had their reference missing were removed, to prevent
+	\item Extract papers identifier: We selected 14 different keywords for the papers that would be extracted. For each keyword, we retrieved 5,000 PMC identifiers and stored them in CSV files. The identifier were extracted by a scraper that got the
+	PMC identifier from PubMed website.
+	\item Paper requests: After retrieving the identifier, the system made requests to the API and the results were saved locally in JSON format. Each JSON was preprocessed to only contain text, tables and figures were removed.
+	\item Vectorizing data: Each research paper's contexts was broken into chunks, vectorized by an LLM, and stored it in a Chroma \textbf{REFERENCES} database. Each chunk was given a unique identifier to be paired with the original text. 
+	\item Storing metadata: With all papers vectorized, the paper's metadata and the chunk's unique identifiers were stored in a Postgres database. Duplicate records and researches that had their reference missing were removed, to prevent
 	inconsistency and ensure that our classifier cites the correct sources. Our relational database Table diagram can be found on \textbf{ADD TABLE DIAGRAM REFERENCE}
 
 %- Save links in temporary file and upload to a consumer to 
@@ -74,10 +75,10 @@ To get these identifiers a scraper was designed to extract the PubMed Central (P
 The pipeline shown in Figure \ref{fig:llm} goes as follows:
 
 \begin{enumerate}
-	\item Health-related classification: Verifies if the inputted text is health-related. The possible options are related, unrelated, or ambiguous.  
-	\item Misinformation classification: Checks if the text contains misinformation. If any misinformation is detected, we need to find official health data to rebut said misinformation.
-	\item	Context finder: A query is created for a vector database based on the original text. This query is sent to a vectorized database, chroma [reference].
-	\item	Medical information database:  This is a database that contains medical data from official sources. Returns the IDs and strings of texts that are related to the original text.
+	\item Health-related classification: Verifies if the inputted text is health-related. The possible options are related, unrelated, or ambiguous.
+	\item Misinformation classification: If the text was classified as health-related, we then checks if the text contains misinformation. If any misinformation is detected, we need to find official health data to rebut said misinformation.
+	\item	Context finder: A query is created for a vector database based on the original text. This query is sent to a vectorized database, Chroma, and will return chunks that are related to the query.
+	\item	Medical information database:  This is a database that contains medical metadata from official sources. Using the chunk IDs we will retrieve the original papers' references.
 	\item	Organize and rebut: The result from the medical database is now processed and used to make a rebuttal for the misinformation in the text. Then, we query the relational database to extract the references of the papers used for the previous part.
 	The output includes the original text, the health and misinformation classifications, the correction of the misinformation, and the citation of the sources used. 
 \end{enumerate}

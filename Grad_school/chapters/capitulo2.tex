@@ -38,28 +38,31 @@ for specific tasks and limitations for others.
         \label{text_generation}
 \end{figure}
 
-\subsection{Decoder-only models}
-Decoder-only models predict the next word based on the previous context, thus being unidirectional models. The model achieves this by taking a text or prompt as input and returning 
+\begin{description}
+
+%\subsection{Decoder-only models}
+\item[Decoder-only models:] Decoder-only models predict the next word based on the previous context, thus being unidirectional models. The model achieves this by taking a text or prompt as input and returning 
 a first word. For each subsequent word, the model uses the previously generated text as input to predict the next word, continuing until it produces a coherent output. In Figure \ref{text_generation},
 the model predicts the last word based the previous context. Because of their ability to predict sequences of texts, they are frequently employed in tasks like summarization and text generation. Models
 that perform those task are also called causal language modeling (CLM), because they predict new tokens not found in the input. Compared to the other architectures, these models are massive
 in size. Because of their sizes, these are not very practical or cost-effective for daily usage. These are the most commonly known models, such as GPT-3 \cite{DBLP:journals/corr/abs-2005-14165},
 Mistral \cite{jiang2023mistral7b}, and LLaMa \cite{touvron2023llamaopenefficientfoundation}.
 
-\subsection{Encoder-only models}
-This type of model predicts by masking specific words in a sentence. Said masking helps them understand the meaning or relation of the masked word based on context. They are bi-directional,
+%\subsection{Encoder-only models}
+\item[Encoder-only models:] This type of model predicts by masking specific words in a sentence. Said masking helps them understand the meaning or relation of the masked word based on context. They are bi-directional,
 which means they take the context before and after the masking to evaluate the word. The example in Figure \ref{text_generation} shows a sentence with a word mask and being inputted to
 the encoder LLM; the model predicts the missing word by using the surrounding text. That is why they tend to perform well at classification and sentiment analysis but are not optimal for text
 generation. Said model are called masked language models (MLM). In contrast to other architectures, these models are relatively small. Some examples of encoder-only LLM are BERT
 \cite{DBLP:journals/corr/abs-1810-04805} and RoBERTa \cite{liu2019robertarobustlyoptimizedbert}.
 
-\subsection{Encoder-Decoder models}
-Encoder-decoder models combines masking and text generation. The way the work is by masking sequence of texts and using the context around it to make a prediction. As seen
+%\subsection{Encoder-Decoder models}
+\item[Encoder-Decoder models:] These models combines masking and text generation. The way the work is by masking sequence of texts and using the context around it to make a prediction. As seen
 in Figure \ref{text_generation}, they can mask more than one word from the original inputted text. Because the model generates sequences of texts, it is commonly used for translation
 and question and answer. It is know that translating from one language to another is not possible using a word by word translation; one must understand the entire sequence to not loss context.
 To have an optimal model, both encoder and decoder must be trained for the task one wishes to achieve. Depending on the task, it can be harder to train compared to the other types of architectures.
 Bart \cite{lewis2019bartdenoisingsequencetosequencepretraining} and T5 \cite{chung2022scalinginstructionfinetunedlanguagemodels} are example of encoder-decoder LLMs.
 
+\end{description}
 
 \subsection{Classification tasks}
 Large Language Models use different learning methods to train. Such methods include zero-shot, one-shot, and few-shot learning. As the name implies, zero-shot learning is training a model without
@@ -92,21 +95,30 @@ They clarified the importance of not taking the model for granted and how social
 
 
 \section{Misinformation in Social Media}
-There are many sources in the world to find information about any topic. Nonetheless, many people use social media as their primary source and mostly take this information as truth without
-validation. On occasion, these can be fake, misleading, or wrong. When this happens unintentionally or by lack of understanding of the topic, it is called misinformation. On the other hand,
-when it is intentional to provide wrong information, this is known as disinformation. For simplification, both terms will be used interchangeably.
+There are many sources in the world to find information about any topic. Nonetheless, many people use social media as their primary source \cite{socialmedias} and occasionally take this information as truth without
+validation \cite{social_fact}. On occasion, these can be fake, misleading, or wrong. When this happens unintentionally or by lack of understanding of the topic, it is called misinformation. On the other hand,
+when it is intentional to provide wrong information, this is known as disinformation. For simplification, both terms will be used interchangeably, as they have a similar impact on the user and give information that is not accurate.
 
-Misinformation has been dangerous during critical events like natural disasters or health crises. For instance, during the COVID-19 pandemic, falsehood arose saying that the vaccine had
-microchips, which led many people to die \cite{article} because they refused to get vaccinated out of fear. A problem with disinformation is that the audience does not always detect it. When misinformation
-spreads and is not clarified early on, it can be confused as fact. Older audiences and people with less education are more likely to share and believe fake or misleading news \cite{encyclopedia3040099}. 
+Misinformation has been dangerous during critical events like natural disasters or health crises. For instance, during the COVID-19 pandemic, false claims appeared saying that the vaccine had
+microchips or that it was intended for population control \cite{article_vaccine}, which led to high health risks or even deaths \cite{article} because they refused to get vaccinated out of fear. A problem with disinformation is that the audience
+does not always detect it. When misinformation spreads and is not clarified early on, it can be confused as fact. Misinformation can affect all demographics, but older audiences and people with less education are more
+likely to share and believe fake or misleading news  \cite{encyclopedia3040099}. 
 
-There has been various research on reducing the propagation of misinformation. Misinformation was seen as a game-theoretic in \cite{9906925}, where some players spread fake news, and others tried
-to stop it. They created an agent at the network level to combat misinformation in a simulation. However, they could not conclude the efficiency of their model because of the lack of a pattern. On
-the other hand, in \cite{10100054} the authors used LSTM and BERT to classify misinformation from the different news sources. They proved that BERT outperformed LSTM, achieving an accuracy of 64.88\% against 60.59\%. 
+There have been various research studies on reducing the propagation of misinformation. Misinformation was modeled as a game-theoretic problem in \cite{9906925}, where some players spread fake news, and others tried
+to stop it. They created an agent at the network level to combat misinformation in a simulation. However, they could not conclude the efficiency of their model due to the lack of discernible patterns in the simulation. On
+the other hand, the authors in \cite{10100054} used LSTM and BERT to classify misinformation from the different news sources. They proved that BERT outperformed LSTM, achieving an accuracy of 64.88\% against 60.59\%. 
+These results are significant in detecting misinformation; still, they are not optimal for situations that can directly impact someone's life. For example, the system has over a third chance of incorrectly classifying news, and this could
+be dangerous if the topic is a natural disaster or health risk. We need to ensure that AI models classify this type of news with a very high accuracy rate. 
+
 Another approach to detecting fake information was on \cite{Ayoobi_2023}, where they detected fake LinkedIn profiles. On this occasion, the dataset used for training included real and AI-generated profiles. They tested multiple
-LLMs, but BERT resulted in the highest accuracy of 95.67\%. These investigations prove the efficiency of Large Language Models for Natural Language Processing in the misinformation field. Regardless,
-none of these studies addresses health-related misinformation on social media.
+LLMs like BERT and RoBERTa, but BERT resulted in the highest accuracy of 95.67\%. These investigations prove the efficiency of Large Language Models for Natural Language Processing in the misinformation field. Regardless,
+none of these studies addresses health-related misinformation on social media. 
 
+When combatting misinformation, the difficulty arises when determining what is spreading and how experts can correct it. To determine if a text is spreading lies, one must understand or find credible sources,
+such as peer-reviewed studies or expert opinions, to verify the truth. Some disinformation can be easier to identify like hoaxes, but other things, such as conspiracy theories, require more resources to debunk.
+When the topic of the text becomes complex or not identifiable, some credible sources help with the rebuttal. These tasks are time-consuming and require an expert in the field for accuracy. In addition, the
+explanation must be expressed so that any audience can understand it. These are a few reasons that health-related misinformation is hard to combat. It requires professionals in the field to be fast at identifying
+misinformation and concise when correcting them. With the advancement in Artificial Intelligence, LLM can combat misinformation by classifying it and rebutting it by generating text based on peer-reviewed research.
 
 % Misinformation link: \cite{9906925}
 
