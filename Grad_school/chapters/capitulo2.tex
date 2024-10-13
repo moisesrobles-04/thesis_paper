@@ -93,6 +93,41 @@ the model to answer the sentiment of the texts. In-context learning does not req
 A possible problem with the neutral post is that prompting does not train the model to perform a specific tasks. That experiment showed the problems that users face when they use social media to make decisions.
 They clarified the importance of not taking the model for granted and how social media can cause a user to make a poor decision.
 
+An issue with LLM is that they answer based on statistical relationships between words, and occasionally, their output could make no sense. Sometimes, they can generate a result that is not factual
+or valid this phenomenon is called AI hallucinations. These models train to find patterns between tokens. Without the proper context, they cannot differentiate between fact and fallacy. This context
+needs to  be related or similar to the input that the model receives. However, finding the necessary information is not optimal if done manually. That begs the question, how much data would be needed
+to achieve a coherent answer, and how can this be done effectively?
+
+
+\section{Vector Databases}
+AI hallucinations occur when models generate outputs that seem plausible but lack factual accuracy. We can minimize the hallucinations by providing context relating to the text inputted. A solution to this
+is finding data from officials or experts on the topic associated with the text. However, with much research available, we need to narrow the search. In addition, the context quality is essential for the model to
+make any inference. The search process for this consumes time and is not always optimal. 
+
+Nonetheless, if we have an immense amount of data from different sources, we can benefit by using a vector database. In contrast to other databases, they store data in a vector representation.
+These databases can come in different forms, like Chroma \cite{chroma}, a native vector database. Also, some relational databases have extensions that allow them to make vector similarity searches,
+like Postgres with pgvector \cite{pgvector}. They can turn images, videos, documents, and others into numerical embedding. These embeddings are numerical vectors capturing semantic meaning \cite{10455990}.
+They are practical because the system stores the data provided as vectors in a high-dimensional space, where semantically similar data are positioned close in said space. We can see a text example of the vector
+space in \ref{vector_space}. If we search for "Flu" it could return "Sick" or "Covid" with a higher probability than "Car" or "Truck". As we can see, querying this database will return a result close to the input.
+
+  \begin{figure}[!h]
+    \centering
+        \includegraphics[width=0.85\linewidth]{images/Vector_example_update.png}
+        \caption{High-Dimensional Space Representation}
+        \label{vector_space}
+\end{figure}
+
+Although these systems help find similar text, there are a few limitations. One such problem is the vector size, which can impact the accuracy and resource usage \cite{han2023comprehensivesurveyvectordatabase}. If
+the vector size is relatively big, the system will have a higher accuracy but will require more storage and resources to process. Also, this affects when searching large datasets, which incurs a resource-intensive search.
+ 
+For the data insertion process, we need to find optimal strategies for our data. If we focus on a text dataset, the best practice is to split the document into chunks. This splitting process must be optimal for the task we want
+to achieve. If we split it into small chunks, it will have a more precise answer, but we dilute the meaning of the text. On the other hand, larger chunks can have more context but less relevance. After selecting the appropriate
+size, these chunks must be turned into a vector, usually done with an LLM. Finally, these vectors and their chunks are stored in the system. 
+
+To search the system, we send a query to the LLM that converts it into a vector. Then, the vector is used in the database to make a similarity search. The system will return chunks that can function as context for an LLM to
+analyze. In this context, an LLM can use the retrieved chunks to generate a fact-based answer from outside their initial training. Therefore, it can help reduce the dependency on a professional in the field to answer questions
+about a complex topic. Additionally, this can help determine texts that are not factual, incorrect, or misleading.
+
 
 \section{Misinformation in Social Media}
 There are many sources in the world to find information about any topic. Nonetheless, many people use social media as their primary source \cite{socialmedias} and occasionally take this information as truth without
@@ -118,9 +153,9 @@ When combatting misinformation, the difficulty arises when determining what is s
 such as peer-reviewed studies or expert opinions, to verify the truth. Some disinformation can be easier to identify like hoaxes, but other things, such as conspiracy theories, require more resources to debunk.
 When the topic of the text becomes complex or not identifiable, some credible sources help with the rebuttal. These tasks are time-consuming and require an expert in the field for accuracy. In addition, the
 explanation must be expressed so that any audience can understand it. These are a few reasons that health-related misinformation is hard to combat. It requires professionals in the field to be fast at identifying
-misinformation and concise when correcting them. With the advancement in Artificial Intelligence, LLM can combat misinformation by classifying it and rebutting it by generating text based on peer-reviewed research.
+misinformation and concise when correcting them. 
 
-% Misinformation link: \cite{9906925}
+With the advancement in Artificial Intelligence, LLM can combat misinformation by classifying it and rebutting it by generating text based on peer-reviewed research. 
 
 
 \section{Twitter Health Surveillance (THS)}

@@ -62,12 +62,33 @@ X.~Deng, V.~Bashlovkina, F.~Han, S.~Baumgartner, and M.~Bendersky, ``Llms to
   the moon? reddit market sentiment analysis with large language models,''
   pp.~1014--1019, 04 2023.
 
+\bibitem{chroma}
+Chroma, ``The ai-native open-source embedding database,'' 2022.
+\newblock accessed: 04.27.2024.
+
+\bibitem{pgvector}
+pgvector, ``pgvector: Open-source vector similarity search for postgres,''
+  2024.
+\newblock accessed: 10.1.2024.
+
+\bibitem{10455990}
+P.~N. Singh, S.~Talasila, and S.~V. Banakar, ``Analyzing embedding models for
+  embedding vectors in vector databases,'' in {\em 2023 IEEE International
+  Conference on ICT in Business Industry \& Government (ICTBIG)}, pp.~1--7,
+  2023.
+
+\bibitem{han2023comprehensivesurveyvectordatabase}
+Y.~Han, C.~Liu, and P.~Wang, ``A comprehensive survey on vector database:
+  Storage and retrieval technique, challenge,'' 2023.
+
 \bibitem{socialmedias}
 F.~Shen, {\em Introduction: Social Media as a News Source}, pp.~1--2.
 \newblock 10 2021.
 
 \bibitem{social_fact}
-
+Z.~Epstein, N.~Sirlin, A.~Arechar, G.~Pennycook, and D.~Rand, ``The social
+  media context interferes with truth discernment,'' {\em Science Advances},
+  vol.~9, no.~9, p.~eabo6169, 2023.
 
 \bibitem{article_vaccine}
 M.~S. Islam, A.-H. Kamal, A.~Kabir, D.~Southern, S.~Khan, S.~Hasan, T.~Sarkar,
