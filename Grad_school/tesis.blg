@@ -18,45 +18,45 @@ Database file #1: referencias.bib
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
-You've used 30 entries,
+You've used 31 entries,
             1876 wiz_defined-function locations,
-            635 strings with 10750 characters,
-and the built_in function-call counts, 8420 in all, are:
-= -- 633
-> -- 644
+            640 strings with 10935 characters,
+and the built_in function-call counts, 8693 in all, are:
+= -- 656
+> -- 655
 < -- 0
-+ -- 227
-- -- 197
-* -- 676
-:= -- 1314
-add.period$ -- 35
-call.type$ -- 30
-change.case$ -- 27
++ -- 231
+- -- 200
+* -- 694
+:= -- 1351
+add.period$ -- 36
+call.type$ -- 31
+change.case$ -- 28
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 341
-empty$ -- 724
-format.name$ -- 197
-if$ -- 1952
+cite$ -- 34
+duplicate$ -- 358
+empty$ -- 755
+format.name$ -- 200
+if$ -- 2022
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 22
-newline$ -- 98
-num.names$ -- 30
-pop$ -- 157
+int.to.str$ -- 31
+missing$ -- 23
+newline$ -- 101
+num.names$ -- 31
+pop$ -- 164
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 243
+skip$ -- 252
 stack$ -- 0
-substring$ -- 335
-swap$ -- 121
+substring$ -- 347
+swap$ -- 126
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 55
-width$ -- 32
-write$ -- 263
+while$ -- 58
+width$ -- 33
+write$ -- 272
 (There were 3 warnings)

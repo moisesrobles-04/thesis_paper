@@ -10,10 +10,10 @@ There has been many advancement....
 Natural language processing (NLP) has always been an intricate field because of the complexity of how humans communicate. The meaning of a message
 can vary because of homonyms, tone, context, and other factors that affect the message delivered; these are some challenges computers face when trying
 to replicate or learn text communication and expressions.  However, this changed with the introduction of Large Language Models (LLM) \cite{naveed2024comprehensiveoverviewlargelanguage}.
-These models are trained with large amounts of data to replicate human-like patterns or generate text based on statistical relationships between words, and all
-was made possible because of transformers \cite{vaswani2023attentionneed}. Previous NLP techniques such as Recurrent Neural Network (RNN) and
+These models are trained with large amounts of data to replicate human-like patterns or generate text based on statistical relationships between words, and these
+advancements were made possible by transformers \cite{vaswani2023attentionneed}. Previous NLP techniques such as Recurrent Neural Network (RNN) and
 Long-Short Term Memory (LSTM) could understand a sentence context in the short term. However, these struggle when trying to understand longer texts.
-In contrast, transformers architecture, seen in Figure \ref{transformer}, differs from others because it uses self-attention.
+In contrast, transformer architecture, seen in Figure \ref{transformer}, differs from others because it uses self-attention.
 
 \begin{figure}[!hb]
     \centering
@@ -22,13 +22,14 @@ In contrast, transformers architecture, seen in Figure \ref{transformer}, differ
         \label{transformer}
 \end{figure}
 
+\subsection{LLM Architectures}
 This self-attention finds dependencies between all words in a text, short and long-term. The process of this starts by turning words into tokens. A token can be a word,
 subword, individual letter, or a sequence of words mapped to an embedding. The embedding is the vector representation of a token in high-dimension space; its size
 depends on how much information it stores about the token. Now, self-attention finds relationships between all tokens and gives them an attention score, measuring
 the relevance of a token to others. Transformers uses the scores to generate a final representation of each token. This process depends on how the models make a token.
 The tokenization strategy is determined by the preprocessing stage, and influenced by the embedding and model architecture. The embedding impacts the strategy
 because of its dimensionality, the amount of information encoded, and the model's sequence length limitations. In Figure \ref{transformer},  we can see an encoder and a
-decoder in the transformers architecture. Based on that, there are different LLM architectures: decoder-only, encoder-only, and encoder-decoder. Each one has advantages
+decoder in the transformer architecture. Based on that, there are different LLM architectures: decoder-only, encoder-only, and encoder-decoder. Each one has advantages
 for specific tasks and limitations for others.
 
 \begin{figure}[!hb]
@@ -43,24 +44,24 @@ for specific tasks and limitations for others.
 %\subsection{Decoder-only models}
 \item[Decoder-only models:] Decoder-only models predict the next word based on the previous context, thus being unidirectional models. The model achieves this by taking a text or prompt as input and returning 
 a first word. For each subsequent word, the model uses the previously generated text as input to predict the next word, continuing until it produces a coherent output. In Figure \ref{text_generation},
-the model predicts the last word based the previous context. Because of their ability to predict sequences of texts, they are frequently employed in tasks like summarization and text generation. Models
-that perform those task are also called causal language modeling (CLM), because they predict new tokens not found in the input. Compared to the other architectures, these models are massive
+the model predicts the last word based on the previous context. Because of their ability to predict sequences of texts, they are frequently employed in tasks like summarization and text generation. Models
+that perform those tasks are called causal language modeling (CLM) because they predict new tokens not found in the input. Compared to the other architectures, these models are massive
 in size. Because of their sizes, these are not very practical or cost-effective for daily usage. These are the most commonly known models, such as GPT-3 \cite{DBLP:journals/corr/abs-2005-14165},
 Mistral \cite{jiang2023mistral7b}, and LLaMa \cite{touvron2023llamaopenefficientfoundation}.
 
 %\subsection{Encoder-only models}
-\item[Encoder-only models:] This type of model predicts by masking specific words in a sentence. Said masking helps them understand the meaning or relation of the masked word based on context. They are bi-directional,
-which means they take the context before and after the masking to evaluate the word. The example in Figure \ref{text_generation} shows a sentence with a word mask and being inputted to
+\item[Encoder-only models:] These models predict by masking specific words in a sentence. Said masking helps them understand the meaning or relation of the masked word based on context. They are bi-directional,
+which means they take the context before and after the masking to evaluate the word. The example in Figure \ref{text_generation} shows a sentence with a word mask being inputted to
 the encoder LLM; the model predicts the missing word by using the surrounding text. That is why they tend to perform well at classification and sentiment analysis but are not optimal for text
-generation. Said model are called masked language models (MLM). In contrast to other architectures, these models are relatively small. Some examples of encoder-only LLM are BERT
+generation. Said models are called masked language models (MLM). In contrast to other architectures, these models are relatively small. Some examples of encoder-only LLM are BERT
 \cite{DBLP:journals/corr/abs-1810-04805} and RoBERTa \cite{liu2019robertarobustlyoptimizedbert}.
 
 %\subsection{Encoder-Decoder models}
-\item[Encoder-Decoder models:] These models combines masking and text generation. The way the work is by masking sequence of texts and using the context around it to make a prediction. As seen
+\item[Encoder-Decoder models:] These models combine masking and text generation. They work by masking the sequence of texts and using the context around it to make a prediction. As seen
 in Figure \ref{text_generation}, they can mask more than one word from the original inputted text. Because the model generates sequences of texts, it is commonly used for translation
-and question and answer. It is know that translating from one language to another is not possible using a word by word translation; one must understand the entire sequence to not loss context.
+and question and answer. Translating between languages cannot be achieved through word-for-word conversion; it requires understanding the entire sequence to preserve the context.
 To have an optimal model, both encoder and decoder must be trained for the task one wishes to achieve. Depending on the task, it can be harder to train compared to the other types of architectures.
-Bart \cite{lewis2019bartdenoisingsequencetosequencepretraining} and T5 \cite{chung2022scalinginstructionfinetunedlanguagemodels} are example of encoder-decoder LLMs.
+Bart \cite{lewis2019bartdenoisingsequencetosequencepretraining} and T5 \cite{chung2022scalinginstructionfinetunedlanguagemodels} are examples of encoder-decoder LLMs.
 
 \end{description}
 
@@ -84,15 +85,17 @@ Also, the result must follow a specific format. This process of instructions is 
 Moreover, LLMs that completed training with no additional modifications are known as based models. The response from this model will most likely make no sense with the premises it receives.
 This happens because the model is trained on excessive texts to find patterns between them, but this pattern might not be on par with the input. For the model to return a coherent response, it must go
 through a finetuning process. Finetuning consists of making a model perform specific tasks, such as chatting, summarization, chatbots, and others.
-To finetune a model, it must undergo another training process, but now the training data relates to the tasks it will perform. 
+To fine-tune a model, it must undergo another training process, but now the training data relates to the tasks it will perform. 
 
+\subsection{Example Applications}
 The authors in \cite{koh2023groundinglanguagemodelsimages} trained a based LLM model to understand images and give a text description or a combination of text and image. The training process for
 the model used images and captions of those images as their data and the zero-shot learning strategy. Their resulting model was used as a chatbot that identifies images, answers questions, or gives
-visual examples about them. Another experiment was \cite{inproceedings}, where the authors trained a model to identify sentiments on financial market decisions. In this case, they used prompting, also called in-context learning, for 
-the model to answer the sentiment of the texts. In-context learning does not require to update any parameter of the original model. Their model resulted in a 70\% accuracy on sentiment prediction, failing mostly on neutral posts.
-A possible problem with the neutral post is that prompting does not train the model to perform a specific tasks. That experiment showed the problems that users face when they use social media to make decisions.
+visual examples. Another experiment was \cite{inproceedings}, where the authors trained a model to identify sentiments on financial market decisions. In this case, they used prompting, also called in-context learning, for 
+the model to answer the sentiment of the texts. In-context learning does not update any parameter of the original model. Their model resulted in a 70\% accuracy on sentiment prediction, failing mostly on neutral posts.
+A possible problem with the neutral post is that prompting does not train the model to perform a specific task. That experiment showed the problems that users face when they use social media to make decisions.
 They clarified the importance of not taking the model for granted and how social media can cause a user to make a poor decision.
 
+\subsection{Challenges and Limitations}
 An issue with LLM is that they answer based on statistical relationships between words, and occasionally, their output could make no sense. Sometimes, they can generate a result that is not factual
 or valid this phenomenon is called AI hallucinations. These models train to find patterns between tokens. Without the proper context, they cannot differentiate between fact and fallacy. This context
 needs to  be related or similar to the input that the model receives. However, finding the necessary information is not optimal if done manually. That begs the question, how much data would be needed
@@ -100,9 +103,9 @@ to achieve a coherent answer, and how can this be done effectively?
 
 
 \section{Vector Databases}
-AI hallucinations occur when models generate outputs that seem plausible but lack factual accuracy. We can minimize the hallucinations by providing context relating to the text inputted. A solution to this
-is finding data from officials or experts on the topic associated with the text. However, with much research available, we need to narrow the search. In addition, the context quality is essential for the model to
-make any inference. The search process for this consumes time and is not always optimal. 
+AI hallucinations occur when models generate a plausible output but lack factual accuracy. We can minimize the hallucinations by providing context relating to the text inputted. A solution to this
+is finding data from officials or experts on the topic associated with the text. Given the vast amount of research available, narrowing down relevant information becomes a challenge. In addition,
+the context quality is essential for the model to make any inference. The search process for this consumes time and is not always optimal. 
 
 Nonetheless, if we have an immense amount of data from different sources, we can benefit by using a vector database. In contrast to other databases, they store data in a vector representation.
 These databases can come in different forms, like Chroma \cite{chroma}, a native vector database. Also, some relational databases have extensions that allow them to make vector similarity searches,
@@ -122,11 +125,14 @@ the vector size is relatively big, the system will have a higher accuracy but wi
  
 For the data insertion process, we need to find optimal strategies for our data. If we focus on a text dataset, the best practice is to split the document into chunks. This splitting process must be optimal for the task we want
 to achieve. If we split it into small chunks, it will have a more precise answer, but we dilute the meaning of the text. On the other hand, larger chunks can have more context but less relevance. After selecting the appropriate
-size, these chunks must be turned into a vector, usually done with an LLM. Finally, these vectors and their chunks are stored in the system. 
+size, these chunks must be turned into a vector, usually done with an LLM. Finally, we store these vectors and their chunks in the database system. 
 
 To search the system, we send a query to the LLM that converts it into a vector. Then, the vector is used in the database to make a similarity search. The system will return chunks that can function as context for an LLM to
-analyze. In this context, an LLM can use the retrieved chunks to generate a fact-based answer from outside their initial training. Therefore, it can help reduce the dependency on a professional in the field to answer questions
-about a complex topic. Additionally, this can help determine texts that are not factual, incorrect, or misleading.
+analyze. In this context, an LLM can use the retrieved chunks to generate a fact-based answer from outside their initial training. This process, known as Retrieval-Augmented Generation (RAG), enables LLMs to access relevant
+information during text generation. In \cite{10683437} they tested LLM to answer a test that contained images and text. They evaluate the GPT3 base model, the base model with prompt, and a GPT3 with RAG. Their experiments
+showed that the base model's average success ratio was 40\%, the second model was 58\%, and the model with RAG ended with 75\%. Said experiment showed that an LLM can outperform when it receives the necessary context.
+Therefore, RAG can assist in providing expert-level responses, but human oversight is still imperative for complex topics. Additionally, in a world with many sources of information that can be misleading to people, this can help identify
+texts that are not factual or incorrect. 
 
 
 \section{Misinformation in Social Media}
@@ -142,7 +148,7 @@ likely to share and believe fake or misleading news  \cite{encyclopedia3040099}.
 There have been various research studies on reducing the propagation of misinformation. Misinformation was modeled as a game-theoretic problem in \cite{9906925}, where some players spread fake news, and others tried
 to stop it. They created an agent at the network level to combat misinformation in a simulation. However, they could not conclude the efficiency of their model due to the lack of discernible patterns in the simulation. On
 the other hand, the authors in \cite{10100054} used LSTM and BERT to classify misinformation from the different news sources. They proved that BERT outperformed LSTM, achieving an accuracy of 64.88\% against 60.59\%. 
-These results are significant in detecting misinformation; still, they are not optimal for situations that can directly impact someone's life. For example, the system has over a third chance of incorrectly classifying news, and this could
+These results are significant in detecting misinformation; still, they are not optimal for situations that can directly impact someone's life. For example, the system has over a third chance of misclassifying news, and this could
 be dangerous if the topic is a natural disaster or health risk. We need to ensure that AI models classify this type of news with a very high accuracy rate. 
 
 Another approach to detecting fake information was on \cite{Ayoobi_2023}, where they detected fake LinkedIn profiles. On this occasion, the dataset used for training included real and AI-generated profiles. They tested multiple
@@ -153,9 +159,9 @@ When combatting misinformation, the difficulty arises when determining what is s
 such as peer-reviewed studies or expert opinions, to verify the truth. Some disinformation can be easier to identify like hoaxes, but other things, such as conspiracy theories, require more resources to debunk.
 When the topic of the text becomes complex or not identifiable, some credible sources help with the rebuttal. These tasks are time-consuming and require an expert in the field for accuracy. In addition, the
 explanation must be expressed so that any audience can understand it. These are a few reasons that health-related misinformation is hard to combat. It requires professionals in the field to be fast at identifying
-misinformation and concise when correcting them. 
-
-With the advancement in Artificial Intelligence, LLM can combat misinformation by classifying it and rebutting it by generating text based on peer-reviewed research. 
+misinformation and concise when correcting them. With the advancement in Artificial Intelligence, LLM can combat misinformation by classifying it and rebutting it. For the classification process, it is possible to
+finetune an LLM that determines if a text is misinformation. Additionally, it can generate rebuttals using RAG. With a vector database that contains peer-reviewed research, it can ensure that the information is factual. 
+This AI approach can reduce the dependency on experts and have a system that can act in real-time to prevent a significant spread of misinformation.
 
 
 \section{Twitter Health Surveillance (THS)}
