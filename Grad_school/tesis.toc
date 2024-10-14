@@ -17,16 +17,17 @@
 \contentsline {section}{\numberline {2.3}Misinformation in Social Media}{15}{}%
 \contentsline {section}{\numberline {2.4}Twitter Health Surveillance (THS)}{17}{}%
 \contentsline {chapter}{\numberline {3}Problem Formulation}{20}{}%
-\contentsline {section}{\numberline {3.1}How to incorporate citations in your document}{20}{}%
-\contentsline {subsection}{\numberline {3.1.1}Citation Styles}{20}{}%
-\contentsline {section}{\numberline {3.2}Using Images}{21}{}%
-\contentsline {subsection}{\numberline {3.2.1}Adding Subfigures}{21}{}%
-\contentsline {chapter}{\numberline {4}System Architecture}{23}{}%
-\contentsline {section}{\numberline {4.1}System Overview}{23}{}%
-\contentsline {section}{\numberline {4.2}Fine-tuning}{23}{}%
-\contentsline {subsection}{\numberline {4.2.1}Health-Related Classification}{24}{}%
-\contentsline {subsection}{\numberline {4.2.2}Misinformation Classification}{24}{}%
-\contentsline {section}{\numberline {4.3}Paper ETL Pipeline}{25}{}%
+\contentsline {section}{\numberline {3.1}Classification}{20}{}%
+\contentsline {chapter}{\numberline {4}System Architecture}{21}{}%
+\contentsline {section}{\numberline {4.1}System Overview}{21}{}%
+\contentsline {section}{\numberline {4.2}Fine-tuning}{21}{}%
+\contentsline {subsection}{\numberline {4.2.1}Health-Related Classification}{22}{}%
+\contentsline {subsection}{\numberline {4.2.2}Misinformation Classification}{22}{}%
+\contentsline {section}{\numberline {4.3}Paper ETL Pipeline}{22}{}%
+\contentsline {subsection}{\numberline {4.3.1}Scraper}{23}{}%
+\contentsline {subsection}{\numberline {4.3.2}BioC API}{24}{}%
+\contentsline {subsection}{\numberline {4.3.3}Vectorizing data}{25}{}%
+\contentsline {subsection}{\numberline {4.3.4}Store metadata}{25}{}%
 \contentsline {section}{\numberline {4.4}Misinformation Rebuttal Pipeline}{26}{}%
 \contentsline {section}{\numberline {4.5}Hardware and Software}{28}{}%
 \contentsline {chapter}{\numberline {5}Performance Evaluation}{30}{}%

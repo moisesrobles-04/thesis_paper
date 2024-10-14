@@ -33,24 +33,74 @@ LR, Batch size, seed, and epochs are static.
 
 \section{Paper ETL Pipeline}
 
-\begin{figure}[H]
+Our model must use credible sources of information to rebut misinformation. We identified PubMed \textbf{[REFERENCES]}, an online library that contains peer-reviewed medical literature. We want to extract the papers and store them in a vector database. To extract these papers, we used the BioC API \cite{bioinformatics}, which has access to the PubMed library. However, the API needs the research paper's identifier, known as PubMed Central (PMC) ID. We design a scraper to extract these identifiers from the official PubMed site. The pipeline in Figure \ref{fig:etl} shows the processes of data extraction. 
+
+\begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[width=0.75\textwidth]{images/ETL_Pipeline} %specify width
+		\includegraphics[width=0.75\textwidth]{images/ETL_Pipeline.png} %specify width
 	\end{center}
 	\caption{Medical Data Extraction Pipeline} %specify caption
 	\label{fig:etl}
 \end{figure}
 
-For our models to be able to rebut the misinformation, it needs to use credible sources. We identified PubMed \textbf{[REFERENCES]} to extract the papers and stored them in a vector database.
-To extract these papers, we used the BioC API \cite{bioinformatics} that contains the PubMed papers. However, the API needs the research papers' identifiers, called PubMed Central (PMC) identifieer.
-To get these identifiers a scraper was designed to extract the PubMed Central (PMC) identifier. The pipeline in The pipeline in Figure \ref{fig:etl} goes as follows:
-\begin{enumerate}
-	\item Extract papers identifier: We selected 14 different keywords for the papers that would be extracted. For each keyword, we retrieved 5,000 PMC identifiers and stored them in CSV files. The identifier were extracted by a scraper that got the
-	PMC identifier from PubMed website.
-	\item Paper requests: After retrieving the identifier, the system made requests to the API and the results were saved locally in JSON format. Each JSON was preprocessed to only contain text, tables and figures were removed.
-	\item Vectorizing data: Each research paper's contexts was broken into chunks, vectorized by an LLM, and stored it in a Chroma \textbf{REFERENCES} database. Each chunk was given a unique identifier to be paired with the original text. 
-	\item Storing metadata: With all papers vectorized, the paper's metadata and the chunk's unique identifiers were stored in a Postgres database. Duplicate records and researches that had their reference missing were removed, to prevent
-	inconsistency and ensure that our classifier cites the correct sources. Our relational database Table diagram can be found on \textbf{ADD TABLE DIAGRAM REFERENCE}
+\subsection{Scraper}
+The first step of the pipeline was identifying what papers we needed to extract. We selected 17 topics for the data extraction process. These topics are:
+\begin{multicols}{2}
+\begin{itemize}
+	\item{allergy}
+	\item{bird flu}
+	\item{cancer}
+	\item{chickenpox}
+	\item{common cold}
+	\item{conjunctivitis}
+	\item{covid sickness}
+	\item{covid symptoms}
+	\item{covid treatment}
+	\item{covid vaccine}
+	\item{flu vaccine}
+	\item{headache}
+	\item{influenza}
+	\item{monkeypox}
+	\item{stomach aches}
+	\item{swine flu}
+	\item{zika}
+
+\end{itemize}
+
+\end{multicols}
+
+To extract them, we built a scraper in Python using Selenium and BeautifulSoup libraries. We used Selenium to retrieve the web source from PubMed's website, and BeautifulSoup was used to get the links to each paper. These links contained the PMC identifier. For each topic, we selected 5,000 PMC identifiers. These identifiers were grouped by topic and stored locally in Comma Separated Value (CSV) files.
+
+\subsection{BioC API}
+After retrieving those identifiers, we need to extract the research papers. Using the PubMed API, BioC, we made requests that returned the documents as JSON. These JSONs were processed to contain texts, and we removed tables and figures. Later, the paper's sections -introduction, methodology, results, and others- were combined as one attribute, excluding references. We removed tables, figures, and references from the context to ensure the chunking process worked appropriately. If the data is not processed, when performing RAG, we can retrieve data that is not useful. After that, we turned the result into a new JSON that contained the research metadata and its context. 
+
+\subsection{Vectorizing data}
+Later, each research paper’s context was split into chunks using LangChain. Then, we used an LLM, BAAI \cite{bge_embedding}, to embed these chunks. A universal unique identifier (UUID) was combined with each chunk and stored in a Chroma \cite{chroma} database. After uploading the data to Chroma, we added these UUIDs to their JSON. 
+
+
+\subsection{Store metadata}
+Now, with all papers vectorized, we upload the metadata into a Postgres database. First, we validate that there are no duplicate records in the system. To prevent duplicates, we search for the paper's reference. If any is found, we delete the chunks from the vector database. Additionally, any research that did not contain at least an abstract was removed. That ensures that there is no repetition or inconsistency when doing the rebuttal. Later, we upload this data into the system following the schema found in Figure \ref{fig:table}. The tables in this schema are as follow:
+
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/Table_diagram.png} %specify width
+	\end{center}
+	\caption{Research Papers Schema Diagram} %specify caption
+	\label{fig:table}
+\end{figure}
+
+
+\begin{description}
+	\item{\textbf{Research:}}  The table contains the research paper data. Its attributes are title, which is the research paper title; context, the paper’s text; paper\_ref, the complete reference of the paper, used to prevent duplicates; and fullpaper, which is a boolean that is true if the paper contains an abstract, introduction, methodology, discussion, conclusion, and references.
+	\item{\textbf{Chunks:}} This table pairs the UUIDs from the paper's chunks and their respective research record.  
+	\item{\textbf{Keyword:}} Some research papers contain keywords that allow the reader to know the subjects mentioned in the paper. 
+	\item{\textbf{Author:}} Stores the first and last names of all authors identified in the research paper. 
+	\item{\textbf{Reference:}} All references that are present in the research paper.
+	\item{\textbf{Topic:}} This contains the different topics used to search the papers.
+
+\end{description}
+
+We started the search with 85,000 peer-reviewed papers. After finishing the filtering and data cleaning, we ended with 56,365 different research papers. 
 
 %- Save links in temporary file and upload to a consumer to 
 %process link information.
@@ -68,7 +118,6 @@ To get these identifiers a scraper was designed to extract the PubMed Central (P
 
 %- Model respond with full rebuttal and official link.
    % + Add pipeline image
-\end{enumerate}
 
 \section{Misinformation Rebuttal Pipeline}
 

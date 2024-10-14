@@ -1,53 +1,67 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: tesis.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: prelim/portada3.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: prelim/abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
 A level-1 auxiliary file: prelim/acknowledgment.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: prelim/acronyms.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo1.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo2.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo3.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo4.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo5.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo6.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo7.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
 A level-1 auxiliary file: chapters/conclusion.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: referencias.bib
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
-You've used 32 entries,
+You've used 33 entries,
             1876 wiz_defined-function locations,
-            645 strings with 11114 characters,
-and the built_in function-call counts, 8860 in all, are:
-= -- 669
-> -- 666
+            648 strings with 11256 characters,
+and the built_in function-call counts, 9025 in all, are:
+= -- 680
+> -- 680
 < -- 0
-+ -- 235
-- -- 203
-* -- 708
-:= -- 1380
-add.period$ -- 37
-call.type$ -- 32
-change.case$ -- 29
++ -- 240
+- -- 207
+* -- 719
+:= -- 1406
+add.period$ -- 38
+call.type$ -- 33
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 367
-empty$ -- 772
-format.name$ -- 203
-if$ -- 2060
+cite$ -- 36
+duplicate$ -- 371
+empty$ -- 790
+format.name$ -- 207
+if$ -- 2099
 int.to.chr$ -- 0
-int.to.str$ -- 32
+int.to.str$ -- 33
 missing$ -- 24
-newline$ -- 104
-num.names$ -- 32
-pop$ -- 167
+newline$ -- 107
+num.names$ -- 33
+pop$ -- 174
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 253
+skip$ -- 257
 stack$ -- 0
 substring$ -- 347
 swap$ -- 127
@@ -56,7 +70,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 59
-width$ -- 34
-write$ -- 281
+while$ -- 60
+width$ -- 35
+write$ -- 288
 (There were 3 warnings)
