@@ -4,32 +4,43 @@
 
 \section{Motivation}
 
-\noindent 	Nowadays, technology has advanced to the point that anyone can find any information in just a few seconds. Social media has been an essential element
-in the search for information. The issue with this is that anyone can find, search, share, and even write anything, accurate or not. However, this dilemma has caused
-problems in this modern era. If anyone can share anything, how can you be sure what is true? Users are susceptible to disinformation or misinformation. In this context,
-misinformation refers to messages with false information dispersed because the author misunderstood facts. In contrast, disinformation refers to messages with false information
-that are intentionally dispersed by the author of the message with the intent of forming opinions based on false data. In either case, false information spreads to readers as
-facts. Most social media platforms recommend readers read from experts or official news outlets, but with an overwhelming amount of data, it is complicated to keep up with everything.
+\noindent Nowadays, technology has advanced to the point that anyone can find any information in just a few seconds. Social media has been an essential
+element in the search for information. The issue with this is that anyone can find, search, share, and even write anything, accurate or not. However, this dilemma
+has caused problems in this modern era. If anyone can share anything, how can you be sure what is true? Users are susceptible to disinformation or misinformation.
+In this context, misinformation refers to messages with false information dispersed because the author misunderstood facts. In contrast, disinformation refers to
+messages with false information that are intentionally dispersed. The author of these messages has the intention of forming opinions based on false data. In either
+case, false information spreads to readers as facts. Most social media platforms recommend that readers read from experts or official news outlets. Nevertheless,
+the overwhelming amount of data makes it complicated to keep up with everything.
 
-Currently, social media such as X (formerly known as Twitter) have "Community Notes" which clarify tweets that are misleading or disinforming. However, this system
+Currently, social media such as X (formerly known as Twitter) have "Community Notes" which clarify tweets that are misleading or misinforming. However, this system
 depends totally on human interaction and is a slow and intricate process. On most occasions, when a "Community Note" is added to a tweet, the disinformation has
 already been spread. The issue of detecting and preventing the spread of misinformation has not been an easy task, especially in the health field. Another important
-factor mentioned in \textbf{[REFERENCE]} is that health-related misinformation is more engaging if they are textual compared to pictorial. 
+factor mentioned in \cite{article} is that health-related textual misinformation is more engaging when compared with pictorial.
 
 In recent times, it has been challenging for health officials to achieve the prevention of endemic or pandemics. Most of the time, these officials tend to make educational
 campaigns for the population. However, social media misinformation can reduce the effectiveness of these campaigns. In addition, this is harder to counteract because
-these can spread for longer times and reach different users \textbf{[REFERENCE]}. Some problems these experts have faced in the past years were misinformation
+these can spread for longer times and reach different users \cite{article}. Some problems these experts have faced in the past years were misinformation
 about vaccines, users invalidating safe measurements, and other issues.
 
-Is not easy to find training data about this topic because of the informality in social media, slang terms, or special characters. However, we use the data from the THS
-project from the University of Puerto Rico Mayag\"uez Campus (UPRM) as our primary source for the health classification dataset. On the other hand, the misinformation
-dataset contains social media posts, articles, websites, and others. For this classification process, we use Large Language Models (LLM). An LLM is a computational
-model with high capability in the Natural Language Processing (NLP) field, thanks to its ability to make statistical relationships with texts. These models have made
-breakthroughs in how computers interpret the human language. Thus, we can train them to classify and make inferences from a text.
+The Twitter Health Surveillance (THS) system was designed to detect tweets related to health conditions \cite{8622504}. THS is a prototype system we are building at the University
+of Puerto Rico, Mayag\"uez (UPRM). The project is designed as an integrated platform to help health officials collect tweets, determine if they are related to a medical condition, extract
+metadata from them, and create a warehouse that can be used to analyze the data further. The THS Artificial Intelligence (AI) components used Long-Short Term Memory (LSTM)
+and Gated Recurrent Unit (GRU) to classify tweets as being medically related, unrelated, or ambiguous. The data they used was from the Twitter API system, then processed
+through the Hadoop ecosystem and stored in a Hive database.
 
-For this project, we investigate and implement Large Language Models to: 1) detect if a text is health-related, 2) if it is related, then determine if it contains misinformation,
-and 3) rebut texts that are misinformation using research papers gathered from official health sources as context. With the use of a vector database, we retrieve chunks of
-the research papers that are related to the classified text. Finally, the system cites the papers it used for the rebuttal process to ensure that the users receive a result as accurately as possible.
+Searching for training data about this topic is not an easy task. A problem with social media text is the informality, slang terms, or special characters. However, we use the
+data from the THS project as our primary source for the health classification dataset. On the other hand, the misinformation dataset contains social media posts, articles,
+websites, and others. Instead of using the THS architectures, we opted for Large Language Models (LLM). 
+
+An LLM is a computational model with high capability in Natural Language Processing (NLP) thanks to its ability to make statistical relationships within texts. These models
+have made breakthroughs in how computers interpret human language. Additionally, we can train them to accomplish text-based tasks. Some examples are classifications,
+answering questions, making inferences, summarizing, and others. Thus, we can train them to classify and make inferences from a text.
+
+We employ a transformer-based LLM in this project. These are effective in the natural language process field (NLP) \cite{DBLP:journals/corr/abs-2105-00813}.
+The system detects health misinformation and provides context for its classification. Also, we did not preprocess the tweets because they could lose the context of the actual meaning if we
+remove hashtags, mentions, and emojis. This system has a high chance of detecting misinformation and rebutting it to educate users. We built the prototype using Python, PyTorch, Chroma,
+Ollama, and other open-source tools. In determining if a text is health-related, our system achieved a 90\% F1 score and a 97\% F1 if it contained misinformation. Additionally, our preliminary
+results show that using official health sources with RAG helps the LLM rebut correctly. Hence, our system proved that it is possible to classify and rebut health-related misinformation.
 
 \section{Objectives}
 

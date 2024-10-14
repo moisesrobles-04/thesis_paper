@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{article}
+S.~T and S.~Mathew, ``The disaster of misinformation: a review of research in
+  social media,'' {\em International Journal of Data Science and Analytics},
+  vol.~13, pp.~1--15, 05 2022.
+
+\bibitem{8622504}
+C.~C. Garzón-Alfonso and M.~Rodríguez-Martínez, ``Twitter health
+  surveillance (ths) system,'' in {\em 2018 IEEE International Conference on
+  Big Data (Big Data)}, pp.~1647--1654, 2018.
+
+\bibitem{DBLP:journals/corr/abs-2105-00813}
+A.~Chernyavskiy, D.~Ilvovsky, and P.~Nakov, ``Transformers: "the end of
+  history" for nlp?,'' {\em CoRR}, vol.~abs/2105.00813, 2021.
+
 \bibitem{naveed2024comprehensiveoverviewlargelanguage}
 H.~Naveed, A.~U. Khan, S.~Qiu, M.~Saqib, S.~Anwar, M.~Usman, N.~Akhtar,
   N.~Barnes, and A.~Mian, ``A comprehensive overview of large language
@@ -102,11 +116,6 @@ M.~S. Islam, A.-H. Kamal, A.~Kabir, D.~Southern, S.~Khan, S.~Hasan, T.~Sarkar,
   cognitive inoculation against misinformation to improve vaccine adherence,''
   05 2021.
 
-\bibitem{article}
-S.~T and S.~Mathew, ``The disaster of misinformation: a review of research in
-  social media,'' {\em International Journal of Data Science and Analytics},
-  vol.~13, pp.~1--15, 05 2022.
-
 \bibitem{encyclopedia3040099}
 S.~Benaissa~Pedriza, ``Disinformation perception by digital and social
   audiences: Threat awareness, decision-making and trust in media
@@ -129,11 +138,6 @@ N.~Ayoobi, S.~Shahriar, and A.~Mukherjee, ``The looming threat of fake and
   llm-generated linkedin profiles: Challenges and opportunities for detection
   and prevention,'' in {\em Proceedings of the 34th ACM Conference on Hypertext
   and Social Media}, HT ’23, ACM, Sept. 2023.
-
-\bibitem{8622504}
-C.~C. Garzón-Alfonso and M.~Rodríguez-Martínez, ``Twitter health
-  surveillance (ths) system,'' in {\em 2018 IEEE International Conference on
-  Big Data (Big Data)}, pp.~1647--1654, 2018.
 
 \bibitem{9581175}
 D.~Villanueva-Vega and M.~Rodriguez-Martinez, ``Finding similar tweets in

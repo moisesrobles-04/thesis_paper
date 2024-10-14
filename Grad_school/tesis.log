@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  13 OCT 2024 00:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 OCT 2024 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1090,7 +1090,7 @@ Chapter 1.
 [1
 
 
-] [2] [3]) [4] [5]
+] [2] [3] [4]) [5]
 \openout2 = `chapters/capitulo2.aux'.
 
  (./chapters/capitulo2.tex
@@ -1099,7 +1099,7 @@ Chapter 2.
 File: images/transformers_architecture.png Graphic file (type png)
 <use images/transformers_architecture.png>
 Package pdftex.def Info: images/transformers_architecture.png  used on input li
-ne 20.
+ne 19.
 (pdftex.def)             Requested size: 443.57848pt x 420.22879pt.
 [6
 
@@ -1111,10 +1111,10 @@ ne 20.
 File: images/LLM_Arch_text_generation.png Graphic file (type png)
 <use images/LLM_Arch_text_generation.png>
 Package pdftex.def Info: images/LLM_Arch_text_generation.png  used on input lin
-e 37.
+e 36.
 (pdftex.def)             Requested size: 443.57848pt x 207.83177pt.
  [8 <./images/LLM_Arch_text_generation.png>]
-Overfull \hbox (4.63458pt too wide) in paragraph at lines 60--65
+Overfull \hbox (4.63458pt too wide) in paragraph at lines 59--64
 []\OT1/cmr/m/n/12 These mod-els com-bine mask-ing and text gen-er-a-tion. They
  []
 
@@ -1122,7 +1122,7 @@ Overfull \hbox (4.63458pt too wide) in paragraph at lines 60--65
 <images/gpt_example.png, id=87, 341.77687pt x 198.7425pt>
 File: images/gpt_example.png Graphic file (type png)
 <use images/gpt_example.png>
-Package pdftex.def Info: images/gpt_example.png  used on input line 79.
+Package pdftex.def Info: images/gpt_example.png  used on input line 78.
 (pdftex.def)             Requested size: 399.21791pt x 232.16083pt.
 
 
@@ -1133,19 +1133,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: images/Vector_example_update.png Graphic file (type png)
 <use images/Vector_example_update.png>
 Package pdftex.def Info: images/Vector_example_update.png  used on input line 1
-18.
+17.
 (pdftex.def)             Requested size: 377.0444pt x 370.13545pt.
  [13 <./images/Vector_example_update.png>] [14] [15] [16]
 <images/ths_architecture.png, id=113, 469.755pt x 195.58069pt>
 File: images/ths_architecture.png Graphic file (type png)
 <use images/ths_architecture.png>
-Package pdftex.def Info: images/ths_architecture.png  used on input line 176.
+Package pdftex.def Info: images/ths_architecture.png  used on input line 175.
 (pdftex.def)             Requested size: 443.57848pt x 184.68147pt.
  [17 <./images/ths_architecture.png>]
 <images/base_gpt_health.png, id=119, 318.18875pt x 163.61125pt>
 File: images/base_gpt_health.png Graphic file (type png)
 <use images/base_gpt_health.png>
-Package pdftex.def Info: images/base_gpt_health.png  used on input line 191.
+Package pdftex.def Info: images/base_gpt_health.png  used on input line 190.
 (pdftex.def)             Requested size: 354.86412pt x 182.46942pt.
 ) [18 <./images/base_gpt_health.png>] [19]
 \openout2 = `chapters/capitulo3.aux'.
@@ -1245,32 +1245,32 @@ Chapter 6.
 
  (./chapters/capitulo7.tex
 Chapter 7.
-[34
+) [34
 
 
 
 
-] [35]) [36]
+]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 Chapter 8.
-[37
+) [35
 
 
 
 
-]) [38] (./tesis.bbl [39
+] (./tesis.bbl [36
 
 
 
-] [40] [41] [42]) [43] [44
+] [37] [38] [39]) [40] [41
 
-] [45] [46
+] [42] [43
 
-] [47
+] [44
 
-] [48
+] [45
 
 ]
 (./tesis.aux (./prelim/portada3.aux) (./prelim/abstract.aux)
@@ -1284,10 +1284,10 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30207 strings out of 474116
- 752540 string characters out of 5743682
+ 30210 strings out of 474116
+ 752663 string characters out of 5743682
  1934187 words of memory out of 5000000
- 51941 multiletter control sequences out of 15000+600000
+ 51944 multiletter control sequences out of 15000+600000
  566181 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,107p,785b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1298,10 +1298,10 @@ b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
 /local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/
 local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesis.pdf (62 pages, 1475134 bytes).
+Output written on tesis.pdf (59 pages, 1473400 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 253 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
