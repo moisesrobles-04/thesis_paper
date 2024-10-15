@@ -81,15 +81,6 @@ Later, each research paper’s context was split into chunks using LangChain. Th
 \subsection{Store metadata}
 Now, with all papers vectorized, we upload the metadata into a Postgres database. First, we validate that there are no duplicate records in the system. To prevent duplicates, we search for the paper's reference. If any is found, we delete the chunks from the vector database. Additionally, any research that did not contain at least an abstract was removed. That ensures that there is no repetition or inconsistency when doing the rebuttal. Later, we upload this data into the system following the schema found in Figure \ref{fig:table}. The tables in this schema are as follow:
 
-\begin{figure}[!ht]
-	\begin{center}
-		\includegraphics[width=0.9\textwidth]{images/Table_diagram.png} %specify width
-	\end{center}
-	\caption{Research Papers Schema Diagram} %specify caption
-	\label{fig:table}
-\end{figure}
-
-
 \begin{description}
 	\item{\textbf{Research:}}  The table contains the research paper data. Its attributes are title, which is the research paper title; context, the paper’s text; paper\_ref, the complete reference of the paper, used to prevent duplicates; and fullpaper, which is a boolean that is true if the paper contains an abstract, introduction, methodology, discussion, conclusion, and references.
 	\item{\textbf{Chunks:}} This table pairs the UUIDs from the paper's chunks and their respective research record.  
@@ -99,6 +90,15 @@ Now, with all papers vectorized, we upload the metadata into a Postgres database
 	\item{\textbf{Topic:}} This contains the different topics used to search the papers.
 
 \end{description}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/Table_diagram.png} %specify width
+	\end{center}
+	\caption{Research Papers Schema Diagram} %specify caption
+	\label{fig:table}
+\end{figure}
+
 
 We started the search with 85,000 peer-reviewed papers. After finishing the filtering and data cleaning, we ended with 56,365 different research papers. 
 
