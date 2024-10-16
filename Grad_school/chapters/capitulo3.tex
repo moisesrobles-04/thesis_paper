@@ -1,4 +1,54 @@
 
-\chapter{Problem Formulation}  
+\chapter{Methodology}  
 
-\section{Classification}
+\section{Performance Metrics}
+To evaluate the models effectiveness we used the following metrics:
+
+\begin{itemize}
+	\item{\textbf{Precision}}: This metric evaluates the proportion of positive that the model classified as positive that are actually positive.
+	\item{\textbf{Recall}}: This metric evaluates the proportion of the positives that the model classified correctly again all positives.
+	\item{\textbf{F1}}: This metric balances the precision and recall scores.
+	\item{\textbf{Elapsed Time}}: To evaluate the models training time.
+	
+\end{itemize}
+
+
+\section{Data Collection}
+
+
+\subsection{Health-related Dataset}
+
+\subsection{Misinformation Dataset}
+
+
+\section{Fine-tuning}
+
+The Large Language Models (LLM) used for this paper are pre-trained, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language.
+This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification,
+translation, generation, or other. This process is called fine-tuning, we modify an existing model to accomplish a task. In this case, we taught the models to classify two types of texts: health-related and
+misinformation-related texts. 
+\newline
+
+Three models were identified to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2. Each one has a different architecture. 
+
+
+\subsection{Health-Related Classification}
+The health-related dataset comprises over 12,441 tweets extracted from the previous THS project. Said dataset was labeled by health professsional into three categories: related, unrelated, and ambiguous tweets. A second dataset, with 8,762 texts, was created with data from different sources such as news, social media, and blogs classified as misinformation and non-misinformation \textbf{\textit{[Insert References]}}. 
+
+
+\subsection{Misinformation Classification}
+
+
+
+2. Misinformation classification
+
+LR, Batch size, seed, and epochs are static.
+
+- Each model was fine-tune twice.
+
+    1. Sequence classification: 1, 2, or 3; 1 or 2.
+
+    2. Classification with text generation: Related, Unrelated, or Ambiguous; Misinformation or Not Misinformation.
+
+- Weighted average added for the sequence classification.
+
