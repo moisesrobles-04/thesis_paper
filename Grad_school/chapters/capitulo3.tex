@@ -13,12 +13,80 @@ To evaluate the models effectiveness we used the following metrics:
 \end{itemize}
 
 
-\section{Data Collection}
+\section{Hardware}
+This experiment was implemented in a cluster. Only one node was used for the finetuning and to host the application. The hardware specification
+for the node is found on Table \ref{table:hardware}.
 
+\begin{table}[ht!]
+\centering
+\caption{Cluster's Node Specifications}
+\begin{tabular}{||c | c||} 
+ \hline
+\textbf{Hardware} & \textbf{Description} \\ [0.5ex] 
+ \hline
+ Hard Disk & 256GB  \\ 
+ \hline
+ RAM & 80GB  \\
+ \hline
+ Processor & \# \\
+ \hline
+ GPU & NVIDIA V100 32GB VRAM \\
+ \hline
+\end{tabular}
+\label{table:hardware}
+\end{table}
+
+
+\section{Software}
+There were various software tools used for the project. The node used for the experiment run Ubuntu Linux 20.04 LTS. The training, ETL pipeline,
+and REST API were implemented with Python 3.9.19. To finetune the models we used PyTorch 2.0.1 with GPU support enabled for
+NVIDIA CUDA 11.7. To initialize and use the models we implemented the Transformers  4.34.0 library. The models were imported from
+Hugging Face (HF) \textbf{[REFERENCE]}. We used BERT, T5, and LLaMa2 for our research. In Table \ref{table:LLM} we see the specifications
+for each model. Also, we use Postgres 14 to store our extracted research papers. In addition, we implemented Chroma 0.4.24 as our vector database.
+Finally, for the RAG process, we installed Ollama tu run LlaMa3.1 8B parameter model. 
+
+
+  \begin{table}[ht!]
+\centering
+\caption{LLM Specifications}
+\begin{tabular}{||c | c | c | c||} 
+ \hline
+\textbf{Model} & \textbf{HF name} & \textbf{Architecture} & \textbf{Parameters} \\ [0.5ex] 
+ \hline
+ BERT & bert-base-uncased & Encoder Only & 110M \\ 
+ \hline
+ T5 & t5-base & Encoder-Decoder & 220M \\
+ \hline
+ LlaMa-2 & Llama-2-7b-hf & Decoder-only & 7B \\
+ \hline
+\end{tabular}
+\label{table:LLM}
+\end{table}
+ 
+
+
+\section{Datasets}
+
+This sections explains the two datasets used for the training process.
 
 \subsection{Health-related Dataset}
+The health-related dataset comprises over 12,441 tweets extracted from the previous THS project. Health professionals labeled the dataset into three categories: related (7848),
+unrelated (3828), and ambiguous (765) tweets. However, this dataset is imbalanced; thus, we applied class weights to the loss function. These weights give a higher penalty for
+classes that appear frequently. The weights prevent the models from overfitting, mitigating the effects of class imbalance during training.
+
+Before we start finetuning the models, we preprocessed the data. As initially mentioned, we want as much context as possible for our model to train. That meant the classification
+process would include links, mentions, and hashtags. However, these elements contain various characters, and the embedding might struggle with out-of-vocabulary or irregular
+patterns. Thus, we opted to use special tokens to replace them. We use special tokens to replace elements with patterns that do not contribute to semantic meaning, such as random
+strings in URLs. For example, some URLs are strings with random values, which can result in the embedding assigning the wrong values. Because of this, we replace these items with
+their respective tokens. Any URL was replaced by \textit{[LINK]}, mentions by \textit{[MENTION]}, and hashtags by \textit{[HASHTAG]}. That allows us to keep the elements and give
+them some importance in the text.
 
 \subsection{Misinformation Dataset}
+The misinformation dataset, with 8,749 texts, combines data from different sources such as news, social media, and blogs. These records were labeled as misinformation (3638) and
+non-misinformation (5111) \textbf{\textit{[REFERENCE]}}. We also applied class weights for the data imbalance. The dataset in \cite{stephencrone2022} consists of social media texts
+that mentions the monkeypox. We only used the "text" and "binary\_class" columns from their dataset. Another source was \cite{coviddata}, they classified Covid-19 texts. That dataset contains
+articles and post from different online sources. They labeled the data based on official sources that validated the text claims. In this dataset we only used the 'title' column and the label assign to the file.
+The reason for this is that, occasionally, online users share news reports or articles based on the headline alone. Next, the last dataset \cite{covidunesco}
 
 
 \section{Fine-tuning}
@@ -33,7 +101,7 @@ Three models were identified to perform these classification tasks. The models u
 
 
 \subsection{Health-Related Classification}
-The health-related dataset comprises over 12,441 tweets extracted from the previous THS project. Said dataset was labeled by health professsional into three categories: related, unrelated, and ambiguous tweets. A second dataset, with 8,762 texts, was created with data from different sources such as news, social media, and blogs classified as misinformation and non-misinformation \textbf{\textit{[Insert References]}}. 
+
 
 
 \subsection{Misinformation Classification}

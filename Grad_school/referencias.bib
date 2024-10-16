@@ -7,63 +7,18 @@
 
 
 
-
-% ____EXAMPLES OF REFERENCE TYPES: Journals, books, webpages, chapters____
-
-
-@article{radiation2,
-author = {L\'opez, A.M. and Soderstrom, K.G.},
-title = {Insolation in {P}uerto {R}ico},
-journal = {Journal of Solar Energy Engineering},
-year = {1983},
-volume = {},
-number = {},
-pages = {},
-}
-
-@article{einstein,
-    author = "Albert Einstein",
-    title = "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
-    [{On} the electrodynamics of moving bodies]",
-    journal = "Annalen der Physik",
-    volume = "322",
-    number = "10",
-    pages = "891--921",
-    year = "1905",
-    DOI = "http://dx.doi.org/10.1002/andp.19053221004",
-    keywords = "physics"
-}
-
-@book{dirac,
-    title = {The Principles of Quantum Mechanics},
-    author = {Paul Adrien Maurice Dirac},
-    isbn = {9780198520115},
-    series = {International series of monographs on physics},
-    year = {1981},
-    publisher = {Clarendon Press},
-    keywords = {physics}
-}
-
-%for webpage references
-@misc{knuthwebsite,
-    author = "Donald Knuth",
-    title = "Knuth: Computers and Typesetting",
-    howpublished  = "http://www-cs-faculty.stanford.edu/~uno/abcde.html",
-    note = "(accessed: 01.09.2016)",
-    keywords = "latex,knuth"
-}
-
-@inbook{knuth-fa,
-    author = "Donald E. Knuth",
-    title = "Fundamental Algorithms",
-    publisher = "Addison-Wesley",
-    year = "1973",
-    chapter = "1.2",
-    keywords  = "knuth,programming"
-}
-
-
 % ____Official references________
+
+@article{2020t5,
+  author  = {Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+  title   = {Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer},
+  journal = {Journal of Machine Learning Research},
+  year    = {2020},
+  volume  = {21},
+  number  = {140},
+  pages   = {1-67},
+  url     = {http://jmlr.org/papers/v21/20-074.html}
+}
 
 
 @INPROCEEDINGS{8622504,
@@ -195,6 +150,7 @@ url = {https://www.trychroma.com/},
 note = {accessed: 04.27.2024},
 }
 
+% Not in use
 @misc{chung2022scalinginstructionfinetunedlanguagemodels,
       title={Scaling Instruction-Finetuned Language Models}, 
       author={Hyung Won Chung and Le Hou and Shayne Longpre and Barret Zoph and Yi Tay and William Fedus and Yunxuan Li and Xuezhi Wang and Mostafa Dehghani and Siddhartha Brahma and Albert Webson and Shixiang Shane Gu and Zhuyun Dai and Mirac Suzgun and Xinyun Chen and Aakanksha Chowdhery and Alex Castro-Ros and Marie Pellat and Kevin Robinson and Dasha Valter and Sharan Narang and Gaurav Mishra and Adams Yu and Vincent Zhao and Yanping Huang and Andrew Dai and Hongkun Yu and Slav Petrov and Ed H. Chi and Jeff Dean and Jacob Devlin and Adam Roberts and Denny Zhou and Quoc V. Le and Jason Wei},
@@ -204,6 +160,27 @@ note = {accessed: 04.27.2024},
       primaryClass={cs.LG},
       url={https://arxiv.org/abs/2210.11416}, 
 }
+%
+
+@misc{coviddata,
+	title={COVID-19 Fake News Dataset},
+	url={https://www.kaggle.com/datasets/arashnic/covid19-fake-news/data?select=NewsFakeCOVID-19.csv},
+	publisher={Kaggle},
+	author={M\"obius},
+	month={October},
+	year={2023}
+}
+
+@misc{covidunesco,
+	title={Localized Misinformation in a Global Pandemic: Report on COVID-19 Narratives around the World},
+	url={https://esoc.princeton.edu/publications/localized-misinformation-global-pandemic-report-covid-19-narratives-around-world},
+	publisher={Empirical Study of Conflict, Princeton University},
+	author={Samikshya Siwakoti and Kamya Yadav and Isra Thange and Nicola Bariletto and Luca Zanotti and Alaa Ghoneim and Jacob N.},
+	month = {March},
+	year={2021},
+	pages={1-68}
+}
+
 
 @article{DBLP:journals/corr/abs-1810-04805,
   author       = {Jacob Devlin and
@@ -282,7 +259,6 @@ note = {accessed: 04.27.2024},
   biburl       = {https://dblp.org/rec/journals/corr/abs-2105-00813.bib},
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
-
 
 @Article{encyclopedia3040099,
 AUTHOR = {Benaissa Pedriza, Samia},
@@ -399,6 +375,15 @@ pages = {1-2},
 title = {Introduction: Social Media as a News Source},
 isbn = {9781003179580},
 doi = {10.4324/9781003179580-1}
+}
+
+@misc{stephencrone2022,
+	title={Monkeypox misinformation: Twitter dataset},
+	url={https://www.kaggle.com/ds/2352848},
+	DOI={10.34740/KAGGLE/DS/2352848},
+	publisher={Kaggle},
+	author={Stephen Crone},
+	year={2022}
 }
 
 @misc{touvron2023llamaopenefficientfoundation,
