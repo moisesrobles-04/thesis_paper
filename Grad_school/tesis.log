@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.2)  16 OCT 2024 21:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.2)  16 OCT 2024 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1130,11 +1130,8 @@ LaTeX Info: Redefining \cite on input line 694.
 \cftafterexptitleskip=\skip126
  (tesis.aux (prelim/portada3.aux) (prelim/abstract.aux)
 (prelim/acknowledgment.aux) (prelim/acronyms.aux) (chapters/capitulo1.aux)
-(chapters/capitulo2.aux) (chapters/capitulo3.aux
-
-LaTeX Warning: Label `table:misinformationweights' multiply defined.
-
-) (chapters/capitulo4.aux) (chapters/capitulo5.aux) (chapters/conclusion.aux))
+(chapters/capitulo2.aux) (chapters/capitulo3.aux) (chapters/capitulo4.aux)
+(chapters/capitulo5.aux) (chapters/conclusion.aux))
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -1481,10 +1478,6 @@ Chapter 6.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
  34367 strings out of 474485
@@ -1501,7 +1494,7 @@ ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Moises_Robles0
 4/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/U
 sers/Moises_Robles04/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb>
-Output written on tesis.pdf (57 pages, 1006018 bytes).
+Output written on tesis.pdf (57 pages, 1006039 bytes).
 PDF statistics:
  234 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
