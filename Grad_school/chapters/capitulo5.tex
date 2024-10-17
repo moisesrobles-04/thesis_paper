@@ -3,24 +3,164 @@
 
 \chapter{Performance Evaluation}  
 
-\section{Hardware}
-\list{-}
-    \item V100 machines: 32Gb VRAM, and 80-ish RAM
-    \item Cuda 11.7
-    \item Python 3.9.19
-    \item Pytorch 2.0.1
-    \item Transformers 4.34.0
+\section{Health-Related Classification}
+Our model shows...
+
+\subsection{Precision}
+\begin{table}[ht!]
+	\centering
+	\caption{Health Related Precision Result}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
+		\hline
+		BERT & 0.85  \\
+		\hline
+		LLaMa-2 & 0.94 \\ 
+		\hline
+		LSTM GRU NO ATTENTION & 0.83  \\
+		\hline
+		T5 (Causal) & 0.85 \\
+		\hline
+		T5 (Sequence) & 0.48 \\
+		\hline
+	\end{tabular}
+	\label{table:HealthPrecision}
+\end{table}
+
+The precision...
 
 
-\section{Software}
-Various softwares were used for this research, these are:
+\subsection{Recall}
+\begin{table}[ht!]
+	\centering
+	\caption{Health Related Recall Result}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
+		\hline
+		BERT & 0.91  \\
+		\hline
+		LLaMa-2 & 0.84 \\ 
+		\hline
+		LSTM GRU NO ATTENTION & 0.89  \\
+		\hline
+		T5 (Causal) & 0.95 \\
+		\hline
+		T5 (Sequence) & 0.44 \\
+		\hline
+	\end{tabular}
+	\label{table:HealthRecall}
+\end{table}
 
-\begin{itemize}
-	\item{Python}
-	\item{Hugging Face}
-	\item{BioC}
-	\item{Torch}
-	\item{CUDA}
-	\item{Transformers}
+The recall...
 
-\end{itemize}
+
+\subsection{F1}
+\begin{table}[ht!]
+	\centering
+	\caption{Health Related F1 Result}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
+		\hline
+		BERT & 0.88  \\
+		\hline
+		LLaMa-2 & 0.89 \\ 
+		\hline
+		LSTM GRU NO ATTENTION & 0.86  \\
+		\hline
+		T5 (Causal) & 0.90 \\
+		\hline
+		T5 (Sequence) & 0.46 \\
+		\hline
+	\end{tabular}
+	\label{table:HealthF1}
+\end{table}
+
+The F1...
+
+\subsection{Training Time}
+
+The training time for each model was...
+
+
+\section{Misinformation Classification}
+Our model shows...
+
+\subsection{Precision}
+\begin{table}[ht!]
+	\centering
+	\caption{Misinformation Precision Result}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
+		\hline
+		BERT & 0.90  \\
+		\hline
+		LLaMa-2 & 0.98 \\ 
+		\hline
+		T5 (Causal) & MUST ADD \\
+		\hline
+		T5 (Sequence) & MUST ADD \\
+		\hline
+	\end{tabular}
+	\label{table:MisinformationPrecision}
+\end{table}
+
+The precision...
+
+
+\subsection{Recall}
+\begin{table}[ht!]
+	\centering
+	\caption{Misinformation Recall Result}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
+		\hline
+		BERT & 0.94  \\
+		\hline
+		LLaMa-2 & 0.95 \\ 
+		\hline
+		T5 (Causal) & MUST ADD \\
+		\hline
+		T5 (Sequence) & MUST ADD \\
+		\hline
+	\end{tabular}
+	\label{table:MisinformationRecall}
+\end{table}
+
+The recall...
+
+
+\subsection{F1}
+\begin{table}[ht!]
+	\centering
+	\caption{Misinformation F1 Result}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
+		\hline
+		BERT & 0.92  \\
+		\hline
+		LLaMa-2 & 0.97 \\ 
+		\hline
+		T5 (Causal) & MUST ADD \\
+		\hline
+		T5 (Sequence) & MUST ADD \\
+		\hline
+	\end{tabular}
+	\label{table:MisinformationF1}
+\end{table}
+
+The F1...
+
+
+\subsection{Training Time}
+
+The training time for each model was...
+
+
+
+

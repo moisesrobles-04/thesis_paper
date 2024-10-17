@@ -67,46 +67,129 @@ Finally, for the RAG process, we installed Ollama tu run LlaMa3.1 8B parameter m
 
 \section{Datasets}
 
-This sections explains the two datasets used for the training process.
+This section describes the health-related and misinformation datasets used for training, their structure, and the preprocessing techniques applied.
+
+\begin{table}[H]
+	\centering
+	\caption{Training Datasets}
+	\begin{tabular}{||c | c | c| c||} 
+		\hline
+		\textbf{Dataset} &
+		\textbf{Category} & \textbf{Label}& \textbf{\# of records} \\ [1.5ex] 
+		\hline
+		\multirow{3}{6.75em}{Health Related Dataset} & Unrelated & 0 & 3828  \\[1ex]
+		& Related & 1 & 7848  \\ [1ex]
+		& Ambiguous & 2 & 765 \\[1ex]
+		\hline
+		\multirow{2}{6.75em}{Misinformation Dataset} & Misinformation & 0 & 3638\\ [1ex]
+		& Not Misinformation & 1 & 5111  \\[1ex]
+		\hline
+	\end{tabular}
+	\label{table:dataset}
+\end{table}
+
 
 \subsection{Health-related Dataset}
-The health-related dataset comprises over 12,441 tweets extracted from the previous THS project. Health professionals labeled the dataset into three categories: related (7848),
-unrelated (3828), and ambiguous (765) tweets. However, this dataset is imbalanced; thus, we applied class weights to the loss function. These weights give a higher penalty for
-classes that appear frequently. The weights prevent the models from overfitting, mitigating the effects of class imbalance during training.
+The health-related dataset comprises over 12,441 tweets extracted from the previous THS project.  Health professionals labeled the tweets in this dataset as related, unrelated, or ambiguous. As shown in Table \ref{table:dataset} this dataset is imbalanced; thus, we applied class weights to the loss function. The imbalance can cause the model to predict the most frequent class disproportionately, reducing its ability to generalize.These weights assign higher penalties to errors in underrepresented classes. The weights prevent the models from overfitting, mitigating the effects of class imbalance during training.
 
-Before we start finetuning the models, we preprocessed the data. As initially mentioned, we want as much context as possible for our model to train. That meant the classification
-process would include links, mentions, and hashtags. However, these elements contain various characters, and the embedding might struggle with out-of-vocabulary or irregular
-patterns. Thus, we opted to use special tokens to replace them. We use special tokens to replace elements with patterns that do not contribute to semantic meaning, such as random
-strings in URLs. For example, some URLs are strings with random values, which can result in the embedding assigning the wrong values. Because of this, we replace these items with
-their respective tokens. Any URL was replaced by \textit{[LINK]}, mentions by \textit{[MENTION]}, and hashtags by \textit{[HASHTAG]}. That allows us to keep the elements and give
-them some importance in the text.
+%\begin{table}[H]
+%	\centering
+%	\caption{Health-Related Dataset}
+%	\begin{tabular}{||c | c||} 
+%		\hline
+%		\textbf{Category} & \textbf{\# of records} \\ [1.5ex] 
+%		\hline
+%		Related & 7848  \\ [1ex]
+%		\hline
+%		Unrelated & 3828  \\[1ex]
+%		\hline
+%		Ambiguous & 765 \\[1ex]
+%		\hline
+%	\end{tabular}
+%	\label{table:health}
+%\end{table}
+
 
 \subsection{Misinformation Dataset}
-The misinformation dataset, with 8,749 texts, combines data from different sources such as news, social media, and blogs. These records were labeled as misinformation (3638) and
-non-misinformation (5111) \textbf{\textit{[REFERENCE]}}. We also applied class weights for the data imbalance. The dataset in \cite{stephencrone2022} consists of social media texts
-that mentions the monkeypox. We only used the "text" and "binary\_class" columns from their dataset. Another source was \cite{coviddata}, they classified Covid-19 texts. That dataset contains
-articles and post from different online sources. They labeled the data based on official sources that validated the text claims. In this dataset we only used the 'title' column and the label assign to the file.
-The reason for this is that, occasionally, online users share news reports or articles based on the headline alone. Next, the last dataset \cite{covidunesco}
+The misinformation dataset, with 8,749 texts, combines data from different sources such as news, social media, and blogs. These records have two labels: misinformation and non-misinformation. As in the health-related dataset, we also applied class weights because of the imbalance, as Table \ref{table:dataset} shows. The dataset in \cite{stephencrone2022} consists of social media texts that mention the monkeypox. We only used "text" and "binary\_class" columns from that dataset. Another source was \cite{coviddata}, which classified Covid-19 texts. That dataset contains articles and posts from different online sources. They labeled the data based on official sources that validated the text claims. In this dataset, we only used the "title" column and the label assigned to the file. We used that dataset because, occasionally, online users share news reports or articles based on the headline alone. Next, the last dataset \cite{covidunesco} data, comes from a variety of sources. The dataset only contains misinformation records such as posts, news, videos, emails, messages, and others. We selected English-only records from that dataset because BERT is limited to this language. Now, we used only the "Title", "Narrative\_Description" columns. These two columns were appended as one string for the model to train. 
 
+
+\subsection{Data Preprocessing}
+Before we start fine-tuning the models, we preprocessed both datasets. As initially mentioned, we want as much context as possible for our model to train. That meant the classification
+process would include links, mentions, and hashtags. These elements are important for context because users can convey sentiments that could be relevant to text. However, these elements contain various characters, and the embedding might struggle with out-of-vocabulary or irregular
+patterns. Thus, we opted to use special tokens to replace them. We use special tokens to replace elements with patterns that do not contribute to semantic meaning, such as random
+strings in URLs. For example, some URLs are strings with random values, which can result in the embedding assigning the wrong values. Because of this, we replace these items with
+their respective tokens. Any URL was replaced by \textit{[LINK]}, mentions by \textit{[MENTION]}, and hashtags by \textit{[HASHTAG]}. That allows us to keep the elements and give them some importance in the text.
+
+%\begin{table}[H]
+%	\centering
+%	\caption{Misinformation Dataset}
+%	\begin{tabular}{||c | c||} 
+%		\hline
+%		\textbf{Category} & \textbf{\# of records} \\ [1.5ex] 
+%		\hline
+%		Misinformation & 3638  \\ [1ex]
+%		\hline
+%		Not Misinfomation & 5111  \\[1ex]
+%		\hline
+%	\end{tabular}
+%	\label{table:misinformation}
+%\end{table}
 
 \section{Fine-tuning}
 
-The Large Language Models (LLM) used for this paper are pre-trained, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language.
-This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification,
-translation, generation, or other. This process is called fine-tuning, we modify an existing model to accomplish a task. In this case, we taught the models to classify two types of texts: health-related and
+The LLMs used for this paper are pre-trained, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language.
+This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. This process is called fine-tuning. Fine-tuning is when an existing model is trained to accomplish a task. In this case, we taught the models to classify two types of texts: health-related and
 misinformation-related texts. 
-\newline
 
-Three models were identified to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2. Each one has a different architecture. 
+
+We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2. Each one has a different architecture, as shown in Table \ref{table:LLM}. 
 
 
 \subsection{Health-Related Classification}
+A learning rate of 5E-6
 
+A batch size of 16
+
+20 epochs per model
+
+The class weights values for this dataset is shown in Table \ref{table:healthweight}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Health-Related Dataset Weight Penalty}
+	\begin{tabular}{||c | c||} 
+			\hline
+			\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
+			\hline
+			Unrelated & 3.25 \\ [1ex]
+			\hline
+			Related & 1.58 \\[1ex]
+			\hline
+			Ambiguous & 16.26 \\[1ex]
+			\hline
+		\end{tabular}
+	\label{table:healthweight}
+\end{table}
 
 
 \subsection{Misinformation Classification}
 
-
+\begin{table}[H]
+	\centering
+	\caption{Misinformation Dataset Weight Penalty}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
+		\hline
+		Misinformation & 2.41  \\ [1ex]
+		\hline
+		Not Misinfomation & 1.71  \\[1ex]
+		\hline
+	\end{tabular}
+	\label{table:misinformationweights}
+\end{table}
 
 2. Misinformation classification
 
