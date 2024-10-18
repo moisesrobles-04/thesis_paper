@@ -41,15 +41,16 @@
 \contentsline {chapter}{\numberline {5}Performance Evaluation}{35}{}%
 \contentsline {section}{\numberline {5.1}Health-Related Classification}{35}{}%
 \contentsline {subsection}{\numberline {5.1.1}Precision}{35}{}%
-\contentsline {subsection}{\numberline {5.1.2}Recall}{35}{}%
-\contentsline {subsection}{\numberline {5.1.3}F1}{36}{}%
-\contentsline {subsection}{\numberline {5.1.4}Training Time}{36}{}%
-\contentsline {section}{\numberline {5.2}Misinformation Classification}{36}{}%
-\contentsline {subsection}{\numberline {5.2.1}Precision}{36}{}%
-\contentsline {subsection}{\numberline {5.2.2}Recall}{37}{}%
-\contentsline {subsection}{\numberline {5.2.3}F1}{37}{}%
-\contentsline {subsection}{\numberline {5.2.4}Training Time}{37}{}%
-\contentsline {chapter}{\numberline {6}Conclusions \& Future Work}{38}{}%
-\contentsline {section}{\numberline {6.1}Conclusions}{38}{}%
-\contentsline {section}{\numberline {6.2}Future Work}{38}{}%
-\contentsline {chapter}{References}{43}{}%
+\contentsline {subsection}{\numberline {5.1.2}Recall}{36}{}%
+\contentsline {subsection}{\numberline {5.1.3}F1}{37}{}%
+\contentsline {subsection}{\numberline {5.1.4}Training Time}{37}{}%
+\contentsline {section}{\numberline {5.2}Misinformation Classification}{38}{}%
+\contentsline {subsection}{\numberline {5.2.1}Precision}{39}{}%
+\contentsline {subsection}{\numberline {5.2.2}Recall}{39}{}%
+\contentsline {subsection}{\numberline {5.2.3}F1}{40}{}%
+\contentsline {subsection}{\numberline {5.2.4}Training Time}{40}{}%
+\contentsline {section}{\numberline {5.3}Discussion}{41}{}%
+\contentsline {chapter}{\numberline {6}Conclusions \& Future Work}{43}{}%
+\contentsline {section}{\numberline {6.1}Conclusions}{43}{}%
+\contentsline {section}{\numberline {6.2}Future Work}{43}{}%
+\contentsline {chapter}{References}{48}{}%
