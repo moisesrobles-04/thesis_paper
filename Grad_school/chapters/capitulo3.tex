@@ -188,7 +188,7 @@ The final attribute that we need to consider is the activation and batch size. T
 \end{table}
 
 
-With all these values calculated we can estimate the memory usage per model using the Equation \ref{eq:total}. The results for each model is presented on Table \ref{table:MemoryUsage}
+With all these values calculated we can estimate the memory usage per model using the Equation \ref{eq:total}. The results for each model is presented on Table \ref{table:MemoryUsage}. These estimates shows what is the minimum memory require for each model. For BERT we need 5.85GB, T5 is 7.89GB, and LLaMa-2 is 174.39GB. Knowing that our cluster only has a GPU with 32GB, it would not be possible to fine-tune LLaMa-2. However, there is an alternative that reduces the model size. 
 	
 \[ Total Memory = Model + Optimizer + Gradients + Activation \label{eq:total} \tag{5} \] 
 
@@ -209,7 +209,11 @@ With all these values calculated we can estimate the memory usage per model usin
 	\label{table:MemoryUsage}
 \end{table}
 
+\subsection{Parameter-Efficient Fine-Tuning (PEFT)}
+
+
 \subsection{Training Parameters}
+The parameters used to train the models are shown in Table \textbf{[REFERENCE]}
 
 
 \subsection{Health-Related Classification}
@@ -271,3 +275,4 @@ LR, Batch size, seed, and epochs are static.
 
 - Weighted average added for the sequence classification.
 
+\section{User Interface (UI)}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.2)  18 OCT 2024 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.10.2)  18 OCT 2024 23:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1424,17 +1424,17 @@ Overfull \hbox (37.8622pt too wide) in paragraph at lines 198--210
  [][] 
  []
 
-[26]) [27]
+[26] [27]) [28]
 \openout2 = `chapters/capitulo4.aux'.
 
  (chapters/capitulo4.tex
 Chapter 4.
-<images/ETL_Pipeline.png, id=155, 247.97644pt x 292.6935pt>
+<images/ETL_Pipeline.png, id=158, 247.97644pt x 292.6935pt>
 File: images/ETL_Pipeline.png Graphic file (type png)
 <use images/ETL_Pipeline.png>
 Package pdftex.def Info: images/ETL_Pipeline.png  used on input line 32.
 (pdftex.def)             Requested size: 332.68385pt x 392.68512pt.
-[28
+[29
 
 
 
@@ -1443,59 +1443,59 @@ Package pdftex.def Info: images/ETL_Pipeline.png  used on input line 32.
 Overfull \vbox (5.91653pt too high) has occurred while \output is active []
 
 
-[29 <./images/ETL_Pipeline.png>] [30]
-<images/Table_diagram.png, id=167, 410.7345pt x 359.6637pt>
+[30 <./images/ETL_Pipeline.png>] [31]
+<images/Table_diagram.png, id=170, 410.7345pt x 359.6637pt>
 File: images/Table_diagram.png Graphic file (type png)
 <use images/Table_diagram.png>
 Package pdftex.def Info: images/Table_diagram.png  used on input line 89.
 (pdftex.def)             Requested size: 399.21791pt x 349.5868pt.
- [31]
-<images/LLM_Pipeline.png, id=171, 291.489pt x 397.0032pt>
+ [32]
+<images/LLM_Pipeline.png, id=174, 291.489pt x 397.0032pt>
 File: images/LLM_Pipeline.png Graphic file (type png)
 <use images/LLM_Pipeline.png>
 Package pdftex.def Info: images/LLM_Pipeline.png  used on input line 105.
 (pdftex.def)             Requested size: 332.68385pt x 453.1396pt.
- [32 <./images/Table_diagram.png>]
-[33 <./images/LLM_Pipeline.png>] [34] [35]) [36]
+ [33 <./images/Table_diagram.png>]
+[34 <./images/LLM_Pipeline.png>] [35] [36]) [37]
 \openout2 = `chapters/capitulo5.aux'.
 
  (chapters/capitulo5.tex
 Chapter 5.
-[37
+[38
 
 
 
 
-] [38]
-<images/Health_related_training_time.png, id=196, 361.35pt x 252.945pt>
+] [39]
+<images/Health_related_training_time.png, id=199, 361.35pt x 252.945pt>
 File: images/Health_related_training_time.png Graphic file (type png)
 <use images/Health_related_training_time.png>
 Package pdftex.def Info: images/Health_related_training_time.png  used on input
  line 101.
 (pdftex.def)             Requested size: 443.57848pt x 310.50682pt.
- [39] [40 <./images/Health_related_training_time.png>] [41]
-<images/Misinformation_training_time.png, id=208, 439.533pt x 321.054pt>
+ [40] [41 <./images/Health_related_training_time.png>] [42]
+<images/Misinformation_training_time.png, id=211, 439.533pt x 321.054pt>
 File: images/Misinformation_training_time.png Graphic file (type png)
 <use images/Misinformation_training_time.png>
 Package pdftex.def Info: images/Misinformation_training_time.png  used on input
  line 196.
 (pdftex.def)             Requested size: 443.57848pt x 324.00723pt.
- [42]
-[43 <./images/Misinformation_training_time.png>]) [44]
+ [43]
+[44 <./images/Misinformation_training_time.png>]) [45]
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex
 Chapter 6.
-) [45
+) [46
 
 
 
 
-] (tesis.bbl [46
+] (tesis.bbl [47
 
 
 
-] [47] [48] [49]) [50] (tesis.aux (prelim/portada3.aux)
+] [48] [49] [50]) [51] (tesis.aux (prelim/portada3.aux)
 (prelim/abstract.aux) (prelim/acknowledgment.aux) (prelim/acronyms.aux)
 (chapters/capitulo1.aux) (chapters/capitulo2.aux) (chapters/capitulo3.aux)
 (chapters/capitulo4.aux) (chapters/capitulo5.aux) (chapters/conclusion.aux))
@@ -1522,9 +1522,9 @@ cm/cmr12.pfb><C:/Users/Moises_Robles04/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Moises_Robles04/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Moises_Robles04/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesis.pdf (64 pages, 1179197 bytes).
+Output written on tesis.pdf (65 pages, 1180605 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
+ 278 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
