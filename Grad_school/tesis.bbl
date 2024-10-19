@@ -65,6 +65,10 @@ C.~Raffel, N.~Shazeer, A.~Roberts, K.~Lee, S.~Narang, M.~Matena, Y.~Zhou,
   unified text-to-text transformer,'' {\em Journal of Machine Learning
   Research}, vol.~21, no.~140, pp.~1--67, 2020.
 
+\bibitem{hu2021loralowrankadaptationlarge}
+E.~J. Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, and
+  W.~Chen, ``Lora: Low-rank adaptation of large language models,'' 2021.
+
 \bibitem{koh2023groundinglanguagemodelsimages}
 J.~Y. Koh, R.~Salakhutdinov, and D.~Fried, ``Grounding language models to
   images for multimodal inputs and outputs,'' 2023.
@@ -142,6 +146,15 @@ D.~Villanueva-Vega and M.~Rodriguez-Martinez, ``Finding similar tweets in
   health related topics,'' in {\em 2021 IEEE International Conference on
   Digital Health (ICDH)}, pp.~184--190, 2021.
 
+\bibitem{bioinformatics}
+D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
+  subset in BioC: about three million full-text articles and growing},'' {\em
+  Bioinformatics}, vol.~35, pp.~3533--3535, 01 2019.
+
+\bibitem{bge_embedding}
+S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
+  advance general chinese embedding,'' 2023.
+
 \bibitem{stephencrone2022}
 S.~Crone, ``Monkeypox misinformation: Twitter dataset,'' 2022.
 
@@ -155,14 +168,5 @@ S.~Siwakoti, K.~Yadav, I.~Thange, N.~Bariletto, L.~Zanotti, A.~Ghoneim, and
 
 \bibitem{transformer-math-eleutherai}
 Q.~Anthony, S.~Biderman, and H.~Schoelkopf, ``Transformer math 101.''
-
-\bibitem{bioinformatics}
-D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
-  subset in BioC: about three million full-text articles and growing},'' {\em
-  Bioinformatics}, vol.~35, pp.~3533--3535, 01 2019.
-
-\bibitem{bge_embedding}
-S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
-  advance general chinese embedding,'' 2023.
 
 \end{thebibliography}

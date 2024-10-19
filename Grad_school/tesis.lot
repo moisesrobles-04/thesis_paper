@@ -1,19 +1,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Cluster's Node Specifications}}{21}{}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces LLM Specifications}}{21}{}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Training Datasets}}{22}{}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Models Activation Parameters}}{26}{}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Models Memory Usage Estimate (MB)}}{26}{}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Health-Related Dataset Weight Penalty}}{27}{}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Misinformation Dataset Weight Penalty}}{27}{}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Cluster's Node Specifications}}{31}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces LLM Specifications}}{31}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Training Datasets}}{32}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Models Activation Parameters}}{36}{}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Models Memory Usage Estimate (MB)}}{36}{}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Health-Related Dataset Weight Penalty}}{37}{}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Misinformation Dataset Weight Penalty}}{37}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Health Related Precision Result}}{38}{}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Health Related Recall Result}}{39}{}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Health Related F1 Result}}{40}{}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Misinformation Precision Result}}{42}{}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Misinformation Recall Result}}{42}{}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Misinformation F1 Result}}{43}{}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Health Related Precision Result}}{39}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Health Related Recall Result}}{40}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Health Related F1 Result}}{41}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Misinformation Precision Result}}{43}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Misinformation Recall Result}}{43}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Misinformation F1 Result}}{44}{}%
 \addvspace {10\p@ }

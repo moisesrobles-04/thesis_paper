@@ -1,46 +1,29 @@
 \relax 
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Methodology}{20}{}\protected@file@percent }
+\citation{bioinformatics}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}System Architecture}{21}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Performance Metrics}{20}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Hardware}{20}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Cluster's Node Specifications}}{21}{}\protected@file@percent }
-\newlabel{table:hardware}{{3.1}{21}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Software}{21}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces LLM Specifications}}{21}{}\protected@file@percent }
-\newlabel{table:LLM}{{3.2}{21}{}{}{}}
-\citation{stephencrone2022}
-\citation{coviddata}
-\citation{covidunesco}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Datasets}{22}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Training Datasets}}{22}{}\protected@file@percent }
-\newlabel{table:dataset}{{3.3}{22}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Health-related Dataset}{22}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Misinformation Dataset}{22}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Data Preprocessing}{23}{}\protected@file@percent }
-\citation{transformer-math-eleutherai}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Fine-tuning}{24}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Memory Usage Estimation}{25}{}\protected@file@percent }
-\newlabel{eq:model}{{{1}}{25}{}{}{}}
-\newlabel{eq:optimizer}{{{2}}{25}{}{}{}}
-\newlabel{eq:gradients}{{{3}}{25}{}{}{}}
-\newlabel{eq:activation}{{{4}}{25}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Models Activation Parameters}}{26}{}\protected@file@percent }
-\newlabel{table:ModelActivation}{{3.4}{26}{}{}{}}
-\newlabel{eq:total}{{{5}}{26}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Models Memory Usage Estimate (MB)}}{26}{}\protected@file@percent }
-\newlabel{table:MemoryUsage}{{3.5}{26}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Parameter-Efficient Fine-Tuning (PEFT)}{27}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Training Parameters}{27}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Health-Related Classification}{27}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Health-Related Dataset Weight Penalty}}{27}{}\protected@file@percent }
-\newlabel{table:healthweight}{{3.6}{27}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}Misinformation Classification}{27}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.7}{\ignorespaces Misinformation Dataset Weight Penalty}}{27}{}\protected@file@percent }
-\newlabel{table:misinformationweights}{{3.7}{27}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}User Interface (UI)}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Paper ETL Pipeline}{21}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Scraper}{21}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Medical Data Extraction Pipeline}}{22}{}\protected@file@percent }
+\newlabel{fig:etl}{{3.1}{22}{}{}{}}
+\citation{bge_embedding}
+\citation{chroma}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}BioC API}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Vectorizing data}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Store metadata}{24}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Research Papers Schema Diagram}}{25}{}\protected@file@percent }
+\newlabel{fig:table}{{3.2}{25}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Misinformation Rebuttal Pipeline}{25}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Misinformation Rebuttal LLM System Architecture}}{26}{}\protected@file@percent }
+\newlabel{fig:llm}{{3.3}{26}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Health-related Classification}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Misinformation Classification}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Context Finder}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Organize and Rebut}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}User Interface (UI)}{29}{}\protected@file@percent }
 \@setckpt{chapters/capitulo3}{
-\setcounter{page}{29}
+\setcounter{page}{30}
 \setcounter{equation}{0}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -50,13 +33,13 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{3}
-\setcounter{section}{6}
+\setcounter{section}{3}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{0}
-\setcounter{table}{7}
+\setcounter{figure}{3}
+\setcounter{table}{0}
 \setcounter{@pps}{0}
 \setcounter{@ppsavesec}{0}
 \setcounter{@ppsaveapp}{0}
