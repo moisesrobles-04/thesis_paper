@@ -188,8 +188,7 @@ with the best F1 was LLaMa-2 with a 97\%. Next is T5 (Causal) with a 96\% F1, an
 
 In Figure \ref{fig:MisinformationTime}, we present the training time for the misinformation models. We trained the models using the same parameters as in the Health-Related classification.
 When we compare these results with the Health-Related (Figure \ref{fig:HealthTime}), the average training time was less. A possible reason is that we used less data for the training. The
-only exception was BERT, which took 351 minutes to train. Next is T5 (Causal) with 371 minutes and T5 (Sequence) with 1274 minutes. Finally, LLaMa-2 took 2840 minutes to train. The
-drastic change was T5 (Causal), which trained 4.23x faster for this dataset compared to the health-related dataset. Nonetheless, BERT finished the fastest, being 8.10x faster than LLaMa-2.
+only exception was BERT, which took 351 minutes to train. Next is T5 (Causal) with 371 minutes and T5 (Sequence) with 1274 minutes. Finally, LLaMa-2 took 2840 minutes to train. A noticeable difference was T5 (Causal), which trained 4.23x faster for this dataset compared to the health-related dataset. Nonetheless, BERT finished the fastest, being 8.10x faster than LLaMa-2.
 
 
 \begin{figure}[H]
@@ -204,7 +203,7 @@ drastic change was T5 (Causal), which trained 4.23x faster for this dataset comp
 
 \section{Discussion}
 
-The results present that most LLMs outperformed the THS model. Now, we preprocessed the data in both datasets to change links, mentions, and hashtags into special tokens. The training
+The results present that most LLMs outperformed the THS model. We applied preprocessing techniques such as replacing links, mentions, and hashtags with special tokens. The training
 parameters for all models were 20 epochs, batch size of 16, 8bit initialization, and adamw\_8bit optimizer. Additionally, the LoRA hyperparameters were 16 for the rank, an alpha of 32, a dropout
 of 0.05, and a bias for all parameters. The score metrics we used for the model evaluation were precision, recall, and F1. In our case, we want to focus on F1. That metric helps us reduce false
 negative results but not overclassify false positives.

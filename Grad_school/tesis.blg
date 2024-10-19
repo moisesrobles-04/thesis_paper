@@ -25,39 +25,43 @@ Reallocating 'name_of_file' (item size: 1) to 24 items.
 A level-1 auxiliary file: chapters/conclusion.aux
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: referencias.bib
+"{" immediately follows a field part---line 803 of file referencias.bib
+ :  howpublished = \url
+ :                     {blog.eleuther.ai/},
+I'm skipping whatever remains of this entry
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
-You've used 32 entries,
+You've used 33 entries,
             1876 wiz_defined-function locations,
-            640 strings with 10755 characters,
-and the built_in function-call counts, 8477 in all, are:
-= -- 647
-> -- 613
+            643 strings with 10862 characters,
+and the built_in function-call counts, 8622 in all, are:
+= -- 656
+> -- 624
 < -- 0
-+ -- 217
-- -- 185
-* -- 666
-:= -- 1304
++ -- 221
+- -- 188
+* -- 674
+:= -- 1325
 add.period$ -- 35
-call.type$ -- 32
-change.case$ -- 31
+call.type$ -- 33
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 347
-empty$ -- 760
-format.name$ -- 185
-if$ -- 1988
+cite$ -- 36
+duplicate$ -- 351
+empty$ -- 778
+format.name$ -- 188
+if$ -- 2023
 int.to.chr$ -- 0
-int.to.str$ -- 32
+int.to.str$ -- 33
 missing$ -- 19
-newline$ -- 102
-num.names$ -- 32
-pop$ -- 174
+newline$ -- 105
+num.names$ -- 33
+pop$ -- 179
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 253
+skip$ -- 261
 stack$ -- 0
 substring$ -- 330
 swap$ -- 120
@@ -66,7 +70,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 58
-width$ -- 34
-write$ -- 274
-(There were 3 warnings)
+while$ -- 59
+width$ -- 35
+write$ -- 280
+(There was 1 error message)
