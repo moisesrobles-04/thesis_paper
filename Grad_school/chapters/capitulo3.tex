@@ -24,10 +24,7 @@
 
 Our model must use credible sources of information to rebut misinformation. We identified PubMed \textbf{[REFERENCES]}, an online library that contains peer-reviewed medical literature. We want to extract the papers and store them in a vector database. To extract these papers, we used the BioC API \cite{bioinformatics}, which has access to the PubMed library. However, the API needs the research paper's identifier, known as PubMed Central (PMC) ID. We design a scraper to extract these identifiers from the official PubMed site. The pipeline in Figure \ref{fig:etl} shows the processes of data extraction. 
 
-\subsection{Scraper}
-The first step of the pipeline was identifying what papers we needed to extract. We selected 17 topics for the data extraction process. These topics are:
-
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{images/ETL_Pipeline.png} %specify width
 	\end{center}
@@ -35,31 +32,37 @@ The first step of the pipeline was identifying what papers we needed to extract.
 	\label{fig:etl}
 \end{figure}
 
-\begin{multicols}{2}
-	\begin{itemize}[topsep=0pt, partopsep=0pt, parsep=0pt]
-	
-	\item{allergy}
-	\item{bird flu}
-	\item{cancer}
-	\item{chickenpox}
-	\item{common cold}
-	\item{conjunctivitis}
-	\item{covid sickness}
-	\item{covid symptoms}
-	\item{covid treatment}
-	\item{covid vaccine}
-	\item{flu vaccine}
-	\item{headache}
-	\item{influenza}
-	\item{monkeypox}
-	\item{stomach aches}
-	\item{swine flu}
-	\item{zika}
+\subsection{Scraper}
+The first step of the pipeline was identifying what papers we needed to extract. We selected 17 topics for the data extraction process, that can be seen in Table \ref{}.
 
-	\end{itemize}
-
-\end{multicols}
-
+\begin{table}[!ht]
+	\centering
+	\caption{Topics for Research Paper Extraction}
+	\begin{tabular}{||c | c||} 
+			\hline
+			 \multicolumn{2}{||c||}{\textbf{Topics}} \\ [1.5ex] 
+			\hline
+			allergy  & covid vaccine \\ [1ex]
+			\hline
+			bird flu & flu vaccine \\ [1ex]
+			\hline
+			cancer & headache \\ [1ex]
+			\hline
+			chickenpox & influenza\\ [1ex]
+			\hline
+			common cold & monkeypox \\ [1ex]
+			\hline
+			conjunctivitis & stomach aches \\ [1ex]
+			\hline
+			covid sickness & swine flu \\ [1ex]
+			\hline
+			covid symptoms & zika\\ [1ex]
+			\hline
+			covid treatment &  \\ [1ex]
+			\hline
+			\end{tabular}
+	\label{table:healthweight}
+\end{table}
 
 
 To extract them, we built a scraper in Python using Selenium and BeautifulSoup libraries. We used Selenium to retrieve the web source from PubMed's website, and BeautifulSoup was used to get the links to each paper. These links contained the PMC identifier. For each topic, we selected 5,000 PMC identifiers. These identifiers were grouped by topic and stored locally in Comma Separated Value (CSV) files.

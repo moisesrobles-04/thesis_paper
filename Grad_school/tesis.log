@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  19 OCT 2024 13:50
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  19 OCT 2024 14:26
  restricted system commands enabled.
  file:line:error style messages enabled.
 **tesis.tex
@@ -1073,8 +1073,11 @@ LaTeX Info: Redefining \cite on input line 694.
  (./tesis.aux
 (./prelim/portada3.aux) (./prelim/abstract.aux) (./prelim/acknowledgment.aux)
 (./prelim/acronyms.aux) (./chapters/capitulo1.aux) (./chapters/capitulo2.aux)
-(./chapters/capitulo3.aux) (./chapters/capitulo4.aux) (./chapters/capitulo5.aux
-) (./chapters/conclusion.aux))
+(./chapters/capitulo3.aux) (./chapters/capitulo4.aux
+
+LaTeX Warning: Label `table:healthweight' multiply defined.
+
+) (./chapters/capitulo5.aux) (./chapters/conclusion.aux))
 \openout1 = tesis.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -1355,7 +1358,7 @@ Chapter 3.
 <images/ETL_Pipeline.png, id=126, 247.97644pt x 292.6935pt>
 File: images/ETL_Pipeline.png Graphic file (type png)
 <use images/ETL_Pipeline.png>
-Package luatex.def Info: images/ETL_Pipeline.png  used on input line 32.
+Package luatex.def Info: images/ETL_Pipeline.png  used on input line 29.
 (luatex.def)             Requested size: 332.68385pt x 392.68512pt.
 [21
 
@@ -1363,20 +1366,19 @@ Package luatex.def Info: images/ETL_Pipeline.png  used on input line 32.
 
 
 ]
-Overfull \vbox (5.91653pt too high) has occurred while \output is active []
 
+LaTeX Warning: Reference `' on page 22 undefined on input line 36.
 
-[22<./images/ETL_Pipeline.png>] [23]
-<images/Table_diagram.png, id=137, 410.7345pt x 359.6637pt>
+[22<./images/ETL_Pipeline.png>] [23] [24]
+<images/Table_diagram.png, id=140, 410.7345pt x 359.6637pt>
 File: images/Table_diagram.png Graphic file (type png)
 <use images/Table_diagram.png>
-Package luatex.def Info: images/Table_diagram.png  used on input line 89.
+Package luatex.def Info: images/Table_diagram.png  used on input line 92.
 (luatex.def)             Requested size: 399.21791pt x 349.5868pt.
- [24]
 <images/LLM_Pipeline.png, id=141, 291.489pt x 397.0032pt>
 File: images/LLM_Pipeline.png Graphic file (type png)
 <use images/LLM_Pipeline.png>
-Package luatex.def Info: images/LLM_Pipeline.png  used on input line 105.
+Package luatex.def Info: images/LLM_Pipeline.png  used on input line 108.
 (luatex.def)             Requested size: 332.68385pt x 453.1396pt.
  [25<./images/Table_diagram.png>]
 [26<./images/LLM_Pipeline.png>] [27] [28]) [29]
@@ -1445,18 +1447,25 @@ Chapter 6.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 )
 
 Here is how much of LuaTeX's memory you used:
- 35195 strings out of 476447
+ 35191 strings out of 476447
  100000,1977958 words of node,token memory allocated
- 869 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 18 attribute, 117 glue_spe
-c, 18 attribute_list, 2 write nodes
-   avail lists: 2:826,3:271,4:98,5:345,6:55,7:5799,8:49,9:770,10:16,11:450
- 56117 multiletter control sequences out of 65536+600000
+ 856 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 17 attribute, 117 glue_spe
+c, 17 attribute_list, 2 write nodes
+   avail lists: 2:826,3:271,4:48,5:345,6:55,7:5799,8:49,9:770,10:16,11:450
+ 56113 multiletter control sequences out of 65536+600000
  42 fonts using 3019575 bytes
- 99i,12n,102p,1384b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,102p,1384b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
 f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.
 otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regul
@@ -1465,7 +1474,7 @@ ld.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
 .pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesis.pdf (66 pages, 1135625 bytes).
+Output written on tesis.pdf (66 pages, 1136466 bytes).
 
 PDF statistics: 280 PDF objects out of 1000 (max. 8388607)
  172 compressed objects within 2 object streams
