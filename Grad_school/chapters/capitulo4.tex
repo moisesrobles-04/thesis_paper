@@ -42,10 +42,11 @@ for the node is found on Table \ref{table:hardware}.
 \section{Software}
 There were various software tools used for the project. The training, ETL pipeline,
 and REST API were implemented with Python 3.9.19. To finetune the models we used PyTorch 2.0.1 with GPU support enabled for
-NVIDIA CUDA 11.7. To initialize and use the models we implemented the Transformers  4.34.0 library. The models were imported from
-Hugging Face (HF) \textbf{[REFERENCE]}. We used BERT, T5, and LLaMa-2 for our research. In Table \ref{table:LLM} we see the specifications
-for each model. All these models are base model, which means they are not train to accomplish a specific task. Also, we use Postgres 14 to store our extracted research papers. In addition, we implemented Chroma 0.4.24 as our vector database.
-Finally, for the RAG process, we installed Ollama tu run LlaMa3.1 8B parameter model. 
+NVIDIA CUDA 11.7. To initialize and use the models we implemented the Transformers 4.34.0 library. The models were imported from
+Hugging Face (HF) \textbf{[REFERENCE]}. We used BERT, T5, and LLaMa-2 for our research. To reduce the model memory usage, we use
+the PEFT 0.12.0 and bitsandbytes library for LoRA. In Table \ref{table:LLM} we see the specifications for each model. All these models are base
+model, which means they are not train to accomplish a specific task. Also, we use Postgres 14 to store our extracted research papers. In addition, we
+implemented Chroma 0.4.24 as our vector database. Finally, for the RAG process, we installed Ollama tu run LlaMa3.1 8B parameter model. 
 
 
   \begin{table}[ht!]
@@ -94,22 +95,6 @@ This section describes the health-related and misinformation datasets used for t
 \subsection{Health-related Dataset}
 The health-related dataset comprises over 12,441 tweets extracted from the previous THS project.  Health professionals labeled the tweets in this dataset as related, unrelated, or ambiguous. As shown in Table \ref{table:dataset} this dataset is imbalanced; thus, we applied class weights to the loss function. The imbalance can cause the model to predict the most frequent class disproportionately, reducing its ability to generalize.These weights assign higher penalties to errors in underrepresented classes. The weights prevent the models from overfitting, mitigating the effects of class imbalance during training.
 
-%\begin{table}[H]
-%	\centering
-%	\caption{Health-Related Dataset}
-%	\begin{tabular}{||c | c||} 
-%		\hline
-%		\textbf{Category} & \textbf{\# of records} \\ [1.5ex] 
-%		\hline
-%		Related & 7848  \\ [1ex]
-%		\hline
-%		Unrelated & 3828  \\[1ex]
-%		\hline
-%		Ambiguous & 765 \\[1ex]
-%		\hline
-%	\end{tabular}
-%	\label{table:health}
-%\end{table}
 
 
 \subsection{Misinformation Dataset}
@@ -156,12 +141,12 @@ Our initial approach for the experiment was to use the model with default parame
 For the example we use T5, this model has 220M parameters. If we use Equation \ref{eq:model}, T5 requires 839MB to initialize. 
 
 
-\[ Memory_{optimizer}, fp32 = (12 bytes/param) (No. param) \label{eq:optimizer} \tag{2} \] 
+\[ Memory_{optimizer} = (12 bytes/param) (No. param) \label{eq:optimizer} \tag{2} \] 
 
 Then we calculate the optimizer state. We consider AdamW, because it is the most common optimizer. When we use the Equation \ref{eq:optimizer} we get that the optimizer for T5 requires 2.46GB. 
 
 
-\[ Memory_{gradients}, fp32 = (4 bytes/param) (No. param) \label{eq:gradients} \tag{3} \] 
+\[ Memory_{gradients} = (4 bytes/param) (No. param) \label{eq:gradients} \tag{3} \] 
 
 Next we have the gradient. Gradients have a similar memory usage as the models memory. The Equation \ref{eq:gradients} shows that we it requires 839MB for T5.
 
@@ -173,22 +158,22 @@ The final attribute that we need to consider is the activation and batch size. T
 \begin{table}[H]
 	\centering
 	\caption{Models Activation Parameters}
-	\begin{tabular}{||c | c | p{1.5cm} | p{1.5cm} | c | p{2cm} | c||} 
+	\begin{tabular}{||p{1.75cm} | p{2cm} | p{1.75cm} | p{1.75cm} | p{1.5cm} | p{2cm} | p{2.75cm}||} 
 		\hline
-		\textbf{Model} & \textbf{Sequence} & \textbf{Batch Size} & \textbf{Hidden Size} & \textbf{Layers} & \textbf{Attention Head} & \textbf{Parallelism} \\ [1ex] 
+		\textbf{Model} & \textbf{Sequence (s)} & \textbf{Batch Size (b)} & \textbf{Hidden Size (h)} & \textbf{Layers (L)} & \textbf{Attention Head (a)} & \textbf{Parallelism (t)} \\ [1ex] 
 		\hline
-		BERT & 256 & 32 & 768 & 12 & 12 & 1 \\ [1ex]
+		BERT & 256 & 16 & 768 & 12 & 12 & 1 \\ [1ex]
 		\hline
-		T5 & 256 & 32 & 768 & 12 & 12 & 1  \\[1ex]
+		T5 & 256 & 16 & 768 & 12 & 12 & 1  \\[1ex]
 		\hline
-		LLaMa-2 (7B) & 256 & 32 & 4096 & 2 & 32 & 1  \\[1ex]
+		LLaMa-2 & 256 & 16 & 4096 & 2 & 32 & 1  \\[1ex]
 		\hline
 	\end{tabular}
 	\label{table:ModelActivation}
 \end{table}
 
 
-With all these values calculated we can estimate the memory usage per model using the Equation \ref{eq:total}. The results for each model is presented on Table \ref{table:MemoryUsage}. These estimates shows what is the minimum memory require for each model. For BERT we need 5.85GB, T5 is 7.89GB, and LLaMa-2 is 174.39GB. Knowing that our cluster only has a GPU with 32GB, it would not be possible to fine-tune LLaMa-2. However, there is an alternative that reduces the model size. 
+With all these values calculated we can estimate the memory usage per model using the Equation \ref{eq:total}. The results for each model is presented on Table \ref{table:MemoryUsage}. These estimates shows what is the minimum memory require for each model. For BERT we need 3.95GB, T5 is 6.00GB, and LLaMa-2 is 152.39GB. Knowing that our cluster only has a GPU with 32GB, it would not be possible to fine-tune LLaMa-2. However, there is an alternative that reduces the model size. 
 	
 \[ Total Memory = Model + Optimizer + Gradients + Activation \label{eq:total} \tag{5} \] 
 
@@ -199,31 +184,153 @@ With all these values calculated we can estimate the memory usage per model usin
 		\hline
 		\textbf{Name} & \textbf{Parameters} & \textbf{Model} & \textbf{Optimizer} & \textbf{Gradient} & \textbf{Activation} & \textbf{Total} \\ [1ex] 
 		\hline
-		BERT & 110M & 419.62 & 1258.85 & 419.62 & 3888.00 & \textbf{5986.09} \\ [1ex]
+		BERT & 110M & 419.62 & 1258.85 & 419.62 & 1944.00 & \textbf{4042.09} \\ [1ex]
 		\hline
-		T5 & 220M & 839.23 & 2517.70 & 839.23 & 3888.00 & \textbf{8084.16}  \\[1ex]
+		T5 & 220M & 839.23 & 2517.70 & 839.23 & 1944.00 & \textbf{6140.16}  \\[1ex]
 		\hline
-		LLaMa-2 & 7B & 26702.88 & 80108.64 & 26702.88 & 45056.00 & \textbf{178570.40}  \\[1ex]
+		LLaMa-2 & 7B & 26702.88 & 80108.64 & 26702.88 & 11264.00 & \textbf{156042.40}  \\[1ex]
 		\hline
 	\end{tabular}
 	\label{table:MemoryUsage}
 \end{table}
 
 \subsection{Parameter-Efficient Fine-Tuning (PEFT)}
+PEFT is a library used to reduce the parameters of a model that will be fine-tuned. The library allows us to use the Low-Rank Adapter (LoRA). That adapter
+help us reduce the memory usage of the model. The main reason is that we can initialize the model in 8bits instead of 32bits. Also, because we have less precision
+we can change the optimizer to adamw\_8bits. Additionally, we do not fine-tune the entire model, we only modify a small percent. 
+
+To determine how many parameters will be modified, we need to understand the hyperparameters of the LoRA configurations. Based on the research \cite{hu2021loralowrankadaptationlarge},
+we can estimate the number of trainable parameters. The Equation \ref{eq:TrainParam} can give the approximate trainable parameters. The variable \textbf{d\textsubscript{model}}
+is the hidden layer of the model. Then \textbf{r} is the low-rank factor, is how many parameters we train. The last attribute is the \textbf{L\textsubscript{weight}}, which is the number of weight
+matrices. That value is the multiplication of the number of layer by the projection matrices. In our experiment we use two of the models matrices, the query matrix (Q) and the value matrix (V).
+The first represents what the query token is looking for in other tokens. The value matrix, contains the information associated to each token. For more details about these matrixes refer to \cite{vaswani2023attentionneed}.
+
+\[ Trainable \ Parameter = 2 \cdot d_{model} \cdot r \cdot L_{weight} \label{eq:TrainParam} \tag{6} \] 
+
+Now we can estimate the LoRA layer for each model. The hyperparameters and total trainable parameters of our experiment can be found on Table \ref{table:LoRA}.
+
+\begin{table}[H]
+	\centering
+	\caption{LoRA Hyperparameters \& Total Trainable Parameters}
+	\begin{tabular}{||c | c | c | c | c||} 
+		\hline
+		\textbf{Name} & \textbf{d\textsubscript{model}} & \textbf{r} & \textbf{L\textsubscript{weight}} & \textbf{Total Parameters} \\ [1ex] 
+		\hline
+		BERT & 768 & 16 & 24 & \textbf{589,824} \\ [1ex]
+		\hline
+		T5 & 768 & 16 & 24 & \textbf{589,824}  \\ [1ex]
+		\hline
+		LLaMa-2 & 4096 & 16 & 64 & \textbf{8,388,608}  \\ [1ex]
+		\hline
+	\end{tabular}
+	\label{table:LoRA}
+\end{table}
+
+Now, we can make a new estimate for the new memory usage that each model will require. To ensure that all models can be used we made some changes for the parameters.
+First, we reuse the batch size and token sequence from \ref{table:ModelActivation}. Second, for the optimizer we have adamw\_8bits. Now, we can use the alternative equations
+from \cite{transformer-math-eleutherai} to make the estimate. This time we will use LLaMa-2 for our calculation.
+
+\[ Memory_{model}, int8 = (1 bytes/param) (No. param) \label{eq:peftmodel} \tag{7} \] 
+
+For Equation \ref{eq:peftmodel} we use the total number of parameters. We do this, because we need to initialize the entire model even if we train just a few parameters.
+
+\[ Memory_{optimizer} = (6 bytes/param) (No. param) \label{eq:peftoptimizer} \tag{8} \] 
+
+For the optimizer, we have used 8bit\_AdamW, because it retains the advantages of AdamW and leaves a small memory footprint. In this case, the number of parameters are the ones that
+will be trained. When we use the Equation \ref{eq:peftoptimizer} and Table \ref{table:LoRA} we get that the optimizer for LLaMa-2 requires 48MB. 
+
+\[ Memory_{gradients} = (1 bytes/param) (No. param) \label{eq:peftgradients} \tag{9} \] 
+
+Next we have the gradient. Gradients have a similar memory usage as the models memory. The Equation \ref{eq:peftgradients} shows that LlaMa-2 requires 6675MB.
+
+The last element is the activation and we reuse the Equation \ref{eq:activation}. The variables for each model can be found on Table \ref{table:ModelActivation}. Now,
+if we calculate LLaMa-2 activation memory usage, it results in 11GB. The new memory usage total is shown on Table \ref{table:PeftMemoryUsage}. The new memory estimate
+for BERT is 1.06GB, T5 is 1.16GB, and LLaMa-2 is 17.58GB. Those results clearly show that now all models can possible be trained on our hardware with no limitation. 
+However, these estimates can vary depending on the task or initialization method for each model. Causal Language Modeling can require more resources than the estimate, because 
+the model the labeled data is turned into a token sequence. Other factors such as dropout, the weight we give to each LoRA parameter, and the weight decay also affect this result.
+Nonetheless, this approximate shows that it is possible to fine-tune the models.
+
+\begin{table}[H]
+	\centering
+	\caption{PEFT Model Memory Usage Estimate (MB)}
+	\begin{tabular}{||c | c | c | c | c | c | c||} 
+		\hline
+		\textbf{Name} & \textbf{PEFT Param.} & \textbf{Model} & \textbf{Optimizer} & \textbf{Gradient} & \textbf{Activation} & \textbf{Total} \\ [1ex] 
+		\hline
+		BERT & 589,824 & 104.90 & 3.38 & 1.13 & 972.00 & \textbf{1081.40} \\ [1ex]
+		\hline
+		T5 & 589,824 & 209.81 & 3.38 & 1.13 & 972.00 & \textbf{1186.31}  \\[1ex]
+		\hline
+		LLaMa-2 & 8,388,608 & 6675.72 & 48.00 & 16.00 & 11264.00 & \textbf{18003.72}  \\[1ex]
+		\hline
+	\end{tabular}
+	\label{table:PeftMemoryUsage}
+\end{table}
 
 
 \subsection{Training Parameters}
-The parameters used to train the models are shown in Table \textbf{[REFERENCE]}
+After validating that we can fine-tune the models with our hardware, we must select the hyperparameters for our training. The selected parameters are shown in Table \ref{table:hyperparameters}.
+The parameters in that table are used as follow:
+
+\begin{table}[!ht]
+	\centering
+	\caption{Fine-tuning Hyperparameters}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Parameter} & \textbf{value} \\ [1.5ex] 
+		\hline
+		Learning Rate & 5E-6  \\ [1ex]
+		\hline
+		Batch size & 16  \\[1ex]
+		\hline
+		Epochs & 20 \\[1ex]
+		\hline
+		Gradient Accumulation & 8 \\[1ex]
+		\hline
+		Weight\_decay & 0.1 \\[1ex]
+		\hline
+		Evaluation Step & 50 \\[1ex]
+		\hline
+		Evaluation Batch & 2 \\[1ex]
+		\hline
+		Evaluation Accumulation & 16 \\[1ex]
+		\hline
+		Warm-Up & 450 \\[1ex]
+		\hline
+		Metric & f1 \\[1ex]
+		\hline
+	\end{tabular}
+	\label{table:hyperparameters}
+\end{table}
+
+
+\begin{itemize}
+\item{\textbf{Learning Rate}}: Step size that the model takes for to adjust its parameters.
+\item{\textbf{Batch size}}: Number of training samples used in one iteration or step.
+\item{\textbf{Epochs}}: Number of times the entire training data is iterated.
+\item{\textbf{Gradient Accumulation}}: Accumulation of multiple batches results during training to perform a weight update. This reduces the memory usage. 
+\item{\textbf{Weight\_decay}}: Regularization method used to help the model generalize.
+\item{\textbf{Evaluation Step}}: Number of updates steps between 2 evaluations.
+\item{\textbf{Evaluation Batch}}: Batch size for the evaluation.
+\item{\textbf{Evaluation Accumulation}}: Accumulation of multiple batches results during evaluation to perform a weight update. This reduces the memory usage. 
+\item{\textbf{Warm-Up}}: Number of warmup steps for the learning rate.
+\item{\textbf{Metric}}: Metric to use to select best model during the evaluation process.
+
+\end{itemize}
+
+Apart from these parameters, we split the data for each classification process as follow:
+
+\begin{description}
+\item{\textbf{Training dataset}}: this data is used to adjust the parameters of the model during the fine-tuning training process. This contains 70\% of the data in the dataset. 
+\item{\textbf{Evaluation dataset}}: this data is used to validate the performance during the fine-tuning evaluation process. When each evaluation step finishes it saves the configuration
+for the model with the highest metric result. This consists of 15\% of the data in the dataset.
+\item{\textbf{Test dataset (15\%)}}: this data is select the best model between a collection of trained and validated models. This consists of 15\% of the data in the dataset.
+
+\end{description}
 
 
 \subsection{Health-Related Classification}
-A learning rate of 5E-6
 
-A batch size of 16
-
-20 epochs per model
-
-Training-test-validation: 70-15-15
 
 The class weights values for this dataset is shown in Table \ref{table:healthweight}
 

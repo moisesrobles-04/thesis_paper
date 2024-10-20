@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  19 OCT 2024 14:26
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  19 OCT 2024 20:07
  restricted system commands enabled.
  file:line:error style messages enabled.
 **tesis.tex
@@ -1391,54 +1391,65 @@ Chapter 4.
 
 
 ] [31] [32] [33] [34] [35]
-Overfull \hbox (22.36928pt too wide) in paragraph at lines 176--188
+Overfull \hbox (32.5336pt too wide) in paragraph at lines 161--173
  [][] 
  []
 
 
-Overfull \hbox (37.70149pt too wide) in paragraph at lines 198--210
+Overfull \hbox (37.70149pt too wide) in paragraph at lines 183--195
  [][] 
  []
 
-[36] [37]) [38]
+[36] [37] [38]
+Overfull \hbox (40.85747pt too wide) in paragraph at lines 256--268
+ [][] 
+ []
+
+
+Overfull \hbox (0.8496pt too wide) in paragraph at lines 311--312
+[]\TU/lmr/bx/n/12 Gra-di-ent Ac-cu-mu-la-tion\TU/lmr/m/n/12 : Ac-cu-mu-la-tion 
+of mul-ti-ple batches re-sults dur-ing train-
+ []
+
+[39] [40] [41]) [42]
 \openout2 = chapters/capitulo5.aux
  (./chapters/capitulo5.tex
 Chapter 5.
-[39
+[43
 
 
 
 
-] [40]
-<images/Health_related_training_time.png, id=200, 361.35pt x 252.945pt>
+] [44]
+<images/Health_related_training_time.png, id=213, 361.35pt x 252.945pt>
 File: images/Health_related_training_time.png Graphic file (type png)
 <use images/Health_related_training_time.png>
 Package luatex.def Info: images/Health_related_training_time.png  used on input
  line 101.
 (luatex.def)             Requested size: 443.57848pt x 310.50682pt.
- [41] [42<./images/Health_related_training_time.png>] [43]
-<images/Misinformation_training_time.png, id=211, 439.533pt x 321.054pt>
+ [45] [46<./images/Health_related_training_time.png>] [47]
+<images/Misinformation_training_time.png, id=225, 439.533pt x 321.054pt>
 File: images/Misinformation_training_time.png Graphic file (type png)
 <use images/Misinformation_training_time.png>
 Package luatex.def Info: images/Misinformation_training_time.png  used on input
  line 196.
 (luatex.def)             Requested size: 443.57848pt x 324.00723pt.
- [44]
-[45<./images/Misinformation_training_time.png>]) [46]
+ [48]
+[49<./images/Misinformation_training_time.png>]) [50]
 \openout2 = chapters/conclusion.aux
 
 (./chapters/conclusion.tex
 Chapter 6.
-) [47
+) [51
 
 
 
 
-] (./tesis.bbl [48
+] (./tesis.bbl [52
 
 
 
-] [49] [50] [51]) [52] (./tesis.aux
+] [53] [54] [55]) [56] (./tesis.aux
 (./prelim/portada3.aux) (./prelim/abstract.aux) (./prelim/acknowledgment.aux)
 (./prelim/acronyms.aux) (./chapters/capitulo1.aux) (./chapters/capitulo2.aux)
 (./chapters/capitulo3.aux) (./chapters/capitulo4.aux) (./chapters/capitulo5.aux
@@ -1457,27 +1468,28 @@ LaTeX Warning: There were multiply-defined labels.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35191 strings out of 476447
+ 35199 strings out of 476447
  100000,1977958 words of node,token memory allocated
- 856 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 17 attribute, 117 glue_spe
-c, 17 attribute_list, 2 write nodes
-   avail lists: 2:826,3:271,4:48,5:345,6:55,7:5799,8:49,9:770,10:16,11:450
- 56113 multiletter control sequences out of 65536+600000
- 42 fonts using 3019575 bytes
- 99i,12n,102p,1384b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.ot
-f></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.
-otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regul
-ar.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-bo
-ld.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
-.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesis.pdf (66 pages, 1136466 bytes).
+ 888 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 25 attribute, 117 glue_spe
+c, 25 attribute_list, 2 write nodes
+   avail lists: 2:885,3:271,4:48,5:339,6:86,7:5799,8:49,9:937,10:18,11:450
+ 56121 multiletter control sequences out of 65536+600000
+ 43 fonts using 3151263 bytes
+ 99i,13n,102p,1384b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><
+/usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf
+></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.o
+tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regula
+r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-bol
+d.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on tesis.pdf (70 pages, 1149810 bytes).
 
-PDF statistics: 280 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
+PDF statistics: 299 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
