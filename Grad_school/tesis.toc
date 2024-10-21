@@ -29,33 +29,31 @@
 \contentsline {subsection}{\numberline {3.2.3}Context Finder}{27}{}%
 \contentsline {subsection}{\numberline {3.2.4}Organize and Rebut}{28}{}%
 \contentsline {section}{\numberline {3.3}User Interface (UI)}{29}{}%
-\contentsline {chapter}{\numberline {4}Methodology}{30}{}%
-\contentsline {section}{\numberline {4.1}Performance Metrics}{30}{}%
-\contentsline {section}{\numberline {4.2}Hardware}{30}{}%
-\contentsline {section}{\numberline {4.3}Software}{31}{}%
-\contentsline {section}{\numberline {4.4}Datasets}{32}{}%
-\contentsline {subsection}{\numberline {4.4.1}Health-related Dataset}{32}{}%
-\contentsline {subsection}{\numberline {4.4.2}Misinformation Dataset}{32}{}%
-\contentsline {subsection}{\numberline {4.4.3}Data Preprocessing}{33}{}%
-\contentsline {section}{\numberline {4.5}Fine-tuning}{34}{}%
-\contentsline {subsection}{\numberline {4.5.1}Memory Usage Estimation}{35}{}%
-\contentsline {subsection}{\numberline {4.5.2}Parameter-Efficient Fine-Tuning (PEFT)}{37}{}%
-\contentsline {subsection}{\numberline {4.5.3}Training Parameters}{39}{}%
-\contentsline {subsection}{\numberline {4.5.4}Health-Related Classification}{41}{}%
-\contentsline {subsection}{\numberline {4.5.5}Misinformation Classification}{41}{}%
-\contentsline {chapter}{\numberline {5}Performance Evaluation}{43}{}%
-\contentsline {section}{\numberline {5.1}Health-Related Classification}{43}{}%
-\contentsline {subsection}{\numberline {5.1.1}Precision}{43}{}%
-\contentsline {subsection}{\numberline {5.1.2}Recall}{44}{}%
-\contentsline {subsection}{\numberline {5.1.3}F1}{45}{}%
-\contentsline {subsection}{\numberline {5.1.4}Training Time}{45}{}%
-\contentsline {section}{\numberline {5.2}Misinformation Classification}{46}{}%
-\contentsline {subsection}{\numberline {5.2.1}Precision}{47}{}%
-\contentsline {subsection}{\numberline {5.2.2}Recall}{47}{}%
-\contentsline {subsection}{\numberline {5.2.3}F1}{48}{}%
-\contentsline {subsection}{\numberline {5.2.4}Training Time}{48}{}%
-\contentsline {section}{\numberline {5.3}Discussion}{49}{}%
-\contentsline {chapter}{\numberline {6}Conclusions \& Future Work}{51}{}%
-\contentsline {section}{\numberline {6.1}Conclusions}{51}{}%
-\contentsline {section}{\numberline {6.2}Future Work}{51}{}%
-\contentsline {chapter}{References}{56}{}%
+\contentsline {chapter}{\numberline {4}Methodology}{32}{}%
+\contentsline {section}{\numberline {4.1}Performance Metrics}{32}{}%
+\contentsline {section}{\numberline {4.2}Hardware}{32}{}%
+\contentsline {section}{\numberline {4.3}Software}{33}{}%
+\contentsline {section}{\numberline {4.4}Datasets}{34}{}%
+\contentsline {subsection}{\numberline {4.4.1}Health-related Dataset}{34}{}%
+\contentsline {subsection}{\numberline {4.4.2}Misinformation Dataset}{35}{}%
+\contentsline {subsection}{\numberline {4.4.3}Data Preprocessing}{36}{}%
+\contentsline {section}{\numberline {4.5}Fine-tuning}{37}{}%
+\contentsline {subsection}{\numberline {4.5.1}Memory Usage Estimation}{37}{}%
+\contentsline {subsection}{\numberline {4.5.2}Parameter-Efficient Fine-Tuning (PEFT)}{39}{}%
+\contentsline {subsection}{\numberline {4.5.3}Training Parameters}{42}{}%
+\contentsline {chapter}{\numberline {5}Performance Evaluation}{44}{}%
+\contentsline {section}{\numberline {5.1}Health-Related Classification}{44}{}%
+\contentsline {subsection}{\numberline {5.1.1}Precision}{44}{}%
+\contentsline {subsection}{\numberline {5.1.2}Recall}{45}{}%
+\contentsline {subsection}{\numberline {5.1.3}F1}{46}{}%
+\contentsline {subsection}{\numberline {5.1.4}Training Time}{46}{}%
+\contentsline {section}{\numberline {5.2}Misinformation Classification}{47}{}%
+\contentsline {subsection}{\numberline {5.2.1}Precision}{48}{}%
+\contentsline {subsection}{\numberline {5.2.2}Recall}{48}{}%
+\contentsline {subsection}{\numberline {5.2.3}F1}{49}{}%
+\contentsline {subsection}{\numberline {5.2.4}Training Time}{49}{}%
+\contentsline {section}{\numberline {5.3}Discussion}{50}{}%
+\contentsline {chapter}{\numberline {6}Conclusions \& Future Work}{52}{}%
+\contentsline {section}{\numberline {6.1}Conclusions}{52}{}%
+\contentsline {section}{\numberline {6.2}Future Work}{52}{}%
+\contentsline {chapter}{References}{57}{}%

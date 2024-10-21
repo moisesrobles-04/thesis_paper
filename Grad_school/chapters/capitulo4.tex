@@ -93,12 +93,44 @@ This section describes the health-related and misinformation datasets used for t
 
 
 \subsection{Health-related Dataset}
-The health-related dataset comprises over 12,441 tweets extracted from the previous THS project.  Health professionals labeled the tweets in this dataset as related, unrelated, or ambiguous. As shown in Table \ref{table:dataset} this dataset is imbalanced; thus, we applied class weights to the loss function. The imbalance can cause the model to predict the most frequent class disproportionately, reducing its ability to generalize.These weights assign higher penalties to errors in underrepresented classes. The weights prevent the models from overfitting, mitigating the effects of class imbalance during training.
+The health-related dataset comprises over 12,441 tweets extracted from the previous THS project.  Health professionals labeled the tweets in this dataset as related, unrelated, or ambiguous. As shown in Table \ref{table:dataset} this dataset is imbalanced; thus, we applied class weights to the loss function. The imbalance can cause the model to predict the most frequent class disproportionately, reducing its ability to generalize.These weights assign higher penalties to errors in underrepresented classes. The weights prevent the models from overfitting, mitigating the effects of class imbalance during training. The weight penalty for each class is shown in Table \ref{table:healthweight}.
 
+\begin{table}[H]
+	\centering
+	\caption{Health-Related Dataset Weight Penalty}
+	\begin{tabular}{||c | c||} 
+			\hline
+			\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
+			\hline
+			Unrelated & 3.25 \\ [1ex]
+			\hline
+			Related & 1.58 \\[1ex]
+			\hline
+			Ambiguous & 16.26 \\[1ex]
+			\hline
+		\end{tabular}
+	\label{table:healthweight}
+\end{table}
 
 
 \subsection{Misinformation Dataset}
-The misinformation dataset, with 8,749 texts, combines data from different sources such as news, social media, and blogs. These records have two labels: misinformation and non-misinformation. As in the health-related dataset, we also applied class weights because of the imbalance, as Table \ref{table:dataset} shows. The dataset in \cite{stephencrone2022} consists of social media texts that mention the monkeypox. We only used "text" and "binary\_class" columns from that dataset. Another source was \cite{coviddata}, which classified Covid-19 texts. That dataset contains articles and posts from different online sources. They labeled the data based on official sources that validated the text claims. In this dataset, we only used the "title" column and the label assigned to the file. We used that dataset because, occasionally, online users share news reports or articles based on the headline alone. Next, the last dataset \cite{covidunesco} data, comes from a variety of sources. The dataset only contains misinformation records such as posts, news, videos, emails, messages, and others. We selected English-only records from that dataset because BERT is limited to this language. Now, we used only the "Title", "Narrative\_Description" columns. These two columns were appended as one string for the model to train. 
+The misinformation dataset, with 8,749 texts, combines data from different sources such as news, social media, and blogs. These records have two labels: misinformation and non-misinformation. As in the health-related dataset, we also applied class weights because of the imbalance, as Table \ref{table:dataset} shows. The weight penalties used for the imbalance is shown in Table \ref{table:misinformationweight}. Multiple datasets from different sources were combined for this experiment. The dataset in \cite{stephencrone2022} consists of social media texts that mention the monkeypox. We only used "text" and "binary\_class" columns from that dataset. Another source was \cite{coviddata}, which classified Covid-19 texts. That dataset contains articles and posts from different online sources. They labeled the data based on official sources that validated the text claims. In this dataset, we only used the "title" column and the label assigned to the file. We used that dataset because, occasionally, online users share news reports or articles based on the headline alone. Next, the last dataset \cite{covidunesco} data, comes from a variety of sources. The dataset only contains misinformation records such as posts, news, videos, emails, messages, and others. We selected English-only records from that dataset because BERT is limited to this language. Now, we used only the "Title", "Narrative\_Description" columns. These two columns were appended as one string for the model to train.
+
+
+\begin{table}[H]
+	\centering
+	\caption{Misinformation Dataset Weight Penalty}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
+		\hline
+		Misinformation & 2.41  \\ [1ex]
+		\hline
+		Not Misinfomation & 1.71  \\[1ex]
+		\hline
+	\end{tabular}
+	\label{table:misinformationweight}
+\end{table}
 
 
 \subsection{Data Preprocessing}
@@ -125,35 +157,34 @@ listening to these amazing infectious disease experts talk about [HASHTAG] at th
 \section{Fine-tuning}
 
 The LLMs used for this paper are pre-trained, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language.
-This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. This process is called fine-tuning. Fine-tuning is when an existing model is trained to accomplish a task. In this case, we taught the models to classify two types of texts: health-related and
-misinformation-related texts. 
+This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. That process is called fine-tuning. Fine-tuning is when an existing model is trained to accomplish a task. In this case, we taught the models to classify two types of texts: health-related and misinformation-related texts. 
 
 
-We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2. Each one has a different architecture, as shown in Table \ref{table:LLM}. As mentioned, these models are their base form. Additionally, these models have large numbers of parameters. That can be a drawback when fine-tuning, because it requires an excessive amount of resources. 
+We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2. Each one has a different architecture, as shown in Table \ref{table:LLM}. As mentioned, these models are their base form. Additionally, these models have large numbers of parameters. That can be a drawback when fine-tuning because it requires excessive resources. 
 
 
 \subsection{Memory Usage Estimation}
-Our initial approach for the experiment was to use the model with default parameters. That meant that using the base model with Adam optimizer and with a floating point of 32 (fp32). However, that was not possible because the model require a lot of memory. To estimate the resources that each model requires, we use the formula in \cite{transformer-math-eleutherai}. Their formula provides a result with an overhead of around 20\%.
+Our initial approach for the experiment was to use the model with default parameters. That meant using the base model with Adam optimizer and with a floating point of 32 (fp32). However, that was not possible because the model requires an excessive amount of memory. To estimate the resources that each model requires, we use the formula in \cite{transformer-math-eleutherai}. Their formula provides a result with an overhead of around 20\%.
 
 
 \[ Memory_{model}, fp32 = (4 bytes/param) (No. param) \label{eq:model} \tag{1} \] 
 
-For the example we use T5, this model has 220M parameters. If we use Equation \ref{eq:model}, T5 requires 839MB to initialize. 
+For the example, we use T5, which has 220M parameters. If we use Equation \ref{eq:model}, T5 requires 839MB to initialize.
 
 
 \[ Memory_{optimizer} = (12 bytes/param) (No. param) \label{eq:optimizer} \tag{2} \] 
 
-Then we calculate the optimizer state. We consider AdamW, because it is the most common optimizer. When we use the Equation \ref{eq:optimizer} we get that the optimizer for T5 requires 2.46GB. 
+Then, we calculate the optimizer state. We consider AdamW because it is the most common optimizer. When using Equation \ref{eq:optimizer} we get that the optimizer for T5 requires 2.46GB.
 
 
 \[ Memory_{gradients} = (4 bytes/param) (No. param) \label{eq:gradients} \tag{3} \] 
 
-Next we have the gradient. Gradients have a similar memory usage as the models memory. The Equation \ref{eq:gradients} shows that we it requires 839MB for T5.
+Next, we have the gradient. The gradient memory usage is similar to the model. Equation \ref{eq:gradients} shows that it requires 839MB for T5.
 
 
 \[ Memory_{activation} = sbhL(10 + \frac{24}{t} + 5 \frac{a \cdot s}{h \cdot t} ) \label{eq:activation} \tag{4} \] 
 
-The final attribute that we need to consider is the activation and batch size. The variable for the Equation \ref{eq:activation} were estimated based on the conducted experiments. The first element is \textbf{s}, this refers to the tokens length sequence. Then we have \textbf{b} as the batch size. The \textbf{h} stands for the models hidden size, dimensionality. Now, \textbf{L} is the number of layers in the model. Followed by \textbf{a} for the attention head of the model. Lastly, we have \textbf{t} for parallelism. The variables for each model can be found on Table \ref{table:ModelActivation}. Finally, if we calculate T5 activation memory usage, it results in 3.80GB.
+The final attributes that we need to consider are activation and batch size. We estimate the variables for Equation \ref{eq:activation} based on the experiments conducted. The first element is \textbf{s}, which refers to the token length sequence. Then, the \textbf{b} is for the batch size. The \textbf{h} stands for the model's hidden size and dimensionality. Now, \textbf{L} is the number of layers in the model. Next, we have \textbf{a} for the attention head of the model. Lastly, we have \textbf{t} for parallelism. The variables for each model can be found in Table \ref{table:ModelActivation}. Finally, if we calculate T5 activation memory usage, it results in 3.80GB.
 
 \begin{table}[H]
 	\centering
@@ -173,7 +204,7 @@ The final attribute that we need to consider is the activation and batch size. T
 \end{table}
 
 
-With all these values calculated we can estimate the memory usage per model using the Equation \ref{eq:total}. The results for each model is presented on Table \ref{table:MemoryUsage}. These estimates shows what is the minimum memory require for each model. For BERT we need 3.95GB, T5 is 6.00GB, and LLaMa-2 is 152.39GB. Knowing that our cluster only has a GPU with 32GB, it would not be possible to fine-tune LLaMa-2. However, there is an alternative that reduces the model size. 
+With all these values calculated, we can estimate the memory usage per model using Equation \ref{eq:total}. The results for each model are presented in Table \ref{table:MemoryUsage}. These estimates show the minimum memory required for each model. For BERT we need 3.95GB, T5 is 6.00GB, and LLaMa-2 is 152.39GB. Knowing that our cluster only has a GPU with 32GB, it would not be possible to fine-tune LLaMa-2. However, there is an alternative that reduces the model size.
 	
 \[ Total Memory = Model + Optimizer + Gradients + Activation \label{eq:total} \tag{5} \] 
 
@@ -195,19 +226,13 @@ With all these values calculated we can estimate the memory usage per model usin
 \end{table}
 
 \subsection{Parameter-Efficient Fine-Tuning (PEFT)}
-PEFT is a library used to reduce the parameters of a model that will be fine-tuned. The library allows us to use the Low-Rank Adapter (LoRA). That adapter
-help us reduce the memory usage of the model. The main reason is that we can initialize the model in 8bits instead of 32bits. Also, because we have less precision
-we can change the optimizer to adamw\_8bits. Additionally, we do not fine-tune the entire model, we only modify a small percent. 
+PEFT is a library used to reduce the parameters of a model that will be fine-tuned. The library allows us to use the Low-Rank Adapter (LoRA). That adapter helps us reduce the model's memory usage. The main reason is that we can initialize the model in 8 bits instead of 32 bits. Also, because we have less precision, we can change the optimizer to adamw\_8bits. Additionally, we do not fine-tune the entire model, only modify a small percentage.
 
-To determine how many parameters will be modified, we need to understand the hyperparameters of the LoRA configurations. Based on the research \cite{hu2021loralowrankadaptationlarge},
-we can estimate the number of trainable parameters. The Equation \ref{eq:TrainParam} can give the approximate trainable parameters. The variable \textbf{d\textsubscript{model}}
-is the hidden layer of the model. Then \textbf{r} is the low-rank factor, is how many parameters we train. The last attribute is the \textbf{L\textsubscript{weight}}, which is the number of weight
-matrices. That value is the multiplication of the number of layer by the projection matrices. In our experiment we use two of the models matrices, the query matrix (Q) and the value matrix (V).
-The first represents what the query token is looking for in other tokens. The value matrix, contains the information associated to each token. For more details about these matrixes refer to \cite{vaswani2023attentionneed}.
+To determine how many parameters will be modified, we need to understand the hyperparameters of the LoRA configurations. Based on the research \cite{hu2021loralowrankadaptationlarge}, we can estimate the number of trainable parameters. Equation \ref{eq:TrainParam} can give the approximate trainable parameters. The variable \textbf{d\textsubscript{model}} is the hidden layer of the model. Then, \textbf{r} is the low-rank factor, which is how many parameters we train. The last attribute is the \textbf{L\textsubscript{weight}}, the number of weight matrices. That value is the product of the number of layers by the projection matrices. In our experiment, we use two model matrixes, the query matrix (Q) and the value matrix (V). The first represents what the query token is looking for in other tokens. The value matrix contains the information associated with each token; for more details about these matrixes, refer to \cite{vaswani2023attentionneed}.
 
 \[ Trainable \ Parameter = 2 \cdot d_{model} \cdot r \cdot L_{weight} \label{eq:TrainParam} \tag{6} \] 
 
-Now we can estimate the LoRA layer for each model. The hyperparameters and total trainable parameters of our experiment can be found on Table \ref{table:LoRA}.
+Currently, we can estimate the LoRA layer for each model. The hyperparameters and total trainable parameters of our experiment can be found in Table \ref{table:LoRA}.
 
 \begin{table}[H]
 	\centering
@@ -226,29 +251,24 @@ Now we can estimate the LoRA layer for each model. The hyperparameters and total
 	\label{table:LoRA}
 \end{table}
 
-Now, we can make a new estimate for the new memory usage that each model will require. To ensure that all models can be used we made some changes for the parameters.
-First, we reuse the batch size and token sequence from \ref{table:ModelActivation}. Second, for the optimizer we have adamw\_8bits. Now, we can use the alternative equations
-from \cite{transformer-math-eleutherai} to make the estimate. This time we will use LLaMa-2 for our calculation.
+Now, we can estimate the new memory usage that each model will require. To ensure that we can use all models, we made some changes to the parameters. First, we reuse the batch size and token sequence from \ref{table:ModelActivation}. Second, we have adamw\_8bits as our optimizer. Finally, we will use the alternative equations from \cite{transformer-math-eleutherai} for the estimate. This time, LLaMa-2 will be the model for our calculation.
 
 \[ Memory_{model}, int8 = (1 bytes/param) (No. param) \label{eq:peftmodel} \tag{7} \] 
 
-For Equation \ref{eq:peftmodel} we use the total number of parameters. We do this, because we need to initialize the entire model even if we train just a few parameters.
+For Equation \ref{eq:peftmodel}, we use the total number of parameters. We do this because we need to initialize the entire model even if we train just a few parameters.
+
 
 \[ Memory_{optimizer} = (6 bytes/param) (No. param) \label{eq:peftoptimizer} \tag{8} \] 
 
-For the optimizer, we have used 8bit\_AdamW, because it retains the advantages of AdamW and leaves a small memory footprint. In this case, the number of parameters are the ones that
-will be trained. When we use the Equation \ref{eq:peftoptimizer} and Table \ref{table:LoRA} we get that the optimizer for LLaMa-2 requires 48MB. 
+For the optimizer, we use 8bit\_AdamW because it retains the advantages of AdamW but leaves a smaller memory footprint. In this case, we only consider the number of parameters to be trained. With Equation \ref{eq:peftoptimizer} and Table \ref{table:LoRA}, we calculate that the optimizer for LLaMa-2 requires 48MB.
+
 
 \[ Memory_{gradients} = (1 bytes/param) (No. param) \label{eq:peftgradients} \tag{9} \] 
 
-Next we have the gradient. Gradients have a similar memory usage as the models memory. The Equation \ref{eq:peftgradients} shows that LlaMa-2 requires 6675MB.
+Next, we have the gradient. The gradient consumes a similar amount of memory as the model. Equation \ref{eq:peftgradients} shows that LlaMa-2 requires 6675MB.
 
-The last element is the activation and we reuse the Equation \ref{eq:activation}. The variables for each model can be found on Table \ref{table:ModelActivation}. Now,
-if we calculate LLaMa-2 activation memory usage, it results in 11GB. The new memory usage total is shown on Table \ref{table:PeftMemoryUsage}. The new memory estimate
-for BERT is 1.06GB, T5 is 1.16GB, and LLaMa-2 is 17.58GB. Those results clearly show that now all models can possible be trained on our hardware with no limitation. 
-However, these estimates can vary depending on the task or initialization method for each model. Causal Language Modeling can require more resources than the estimate, because 
-the model the labeled data is turned into a token sequence. Other factors such as dropout, the weight we give to each LoRA parameter, and the weight decay also affect this result.
-Nonetheless, this approximate shows that it is possible to fine-tune the models.
+
+The last element is the activation, and we reuse Equation \ref{eq:activation}. The variables that the equation requires are in Table \ref{table:ModelActivation}. Moreover, if we calculate LLaMa-2 activation memory usage, it results in 11GB. The new memory usage for each model is in Table \ref{table:PeftMemoryUsage}. That table shows that BERT requires 1.06GB, T5 is 1.16GB, and LLaMa-2 is 17.58 GB. Those results show that it is possible to train the models on our hardware without limitations. However, these estimates can vary depending on the tasks or the model's initialization method. Causal Language Modeling can require more resources than the estimate because we turn the labels' data into a token sequence. Other factors, such as dropout, the weight we give to each LoRA parameter, and the weight decay, also affect this result. Nonetheless, this approximation shows that it is possible to fine-tune the models.
 
 \begin{table}[H]
 	\centering
@@ -269,8 +289,7 @@ Nonetheless, this approximate shows that it is possible to fine-tune the models.
 
 
 \subsection{Training Parameters}
-After validating that we can fine-tune the models with our hardware, we must select the hyperparameters for our training. The selected parameters are shown in Table \ref{table:hyperparameters}.
-The parameters in that table are used as follow:
+After validating that we can fine-tune the models with our hardware, we must select the hyperparameters for our training. We present the parameters used in Table \ref{table:hyperparameters}, and the description for each are as follows::
 
 \begin{table}[!ht]
 	\centering
@@ -305,80 +324,46 @@ The parameters in that table are used as follow:
 
 
 \begin{itemize}
-\item{\textbf{Learning Rate}}: Step size that the model takes for to adjust its parameters.
+\item{\textbf{Learning Rate}}: Step size that the model takes to adjust its parameters.
 \item{\textbf{Batch size}}: Number of training samples used in one iteration or step.
-\item{\textbf{Epochs}}: Number of times the entire training data is iterated.
-\item{\textbf{Gradient Accumulation}}: Accumulation of multiple batches results during training to perform a weight update. This reduces the memory usage. 
-\item{\textbf{Weight\_decay}}: Regularization method used to help the model generalize.
-\item{\textbf{Evaluation Step}}: Number of updates steps between 2 evaluations.
-\item{\textbf{Evaluation Batch}}: Batch size for the evaluation.
-\item{\textbf{Evaluation Accumulation}}: Accumulation of multiple batches results during evaluation to perform a weight update. This reduces the memory usage. 
-\item{\textbf{Warm-Up}}: Number of warmup steps for the learning rate.
-\item{\textbf{Metric}}: Metric to use to select best model during the evaluation process.
+\item{\textbf{Epochs}}: Number of times the model iterates the entire training data.
+\item{\textbf{Gradient Accumulation}}: Accumulation of multiple batches results during training to perform a weight update; this reduces memory usage.
+\item{\textbf{Weight\_decay}}: A regularization method used to help the model generalize.
+\item{\textbf{Evaluation Step}}: Number of update steps between two evaluations.
+\item{\textbf{Evaluation Batch}}: Number of samples used in one iteration or step during evaluation.
+\item{\textbf{Evaluation Accumulation}}: The accumulation of multiple batches results during evaluation to perform a weight update; this reduces memory usage.
+\item{\textbf{Warm-Up}}: Number of warm-up steps for the learning rate.
+\item{\textbf{Metric}}: The metric used to select the best model during the evaluation process.
 
 \end{itemize}
 
-Apart from these parameters, we split the data for each classification process as follow:
+Apart from these parameters, we split the data for each classification process as follows:
 
 \begin{description}
-\item{\textbf{Training dataset}}: this data is used to adjust the parameters of the model during the fine-tuning training process. This contains 70\% of the data in the dataset. 
-\item{\textbf{Evaluation dataset}}: this data is used to validate the performance during the fine-tuning evaluation process. When each evaluation step finishes it saves the configuration
-for the model with the highest metric result. This consists of 15\% of the data in the dataset.
-\item{\textbf{Test dataset (15\%)}}: this data is select the best model between a collection of trained and validated models. This consists of 15\% of the data in the dataset.
+\item{\textbf{Training dataset (70\%)}}: the data used to adjust the models' parameters during the fine-tuning training process.
+\item{\textbf{Evaluation dataset (15\%)}}: the data used to validate the models' performance during the fine-tuning evaluation process. When each evaluation step finishes, we save the configuration for the model with the highest metric result. 
+\item{\textbf{Test dataset (15\%)}}: we use this data to select the best model between a collection of trained and validated models.
 
 \end{description}
 
-
-\subsection{Health-Related Classification}
-
-
-The class weights values for this dataset is shown in Table \ref{table:healthweight}
+After finishing the data preprocessing and configuring the model we start the training process. 
 
 
-\begin{table}[H]
-	\centering
-	\caption{Health-Related Dataset Weight Penalty}
-	\begin{tabular}{||c | c||} 
-			\hline
-			\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
-			\hline
-			Unrelated & 3.25 \\ [1ex]
-			\hline
-			Related & 1.58 \\[1ex]
-			\hline
-			Ambiguous & 16.26 \\[1ex]
-			\hline
-		\end{tabular}
-	\label{table:healthweight}
-\end{table}
-
-
-\subsection{Misinformation Classification}
-
-\begin{table}[H]
-	\centering
-	\caption{Misinformation Dataset Weight Penalty}
-	\begin{tabular}{||c | c||} 
-		\hline
-		\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
-		\hline
-		Misinformation & 2.41  \\ [1ex]
-		\hline
-		Not Misinfomation & 1.71  \\[1ex]
-		\hline
-	\end{tabular}
-	\label{table:misinformationweights}
-\end{table}
-
-2. Misinformation classification
-
-LR, Batch size, seed, and epochs are static.
-
-- Each model was fine-tune twice.
-
-    1. Sequence classification: 1, 2, or 3; 1 or 2.
-
-    2. Classification with text generation: Related, Unrelated, or Ambiguous; Misinformation or Not Misinformation.
-
-- Weighted average added for the sequence classification.
+%\subsection{Health-Related Classification}
+%
+%We start the classification process with the health-related dataset. As shown in Table \ref{table:dataset} the dataset is imbalanced. That issue can result in the model training incorrectly because the model 
+% The class weights values for this dataset is shown in Table \ref{table:healthweight}
+%
+%
+%
+%\subsection{Misinformation Classification}
+%
+%
+%2. Misinformation classification
+%
+%    1. Sequence classification: 1, 2, or 3; 1 or 2.
+%
+%    2. Classification with text generation: Related, Unrelated, or Ambiguous; Misinformation or Not Misinformation.
+%
+%- Weighted average added for the sequence classification.
 
