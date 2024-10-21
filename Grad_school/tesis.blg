@@ -1,67 +1,70 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: tesis.aux
-Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
-Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: prelim/portada3.aux
-Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: prelim/abstract.aux
-Reallocating 'name_of_file' (item size: 1) to 26 items.
 A level-1 auxiliary file: prelim/acknowledgment.aux
-Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: prelim/acronyms.aux
-Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo1.aux
-Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo2.aux
-Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo3.aux
-Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo4.aux
-Reallocating 'name_of_file' (item size: 1) to 23 items.
 A level-1 auxiliary file: chapters/capitulo5.aux
-Reallocating 'name_of_file' (item size: 1) to 24 items.
 A level-1 auxiliary file: chapters/conclusion.aux
-Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: referencias.bib
-"{" immediately follows a field part---line 803 of file referencias.bib
- :  howpublished = \url
- :                     {blog.eleuther.ai/},
+I was expecting a `,' or a `}'---line 324 of file referencias.bib
+ : 
+ : @misc{koh2023groundinglanguagemodelsimages,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 371 of file referencias.bib
+ : 
+ : @misc{pgvector,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 385 of file referencias.bib
+ : 
+ : @article{social_fact,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+"{" immediately follows a field part---line 431 of file referencias.bib
+ :  url = \url
+ :            {blog.eleuther.ai/transformer-math/},
 I'm skipping whatever remains of this entry
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
-You've used 33 entries,
+You've used 37 entries,
             1876 wiz_defined-function locations,
-            643 strings with 10862 characters,
-and the built_in function-call counts, 8622 in all, are:
-= -- 656
-> -- 624
+            652 strings with 11447 characters,
+and the built_in function-call counts, 9121 in all, are:
+= -- 688
+> -- 653
 < -- 0
-+ -- 221
-- -- 188
-* -- 674
-:= -- 1325
-add.period$ -- 35
-call.type$ -- 33
-change.case$ -- 32
++ -- 233
+- -- 196
+* -- 699
+:= -- 1384
+add.period$ -- 36
+call.type$ -- 37
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 351
-empty$ -- 778
-format.name$ -- 188
-if$ -- 2023
+cite$ -- 40
+duplicate$ -- 367
+empty$ -- 850
+format.name$ -- 196
+if$ -- 2151
 int.to.chr$ -- 0
-int.to.str$ -- 33
+int.to.str$ -- 37
 missing$ -- 19
-newline$ -- 105
-num.names$ -- 33
-pop$ -- 179
+newline$ -- 117
+num.names$ -- 34
+pop$ -- 204
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 261
+skip$ -- 289
 stack$ -- 0
 substring$ -- 330
 swap$ -- 120
@@ -70,7 +73,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 59
-width$ -- 35
-write$ -- 280
-(There was 1 error message)
+while$ -- 60
+width$ -- 39
+write$ -- 302
+(There were 4 error messages)

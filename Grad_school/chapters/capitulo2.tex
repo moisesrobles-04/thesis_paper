@@ -11,7 +11,7 @@ can vary because of homonyms, tone, context, and other factors that affect the m
 to replicate or learn human text communication and expressions.  However, this changed with the introduction of Large Language Models (LLM) \cite{naveed2024comprehensiveoverviewlargelanguage}.
 These models are trained with large amounts of data to replicate human-like patterns or generate text based on statistical relationships between words, and these
 advancements were made possible by transformers \cite{vaswani2023attentionneed}. Previous NLP techniques such as Recurrent Neural Network (RNN) and
-Long-Short Term Memory (LSTM) could understand a sentence context in the short term. However, these struggle when trying to understand longer texts.
+Long-Short Term Memory (LSTM) could help in understanding a sentence's context in the short term. However, these struggle when trying to understand longer texts.
 In contrast, transformer architecture, seen in Figure \ref{transformer}, differs from others because it uses self-attention.
 
 \begin{figure}[!hb]
@@ -64,6 +64,8 @@ Bart \cite{lewis2019bartdenoisingsequencetosequencepretraining} and T5 \cite{202
 
 \end{description}
 
+Knowing the architectures, each one has its advantages for specific NLP tasks. However, to perform these tasks, we must train them to do so.
+
 \subsection{Classification tasks}
 Large Language Models use different learning methods to train. Such methods include zero-shot, one-shot, and few-shot learning. As the name implies, zero-shot learning is training a model without
 previous knowledge of the data; it is learning from scratch. One-shot learning is a method that receives one example as input and tries to generalize from that example. The final method uses
@@ -82,21 +84,42 @@ Also, the result must follow a specific format. This process of instructions is 
 
 
 Moreover, LLMs that completed training with no additional modifications are known as based models. The response from this model will most likely make no sense with the premises it receives.
-This happens because the model is trained on excessive texts to find patterns between them, but this pattern might not be on par with the input. For the model to return a coherent response, it must go
-through a finetuning process. Finetuning consists of making a model perform specific tasks, such as chatting, summarization, chatbots, and others.
-To fine-tune a model, it must undergo another training process, but now the training data relates to the tasks it will perform. 
+This happens because the model is trained on excessive texts to find patterns between them, but this pattern might not be on par with the input. For the model to return a coherent response, it must go through
+a fine-tuning process. Fine-tuning consists of making a model perform specific tasks, such as chatting, summarization, chatbots, and others. To fine-tune a model, it must undergo another training process, with
+training data related to the tasks it will perform. However, there are multiple training types. We will focus on Sequence Classification and Causal Language Modeling.
+
+\begin{itemize}
+\item{\textbf{Sequence Classification:}} This involves predicting a class label based on an input. That label is a number associated with a class. All previously mentioned models can be trained for Sequence
+Classification, which is the most common training type.
+
+\item{\textbf{Causal Language Modeling:}} This training is used for the model to learn the context of the text. We use this so the model learns to generate a text answer based on the input. The labels are texts related to the input.
+This type of training is similar to question-and-answer problems, in which the model infers a result based on the question. CLM is more expensive in computing power than Sequence Classification because 
+the labels must be embedded. That training type is most commonly used in models that have decoders because they are usually used to generate texts.
+
+\end{itemize}
+
+A problem with fine-tuning LLMs is that they require excessive computational resources to train or fine-tune. It is not viable to fine-tune all the parameters in the model to perform a specific task. However, there is an
+alternative to fine-tuning a model without having a resource problem.
+
+
+\subsection{Low-Rank Adaptation (LoRA)}
+The research in \cite{hu2021loralowrankadaptationlarge} created a technique to train models with billions of parameters effectively. Their technique, LoRA, helps reduce the amount of computational resources and
+parameters to train while maintaining optimal performance. LoRA trains specific layers of the model instead of retraining the full system. Their research shows that they reduced the GPT-3 training size from 350GB to
+35MB. However, a limitation of LoRA is that we must add the trained layer to the base model. That means that after training, we use both the base model and this adapted layer to perform a task. Nonetheless, it is still an
+improvement when they reduced the resources used by 3x, and their model had an accuracy of \textpm 0.5\% compared to full fine-tuning. An effective fine-tuning process is possible, but we need to see some use
+cases for these models.
 
 \subsection{Example Applications}
 The authors in \cite{koh2023groundinglanguagemodelsimages} trained a based LLM model to understand images and give a text description or a combination of text and image. The training process for
-the model used images and captions of those images as their data and the zero-shot learning strategy. Their resulting model was used as a chatbot that identifies images, answers questions, or gives
+the model used images and their captions as their data and the zero-shot learning strategy. Their resulting model was used as a chatbot that identifies images, answers questions, or gives
 visual examples. Another experiment was \cite{inproceedings}, where the authors trained a model to identify sentiments on financial market decisions. In this case, they used prompting, also called in-context learning, for 
 the model to answer the sentiment of the texts. In-context learning does not update any parameter of the original model. Their model resulted in a 70\% accuracy on sentiment prediction, failing mostly on neutral posts.
-A possible problem with the neutral post is that prompting does not train the model to perform a specific task. That experiment showed the problems that users face when they use social media to make decisions.
+A possible problem with the neutral post is that prompting does not train the model to perform a specific task. That experiment showed the problem that users face when they use social media to make decisions.
 They clarified the importance of not taking the model for granted and how social media can cause a user to make a poor decision.
 
 \subsection{Challenges and Limitations}
 An issue with LLM is that they answer based on statistical relationships between words, and occasionally, their output could make no sense. Sometimes, they can generate a result that is not factual
-or valid this phenomenon is called AI hallucinations. These models train to find patterns between tokens. Without the proper context, they cannot differentiate between fact and fallacy. This context
+or valid; this phenomenon is called AI hallucinations. These models train to find patterns between tokens. Without the proper context, they cannot differentiate between fact and fallacy. This context
 needs to  be related or similar to the input that the model receives. However, finding the necessary information is not optimal if done manually. That begs the question, how much data would be needed
 to achieve a coherent answer, and how can this be done effectively?
 

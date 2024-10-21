@@ -1,278 +1,194 @@
-
-\chapter{Methodology}  
-
-\section{Performance Metrics}
-To evaluate the models effectiveness we used the following metrics:
-
-\begin{itemize}
-	\item{\textbf{Precision}}: This metric evaluates the proportion of positive that the model classified as positive that are actually positive.
-	\item{\textbf{Recall}}: This metric evaluates the proportion of the positives that the model classified correctly again all positives.
-	\item{\textbf{F1}}: This metric balances the precision and recall scores.
-	\item{\textbf{Elapsed Time}}: To evaluate the models training time.
-	
-\end{itemize}
-
-
-\section{Hardware}
-This experiment was implemented in a cluster. Only one node was used for the finetuning and to host the application. The hardware specification
-for the node is found on Table \ref{table:hardware}.
-
-\begin{table}[ht!]
-\centering
-\caption{Cluster's Node Specifications}
-\begin{tabular}{||c | c||} 
- \hline
-\textbf{Hardware} & \textbf{Description} \\ [0.5ex] 
- \hline
- Operating System & Ubuntu 20.04.2 LTS \\ [0.5ex] 
- \hline
- Hard Disk & 250GB  \\ [0.5ex] 
- \hline
- RAM & 87.9GB  \\ [0.5ex] 
- \hline
- Processor & Intel(R) Xeon(R) Silver 4214 @ 2.20GHz \\ [0.5ex] 
- \hline
- GPU & NVIDIA TESLA V100s 32GB \\ [0.5ex] 
- \hline
-\end{tabular}
-\label{table:hardware}
-\end{table}
+% Define a custom style for JSON formatting
+\lstdefinelanguage{json}{
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    morestring=[b]",
+    morecomment=[l]{:}
+}
 
 
-\section{Software}
-There were various software tools used for the project. The training, ETL pipeline,
-and REST API were implemented with Python 3.9.19. To finetune the models we used PyTorch 2.0.1 with GPU support enabled for
-NVIDIA CUDA 11.7. To initialize and use the models we implemented the Transformers  4.34.0 library. The models were imported from
-Hugging Face (HF) \textbf{[REFERENCE]}. We used BERT, T5, and LLaMa-2 for our research. In Table \ref{table:LLM} we see the specifications
-for each model. All these models are base model, which means they are not train to accomplish a specific task. Also, we use Postgres 14 to store our extracted research papers. In addition, we implemented Chroma 0.4.24 as our vector database.
-Finally, for the RAG process, we installed Ollama tu run LlaMa3.1 8B parameter model. 
 
 
-  \begin{table}[ht!]
-\centering
-\caption{LLM Specifications}
-\begin{tabular}{||c | c | c | c||} 
- \hline
-\textbf{Model} & \textbf{HF name} & \textbf{Architecture} & \textbf{Parameters} \\ [0.5ex] 
- \hline
- BERT & bert-base-uncased & Encoder Only & 110M \\ 
- \hline
- T5 & t5-base & Encoder-Decoder & 220M \\
- \hline
- LlaMa-2 & Llama-2-7b-hf & Decoder-only & 7B \\
- \hline
-\end{tabular}
-\label{table:LLM}
-\end{table}
- 
+\chapter{System Architecture}  
 
+\section{Paper ETL Pipeline}
 
-\section{Datasets}
+Our model must use credible sources of information to rebut misinformation. We identified PubMed \cite{pubmed}, an online library that contains peer-reviewed medical literature. We want to extract the papers and store them in a vector database. To extract these papers, we used the BioC API \cite{bioinformatics}, which has access to the PubMed library. However, the API needs the research paper's identifier, known as PubMed Central (PMC) ID. We design a scraper to extract these identifiers from the official PubMed site. The pipeline in Figure \ref{fig:etl} shows the processes of data extraction. 
 
-This section describes the health-related and misinformation datasets used for training, their structure, and the preprocessing techniques applied.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{images/ETL_Pipeline.png} %specify width
+	\end{center}
+	\caption{Medical Data Extraction Pipeline} %specify caption
+	\label{fig:etl}
+\end{figure}
 
-\begin{table}[H]
+\subsection{Scraper}
+The first step of the pipeline was identifying what papers we needed to extract. We selected 17 topics for the data extraction process, that can be seen in Table \ref{table:topics}.
+
+\begin{table}[!ht]
 	\centering
-	\caption{Training Datasets}
-	\begin{tabular}{||c | c | c| c||} 
-		\hline
-		\textbf{Dataset} &
-		\textbf{Category} & \textbf{Label}& \textbf{\# of records} \\ [1.5ex] 
-		\hline
-		\multirow{3}{6.75em}{Health Related Dataset} & Unrelated & 0 & 3828  \\[1ex]
-		& Related & 1 & 7848  \\ [1ex]
-		& Ambiguous & 2 & 765 \\[1ex]
-		\hline
-		\multirow{2}{6.75em}{Misinformation Dataset} & Misinformation & 0 & 3638\\ [1ex]
-		& Not Misinformation & 1 & 5111  \\[1ex]
-		\hline
-	\end{tabular}
-	\label{table:dataset}
-\end{table}
-
-
-\subsection{Health-related Dataset}
-The health-related dataset comprises over 12,441 tweets extracted from the previous THS project.  Health professionals labeled the tweets in this dataset as related, unrelated, or ambiguous. As shown in Table \ref{table:dataset} this dataset is imbalanced; thus, we applied class weights to the loss function. The imbalance can cause the model to predict the most frequent class disproportionately, reducing its ability to generalize.These weights assign higher penalties to errors in underrepresented classes. The weights prevent the models from overfitting, mitigating the effects of class imbalance during training.
-
-%\begin{table}[H]
-%	\centering
-%	\caption{Health-Related Dataset}
-%	\begin{tabular}{||c | c||} 
-%		\hline
-%		\textbf{Category} & \textbf{\# of records} \\ [1.5ex] 
-%		\hline
-%		Related & 7848  \\ [1ex]
-%		\hline
-%		Unrelated & 3828  \\[1ex]
-%		\hline
-%		Ambiguous & 765 \\[1ex]
-%		\hline
-%	\end{tabular}
-%	\label{table:health}
-%\end{table}
-
-
-\subsection{Misinformation Dataset}
-The misinformation dataset, with 8,749 texts, combines data from different sources such as news, social media, and blogs. These records have two labels: misinformation and non-misinformation. As in the health-related dataset, we also applied class weights because of the imbalance, as Table \ref{table:dataset} shows. The dataset in \cite{stephencrone2022} consists of social media texts that mention the monkeypox. We only used "text" and "binary\_class" columns from that dataset. Another source was \cite{coviddata}, which classified Covid-19 texts. That dataset contains articles and posts from different online sources. They labeled the data based on official sources that validated the text claims. In this dataset, we only used the "title" column and the label assigned to the file. We used that dataset because, occasionally, online users share news reports or articles based on the headline alone. Next, the last dataset \cite{covidunesco} data, comes from a variety of sources. The dataset only contains misinformation records such as posts, news, videos, emails, messages, and others. We selected English-only records from that dataset because BERT is limited to this language. Now, we used only the "Title", "Narrative\_Description" columns. These two columns were appended as one string for the model to train. 
-
-
-\subsection{Data Preprocessing}
-Before we start fine-tuning the models, we preprocessed both datasets. As initially mentioned, we want as much context as possible for our model to train. That meant the classification
-process would include links, mentions, and hashtags. These elements are important for context because users can convey sentiments that could be relevant to text. However, these elements contain various characters, and the embedding might struggle with out-of-vocabulary or irregular
-patterns. Thus, we opted to use special tokens to replace them. We use special tokens to replace elements with patterns that do not contribute to semantic meaning, such as random
-strings in URLs. For example, some URLs are strings with random values, which can result in the embedding assigning the wrong values. Because of this, we replace these items with
-their respective tokens. Any URL was replaced by \textit{[LINK]}, mentions by \textit{[MENTION]}, and hashtags by \textit{[HASHTAG]}. That allows us to keep the elements and give them some importance in the text. An example of this is shown below.
-
-\noindent \textbf{Example 1:}
- \begin{tcolorbox}[colback=gray!10, colframe=black!70, title=Original Text]
-	\texttt{%
-listening to these amazing infectious disease experts talk about \#influenza at the @nmnh/@asmicrobiology \#flu program like https://t.co/ehnpz6nsyg
-	}
-\end{tcolorbox}
-
-\begin{tcolorbox}[colback=white, colframe=black!70, title=Preprocessed Result]
-	\textit{%
-listening to these amazing infectious disease experts talk about [HASHTAG] at the [MENTION]/[MENTION] [HASTAG] program like [LINK]
-	}
-\end{tcolorbox}
-
-
-\section{Fine-tuning}
-
-The LLMs used for this paper are pre-trained, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language.
-This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. This process is called fine-tuning. Fine-tuning is when an existing model is trained to accomplish a task. In this case, we taught the models to classify two types of texts: health-related and
-misinformation-related texts. 
-
-
-We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2. Each one has a different architecture, as shown in Table \ref{table:LLM}. As mentioned, these models are their base form. Additionally, these models have large numbers of parameters. That can be a drawback when fine-tuning, because it requires an excessive amount of resources. 
-
-
-\subsection{Memory Usage Estimation}
-Our initial approach for the experiment was to use the model with default parameters. That meant that using the base model with Adam optimizer and with a floating point of 32 (fp32). However, that was not possible because the model require a lot of memory. To estimate the resources that each model requires, we use the formula in \cite{transformer-math-eleutherai}. Their formula provides a result with an overhead of around 20\%.
-
-
-\[ Memory_{model}, fp32 = (4 bytes/param) (No. param) \label{eq:model} \tag{1} \] 
-
-For the example we use T5, this model has 220M parameters. If we use Equation \ref{eq:model}, T5 requires 839MB to initialize. 
-
-
-\[ Memory_{optimizer}, fp32 = (12 bytes/param) (No. param) \label{eq:optimizer} \tag{2} \] 
-
-Then we calculate the optimizer state. We consider AdamW, because it is the most common optimizer. When we use the Equation \ref{eq:optimizer} we get that the optimizer for T5 requires 2.46GB. 
-
-
-\[ Memory_{gradients}, fp32 = (4 bytes/param) (No. param) \label{eq:gradients} \tag{3} \] 
-
-Next we have the gradient. Gradients have a similar memory usage as the models memory. The Equation \ref{eq:gradients} shows that we it requires 839MB for T5.
-
-
-\[ Memory_{activation} = sbhL(10 + \frac{24}{t} + 5 \frac{a \cdot s}{h \cdot t} ) \label{eq:activation} \tag{4} \] 
-
-The final attribute that we need to consider is the activation and batch size. The variable for the Equation \ref{eq:activation} were estimated based on the conducted experiments. The first element is \textbf{s}, this refers to the tokens length sequence. Then we have \textbf{b} as the batch size. The \textbf{h} stands for the models hidden size, dimensionality. Now, \textbf{L} is the number of layers in the model. Followed by \textbf{a} for the attention head of the model. Lastly, we have \textbf{t} for parallelism. The variables for each model can be found on Table \ref{table:ModelActivation}. Finally, if we calculate T5 activation memory usage, it results in 3.80GB.
-
-\begin{table}[H]
-	\centering
-	\caption{Models Activation Parameters}
-	\begin{tabular}{||c | c | p{1.5cm} | p{1.5cm} | c | p{2cm} | c||} 
-		\hline
-		\textbf{Model} & \textbf{Sequence} & \textbf{Batch Size} & \textbf{Hidden Size} & \textbf{Layers} & \textbf{Attention Head} & \textbf{Parallelism} \\ [1ex] 
-		\hline
-		BERT & 256 & 32 & 768 & 12 & 12 & 1 \\ [1ex]
-		\hline
-		T5 & 256 & 32 & 768 & 12 & 12 & 1  \\[1ex]
-		\hline
-		LLaMa-2 (7B) & 256 & 32 & 4096 & 2 & 32 & 1  \\[1ex]
-		\hline
-	\end{tabular}
-	\label{table:ModelActivation}
-\end{table}
-
-
-With all these values calculated we can estimate the memory usage per model using the Equation \ref{eq:total}. The results for each model is presented on Table \ref{table:MemoryUsage}. These estimates shows what is the minimum memory require for each model. For BERT we need 5.85GB, T5 is 7.89GB, and LLaMa-2 is 174.39GB. Knowing that our cluster only has a GPU with 32GB, it would not be possible to fine-tune LLaMa-2. However, there is an alternative that reduces the model size. 
-	
-\[ Total Memory = Model + Optimizer + Gradients + Activation \label{eq:total} \tag{5} \] 
-
-\begin{table}[H]
-	\centering
-	\caption{Models Memory Usage Estimate (MB)}
-	\begin{tabular}{||c | c | c | c | c | c | c||} 
-		\hline
-		\textbf{Name} & \textbf{Parameters} & \textbf{Model} & \textbf{Optimizer} & \textbf{Gradient} & \textbf{Activation} & \textbf{Total} \\ [1ex] 
-		\hline
-		BERT & 110M & 419.62 & 1258.85 & 419.62 & 3888000.00 & \textbf{5986.09} \\ [1ex]
-		\hline
-		T5 & 220M & 839.23 & 2517.70 & 839.23 & 3888.00 & \textbf{8084.16}  \\[1ex]
-		\hline
-		LLaMa-2 & 7B & 26702.88 & 80108.64 & 26702.88 & 45056.00 & \textbf{178570.40}  \\[1ex]
-		\hline
-	\end{tabular}
-	\label{table:MemoryUsage}
-\end{table}
-
-\subsection{Parameter-Efficient Fine-Tuning (PEFT)}
-
-
-\subsection{Training Parameters}
-The parameters used to train the models are shown in Table \textbf{[REFERENCE]}
-
-
-\subsection{Health-Related Classification}
-A learning rate of 5E-6
-
-A batch size of 16
-
-20 epochs per model
-
-Training-test-validation: 70-15-15
-
-The class weights values for this dataset is shown in Table \ref{table:healthweight}
-
-
-\begin{table}[H]
-	\centering
-	\caption{Health-Related Dataset Weight Penalty}
+	\caption{Topics for Research Paper Extraction}
 	\begin{tabular}{||c | c||} 
 			\hline
-			\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
+			 \multicolumn{2}{||c||}{\textbf{Topics}} \\ [1.5ex] 
 			\hline
-			Unrelated & 3.25 \\ [1ex]
+			allergy  & covid vaccine \\ [1ex]
 			\hline
-			Related & 1.58 \\[1ex]
+			bird flu & flu vaccine \\ [1ex]
 			\hline
-			Ambiguous & 16.26 \\[1ex]
+			cancer & headache \\ [1ex]
 			\hline
-		\end{tabular}
-	\label{table:healthweight}
+			chickenpox & influenza\\ [1ex]
+			\hline
+			common cold & monkeypox \\ [1ex]
+			\hline
+			conjunctivitis & stomach aches \\ [1ex]
+			\hline
+			covid sickness & swine flu \\ [1ex]
+			\hline
+			covid symptoms & zika\\ [1ex]
+			\hline
+			covid treatment &  \\ [1ex]
+			\hline
+			\end{tabular}
+	\label{table:topics}
 \end{table}
 
+
+To extract them, we built a scraper in Python using Selenium and BeautifulSoup libraries. We used Selenium to retrieve the web source from PubMed's website, and BeautifulSoup was used to get the links to each paper. These links contained the PMC identifier. For each topic, we selected 5,000 PMC identifiers. These identifiers were grouped by topic and stored locally in Comma Separated Value (CSV) files.
+
+\subsection{BioC API}
+After retrieving those identifiers, we need to extract the research papers. Using the PubMed API, BioC, we made requests that returned the documents as JSON. These JSONs were preprocessed to contain texts, and we removed tables and figures. Later, the paper's sections -introduction, methodology, results, and others- were combined as one attribute, excluding references. We removed tables, figures, and references from the context to ensure the chunking process worked appropriately. If the data is not preprocessed, when performing RAG, we can retrieve data that is not useful. After that, we turned the result into a new JSON that contained the research metadata and its context. 
+
+\subsection{Vectorizing data}
+Later, each research paper’s context was split into chunks using LangChain. Then, we used an LLM, BAAI \cite{bge_embedding}, to embed these chunks. A universal unique identifier (UUID) was combined with each chunk and stored in a Chroma \cite{chroma} database. After uploading the data to Chroma, we added these UUIDs to their JSON. 
+
+
+\subsection{Store metadata}
+Now, with all papers vectorized, we upload the metadata into a Postgres database. First, we validate that there are no duplicate records in the system. To prevent duplicates, we search for the paper's reference. If any is found, we delete the chunks from the vector database. Additionally, any research that did not contain at least an abstract was removed. That ensures that there is no repetition or inconsistency when doing the rebuttal. Later, we upload this data into the system following the schema found in Figure \ref{fig:table}. The tables in this schema are as follow:
+
+\begin{description}
+	\item{\textbf{Research:}}  The table contains the research paper data. Its attributes are title, which is the research paper title; context, the paper’s text; paper\_ref, the complete reference of the paper, used to prevent duplicates; and fullpaper, which is a boolean that is true if the paper contains an abstract, introduction, methodology, discussion, conclusion, and references.
+	\item{\textbf{Chunks:}} This table pairs the UUIDs from the paper's chunks and their respective research record.  
+	\item{\textbf{Keyword:}} Some research papers contain keywords that allow the reader to know the subjects mentioned in the paper. 
+	\item{\textbf{Author:}} Stores the first and last names of all authors identified in the research paper. 
+	\item{\textbf{Reference:}} All references that are present in the research paper.
+	\item{\textbf{Topic:}} This contains the different topics used to search the papers.
+
+\end{description}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/Table_diagram.png} %specify width
+	\end{center}
+	\caption{Research Papers Schema Diagram} %specify caption
+	\label{fig:table}
+\end{figure}
+
+
+We started the search with 85,000 peer-reviewed papers. After finishing the filtering and data cleaning, we ended with 56,365 different research papers. 
+
+
+
+\section{Misinformation Rebuttal Pipeline}
+After training the models and storing the context for the rebuttal, we create the model pipeline. The pipeline shown in Figure \ref{fig:llm} shows the process of receiving a text, making the classifications, and returning an explanation of why it is misinformation.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{images/LLM_Pipeline} %specify width
+	\end{center}
+	\caption{Misinformation Rebuttal LLM System Architecture} %specify caption
+	\label{fig:llm}
+\end{figure}
+
+
+\subsection{Health-related Classification}
+The first part of the pipeline is determining if the text is related to health. When the system receives the input text, it sends it to a model finetuned to classify health-related texts. This model determines whether the input is related, unrelated, or ambiguous.
+If the text is health-related, we continue to the next part of the pipeline. When the text is non-related or ambiguous, we end the process. We end this because other topics are out of the model's scope. 
 
 \subsection{Misinformation Classification}
+After confirming that the text is health-related, we want to validate that it contains misinformation. The finetuned model can only return two possible results: misinformation or non-misinformation. If the model finds no misinformation after evaluating the text,
+the final output will return both classifications. When the result contains misinformation, we start the search for research papers.
 
-\begin{table}[H]
-	\centering
-	\caption{Misinformation Dataset Weight Penalty}
-	\begin{tabular}{||c | c||} 
-		\hline
-		\textbf{Category} & \textbf{Weight Penalty} \\ [1.5ex] 
-		\hline
-		Misinformation & 2.41  \\ [1ex]
-		\hline
-		Not Misinfomation & 1.71  \\[1ex]
-		\hline
-	\end{tabular}
-	\label{table:misinformationweights}
-\end{table}
+\subsection{Context Finder}
+Before starting the search on the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama}. That tool allows us to execute locally a pre-trained LLM that generates text. Thus, we send a query to Ollama asking it to make a one-sentence query for the vector database related to the input.
 
-2. Misinformation classification
+ 
+ \begin{tcolorbox}[colback=gray!10, colframe=black!70, title=Input]
+\texttt{%
+\#nih fauci, @cdcdirector @sgottliebfda \&amp; @barda bright expected to be grilled tomorrow over ineffective \#flu vaccine at @housecommerce \#suboversight bets on fauci saying universal \#influenza vax in 5, maybe 10 years? my preview here: \url{https://t.co/fsqefwhik7} \#cdc \#fda \#vaccines%
+}
+\end{tcolorbox}
 
-LR, Batch size, seed, and epochs are static.
+\begin{tcolorbox}[colback=white, colframe=black!70, title=Output]
+\textit{%
+Flu vaccine effectiveness and future universal influenza vaccination strategies.%
+}
+\end{tcolorbox}
+ 
+The above example shows that Ollama can identify the topics of the original text. That tweet mentions that the flu vaccine is ineffective and asks how long it will take for a universal influenza vaccine. The LLM identified the topic and made a query that can help find
+research papers related to it. However, it is essential to mention that the LLM output can vary. As mentioned previously, this is a statistical model and can have slight variations in its result. Now, this output is sent to the Chroma database to retrieve chunks of research
+papers. For this experiment, our model returns eight chunks that are closest in context to the query. These chunks are then sent to another model to be analyzed and organized.
 
-- Each model was fine-tune twice.
+\subsection{Organize and Rebut}
+The final part of our pipeline is using RAG to provide an answer that explains why the original text is misinformation. First, we retrieve the references of the chunks we use for the context. Then, we send the original text with the chunks, as context, to Ollama for
+the model to evaluate. Ollama returns a 2-3 sentence result that explains the text’s misinformation. The final output is a JSON with the following attributes:
 
-    1. Sequence classification: 1, 2, or 3; 1 or 2.
+\begin{description}
+\item{\textbf{chroma\_value:}} If the text is health-related and is misinformation, this will have the rebuttal output from Ollama, consisting of 2-3 sentences. If the text is non-related or non-misinformation, it will give a default value saying so. 
+\item{\textbf{health:}} This is the input text health classification.
+\item{\textbf{misinformation:}} This is the input text misinformation classification.
+\item{\textbf{references:}} This attribute stores the list of references used for the rebuttal. 
+\item{\textbf{t\_context:}} The original text.
 
-    2. Classification with text generation: Related, Unrelated, or Ambiguous; Misinformation or Not Misinformation.
+\end{description}
 
-- Weighted average added for the sequence classification.
+The pipeline enables us to automate the classification process and rebut misinformation using peer-reviewed research. By leveraging fine-tuned models, vector search, and RAG, the architecture provides concise, fact-based responses. A key advantage of this
+approach is its ability to explain complex content accessible to non-technical readers, giving them a clearer understanding of false information. This can assist professionals in the field to mitigate the spread of lies that can negatively impact public health.
+
 
 \section{User Interface (UI)}
+With the pipeline correctly working, users need to interact and view the results. We created an user interface were they can interact with texts and see the classification process. Figure \ref{fig:Menu} shows the main menu of the interface. When we select a text a side screen appears that shows the results from the misinformation classification pipeline. 
+
+\begin{figure}[!ht]
+\noindent\makebox[\textwidth][l] {%
+	\hspace{-\dimexpr\oddsidemargin} % -\dimexpr\oddsidemargin+0.1\paperwidth -> x * 0.5 - 0.375
+		\includegraphics[width=0.75\paperwidth]{images/THS_Frontend_Menu.png} %specify width
+	}%
+	\caption{THS Frontend - Menu} %specify caption
+	\label{fig:Menu}
+\end{figure}
+
+Figure \ref{fig:frontendmisinformation}  presents a case where the models classified the text as health-related and misinformation. The top of the side screen shows the text that was classified. Number 1 shows the health classification, and number 2 shows the misinformation classification. Below that is the rebuttal generated by the models. Finally, we include the references of the research used for the rebuttal. An alternative view of the side screen is Figure \ref{fig:frontendnonmisinformation}; when it does not find misinformation, the model does not generate an answer nor cite any research.
+
+\begin{figure}[H]
+\noindent\makebox[\textwidth][l] {%
+	\hspace{-\dimexpr\oddsidemargin}
+		\includegraphics[width=0.75\paperwidth]{images/THS_Misleading.png} %specify width
+	}%
+	\caption{THS Frontend - Misinformation Classification } %specify caption
+	\label{fig:frontendmisinformation}
+\end{figure}
+
+
+\begin{figure}[H]
+\noindent\makebox[\textwidth][l] {%
+	\hspace{-\dimexpr\oddsidemargin}
+		\includegraphics[width=0.75\paperwidth]{images/THS_NotMisinformation.png} %specify width
+	}%
+	\caption{THS Frontend  - No Misinformation Classification} %specify caption
+	\label{fig:frontendnonmisinformation}
+\end{figure}
+
+
+
