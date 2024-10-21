@@ -18,48 +18,53 @@ I was expecting a `,' or a `}'---line 324 of file referencias.bib
  : @misc{koh2023groundinglanguagemodelsimages,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 378 of file referencias.bib
+I was expecting a `,' or a `}'---line 371 of file referencias.bib
+ : 
+ : @misc{pgvector,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 385 of file referencias.bib
  : 
  : @article{social_fact,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-"{" immediately follows a field part---line 424 of file referencias.bib
+"{" immediately follows a field part---line 431 of file referencias.bib
  :  howpublished = \url
  :                     {blog.eleuther.ai/transformer-math/},
 I'm skipping whatever remains of this entry
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
-You've used 36 entries,
+You've used 37 entries,
             1876 wiz_defined-function locations,
-            650 strings with 11346 characters,
-and the built_in function-call counts, 9027 in all, are:
-= -- 681
-> -- 652
+            652 strings with 11474 characters,
+and the built_in function-call counts, 9121 in all, are:
+= -- 688
+> -- 653
 < -- 0
-+ -- 232
++ -- 233
 - -- 196
-* -- 697
-:= -- 1377
+* -- 699
+:= -- 1384
 add.period$ -- 36
-call.type$ -- 36
-change.case$ -- 35
+call.type$ -- 37
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 363
-empty$ -- 832
+cite$ -- 40
+duplicate$ -- 367
+empty$ -- 850
 format.name$ -- 196
-if$ -- 2124
+if$ -- 2151
 int.to.chr$ -- 0
-int.to.str$ -- 36
+int.to.str$ -- 37
 missing$ -- 19
-newline$ -- 114
+newline$ -- 117
 num.names$ -- 34
-pop$ -- 198
+pop$ -- 204
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 281
+skip$ -- 289
 stack$ -- 0
 substring$ -- 330
 swap$ -- 120
@@ -69,6 +74,6 @@ top$ -- 0
 type$ -- 0
 warning$ -- 3
 while$ -- 60
-width$ -- 38
-write$ -- 297
-(There were 3 error messages)
+width$ -- 39
+write$ -- 302
+(There were 4 error messages)

@@ -159,6 +159,10 @@ D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
 S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
   advance general chinese embedding,'' 2023.
 
+\bibitem{ollama}
+``{Get up and running with large language models.}, howpublished =
+  {\url{https://ollama.com}}, note = {Accessed: 2024-09-29}.''
+
 \bibitem{huggingface}
 ``{Hugging Face – The AI community building the future}, howpublished =
   {\url{https://huggingface.co}}, note = {Accessed: 2024-10-18}.''

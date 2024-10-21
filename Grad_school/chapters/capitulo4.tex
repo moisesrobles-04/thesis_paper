@@ -46,7 +46,8 @@ NVIDIA CUDA 11.7. To initialize and use the models we implemented the Transforme
 Hugging Face (HF) \cite{huggingface}. We used BERT, T5, and LLaMa-2 for our research. To reduce the model memory usage, we use
 the PEFT 0.12.0 and bitsandbytes library for LoRA. In Table \ref{table:LLM} we see the specifications for each model. All these models are base
 model, which means they are not train to accomplish a specific task. Also, we use Postgres 14 to store our extracted research papers. In addition, we
-implemented Chroma 0.4.24 as our vector database. Finally, for the RAG process, we installed Ollama tu run LlaMa3.1 8B parameter model. 
+implemented Chroma 0.4.24 as our vector database. Next, for the RAG process, we installed Ollama \cite{ollama} tu run LlaMa3.1 8B
+\cite{touvron2023llamaopenefficientfoundation} parameter model. Finally, to create the UI to show the results we used React.
 
 
   \begin{table}[ht!]

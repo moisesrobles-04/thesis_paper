@@ -5,7 +5,9 @@
 \chapter{Conclusions \& Future Work}  
 
 \section{Conclusions}
+\noindent In this thesis, we presented how LLMs can be used to refute health misinformation in social media. Additionally, we demonstrated that certain elements within a text—such as mentions, hashtags, and links—play a significant role in shaping its meaning. We also presented how we extracted, processed, stored, and used research papers with LLMs for the misinformation rebuttal. Finally, the research shows that it is possible to fine-tune large models with limited memory using LoRA.
 
+A prototype version of the misinformation rebuttal pipeline was implemented with Python, Postgres, Chroma, and other open-source tools. The research presents the performance results using health-related tweets and misinformation texts from different online sources. Our research preliminary performance results show that we can achieve an F1 score of 90\% for health-related classification and 97\% for misinformation classification. Additionally, we present that the model can refute misinformation by generating an answer using RAG. Thus, the project can help health experts combat misinformation and reduce the risk of negatively impacting public health.
 
 \section{Future Work}
 
@@ -13,7 +15,7 @@
 
 \item{\textbf{Additional Models for Classification:}} It is possible to train alternative LLM  for the classification tasks.
 
-\item{\textbf{Processing Time:}} During our experiment, we noticed that the misinformation pipeline takes too much time to process. The processing time is mostly caused by the search in the vector database. Exploring different vector databases and similarity search algorithms can improve the processing time.
+\item{\textbf{Processing Time:}} During our experiment, we noticed that the misinformation pipeline takes excessive time to process. The processing time is mostly caused by the search in the vector database. Exploring different vector databases and similarity search algorithms can improve the processing time.
 
 \item{\textbf{Rebuttal Helpfulness:}} The rebuttal the model generates must be as useful as possible for non-technical readers. That rebuttal can include specific information about the disease, such as symptoms, treatment, statistics, and other relevant factors.
 
