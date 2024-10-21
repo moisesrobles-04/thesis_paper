@@ -147,7 +147,7 @@ D.~Villanueva-Vega and M.~Rodriguez-Martinez, ``Finding similar tweets in
   Digital Health (ICDH)}, pp.~184--190, 2021.
 
 \bibitem{pubmed}
-``{PubMed - National Library of Medicine}, howpublished =
+``{PubMed - National Library of Medicine}, url =
   {\url{https://pubmed.ncbi.nlm.nih.gov}}, note = {Accessed: 2024-05-10}.''
 
 \bibitem{bioinformatics}
@@ -160,11 +160,11 @@ S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
   advance general chinese embedding,'' 2023.
 
 \bibitem{ollama}
-``{Get up and running with large language models.}, howpublished =
+``{Get up and running with large language models.}, url =
   {\url{https://ollama.com}}, note = {Accessed: 2024-09-29}.''
 
 \bibitem{huggingface}
-``{Hugging Face – The AI community building the future}, howpublished =
+``{Hugging Face – The AI community building the future}, url =
   {\url{https://huggingface.co}}, note = {Accessed: 2024-10-18}.''
 
 \bibitem{stephencrone2022}

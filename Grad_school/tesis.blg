@@ -29,15 +29,15 @@ I was expecting a `,' or a `}'---line 385 of file referencias.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 "{" immediately follows a field part---line 431 of file referencias.bib
- :  howpublished = \url
- :                     {blog.eleuther.ai/transformer-math/},
+ :  url = \url
+ :            {blog.eleuther.ai/transformer-math/},
 I'm skipping whatever remains of this entry
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
 You've used 37 entries,
             1876 wiz_defined-function locations,
-            652 strings with 11474 characters,
+            652 strings with 11447 characters,
 and the built_in function-call counts, 9121 in all, are:
 = -- 688
 > -- 653
