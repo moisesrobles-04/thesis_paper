@@ -146,6 +146,10 @@ D.~Villanueva-Vega and M.~Rodriguez-Martinez, ``Finding similar tweets in
   health related topics,'' in {\em 2021 IEEE International Conference on
   Digital Health (ICDH)}, pp.~184--190, 2021.
 
+\bibitem{pubmed}
+``{PubMed - National Library of Medicine}, howpublished =
+  {\url{https://pubmed.ncbi.nlm.nih.gov}}, note = {Accessed: 2024-05-10}.''
+
 \bibitem{bioinformatics}
 D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
   subset in BioC: about three million full-text articles and growing},'' {\em
@@ -154,6 +158,10 @@ D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
 \bibitem{bge_embedding}
 S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
   advance general chinese embedding,'' 2023.
+
+\bibitem{huggingface}
+``{Hugging Face – The AI community building the future}, howpublished =
+  {\url{https://huggingface.co}}, note = {Accessed: 2024-10-18}.''
 
 \bibitem{stephencrone2022}
 S.~Crone, ``Monkeypox misinformation: Twitter dataset,'' 2022.

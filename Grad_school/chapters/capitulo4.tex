@@ -43,7 +43,7 @@ for the node is found on Table \ref{table:hardware}.
 There were various software tools used for the project. The training, ETL pipeline,
 and REST API were implemented with Python 3.9.19. To finetune the models we used PyTorch 2.0.1 with GPU support enabled for
 NVIDIA CUDA 11.7. To initialize and use the models we implemented the Transformers 4.34.0 library. The models were imported from
-Hugging Face (HF) \textbf{[REFERENCE]}. We used BERT, T5, and LLaMa-2 for our research. To reduce the model memory usage, we use
+Hugging Face (HF) \cite{huggingface}. We used BERT, T5, and LLaMa-2 for our research. To reduce the model memory usage, we use
 the PEFT 0.12.0 and bitsandbytes library for LoRA. In Table \ref{table:LLM} we see the specifications for each model. All these models are base
 model, which means they are not train to accomplish a specific task. Also, we use Postgres 14 to store our extracted research papers. In addition, we
 implemented Chroma 0.4.24 as our vector database. Finally, for the RAG process, we installed Ollama tu run LlaMa3.1 8B parameter model. 
@@ -159,8 +159,7 @@ listening to these amazing infectious disease experts talk about [HASHTAG] at th
 The LLMs used for this paper are pre-trained, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language.
 This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. That process is called fine-tuning. Fine-tuning is when an existing model is trained to accomplish a task. In this case, we taught the models to classify two types of texts: health-related and misinformation-related texts. 
 
-
-We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2. Each one has a different architecture, as shown in Table \ref{table:LLM}. As mentioned, these models are their base form. Additionally, these models have large numbers of parameters. That can be a drawback when fine-tuning because it requires excessive resources. 
+We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2 in their base form. Each one has a different architecture, as shown in Table \ref{table:LLM}. The architectures have their specialty; thus, we performed two processes of fine-tuning: sequence classification and CLM. BERT and LLaMa-2 were only trained on sequence classification, while T5 was trained on sequence and CLM. T5 was the only model capable of that because BERT encoder-only architecture does not allow text generation, and LLaMa-2 required more resources than the ones available. Additionally, these models have large numbers of parameters. That can be a drawback when fine-tuning because the process requires excessive resources.
 
 
 \subsection{Memory Usage Estimation}
