@@ -226,7 +226,7 @@ With all these values calculated, we can estimate the memory usage per model usi
 \end{table}
 
 \subsection{Parameter-Efficient Fine-Tuning (PEFT)}
-PEFT is a library used to reduce the parameters of a model that will be fine-tuned. The library allows us to use the Low-Rank Adapter (LoRA). That adapter helps us reduce the model's memory usage. The main reason is that we can initialize the model in 8 bits instead of 32 bits. Also, because we have less precision, we can change the optimizer to adamw\_8bits. Additionally, we do not fine-tune the entire model, only modify a small percentage.
+PEFT is a library used to reduce the parameters of a model that will be fine-tuned. The library allows us to use the Low-Rank Adapter (LoRA). That adapter helps us reduce the model's memory usage. The main reason is that we can initialize the model in 8 bits instead of 32 bits. Also, because we have less precision, we can change the optimizer to adamw\_8bits. Additionally, we do not fine-tune the entire model; we only modify a small percentage.
 
 To determine how many parameters will be modified, we need to understand the hyperparameters of the LoRA configurations. Based on the research \cite{hu2021loralowrankadaptationlarge}, we can estimate the number of trainable parameters. Equation \ref{eq:TrainParam} can give the approximate trainable parameters. The variable \textbf{d\textsubscript{model}} is the hidden layer of the model. Then, \textbf{r} is the low-rank factor, which is how many parameters we train. The last attribute is the \textbf{L\textsubscript{weight}}, the number of weight matrices. That value is the product of the number of layers by the projection matrices. In our experiment, we use two model matrixes, the query matrix (Q) and the value matrix (V). The first represents what the query token is looking for in other tokens. The value matrix contains the information associated with each token; for more details about these matrixes, refer to \cite{vaswani2023attentionneed}.
 
@@ -260,7 +260,7 @@ For Equation \ref{eq:peftmodel}, we use the total number of parameters. We do th
 
 \[ Memory_{optimizer} = (6 bytes/param) (No. param) \label{eq:peftoptimizer} \tag{8} \] 
 
-For the optimizer, we use 8bit\_AdamW because it retains the advantages of AdamW but leaves a smaller memory footprint. In this case, we only consider the number of parameters to be trained. With Equation \ref{eq:peftoptimizer} and Table \ref{table:LoRA}, we calculate that the optimizer for LLaMa-2 requires 48MB.
+For the optimizer, we use 8bit\_AdamW because it retains AdamW's advantages but leaves a smaller memory footprint. In this case, we only consider the number of parameters to be trained. With Equation \ref{eq:peftoptimizer} and Table \ref{table:LoRA}, we calculate that the optimizer for LLaMa-2 requires 48MB.
 
 
 \[ Memory_{gradients} = (1 bytes/param) (No. param) \label{eq:peftgradients} \tag{9} \] 
@@ -337,7 +337,7 @@ After validating that we can fine-tune the models with our hardware, we must sel
 
 \end{itemize}
 
-Apart from these parameters, we split the data for each classification process as follows:
+\noindent After setting each parameter for the training process, we must validate that the model training was correct. To achieve that, we need to split the dataset. We split the dataset for each classification task as follows: 
 
 \begin{description}
 \item{\textbf{Training dataset (70\%)}}: the data used to adjust the models' parameters during the fine-tuning training process.

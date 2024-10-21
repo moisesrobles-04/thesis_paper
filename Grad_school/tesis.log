@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  21 OCT 2024 00:55
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  21 OCT 2024 02:26
  restricted system commands enabled.
  file:line:error style messages enabled.
 **tesis.tex
@@ -1460,6 +1460,12 @@ Package luatex.def Info: images/Misinformation_training_time.png  used on input
 
 (./chapters/conclusion.tex
 Chapter 6.
+
+Overfull \hbox (5.05894pt too wide) in paragraph at lines 16--17
+[]\TU/lmr/bx/n/12 Pro-cess-ing Time: \TU/lmr/m/n/12 Dur-ing our ex-per-i-ment, 
+we no-ticed that the mis-in-for-ma-tion pipeline
+ []
+
 ) [52
 
 
@@ -1493,7 +1499,7 @@ Here is how much of LuaTeX's memory you used:
  888 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 25 attribute, 117 glue_spe
 c, 25 attribute_list, 2 write nodes
-   avail lists: 2:787,3:271,4:48,5:337,6:88,7:5799,8:49,9:755,10:17,11:450
+   avail lists: 2:787,3:271,4:48,5:338,6:88,7:5799,8:49,9:755,10:17,11:450
  56145 multiletter control sequences out of 65536+600000
  43 fonts using 3151263 bytes
  99i,13n,102p,1556b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1506,7 +1512,7 @@ d.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
 usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesis.pdf (71 pages, 2472378 bytes).
+Output written on tesis.pdf (71 pages, 2473201 bytes).
 
 PDF statistics: 309 PDF objects out of 1000 (max. 8388607)
  187 compressed objects within 2 object streams
