@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  22 OCT 2024 11:27
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  22 OCT 2024 15:54
  restricted system commands enabled.
  file:line:error style messages enabled.
 **tesis.tex
@@ -1373,25 +1373,23 @@ File: images/LLM_Pipeline.png Graphic file (type png)
 Package luatex.def Info: images/LLM_Pipeline.png  used on input line 110.
 (luatex.def)             Requested size: 332.68385pt x 453.1396pt.
  [25<./images/Table_diagram.png>] [26<./images/LLM_Pipeline.png>] [27] [28]
-<images/THS_Frontend_Menu.png, id=155, 1376.14125pt x 689.57625pt>
+<images/THS_Frontend_Menu.png, id=155, 2567.5925pt x 1360.08125pt>
 File: images/THS_Frontend_Menu.png Graphic file (type png)
 <use images/THS_Frontend_Menu.png>
-Package luatex.def Info: images/THS_Frontend_Menu.png  used on input line 169.
-(luatex.def)             Requested size: 460.72124pt x 230.86479pt.
-<images/THS_Misleading.png, id=156, 1531.22063pt x 750.55406pt>
+Package luatex.def Info: images/THS_Frontend_Menu.png  used on input line 167.
+(luatex.def)             Requested size: 411.57652pt x 218.01175pt.
+ [29<./images/THS_Frontend_Menu.png>]
+<images/THS_Misleading.png, id=160, 1283.29437pt x 647.92062pt>
 File: images/THS_Misleading.png Graphic file (type png)
 <use images/THS_Misleading.png>
-Package luatex.def Info: images/THS_Misleading.png  used on input line 180.
-(luatex.def)             Requested size: 460.72124pt x 225.8322pt.
- [29]
-<images/THS_NotMisinformation.png, id=160, 1555.31062pt x 778.40813pt>
-File: images/THS_NotMisinformation.png Graphic file (type png)
-<use images/THS_NotMisinformation.png>
-Package luatex.def Info: images/THS_NotMisinformation.png  used on input line 1
-90.
-(luatex.def)             Requested size: 460.72124pt x 230.57861pt.
- [30<./images/THS_Frontend_Menu.png><./images/THS_Misleading.png>]) [31<./images
-/THS_NotMisinformation.png>]
+Package luatex.def Info: images/THS_Misleading.png  used on input line 182.
+(luatex.def)             Requested size: 411.57652pt x 207.79361pt.
+<images/THS_Rebuttal_view.png, id=161, 769.87625pt x 1002.24437pt>
+File: images/THS_Rebuttal_view.png Graphic file (type png)
+<use images/THS_Rebuttal_view.png>
+Package luatex.def Info: images/THS_Rebuttal_view.png  used on input line 196.
+(luatex.def)             Requested size: 332.68385pt x 433.11299pt.
+[30<./images/THS_Misleading.png>]) [31<./images/THS_Rebuttal_view.png>]
 \openout2 = chapters/capitulo4.aux
 
 (./chapters/capitulo4.tex
@@ -1496,7 +1494,7 @@ d.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
 usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesis.pdf (74 pages, 2481354 bytes).
+Output written on tesis.pdf (74 pages, 2007727 bytes).
 
 PDF statistics: 318 PDF objects out of 1000 (max. 8388607)
  193 compressed objects within 2 object streams
