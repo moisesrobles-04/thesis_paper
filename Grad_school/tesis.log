@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  21 OCT 2024 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  22 OCT 2024 08:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1216,19 +1216,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]) [13]
-(./tesis.exp)
-\tf@exp=\write7
-\openout7 = `tesis.exp'.
-
- [14
-
-
-]
 \openout2 = `chapters/capitulo1.aux'.
 
- (./chapters/capitulo1.tex
+
+(./chapters/capitulo1.tex
 Chapter 1.
 [1
+
+
 
 
 ] [2] [3] [4]) [5]
@@ -1236,7 +1231,7 @@ Chapter 1.
 
  (./chapters/capitulo2.tex
 Chapter 2.
-<images/transformers_architecture.png, id=70, 343.2825pt x 325.215pt>
+<images/transformers_architecture.png, id=66, 343.2825pt x 325.215pt>
 File: images/transformers_architecture.png Graphic file (type png)
 <use images/transformers_architecture.png>
 Package pdftex.def Info: images/transformers_architecture.png  used on input li
@@ -1248,7 +1243,7 @@ ne 19.
 
 
 ] [7 <./images/transformers_architecture.png>]
-<images/LLM_Arch_text_generation.png, id=79, 645.91313pt x 302.63063pt>
+<images/LLM_Arch_text_generation.png, id=76, 645.91313pt x 302.63063pt>
 File: images/LLM_Arch_text_generation.png Graphic file (type png)
 <use images/LLM_Arch_text_generation.png>
 Package pdftex.def Info: images/LLM_Arch_text_generation.png  used on input lin
@@ -1260,7 +1255,7 @@ Overfull \hbox (4.63458pt too wide) in paragraph at lines 59--64
  []
 
 [9]
-<images/gpt_example.png, id=87, 341.77687pt x 198.7425pt>
+<images/gpt_example.png, id=84, 341.77687pt x 198.7425pt>
 File: images/gpt_example.png Graphic file (type png)
 <use images/gpt_example.png>
 Package pdftex.def Info: images/gpt_example.png  used on input line 80.
@@ -1270,7 +1265,7 @@ Package pdftex.def Info: images/gpt_example.png  used on input line 80.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10] [11 <./images/gpt_example.png>] [12] [13]
-<images/Vector_example_update.png, id=102, 822.07124pt x 807.015pt>
+<images/Vector_example_update.png, id=99, 822.07124pt x 807.015pt>
 File: images/Vector_example_update.png Graphic file (type png)
 <use images/Vector_example_update.png>
 Package pdftex.def Info: images/Vector_example_update.png  used on input line 1
@@ -1281,7 +1276,7 @@ Package pdftex.def Info: images/Vector_example_update.png  used on input line 1
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14] [15 <./images/Vector_example_update.png>] [16] [17]
-<images/ths_architecture.png, id=117, 469.755pt x 195.58069pt>
+<images/ths_architecture.png, id=113, 469.755pt x 195.58069pt>
 File: images/ths_architecture.png Graphic file (type png)
 <use images/ths_architecture.png>
 Package pdftex.def Info: images/ths_architecture.png  used on input line 198.
@@ -1291,7 +1286,7 @@ Package pdftex.def Info: images/ths_architecture.png  used on input line 198.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18]
-<images/base_gpt_health.png, id=121, 318.18875pt x 163.61125pt>
+<images/base_gpt_health.png, id=118, 318.18875pt x 163.61125pt>
 File: images/base_gpt_health.png Graphic file (type png)
 <use images/base_gpt_health.png>
 Package pdftex.def Info: images/base_gpt_health.png  used on input line 213.
@@ -1302,7 +1297,7 @@ Package pdftex.def Info: images/base_gpt_health.png  used on input line 213.
 
  (./chapters/capitulo3.tex
 Chapter 3.
-<images/ETL_Pipeline.png, id=130, 247.97644pt x 292.6935pt>
+<images/ETL_Pipeline.png, id=127, 247.97644pt x 292.6935pt>
 File: images/ETL_Pipeline.png Graphic file (type png)
 <use images/ETL_Pipeline.png>
 Package pdftex.def Info: images/ETL_Pipeline.png  used on input line 29.
@@ -1313,29 +1308,29 @@ Package pdftex.def Info: images/ETL_Pipeline.png  used on input line 29.
 
 
 ] [22 <./images/ETL_Pipeline.png>] [23] [24]
-<images/Table_diagram.png, id=145, 410.7345pt x 359.6637pt>
+<images/Table_diagram.png, id=142, 410.7345pt x 359.6637pt>
 File: images/Table_diagram.png Graphic file (type png)
 <use images/Table_diagram.png>
 Package pdftex.def Info: images/Table_diagram.png  used on input line 92.
 (pdftex.def)             Requested size: 399.21791pt x 349.5868pt.
-<images/LLM_Pipeline.png, id=146, 291.489pt x 397.0032pt>
+<images/LLM_Pipeline.png, id=143, 291.489pt x 397.0032pt>
 File: images/LLM_Pipeline.png Graphic file (type png)
 <use images/LLM_Pipeline.png>
 Package pdftex.def Info: images/LLM_Pipeline.png  used on input line 108.
 (pdftex.def)             Requested size: 332.68385pt x 453.1396pt.
  [25 <./images/Table_diagram.png>] [26 <./images/LLM_Pipeline.png>] [27] [28]
-<images/THS_Frontend_Menu.png, id=162, 1376.14125pt x 689.57625pt>
+<images/THS_Frontend_Menu.png, id=159, 1376.14125pt x 689.57625pt>
 File: images/THS_Frontend_Menu.png Graphic file (type png)
 <use images/THS_Frontend_Menu.png>
 Package pdftex.def Info: images/THS_Frontend_Menu.png  used on input line 167.
 (pdftex.def)             Requested size: 460.72124pt x 230.86479pt.
  [29 <./images/THS_Frontend_Menu.png>]
-<images/THS_Misleading.png, id=168, 1531.22063pt x 750.55406pt>
+<images/THS_Misleading.png, id=164, 1531.22063pt x 750.55406pt>
 File: images/THS_Misleading.png Graphic file (type png)
 <use images/THS_Misleading.png>
 Package pdftex.def Info: images/THS_Misleading.png  used on input line 178.
 (pdftex.def)             Requested size: 460.72124pt x 225.8322pt.
-<images/THS_NotMisinformation.png, id=169, 1555.31062pt x 778.40813pt>
+<images/THS_NotMisinformation.png, id=165, 1555.31062pt x 778.40813pt>
 File: images/THS_NotMisinformation.png Graphic file (type png)
 <use images/THS_NotMisinformation.png>
 Package pdftex.def Info: images/THS_NotMisinformation.png  used on input line 1
@@ -1383,14 +1378,14 @@ Chapter 5.
 
 
 ] [46]
-<images/Health_related_training_time.png, id=230, 361.35pt x 252.945pt>
+<images/Health_related_training_time.png, id=227, 361.35pt x 252.945pt>
 File: images/Health_related_training_time.png Graphic file (type png)
 <use images/Health_related_training_time.png>
 Package pdftex.def Info: images/Health_related_training_time.png  used on input
  line 101.
 (pdftex.def)             Requested size: 443.57848pt x 310.50682pt.
  [47] [48 <./images/Health_related_training_time.png>] [49]
-<images/Misinformation_training_time.png, id=242, 439.533pt x 321.054pt>
+<images/Misinformation_training_time.png, id=239, 439.533pt x 321.054pt>
 File: images/Misinformation_training_time.png Graphic file (type png)
 <use images/Misinformation_training_time.png>
 Package pdftex.def Info: images/Misinformation_training_time.png  used on input
@@ -1429,10 +1424,10 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 34423 strings out of 474116
- 838518 string characters out of 5743682
+ 34416 strings out of 474116
+ 838436 string characters out of 5743682
  1942187 words of memory out of 5000000
- 56133 multiletter control sequences out of 15000+600000
+ 56129 multiletter control sequences out of 15000+600000
  566000 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,107p,1565b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1445,10 +1440,10 @@ local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesis.pdf (73 pages, 2511358 bytes).
+Output written on tesis.pdf (72 pages, 2511094 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
+ 314 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
