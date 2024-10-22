@@ -2,7 +2,7 @@
 
 
 \chapter{Performance Evaluation}  
-This section presents the results of our models on the classification tasks. The results show each model's precision, recall, f1 score, and training time.
+This section presents the results of our models on the classification tasks. The results show each model's precision, recall, f1 score, training time, and BERTScore.
 
 
 \section{Health-Related Classification}
@@ -200,6 +200,26 @@ only exception was BERT, which took 351 minutes to train. Next is T5 (Causal) wi
 \end{figure}
 
 
+\section{BERTScore}
+
+Our model BERTScores'  F1 is shown in Table \ref{table:BERTScore}. We calculate these values by taking the average score of the 71 texts classified as health-related and misinformation. The table shows that both models, had a 82\% F1 score. That means that the generated output are closely related but not exactly the same. 
+
+\begin{table}[H]
+	\centering
+	\caption{BERTScore F1 Results}
+	\begin{tabular}{||c | c||} 
+		\hline
+		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
+		\hline
+		LLaMa-3.1 & 82\%  \\
+		\hline
+		GPT-3.5-turbo & 82\% \\ 		
+		\hline
+		\end{tabular}
+	\label{table:BERTScore}
+\end{table}
+
+
 
 \section{Discussion}
 
@@ -217,6 +237,10 @@ The model with the highest F1 score for the misinformation classification (Table
 have desirable results for this classification task. However, both require high computational power, and LLaMa-2 has an extensive training time (Figure \ref{fig:MisinformationTime}) compared to BERT,
 8.09x more. It is important to notice that in both scenarios, LlaMa-2 and T5 (Causal) outperform the other models by a slight margin. These models contain a Decoder element, which can help them
 generate and understand text appropriately.
+
+For the BERTScore, we see that both models had an identical performance (Table \ref{table:BERTScore}). A possible reason is that the RAG process gives sufficient context to generate a coherent response. However, both models
+have their trade-offs. To use GPT-3.5-turbo, we must pay OpenAI to request their API. On the other hand, LLaMa-3.1 ran with Ollama locally, and we need sufficient memory to execute the model. The
+use case for each one depends on the user's hardware.
 
 This project focuses on social media posts, and we know that there are frequent changes in how users interact. Additionally, when new diseases are found or named, we must retrain most
 models to add these words to their vocabulary. Retraining can be costly if the model has many parameters and requires extensive training. Thus, we can say that BERT had overall results

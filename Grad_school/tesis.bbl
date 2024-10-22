@@ -163,6 +163,10 @@ S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
 ``{Get up and running with large language models.}, url =
   {\url{https://ollama.com}}, note = {Accessed: 2024-09-29}.''
 
+\bibitem{zhang2020bertscoreevaluatingtextgeneration}
+T.~Zhang, V.~Kishore, F.~Wu, K.~Q. Weinberger, and Y.~Artzi, ``Bertscore:
+  Evaluating text generation with bert,'' 2020.
+
 \bibitem{huggingface}
 ``{Hugging Face – The AI community building the future}, url =
   {\url{https://huggingface.co}}, note = {Accessed: 2024-10-18}.''
@@ -180,5 +184,8 @@ S.~Siwakoti, K.~Yadav, I.~Thange, N.~Bariletto, L.~Zanotti, A.~Ghoneim, and
 
 \bibitem{transformer-math-eleutherai}
 Q.~Anthony, S.~Biderman, and H.~Schoelkopf, ``Transformer math 101.''
+
+\bibitem{openai}
+``{OpenAI}, url = {\url{https://openai.com}}, note = {Accessed: 2024-09-20}.''
 
 \end{thebibliography}
