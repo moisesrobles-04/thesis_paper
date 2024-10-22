@@ -1,3 +1,5 @@
+\contentsline {section}{ABSTRACT}{ii}{}%
+\contentsline {section}{RESUMEN}{iii}{}%
 \contentsline {section}{List of Figures}{x}{}%
 \contentsline {section}{List of Tables}{xi}{}%
 \contentsline {section}{List of Acronyms}{xiv}{}%
