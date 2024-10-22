@@ -6,13 +6,7 @@
 
 
 \section{Large Language Models (LLM)}
-Natural language processing (NLP) has always been an intricate field because of the complexity of how humans communicate. The meaning of a message
-can vary because of homonyms, tone, context, and other factors that affect the message delivered. These are some challenges that computers face when trying
-to replicate or learn human text communication and expressions.  However, this changed with the introduction of Large Language Models (LLM) \cite{naveed2024comprehensiveoverviewlargelanguage}.
-These models are trained with large amounts of data to replicate human-like patterns or generate text based on statistical relationships between words, and these
-advancements were made possible by transformers \cite{vaswani2023attentionneed}. Previous NLP techniques such as Recurrent Neural Network (RNN) and
-Long-Short Term Memory (LSTM) could help in understanding a sentence's context in the short term. However, these struggle when trying to understand longer texts.
-In contrast, transformer architecture, seen in Figure \ref{transformer}, differs from others because it uses self-attention.
+Natural language processing (NLP) has always been an intricate field because of the complexity of how humans communicate. The meaning of a message can vary because of homonyms, tone, context, and other factors that affect the message delivered. These are some challenges that computers face when trying to replicate or learn human text communication and expressions.  However, this changed with the introduction of Large Language Models (LLM) \cite{naveed2024comprehensiveoverviewlargelanguage}. These models are trained with large amounts of data to replicate human-like patterns or generate text based on statistical relationships between words, and these advancements were made possible by transformers \cite{vaswani2023attentionneed}. Previous NLP techniques such as Recurrent Neural Network (RNN) and Long-Short Term Memory (LSTM) could help in understanding a sentence's context in the short term \cite{Sherstinsky_2020}. However, these struggle when trying to understand longer texts. In contrast, transformer architecture, seen in Figure \ref{transformer}, differs from others because it uses self-attention.
 
 \begin{figure}[!hb]
     \centering
@@ -21,15 +15,13 @@ In contrast, transformer architecture, seen in Figure \ref{transformer}, differs
         \label{transformer}
 \end{figure}
 
-\subsection{LLM Architectures}
-This self-attention finds dependencies between all words in a text, short and long-term. The process of this starts by turning words into tokens. A token can be a word,
-subword, individual letter, or a sequence of words mapped to an embedding. The embedding is the vector representation of a token in high-dimension space; its size
-depends on how much information it stores about the token. Now, self-attention finds relationships between all tokens and gives them an attention score, measuring
-the relevance of a token to others. Transformers uses the scores to generate a final representation of each token. This process depends on how the models make a token.
-The tokenization strategy is determined by the preprocessing stage, and influenced by the embedding and model architecture. The embedding impacts the strategy
-because of its dimensionality, the amount of information encoded, and the model's sequence length limitations. In Figure \ref{transformer},  we can see an encoder and a
-decoder in the transformer architecture. Based on that, there are different LLM architectures: decoder-only, encoder-only, and encoder-decoder. Each one has advantages
-for specific tasks and limitations for others.
+\subsection{Attention Mechanism}
+This self-attention finds dependencies between all words in a text, short and long-term. The process of this starts by turning words into tokens. A token can be a word, subword, individual letter, or a sequence of words mapped to an embedding. The embedding is the vector representation of a token in high-dimension space; its size depends on how much information it stores about the token. Now, self-attention finds relationships between all tokens and gives them an attention score, measuring the relevance of a token to others. Transformers uses the scores to generate a final representation of each token. This process depends on how the models make a token. The tokenization strategy is determined by the preprocessing stage, and influenced by the embedding and model architecture. The embedding impacts the strategy because of its dimensionality, the amount of information encoded, and the model's sequence length limitations. 
+
+
+\subsection{LLM Architecture}
+In Figure \ref{transformer}, we can see an encoder and a decoder in the transformer architecture. Based on that, there are different LLM architectures: decoder-only, encoder-only, and encoder-decoder. Each one has advantages for specific tasks and limitations for others.
+
 
 \begin{figure}[!hb]
     \centering
@@ -38,42 +30,27 @@ for specific tasks and limitations for others.
         \label{text_generation}
 \end{figure}
 
+
 \begin{description}
 
 %\subsection{Decoder-only models}
-\item[Decoder-only models:] Decoder-only models predict the next word based on the previous context, thus being unidirectional models. The model achieves this by taking a text or prompt as input and returning 
-a first word. For each subsequent word, the model uses the previously generated text as input to predict the next word, continuing until it produces a coherent output. In Figure \ref{text_generation},
-the model predicts the last word based on the previous context. Because of their ability to predict sequences of texts, they are frequently employed in tasks like summarization and text generation. Models
-that perform those tasks are called causal language modeling (CLM) because they predict new tokens not found in the input. Compared to the other architectures, these models are massive
-in size. Because of their sizes, these are not very practical or cost-effective for daily usage. These are the most commonly known models, such as GPT-3 \cite{DBLP:journals/corr/abs-2005-14165},
-Mistral \cite{jiang2023mistral7b}, and LLaMa \cite{touvron2023llamaopenefficientfoundation}.
+\item[Decoder-only models:] Decoder-only models predict the next word based on the previous context, thus being unidirectional models. The model achieves this by taking a text or prompt as input and returning  a first word. For each subsequent word, the model uses the previously generated text as input to predict the next word, continuing until it produces a coherent output. In Figure \ref{text_generation}, the model predicts the last word based on the previous context. Because of their ability to predict sequences of texts, they are frequently employed in tasks like summarization and text generation. Models that perform those tasks are called causal language modeling (CLM) because they predict new tokens not found in the input. Compared to the other architectures, these models are massive in size. Because of their sizes, these are not very practical or cost-effective for daily usage. These are the most commonly known models, such as GPT-3 \cite{DBLP:journals/corr/abs-2005-14165}, Mistral \cite{jiang2023mistral7b}, and LLaMa \cite{touvron2023llamaopenefficientfoundation}.
 
 %\subsection{Encoder-only models}
-\item[Encoder-only models:] These models predict by masking specific words in a sentence. Said masking helps them understand the meaning or relation of the masked word based on context. They are bi-directional,
-which means they take the context before and after the masking to evaluate the word. The example in Figure \ref{text_generation} shows a sentence with a word mask being inputted to
-the encoder LLM; the model predicts the missing word by using the surrounding text. That is why they tend to perform well at classification and sentiment analysis but are not optimal for text
-generation. Said models are called masked language models (MLM). In contrast to other architectures, these models are relatively small. Some examples of encoder-only LLM are BERT
-\cite{DBLP:journals/corr/abs-1810-04805} and RoBERTa \cite{liu2019robertarobustlyoptimizedbert}.
+\item[Encoder-only models:] These models predict by masking specific words in a sentence. Said masking helps them understand the meaning or relation of the masked word based on context. They are bi-directional, which means they take the context before and after the masking to evaluate the word. The example in Figure \ref{text_generation} shows a sentence with a word mask being inputted to the encoder LLM; the model predicts the missing word by using the surrounding text. That is why they tend to perform well at classification and sentiment analysis but are not optimal for text generation. Said models are called masked language models (MLM). In contrast to other architectures, these models are relatively small. Some examples of encoder-only LLM are BERT \cite{DBLP:journals/corr/abs-1810-04805} and RoBERTa \cite{liu2019robertarobustlyoptimizedbert}.
 
 %\subsection{Encoder-Decoder models}
-\item[Encoder-Decoder models:] These models combine masking and text generation. They work by masking the sequence of texts and using the context around it to make a prediction. As seen
-in Figure \ref{text_generation}, they can mask more than one word from the original inputted text. Because the model generates sequences of texts, it is commonly used for translation
-and question and answer. Translating between languages cannot be achieved through word-for-word conversion; it requires understanding the entire sequence to preserve the context.
-To have an optimal model, both encoder and decoder must be trained for the task one wishes to achieve. Depending on the task, it can be harder to train compared to the other types of architectures.
-Bart \cite{lewis2019bartdenoisingsequencetosequencepretraining} and T5 \cite{2020t5} are examples of encoder-decoder LLMs.
+\item[Encoder-Decoder models:] These models combine masking and text generation. They work by masking the sequence of texts and using the context around it to make a prediction. As seen in Figure \ref{text_generation}, they can mask more than one word from the original inputted text. Because the model generates sequences of texts, it is commonly used for translation and question and answer. Translating between languages cannot be achieved through word-for-word conversion; it requires understanding the entire sequence to preserve the context. To have an optimal model, both encoder and decoder must be trained for the task one wishes to achieve. Depending on the task, it can be harder to train compared to the other types of architectures. Bart \cite{lewis2019bartdenoisingsequencetosequencepretraining} and T5 \cite{2020t5} are examples of encoder-decoder LLMs.
 
 \end{description}
 
 Knowing the architectures, each one has its advantages for specific NLP tasks. However, to perform these tasks, we must train them to do so.
 
-\subsection{Classification tasks}
-Large Language Models use different learning methods to train. Such methods include zero-shot, one-shot, and few-shot learning. As the name implies, zero-shot learning is training a model without
-previous knowledge of the data; it is learning from scratch. One-shot learning is a method that receives one example as input and tries to generalize from that example. The final method uses
-multiple examples to find a pattern between them. 
 
-In Figure \ref{gpt_example}, we can see an example of zero-shot learning. This LLM has no previous knowledge of the task that it must perform. Nonetheless, the model used, GPT-3, has the 
-advantage that it can follow instructions when redacted clearly. Here, we tell the model that it must act as a medical expert and identify if a message is health-related and why it is classified that way. 
-Also, the result must follow a specific format. This process of instructions is called prompt engineering. Prompting does not retrain or adjust the model parameters. Thus, it does not always have optimal results.  
+\subsection{Classification tasks}
+Large Language Models use different learning methods to train. Such methods include zero-shot, one-shot, and few-shot learning. As the name implies, zero-shot learning is training a model without previous knowledge of the data; it is learning from scratch. One-shot learning is a method that receives one example as input and tries to generalize from that example. The final method uses multiple examples to find a pattern between them. 
+
+In Figure \ref{gpt_example}, we can see an example of zero-shot learning. This LLM has no previous knowledge of the task that it must perform. Nonetheless, the model used, GPT-3, has the advantage that it can follow instructions when redacted clearly. Here, we tell the model that it must act as a medical expert and identify if a message is health-related and why it is classified that way.  Also, the result must follow a specific format. This process of instructions is called prompt engineering. Prompting does not retrain or adjust the model parameters. Thus, it does not always have optimal results.  
  
  \begin{figure}[!h]
     \centering
@@ -83,23 +60,16 @@ Also, the result must follow a specific format. This process of instructions is 
 \end{figure}
 
 
-Moreover, LLMs that completed training with no additional modifications are known as based models. The response from this model will most likely make no sense with the premises it receives.
-This happens because the model is trained on excessive texts to find patterns between them, but this pattern might not be on par with the input. For the model to return a coherent response, it must go through
-a fine-tuning process. Fine-tuning consists of making a model perform specific tasks, such as chatting, summarization, chatbots, and others. To fine-tune a model, it must undergo another training process, with
-training data related to the tasks it will perform. However, there are multiple training types. We will focus on Sequence Classification and Causal Language Modeling.
+Moreover, LLMs that completed training with no additional modifications are known as based models. The response from this model will most likely make no sense with the premises it receives. This happens because the model is trained on excessive texts to find patterns between them, but this pattern might not be on par with the input. For the model to return a coherent response, it must go through a fine-tuning process. Fine-tuning consists of making a model perform specific tasks, such as chatting, summarization, chatbots, and others. To fine-tune a model, it must undergo another training process, with training data related to the tasks it will perform. However, there are multiple training types. We will focus on Sequence Classification and Causal Language Modeling.
 
 \begin{itemize}
-\item{\textbf{Sequence Classification:}} This involves predicting a class label based on an input. That label is a number associated with a class. All previously mentioned models can be trained for Sequence
-Classification, which is the most common training type.
+\item{\textbf{Sequence Classification:}} This involves predicting a class label based on an input. That label is a number associated with a class. All previously mentioned models can be trained for Sequence Classification, which is the most common training type.
 
-\item{\textbf{Causal Language Modeling:}} This training is used for the model to learn the context of the text. We use this so the model learns to generate a text answer based on the input. The labels are texts related to the input.
-This type of training is similar to question-and-answer problems, in which the model infers a result based on the question. CLM is more expensive in computing power than Sequence Classification because 
-the labels must be embedded. That training type is most commonly used in models that have decoders because they are usually used to generate texts.
+\item{\textbf{Causal Language Modeling:}} This training is used for the model to learn the context of the text. We use this so the model learns to generate a text answer based on the input. The labels are texts related to the input. This type of training is similar to question-and-answer problems, in which the model infers a result based on the question. CLM is more expensive in computing power than Sequence Classification because  the labels must be embedded. That training type is most commonly used in models that have decoders because they are usually used to generate texts.
 
 \end{itemize}
 
-A problem with fine-tuning LLMs is that they require excessive computational resources to train or fine-tune. It is not viable to fine-tune all the parameters in the model to perform a specific task. However, there is an
-alternative to fine-tuning a model without having a resource problem.
+A problem with fine-tuning LLMs is that they require excessive computational resources to train or fine-tune. It is not viable to fine-tune all the parameters in the model to perform a specific task. However, there is an alternative to fine-tuning a model without having a resource problem.
 
 
 \subsection{Low-Rank Adaptation (LoRA)}

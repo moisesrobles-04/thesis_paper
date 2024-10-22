@@ -23,6 +23,11 @@ H.~Naveed, A.~U. Khan, S.~Qiu, M.~Saqib, S.~Anwar, M.~Usman, N.~Akhtar,
 A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   L.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' 2023.
 
+\bibitem{Sherstinsky_2020}
+A.~Sherstinsky, ``Fundamentals of recurrent neural network (rnn) and long
+  short-term memory (lstm) network,'' {\em Physica D: Nonlinear Phenomena},
+  vol.~404, p.~132306, Mar. 2020.
+
 \bibitem{DBLP:journals/corr/abs-2005-14165}
 T.~B. Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~Kaplan, P.~Dhariwal,
   A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, S.~Agarwal,

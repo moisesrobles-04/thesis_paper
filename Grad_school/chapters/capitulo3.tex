@@ -18,9 +18,11 @@
 
 
 
-\chapter{System Architecture}  
+\chapter{System Architecture}
 
-\section{Paper ETL Pipeline}
+This section presents the general architectures of the systems we used for the experiment. We illustrate the Extraction, Transformation, and Load (ETL) pipeline for the research papers we used for the misinformation rebuttal. Additionally, we have our misinformation classification process, where we classify the health misinformation and refute it. Finally, we have the UI design where users interact with the texts and the results. 
+
+\section{Research Paper ETL Pipeline}
 
 Our model must use credible sources of information to rebut misinformation. We identified PubMed \cite{pubmed}, an online library that contains peer-reviewed medical literature. We want to extract the papers and store them in a vector database. To extract these papers, we used the BioC API \cite{bioinformatics}, which has access to the PubMed library. However, the API needs the research paper's identifier, known as PubMed Central (PMC) ID. We design a scraper to extract these identifiers from the official PubMed site. The pipeline in Figure \ref{fig:etl} shows the processes of data extraction. 
 
@@ -138,7 +140,7 @@ Flu vaccine effectiveness and future universal influenza vaccination strategies.
  
 The above example shows that Ollama can identify the topics of the original text. That tweet mentions that the flu vaccine is ineffective and asks how long it will take for a universal influenza vaccine. The LLM identified the topic and made a query that can help find
 research papers related to it. However, it is essential to mention that the LLM output can vary. As mentioned previously, this is a statistical model and can have slight variations in its result. Now, this output is sent to the Chroma database to retrieve chunks of research
-papers. For this experiment, our model returns eight chunks that are closest in context to the query. These chunks are then sent to another model to be analyzed and organized.
+papers. For this experiment, our model returns eight chunks that are closest in context to the query. We selected this number because it returns an appropriate amount of context without Ollama truncating the text. These chunks are then sent to another model to be analyzed and organized.
 
 \subsection{Organize and Rebut}
 The final part of our pipeline is using RAG to provide an answer that explains why the original text is misinformation. First, we retrieve the references of the chunks we use for the context. Then, we send the original text with the chunks, as context, to Ollama for

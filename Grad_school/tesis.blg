@@ -33,52 +33,52 @@ I was expecting a `,' or a `}'---line 390 of file referencias.bib
  : @article{social_fact,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-"{" immediately follows a field part---line 436 of file referencias.bib
+"{" immediately follows a field part---line 449 of file referencias.bib
  :  url = \url
  :            {blog.eleuther.ai/transformer-math/},
 I'm skipping whatever remains of this entry
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
-You've used 39 entries,
+You've used 40 entries,
             1876 wiz_defined-function locations,
-            657 strings with 11699 characters,
-and the built_in function-call counts, 9393 in all, are:
-= -- 706
-> -- 671
+            665 strings with 11886 characters,
+and the built_in function-call counts, 9660 in all, are:
+= -- 737
+> -- 675
 < -- 0
-+ -- 240
-- -- 201
-* -- 714
-:= -- 1420
-add.period$ -- 37
-call.type$ -- 39
-change.case$ -- 38
++ -- 242
+- -- 202
+* -- 727
+:= -- 1452
+add.period$ -- 38
+call.type$ -- 40
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 375
-empty$ -- 886
-format.name$ -- 201
-if$ -- 2219
+cite$ -- 43
+duplicate$ -- 395
+empty$ -- 908
+format.name$ -- 202
+if$ -- 2290
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 19
-newline$ -- 123
-num.names$ -- 35
-pop$ -- 217
+int.to.str$ -- 40
+missing$ -- 20
+newline$ -- 126
+num.names$ -- 36
+pop$ -- 219
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 301
+skip$ -- 321
 stack$ -- 0
-substring$ -- 330
-swap$ -- 120
+substring$ -- 342
+swap$ -- 133
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 61
-width$ -- 41
-write$ -- 314
+while$ -- 63
+width$ -- 42
+write$ -- 324
 (There were 5 error messages)
