@@ -1,3 +1,5 @@
+\contentsline {section}{ABSTRACT}{ii}{}%
+\contentsline {section}{RESUMEN}{iii}{}%
 \contentsline {section}{List of Figures}{x}{}%
 \contentsline {section}{List of Tables}{xi}{}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
@@ -28,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Context Finder}{27}{}%
 \contentsline {subsection}{\numberline {3.2.4}Organize and Rebut}{28}{}%
 \contentsline {section}{\numberline {3.3}User Interface (UI)}{29}{}%
-\contentsline {chapter}{\numberline {4}Methodology}{32}{}%
+\contentsline {chapter}{\numberline {4}Experimental Methodology}{32}{}%
 \contentsline {section}{\numberline {4.1}Performance Metrics}{32}{}%
 \contentsline {section}{\numberline {4.2}Hardware}{33}{}%
 \contentsline {section}{\numberline {4.3}Software}{33}{}%
