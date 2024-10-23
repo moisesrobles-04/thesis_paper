@@ -25,39 +25,39 @@
 \contentsline {subsection}{\numberline {3.1.2}BioC API}{23}{}%
 \contentsline {subsection}{\numberline {3.1.3}Vectorizing data}{24}{}%
 \contentsline {subsection}{\numberline {3.1.4}Store metadata}{24}{}%
-\contentsline {section}{\numberline {3.2}Misinformation Rebuttal Pipeline}{25}{}%
-\contentsline {subsection}{\numberline {3.2.1}Health-related Classification}{26}{}%
-\contentsline {subsection}{\numberline {3.2.2}Misinformation Classification}{27}{}%
-\contentsline {subsection}{\numberline {3.2.3}Context Finder}{27}{}%
-\contentsline {subsection}{\numberline {3.2.4}Organize and Rebut}{28}{}%
-\contentsline {section}{\numberline {3.3}User Interface (UI)}{29}{}%
-\contentsline {chapter}{\numberline {4}Experimental Methodology}{32}{}%
-\contentsline {section}{\numberline {4.1}Performance Metrics}{32}{}%
-\contentsline {section}{\numberline {4.2}Hardware}{33}{}%
-\contentsline {section}{\numberline {4.3}Software}{33}{}%
-\contentsline {section}{\numberline {4.4}Datasets}{34}{}%
-\contentsline {subsection}{\numberline {4.4.1}Health-related Dataset}{34}{}%
-\contentsline {subsection}{\numberline {4.4.2}Misinformation Dataset}{35}{}%
-\contentsline {subsection}{\numberline {4.4.3}Data Preprocessing}{36}{}%
-\contentsline {section}{\numberline {4.5}Fine-tuning}{37}{}%
-\contentsline {subsection}{\numberline {4.5.1}Memory Usage Estimation}{38}{}%
-\contentsline {subsection}{\numberline {4.5.2}Parameter-Efficient Fine-Tuning (PEFT)}{40}{}%
-\contentsline {subsection}{\numberline {4.5.3}Training Parameters}{42}{}%
-\contentsline {section}{\numberline {4.6}Rebuttal Evaluation}{44}{}%
-\contentsline {chapter}{\numberline {5}Performance Evaluation}{46}{}%
-\contentsline {section}{\numberline {5.1}Health-Related Classification}{46}{}%
-\contentsline {subsection}{\numberline {5.1.1}Precision}{46}{}%
-\contentsline {subsection}{\numberline {5.1.2}Recall}{47}{}%
-\contentsline {subsection}{\numberline {5.1.3}F1}{48}{}%
-\contentsline {subsection}{\numberline {5.1.4}Training Time}{48}{}%
-\contentsline {section}{\numberline {5.2}Misinformation Classification}{49}{}%
-\contentsline {subsection}{\numberline {5.2.1}Precision}{50}{}%
-\contentsline {subsection}{\numberline {5.2.2}Recall}{50}{}%
-\contentsline {subsection}{\numberline {5.2.3}F1}{51}{}%
-\contentsline {subsection}{\numberline {5.2.4}Training Time}{51}{}%
-\contentsline {section}{\numberline {5.3}BERTScore}{52}{}%
-\contentsline {section}{\numberline {5.4}Discussion}{53}{}%
-\contentsline {chapter}{\numberline {6}Conclusions \& Future Work}{55}{}%
-\contentsline {section}{\numberline {6.1}Conclusions}{55}{}%
-\contentsline {section}{\numberline {6.2}Future Work}{56}{}%
-\contentsline {chapter}{References}{61}{}%
+\contentsline {section}{\numberline {3.2}Misinformation Rebuttal Pipeline}{26}{}%
+\contentsline {subsection}{\numberline {3.2.1}Health-related Classification}{27}{}%
+\contentsline {subsection}{\numberline {3.2.2}Misinformation Classification}{28}{}%
+\contentsline {subsection}{\numberline {3.2.3}Context Finder}{28}{}%
+\contentsline {subsection}{\numberline {3.2.4}Organize and Rebut}{29}{}%
+\contentsline {section}{\numberline {3.3}User Interface (UI)}{30}{}%
+\contentsline {chapter}{\numberline {4}Experimental Methodology}{33}{}%
+\contentsline {section}{\numberline {4.1}Performance Metrics}{33}{}%
+\contentsline {section}{\numberline {4.2}Hardware}{34}{}%
+\contentsline {section}{\numberline {4.3}Software}{34}{}%
+\contentsline {section}{\numberline {4.4}Datasets}{35}{}%
+\contentsline {subsection}{\numberline {4.4.1}Health-related Dataset}{35}{}%
+\contentsline {subsection}{\numberline {4.4.2}Misinformation Dataset}{36}{}%
+\contentsline {subsection}{\numberline {4.4.3}Data Preprocessing}{37}{}%
+\contentsline {section}{\numberline {4.5}Fine-tuning}{38}{}%
+\contentsline {subsection}{\numberline {4.5.1}Memory Usage Estimation}{39}{}%
+\contentsline {subsection}{\numberline {4.5.2}Parameter-Efficient Fine-Tuning (PEFT)}{41}{}%
+\contentsline {subsection}{\numberline {4.5.3}Training Parameters}{43}{}%
+\contentsline {section}{\numberline {4.6}Rebuttal Evaluation}{45}{}%
+\contentsline {chapter}{\numberline {5}Performance Evaluation}{47}{}%
+\contentsline {section}{\numberline {5.1}Health-Related Classification}{47}{}%
+\contentsline {subsection}{\numberline {5.1.1}Precision}{47}{}%
+\contentsline {subsection}{\numberline {5.1.2}Recall}{48}{}%
+\contentsline {subsection}{\numberline {5.1.3}F1}{49}{}%
+\contentsline {subsection}{\numberline {5.1.4}Training Time}{49}{}%
+\contentsline {section}{\numberline {5.2}Misinformation Classification}{50}{}%
+\contentsline {subsection}{\numberline {5.2.1}Precision}{51}{}%
+\contentsline {subsection}{\numberline {5.2.2}Recall}{51}{}%
+\contentsline {subsection}{\numberline {5.2.3}F1}{52}{}%
+\contentsline {subsection}{\numberline {5.2.4}Training Time}{52}{}%
+\contentsline {section}{\numberline {5.3}BERTScore}{53}{}%
+\contentsline {section}{\numberline {5.4}Discussion}{54}{}%
+\contentsline {chapter}{\numberline {6}Conclusions \& Future Work}{56}{}%
+\contentsline {section}{\numberline {6.1}Conclusions}{56}{}%
+\contentsline {section}{\numberline {6.2}Future Work}{57}{}%
+\contentsline {chapter}{References}{62}{}%

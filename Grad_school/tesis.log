@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  22 OCT 2024 15:54
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  22 OCT 2024 22:47
  restricted system commands enabled.
  file:line:error style messages enabled.
 **tesis.tex
@@ -1361,45 +1361,53 @@ Package luatex.def Info: images/ETL_Pipeline.png  used on input line 31.
 
 
 
-] [22<./images/ETL_Pipeline.png>] [23] [24]
-<images/Table_diagram.png, id=137, 410.7345pt x 359.6637pt>
+] [22<./images/ETL_Pipeline.png>] [23]
+<images/Data_vectorization.png, id=134, 405.4347pt x 247.8861pt>
+File: images/Data_vectorization.png Graphic file (type png)
+<use images/Data_vectorization.png>
+Package luatex.def Info: images/Data_vectorization.png  used on input line 80.
+(luatex.def)             Requested size: 399.21791pt x 244.09924pt.
+ [24<./images/Data_vectorization.png>]
+<images/Table_diagram.png, id=139, 410.7345pt x 359.6637pt>
 File: images/Table_diagram.png Graphic file (type png)
 <use images/Table_diagram.png>
-Package luatex.def Info: images/Table_diagram.png  used on input line 94.
+Package luatex.def Info: images/Table_diagram.png  used on input line 102.
 (luatex.def)             Requested size: 399.21791pt x 349.5868pt.
-<images/LLM_Pipeline.png, id=138, 291.489pt x 397.0032pt>
+[25]
+<images/LLM_Pipeline.png, id=143, 291.489pt x 397.0032pt>
 File: images/LLM_Pipeline.png Graphic file (type png)
 <use images/LLM_Pipeline.png>
-Package luatex.def Info: images/LLM_Pipeline.png  used on input line 110.
+Package luatex.def Info: images/LLM_Pipeline.png  used on input line 118.
 (luatex.def)             Requested size: 332.68385pt x 453.1396pt.
- [25<./images/Table_diagram.png>] [26<./images/LLM_Pipeline.png>] [27] [28]
-<images/THS_Frontend_Menu.png, id=155, 2567.5925pt x 1360.08125pt>
+ [26<./images/Table_diagram.png>] [27<./images/LLM_Pipeline.png>] [28]
+[29]
+<images/THS_Frontend_Menu.png, id=160, 2567.5925pt x 1360.08125pt>
 File: images/THS_Frontend_Menu.png Graphic file (type png)
 <use images/THS_Frontend_Menu.png>
-Package luatex.def Info: images/THS_Frontend_Menu.png  used on input line 167.
+Package luatex.def Info: images/THS_Frontend_Menu.png  used on input line 175.
 (luatex.def)             Requested size: 411.57652pt x 218.01175pt.
- [29<./images/THS_Frontend_Menu.png>]
-<images/THS_Misleading.png, id=160, 1283.29437pt x 647.92062pt>
+ [30<./images/THS_Frontend_Menu.png>]
+<images/THS_Misleading.png, id=165, 1283.29437pt x 647.92062pt>
 File: images/THS_Misleading.png Graphic file (type png)
 <use images/THS_Misleading.png>
-Package luatex.def Info: images/THS_Misleading.png  used on input line 182.
+Package luatex.def Info: images/THS_Misleading.png  used on input line 190.
 (luatex.def)             Requested size: 411.57652pt x 207.79361pt.
-<images/THS_Rebuttal_view.png, id=161, 769.87625pt x 1002.24437pt>
+<images/THS_Rebuttal_view.png, id=166, 769.87625pt x 1002.24437pt>
 File: images/THS_Rebuttal_view.png Graphic file (type png)
 <use images/THS_Rebuttal_view.png>
-Package luatex.def Info: images/THS_Rebuttal_view.png  used on input line 196.
+Package luatex.def Info: images/THS_Rebuttal_view.png  used on input line 204.
 (luatex.def)             Requested size: 332.68385pt x 433.11299pt.
-[30<./images/THS_Misleading.png>]) [31<./images/THS_Rebuttal_view.png>]
+ [31<./images/THS_Misleading.png>])
+[32<./images/THS_Rebuttal_view.png>]
 \openout2 = chapters/capitulo4.aux
-
-(./chapters/capitulo4.tex
+ (./chapters/capitulo4.tex
 Chapter 4.
-[32
+[33
 
 
 
 
-] [33] [34] [35] [36] [37] [38]
+] [34] [35] [36] [37] [38] [39]
 Overfull \hbox (32.5336pt too wide) in paragraph at lines 193--205
  [][] 
  []
@@ -1409,7 +1417,7 @@ Overfull \hbox (37.70149pt too wide) in paragraph at lines 215--227
  [][] 
  []
 
-[39] [40] [41]
+[40] [41] [42]
 Overfull \hbox (40.85747pt too wide) in paragraph at lines 277--289
  [][] 
  []
@@ -1420,36 +1428,36 @@ Overfull \hbox (0.8496pt too wide) in paragraph at lines 331--332
 of mul-ti-ple batches re-sults dur-ing train-
  []
 
-[42] [43] [44]) [45]
+[43] [44] [45]) [46]
 \openout2 = chapters/capitulo5.aux
  (./chapters/capitulo5.tex
 Chapter 5.
-[46
+[47
 
 
 
 
-] [47]
-<images/Health_related_training_time.png, id=225, 361.35pt x 252.945pt>
+] [48]
+<images/Health_related_training_time.png, id=231, 361.35pt x 252.945pt>
 File: images/Health_related_training_time.png Graphic file (type png)
 <use images/Health_related_training_time.png>
 Package luatex.def Info: images/Health_related_training_time.png  used on input
  line 101.
 (luatex.def)             Requested size: 443.57848pt x 310.50682pt.
- [48] [49<./images/Health_related_training_time.png>] [50]
-<images/Misinformation_training_time.png, id=237, 439.533pt x 321.054pt>
+ [49] [50<./images/Health_related_training_time.png>] [51]
+<images/Misinformation_training_time.png, id=242, 439.533pt x 321.054pt>
 File: images/Misinformation_training_time.png Graphic file (type png)
 <use images/Misinformation_training_time.png>
 Package luatex.def Info: images/Misinformation_training_time.png  used on input
  line 196.
 (luatex.def)             Requested size: 443.57848pt x 324.00723pt.
- [51]
-[52<./images/Misinformation_training_time.png>] [53]) [54]
+ [52]
+[53<./images/Misinformation_training_time.png>] [54]) [55]
 \openout2 = chapters/conclusion.aux
 
 (./chapters/conclusion.tex
 Chapter 6.
-[55
+[56
 
 
 
@@ -1460,11 +1468,11 @@ Overfull \hbox (5.05894pt too wide) in paragraph at lines 18--19
 we no-ticed that the mis-in-for-ma-tion pipeline
  []
 
-) [56] (./tesis.bbl [57
+) [57] (./tesis.bbl [58
 
 
 
-] [58] [59] [60]) [61] (./tesis.aux
+] [59] [60] [61]) [62] (./tesis.aux
 (./prelim/portada3.aux) (./prelim/abstract.aux) (./prelim/acknowledgment.aux)
 (./prelim/acronyms.aux) (./chapters/capitulo1.aux) (./chapters/capitulo2.aux)
 (./chapters/capitulo3.aux) (./chapters/capitulo4.aux) (./chapters/capitulo5.aux
@@ -1476,13 +1484,13 @@ L3 programming layer <2024-02-20>
 )
 
 Here is how much of LuaTeX's memory you used:
- 35240 strings out of 476447
+ 35251 strings out of 476447
  100000,1977958 words of node,token memory allocated
  888 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 25 attribute, 117 glue_spe
 c, 25 attribute_list, 2 write nodes
    avail lists: 2:885,3:254,4:52,5:339,6:86,7:5701,8:49,9:937,10:17,11:463
- 56160 multiletter control sequences out of 65536+600000
+ 56168 multiletter control sequences out of 65536+600000
  43 fonts using 3151263 bytes
  99i,13n,102p,1556b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><
@@ -1494,10 +1502,10 @@ d.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
 usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesis.pdf (74 pages, 2007727 bytes).
+Output written on tesis.pdf (75 pages, 2061524 bytes).
 
-PDF statistics: 318 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
+PDF statistics: 323 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -3,22 +3,22 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Topics for Research Paper Extraction}}{23}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Cluster's Node Specifications}}{33}{}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces LLM Specifications}}{34}{}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Training Datasets}}{34}{}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Health-Related Dataset Weight Penalty}}{35}{}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Misinformation Dataset Weight Penalty}}{36}{}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Models Activation Parameters}}{39}{}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Models Memory Usage Estimate (MB)}}{39}{}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces LoRA Hyperparameters \& Total Trainable Parameters}}{41}{}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces PEFT Model Memory Usage Estimate (MB)}}{42}{}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces Fine-tuning Hyperparameters}}{43}{}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Cluster's Node Specifications}}{34}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces LLM Specifications}}{35}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Training Datasets}}{35}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Health-Related Dataset Weight Penalty}}{36}{}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Misinformation Dataset Weight Penalty}}{37}{}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Models Activation Parameters}}{40}{}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Models Memory Usage Estimate (MB)}}{40}{}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces LoRA Hyperparameters \& Total Trainable Parameters}}{42}{}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces PEFT Model Memory Usage Estimate (MB)}}{43}{}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Fine-tuning Hyperparameters}}{44}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Health Related Precision Result}}{46}{}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Health Related Recall Result}}{47}{}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Health Related F1 Result}}{48}{}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Misinformation Precision Result}}{50}{}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Misinformation Recall Result}}{50}{}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Misinformation F1 Result}}{51}{}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces BERTScore F1 Results}}{52}{}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Health Related Precision Result}}{47}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Health Related Recall Result}}{48}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Health Related F1 Result}}{49}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Misinformation Precision Result}}{51}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Misinformation Recall Result}}{51}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Misinformation F1 Result}}{52}{}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces BERTScore F1 Results}}{53}{}%
 \addvspace {10\p@ }
