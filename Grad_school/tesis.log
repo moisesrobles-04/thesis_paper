@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  22 OCT 2024 22:47
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  23 OCT 2024 20:54
  restricted system commands enabled.
  file:line:error style messages enabled.
 **tesis.tex
@@ -1502,7 +1502,7 @@ d.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
 usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesis.pdf (75 pages, 2061524 bytes).
+Output written on tesis.pdf (75 pages, 2061495 bytes).
 
 PDF statistics: 323 PDF objects out of 1000 (max. 8388607)
  195 compressed objects within 2 object streams
