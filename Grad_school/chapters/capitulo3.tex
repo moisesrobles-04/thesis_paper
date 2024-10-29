@@ -20,7 +20,7 @@
 
 \chapter{System Architecture}
 
-This section presents the general architectures of the systems we used for the experiment. We illustrate the Extraction, Transformation, and Load (ETL) pipeline for the research papers we used for the misinformation rebuttal. Additionally, we have our misinformation classification process, where we classify the health misinformation and refute it. Finally, we have the UI design where users interact with the texts and the results. 
+This section presents the general architectures of the systems we used for the development and experiments in our system. We illustrate the Extraction, Transformation, and Load (ETL) pipeline we used for the misinformation rebuttal. Additionally, we have our misinformation classification process, where we classify the health misinformation and refute it. Finally, we have the UI design where users interact with the texts and the results. 
 
 \section{Research Paper ETL Pipeline}
 
@@ -70,7 +70,7 @@ The first step of the pipeline was identifying what papers we needed to extract.
 To extract them, we built a scraper in Python using Selenium and BeautifulSoup libraries. We used Selenium to retrieve the web source from PubMed's website, and BeautifulSoup was used to get the links to each paper. These links contained the PMC identifier. For each topic, we selected 5,000 PMC identifiers. These identifiers were grouped by topic and stored locally in Comma Separated Value (CSV) files.
 
 \subsection{BioC API}
-After retrieving those identifiers, we need to extract the research papers. Using the PubMed API, BioC, we made requests that returned the documents as JSON. These JSONs were preprocessed to contain texts, and we removed tables and figures. Later, the paper's sections -introduction, methodology, results, and others- were combined as one attribute, excluding references. We removed tables, figures, and references from the context to ensure the chunking process worked appropriately. If the data is not preprocessed, when performing RAG, we can retrieve data that is not useful. After that, we turned the result into a new JSON that contained the research metadata and its context. 
+After retrieving those identifiers, we need to extract the research papers. Using the PubMed API, BioC, we made requests that returned the documents as JSON. These JSONs were preprocessed to extract texts, and we removed tables and figures. Later, the paper's sections -introduction, methodology, results, and others- were combined as one attribute, excluding references. We removed tables, figures, and references from the context to ensure the chunking process worked appropriately. If the data is not preprocessed, when performing RAG, we can retrieve data that is not useful. After that, we turned the result into a new JSON that contained the research metadata and its context. 
 
 \subsection{Vectorizing data}
 After retrieving the data, we need to vectorize the papers. Figure \ref{fig:vector} shows the process of the papers vectorization. First, each research paper’s context was split into chunks using LangChain. Then, we used an LLM, BAAI \cite{bge_embedding}, to embed these chunks. A universal unique identifier (UUID) was combined with each chunk and stored in a Chroma \cite{chroma} database. After uploading the data to Chroma, we added these UUIDs to their JSON. 
@@ -123,12 +123,12 @@ After training the models and storing the context for the rebuttal, we create th
 
 
 \subsection{Health-related Classification}
-The first part of the pipeline is determining if the text is related to health. When the system receives the input text, it sends it to a model finetuned to classify health-related texts. This model determines whether the input is related, unrelated, or ambiguous.
-If the text is health-related, we continue to the next part of the pipeline. When the text is non-related or ambiguous, we end the process. We end this because other topics are out of the model's scope. 
+The first part of the pipeline is determining if the text is related to health. When the system receives the input text, it sends it to a model fine-tuned to classify health-related texts. This model determines whether the input is related, unrelated, or ambiguous.
+If the text is health-related, we continue to the next part of the pipeline. When the text is non-related or ambiguous, we end the process. We end this because the topics are out of the model's scope. 
 
 \subsection{Misinformation Classification}
-After confirming that the text is health-related, we want to validate that it contains misinformation. The finetuned model can only return two possible results: misinformation or non-misinformation. If the model finds no misinformation after evaluating the text,
-the final output will return both classifications. When the result contains misinformation, we start the search for research papers.
+After confirming that the text is health-related, we want to validate that it contains misinformation. The fine-tuned model can only return two possible results: misinformation or non-misinformation. If the model finds no misinformation after evaluating the text,
+the final output will return that classification. When the result contains misinformation, we start the search for research papers that be used to rebut the message.
 
 \subsection{Context Finder}
 Before starting the search on the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama}. That tool allows us to execute locally a pre-trained LLM that generates text. Thus, we send a query to Ollama asking it to make a one-sentence query for the vector database related to the input.
@@ -151,8 +151,7 @@ research papers related to it. However, it is essential to mention that the LLM 
 papers. For this experiment, our model returns eight chunks that are closest in context to the query. We selected this number because it returns an appropriate amount of context without Ollama truncating the text. These chunks are then sent to another model to be analyzed and organized.
 
 \subsection{Organize and Rebut}
-The final part of our pipeline is using RAG to provide an answer that explains why the original text is misinformation. First, we retrieve the references of the chunks we use for the context. Then, we send the original text with the chunks, as context, to Ollama for
-the model to evaluate. Ollama returns a 2-3 sentence result that explains the text’s misinformation. The final output is a JSON with the following attributes:
+The final part of our pipeline is using RAG to provide an answer that explains why the original text is misinformation. First, we retrieve the references of the chunks we use for the context. Then, we send the original text with the chunks, as context, to Ollama so the model can evaluate and generate an explanation that rebuts the misinformation. Ollama returns a 2-3 sentence result that explains the text’s misinformation. The final output is a JSON with the following attributes:
 
 \begin{description}
 \item{\textbf{chroma\_value:}} If the text is health-related and is misinformation, this will have the rebuttal output from Ollama, consisting of 2-3 sentences. If the text is non-related or non-misinformation, it will give a default value saying so. 
@@ -168,7 +167,7 @@ approach is its ability to explain complex content accessible to non-technical r
 
 
 \section{User Interface (UI)}
-With the pipeline correctly working, users need to interact and view the results. We created an user interface were they can interact with texts and see the classification process. Figure \ref{fig:Menu} shows the main menu of the interface. When we select a text a side screen appears that shows the results from the misinformation classification pipeline. 
+With the pipeline correctly working, users need to interact and view the results. We created an user interface where they can interact with texts and see the classification process. Figure \ref{fig:Menu} shows the main menu of the interface. When we select a text, it triggers a side screen to appear that shows the results from the misinformation classification pipeline. 
 
 \begin{figure}[H]
 	\begin{center}
