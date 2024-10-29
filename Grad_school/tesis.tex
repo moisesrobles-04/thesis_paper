@@ -47,18 +47,6 @@
 %_______________________________________________
 %TO CREATE LIST OF APPENDICES
 
-\newcommand{\listexamplename}{List of Appendices}
-\newlistof{example}{exp}{\listexamplename}
-\newcommand{\example}[1]{%
-\refstepcounter{example}
-\par\noindent\textbf{Appendix \theexample. #1}
-\addcontentsline{exp}{example}
-{\protect\numberline{\thechapter.\theexample}#1}\par}
-
-\makeatletter
-\@addtoreset{example}{chapter}
-\makeatother
-%from https://texblog.org/2008/07/13/define-your-own-list-of/
 %_____________________________________________________________
 
 \begin{document}
@@ -110,11 +98,9 @@ Copyright \copyright \ 2024
   \cleardoublepage
   \addcontentsline{toc}{section}{\listtablename}\listoftables
 
+\newpage
 \addcontentsline{toc}{section}{List of Abbreviation}
 \include{prelim/acronyms}
-
-%\addcontentsline{toc}{section}{\listexamplename}\listofexample
-
 
 \newpage
 %%%% PAGE NUMBERING ___________
