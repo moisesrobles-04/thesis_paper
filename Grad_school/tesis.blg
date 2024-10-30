@@ -15,61 +15,61 @@ A level-1 auxiliary file: chapters/conclusion.aux
 Database file #1: referencias.bib
 I was expecting a `,' or a `}'---line 324 of file referencias.bib
  : 
- : @misc{koh2023groundinglanguagemodelsimages,
+ : @misc{jin2023rethinkinglearningratetuning,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 370 of file referencias.bib
+I was expecting a `,' or a `}'---line 380 of file referencias.bib
  : 
  : @misc{openai,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 376 of file referencias.bib
+I was expecting a `,' or a `}'---line 386 of file referencias.bib
  : 
  : @misc{pgvector,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 390 of file referencias.bib
+I was expecting a `,' or a `}'---line 400 of file referencias.bib
  : 
  : @article{social_fact,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-"{" immediately follows a field part---line 449 of file referencias.bib
+"{" immediately follows a field part---line 459 of file referencias.bib
  :  url = \url
  :            {blog.eleuther.ai/transformer-math/},
 I'm skipping whatever remains of this entry
 Warning--empty booktitle in inproceedings
 Warning--empty publisher in socialmedias
 Warning--empty journal in article_vaccine
-You've used 40 entries,
+You've used 41 entries,
             1876 wiz_defined-function locations,
-            665 strings with 11886 characters,
-and the built_in function-call counts, 9660 in all, are:
-= -- 737
-> -- 675
+            668 strings with 12060 characters,
+and the built_in function-call counts, 9838 in all, are:
+= -- 748
+> -- 692
 < -- 0
-+ -- 242
-- -- 202
-* -- 727
-:= -- 1452
-add.period$ -- 38
-call.type$ -- 40
-change.case$ -- 39
++ -- 248
+- -- 207
+* -- 740
+:= -- 1481
+add.period$ -- 39
+call.type$ -- 41
+change.case$ -- 40
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 395
-empty$ -- 908
-format.name$ -- 202
-if$ -- 2290
+cite$ -- 44
+duplicate$ -- 399
+empty$ -- 926
+format.name$ -- 207
+if$ -- 2331
 int.to.chr$ -- 0
-int.to.str$ -- 40
+int.to.str$ -- 41
 missing$ -- 20
-newline$ -- 126
-num.names$ -- 36
-pop$ -- 219
+newline$ -- 129
+num.names$ -- 37
+pop$ -- 226
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 321
+skip$ -- 325
 stack$ -- 0
 substring$ -- 342
 swap$ -- 133
@@ -78,7 +78,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 63
-width$ -- 42
-write$ -- 324
+while$ -- 64
+width$ -- 43
+write$ -- 331
 (There were 5 error messages)
