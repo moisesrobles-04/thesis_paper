@@ -1,70 +1,35 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  23 OCT 2024 20:54
- restricted system commands enabled.
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  30 OCT 2024 14:29
+entering extended mode
+ restricted \write18 enabled.
  file:line:error style messages enabled.
+ %&-line parsing enabled.
 **tesis.tex
 (./tesis.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
-Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended c
-ollection.
-luaotfload | conf : Root cache directory is "/Users/moisesrobles04/Library/texli
-ve/2024/texmf-var/luatex-cache/generic/names".
-luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-res
-olved path "/usr/local/texlive/2024/texmf-dist/tex/luatex/luaotfload/fontloader-
-2023-12-28.lua".
-Lua-only attribute luaotfload@noligature = 1
-luaotfload | init : Context OpenType loader version 3.134
-Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
-Inserting `luaotfload.node_processor' in `hpack_filter'.
-Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
-Inserting `luaotfload.define_font' in `define_font'.
-Lua-only attribute luaotfload_color_attribute = 2
-luaotfload | conf : Root cache directory is "/Users/moisesrobles04/Library/texli
-ve/2024/texmf-var/luatex-cache/generic/names".
-Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
-Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
-Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
-Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
-Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
-Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
-Inserting `luaotfload.cleanup_files' in `wrapup_run'.
-Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
-Inserting `luaotfload.glyphinfo' in `glyph_info'.
-Lua-only attribute luaotfload.letterspace_done = 3
-Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
-Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
-Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
-Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
-Inserting `tracingstacklevels' in `input_level_string'. (/usr/local/texlive/202
-4/texmf-dist/tex/latex/base/report.cls
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /Users/moisesrobles04/Library/
-texlive/2024/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
-\c@part=\count186
-\c@chapter=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
+)
+\c@part=\count188
+\c@chapter=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\c@figure=\count195
+\c@table=\count196
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
-\bibindent=\dimen139
+\bibindent=\dimen140
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count195
-\c@@ppsavesec=\count196
-\c@@ppsaveapp=\count197
+\c@@pps=\count197
+\c@@ppsavesec=\count198
+\c@@ppsaveapp=\count199
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -82,13 +47,13 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/luatex.def
-File: luatex.def 2022/09/22 v1.2d Graphics/color driver for luatex
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen140
-\Gin@req@width=\dimen141
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/sidecap/sidecap.sty
 Package: sidecap 2023/01/24 v1.7a SideCap Package (RN/HjG)
@@ -96,24 +61,24 @@ Package: sidecap 2023/01/24 v1.7a SideCap Package (RN/HjG)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\SC@BOXWD=\dimen142
-\SC@CAPWD=\dimen143
-\SC@tempdima=\dimen144
-\SC@tempdimb=\dimen145
-\c@SC@C=\count198
+\SC@BOXWD=\dimen143
+\SC@CAPWD=\dimen144
+\SC@tempdima=\dimen145
+\SC@tempdimb=\dimen146
+\c@SC@C=\count266
 \SC@BOX=\box51
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen146
-\WF@size=\dimen147
-\c@WF@wrappedlines=\count199
+\wrapoverhang=\dimen147
+\WF@size=\dimen148
+\c@WF@wrappedlines=\count267
 \WF@box=\box52
 \WF@everypar=\toks18
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count266
+\c@float@type=\count268
 \float@exts=\toks19
 \float@box=\box53
 \@float@everytoks=\toks20
@@ -121,27 +86,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
-\c@tracingst=\count267
-\ST@wd=\dimen148
+\c@tracingst=\count269
+\ST@wd=\dimen149
 \ST@rightskip=\skip50
 \ST@leftskip=\skip51
 \ST@parfillskip=\skip52
-\ST@pageleft=\dimen149
-\ST@headht=\dimen150
-\ST@tailht=\dimen151
-\ST@pagesofar=\dimen152
-\ST@pboxht=\dimen153
-\ST@lineht=\dimen154
-\ST@prevht=\dimen155
-\ST@toadd=\dimen156
-\ST@dimen=\dimen157
+\ST@pageleft=\dimen150
+\ST@headht=\dimen151
+\ST@tailht=\dimen152
+\ST@pagesofar=\dimen153
+\ST@pboxht=\dimen154
+\ST@lineht=\dimen155
+\ST@prevht=\dimen156
+\ST@toadd=\dimen157
+\ST@dimen=\dimen158
 \ST@pbox=\box55
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen158
+\col@sep=\dimen159
 \ar@mcellbox=\box56
-\extrarowheight=\dimen159
+\extrarowheight=\dimen160
 \NC@list=\toks21
 \extratabsurround=\skip53
 \backup@length=\skip54
@@ -152,23 +117,23 @@ Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box58
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen160
-\lightrulewidth=\dimen161
-\cmidrulewidth=\dimen162
-\belowrulesep=\dimen163
-\belowbottomsep=\dimen164
-\aboverulesep=\dimen165
-\abovetopsep=\dimen166
-\cmidrulesep=\dimen167
-\cmidrulekern=\dimen168
-\defaultaddspace=\dimen169
-\@cmidla=\count268
-\@cmidlb=\count269
-\@aboverulesep=\dimen170
-\@belowrulesep=\dimen171
-\@thisruleclass=\count270
-\@lastruleclass=\count271
-\@thisrulewidth=\dimen172
+\heavyrulewidth=\dimen161
+\lightrulewidth=\dimen162
+\cmidrulewidth=\dimen163
+\belowrulesep=\dimen164
+\belowbottomsep=\dimen165
+\aboverulesep=\dimen166
+\abovetopsep=\dimen167
+\cmidrulesep=\dimen168
+\cmidrulekern=\dimen169
+\defaultaddspace=\dimen170
+\@cmidla=\count270
+\@cmidlb=\count271
+\@aboverulesep=\dimen171
+\@belowrulesep=\dimen172
+\@thisruleclass=\count272
+\@lastruleclass=\count273
+\@thisrulewidth=\dimen173
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -179,17 +144,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count272
-\Gm@cntv=\count273
-\c@Gm@tempcnt=\count274
-\Gm@bindingoffset=\dimen173
-\Gm@wd@mp=\dimen174
-\Gm@odd@mp=\dimen175
-\Gm@even@mp=\dimen176
-\Gm@layoutwidth=\dimen177
-\Gm@layoutheight=\dimen178
-\Gm@layouthoffset=\dimen179
-\Gm@layoutvoffset=\dimen180
+\Gm@cnth=\count274
+\Gm@cntv=\count275
+\c@Gm@tempcnt=\count276
+\Gm@bindingoffset=\dimen174
+\Gm@wd@mp=\dimen175
+\Gm@odd@mp=\dimen176
+\Gm@even@mp=\dimen177
+\Gm@layoutwidth=\dimen178
+\Gm@layoutheight=\dimen179
+\Gm@layouthoffset=\dimen180
+\Gm@layoutvoffset=\dimen181
 \Gm@dimlist=\toks22
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty
@@ -222,23 +187,23 @@ Package: amstext 2021/08/26 v2.01 AMS text
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
-\ex@=\dimen181
+\ex@=\dimen182
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen182
+\pmbraise@=\dimen183
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count275
-LaTeX Info: Redefining \frac on input line 236.
-\uproot@=\count276
-\leftroot@=\count277
+\inf@bad=\count277
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count278
+\leftroot@=\count279
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count278
-\DOTSCASE@=\count279
+\classnum@=\count280
+\DOTSCASE@=\count281
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -248,30 +213,30 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen183
+\big@size=\dimen184
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count280
+\macc@depth=\count282
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count281
+\c@MaxMatrixCols=\count283
 \dotsspace@=\muskip17
-\c@parentequation=\count282
-\dspbrk@lvl=\count283
+\c@parentequation=\count284
+\dspbrk@lvl=\count285
 \tag@help=\toks25
-\row@=\count284
-\column@=\count285
-\maxfields@=\count286
+\row@=\count286
+\column@=\count287
+\maxfields@=\count288
 \andhelp@=\toks26
-\eqnshift@=\dimen184
-\alignsep@=\dimen185
-\tagshift@=\dimen186
-\tagwidth@=\dimen187
-\totwidth@=\dimen188
-\lineht@=\dimen189
+\eqnshift@=\dimen185
+\alignsep@=\dimen186
+\tagshift@=\dimen187
+\tagwidth@=\dimen188
+\totwidth@=\dimen189
+\lineht@=\dimen190
 \@envbody=\toks27
 \multlinegap=\skip56
 \multlinetaggap=\skip57
@@ -285,25 +250,24 @@ Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-02-20 L3 programming layer (loader) 
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2024-02-20 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count287
-Inserting `l3color' in `luaotfload.parse_color'.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count289
 \l__pdf_internal_box=\box61
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2024-02-18 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count288
-\calc@Bcount=\count289
-\calc@Adimen=\dimen190
-\calc@Bdimen=\dimen191
+\calc@Acount=\count290
+\calc@Bcount=\count291
+\calc@Adimen=\dimen191
+\calc@Bdimen=\dimen192
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count290
+\calc@Ccount=\count292
 \calc@Cskip=\skip60
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/chemgreek/chemgreek.sty
@@ -312,10 +276,10 @@ Package: xparse 2024-02-18 L3 Experimental document command parser
 )
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
  in chemistry (CN)
-\l__chemgreek_tmpa_int=\count291
-\g__chemgreek_tmpa_int=\count292
+\l__chemgreek_tmpa_int=\count293
+\g__chemgreek_tmpa_int=\count294
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count293
+\l__mhchem_ce_distanceFromLastComma_int=\count295
 \__mhchem_arrow_extPgfLength_skip=\skip61
 \mhchem@minispace@tmp=\skip62
 \mhchem@minibackspace@tmp=\skip63
@@ -326,11 +290,11 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
 \mhchem@smallbondwidth=\skip68
 \mhchem@bondtmp@minussidebearingleft=\skip69
 \mhchem@bondtmp@minussidebearingright=\skip70
-\l__mhchem_option_version_int=\count294
-\mhchem@option@minusmathsidebearingleft=\dimen192
-\mhchem@option@minusmathsidebearingright=\dimen193
-\mhchem@option@minustextsidebearingleft=\dimen194
-\mhchem@option@minustextsidebearingright=\dimen195
+\l__mhchem_option_version_int=\count296
+\mhchem@option@minusmathsidebearingleft=\dimen193
+\mhchem@option@minusmathsidebearingright=\dimen194
+\mhchem@option@minustextsidebearingleft=\dimen195
+\mhchem@option@minustextsidebearingright=\dimen196
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
@@ -343,18 +307,18 @@ Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen196
-\captionmargin=\dimen197
-\caption@leftmargin=\dimen198
-\caption@rightmargin=\dimen199
-\caption@width=\dimen256
-\caption@indent=\dimen257
-\caption@parindent=\dimen258
-\caption@hangindent=\dimen259
+\caption@tempdima=\dimen197
+\captionmargin=\dimen198
+\caption@leftmargin=\dimen199
+\caption@rightmargin=\dimen256
+\caption@width=\dimen257
+\caption@indent=\dimen258
+\caption@parindent=\dimen259
+\caption@hangindent=\dimen260
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count295
-\c@continuedfloat=\count296
+\c@caption@flags=\count297
+\c@continuedfloat=\count298
 Package caption Info: float package is loaded.
 Package caption Info: sidecap package is loaded.
 Package caption Info: supertabular package is loaded.
@@ -362,9 +326,9 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count297
+\c@subfigure=\count299
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count298
+\c@subtable=\count300
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -380,9 +344,9 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count299
-\l__lipsum_a_int=\count300
-\l__lipsum_b_int=\count301
+\g__lipsum_par_int=\count301
+\l__lipsum_a_int=\count302
+\l__lipsum_b_int=\count303
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/blindtext/blindtext.sty
@@ -391,24 +355,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count302
-\c@Blindtext=\count303
-\c@blind@countparstart=\count304
-\blind@countxx=\count305
-\blindtext@numBlindtext=\count306
-\blind@countyy=\count307
-\c@blindlist=\count308
-\c@blindlistlevel=\count309
-\c@blindlist@level=\count310
-\blind@listitem=\count311
-\c@blind@listcount=\count312
-\c@blind@levelcount=\count313
-\blind@mathformula=\count314
-\blind@Mathformula=\count315
-\c@blind@randomcount=\count316
-\c@blind@randommax=\count317
-\c@blind@pangramcount=\count318
-\c@blind@pangrammax=\count319
+\c@blindtext=\count304
+\c@Blindtext=\count305
+\c@blind@countparstart=\count306
+\blind@countxx=\count307
+\blindtext@numBlindtext=\count308
+\blind@countyy=\count309
+\c@blindlist=\count310
+\c@blindlistlevel=\count311
+\c@blindlist@level=\count312
+\blind@listitem=\count313
+\c@blind@listcount=\count314
+\c@blind@levelcount=\count315
+\blind@mathformula=\count316
+\blind@Mathformula=\count317
+\c@blind@randomcount=\count318
+\c@blind@randommax=\count319
+\c@blind@pangramcount=\count320
+\c@blind@pangrammax=\count321
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
@@ -419,8 +383,8 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks29
-\pgfutil@tempdima=\dimen260
-\pgfutil@tempdimb=\dimen261
+\pgfutil@tempdima=\dimen261
+\pgfutil@tempdimb=\dimen262
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box62
@@ -442,35 +406,35 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 tered.code.tex
 \pgfkeys@tmptoks=\toks32
 ))
-\pgf@x=\dimen262
-\pgf@y=\dimen263
-\pgf@xa=\dimen264
-\pgf@ya=\dimen265
-\pgf@xb=\dimen266
-\pgf@yb=\dimen267
-\pgf@xc=\dimen268
-\pgf@yc=\dimen269
-\pgf@xd=\dimen270
-\pgf@yd=\dimen271
+\pgf@x=\dimen263
+\pgf@y=\dimen264
+\pgf@xa=\dimen265
+\pgf@ya=\dimen266
+\pgf@xb=\dimen267
+\pgf@yb=\dimen268
+\pgf@xc=\dimen269
+\pgf@yc=\dimen270
+\pgf@xd=\dimen271
+\pgf@yd=\dimen272
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count320
-\c@pgf@countb=\count321
-\c@pgf@countc=\count322
-\c@pgf@countd=\count323
+\c@pgf@counta=\count322
+\c@pgf@countb=\count323
+\c@pgf@countc=\count324
+\c@pgf@countd=\count325
 \t@pgf@toka=\toks33
 \t@pgf@tokb=\toks34
 \t@pgf@tokc=\toks35
-\pgf@sys@id@count=\count324
+\pgf@sys@id@count=\count326
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
-Driver file for pgf: pgfsys-luatex.def
+Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.d
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
 ef
-File: pgfsys-luatex.def 2023-01-15 v3.1.10 (3.1.10)
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
 df.def
@@ -479,8 +443,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count325
-\pgfsyssoftpath@bigbuffer@items=\count326
+\pgfsyssoftpath@smallbuffer@items=\count327
+\pgfsyssoftpath@bigbuffer@items=\count328
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -491,7 +455,7 @@ Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: luatex.def on input line 274.
+Package xcolor Info: Driver file: pdftex.def on input line 274.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
@@ -509,8 +473,8 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen272
-\pgfmath@count=\count327
+\pgfmath@dimen=\dimen273
+\pgfmath@count=\count329
 \pgfmath@box=\box63
 \pgfmath@toks=\toks36
 \pgfmath@stack@operand=\toks37
@@ -536,37 +500,37 @@ code.tex)
 erarithmetics.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count328
+\c@pgfmathroundto@lastzeros=\count330
 )) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen273
-\pgf@picmaxx=\dimen274
-\pgf@picminy=\dimen275
-\pgf@picmaxy=\dimen276
-\pgf@pathminx=\dimen277
-\pgf@pathmaxx=\dimen278
-\pgf@pathminy=\dimen279
-\pgf@pathmaxy=\dimen280
-\pgf@xx=\dimen281
-\pgf@xy=\dimen282
-\pgf@yx=\dimen283
-\pgf@yy=\dimen284
-\pgf@zx=\dimen285
-\pgf@zy=\dimen286
+\pgf@picminx=\dimen274
+\pgf@picmaxx=\dimen275
+\pgf@picminy=\dimen276
+\pgf@picmaxy=\dimen277
+\pgf@pathminx=\dimen278
+\pgf@pathmaxx=\dimen279
+\pgf@pathminy=\dimen280
+\pgf@pathmaxy=\dimen281
+\pgf@xx=\dimen282
+\pgf@xy=\dimen283
+\pgf@yx=\dimen284
+\pgf@yy=\dimen285
+\pgf@zx=\dimen286
+\pgf@zy=\dimen287
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen287
-\pgf@path@lasty=\dimen288
+\pgf@path@lastx=\dimen288
+\pgf@path@lasty=\dimen289
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen289
-\pgf@shorten@start@additional=\dimen290
+\pgf@shorten@end@additional=\dimen290
+\pgf@shorten@start@additional=\dimen291
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
@@ -574,19 +538,19 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box64
 \pgf@hbox=\box65
 \pgf@layerbox@main=\box66
-\pgf@picture@serial@count=\count329
+\pgf@picture@serial@count=\count331
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen291
+\pgflinewidth=\dimen292
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen292
-\pgf@pt@y=\dimen293
-\pgf@pt@temp=\dimen294
+\pgf@pt@x=\dimen293
+\pgf@pt@y=\dimen294
+\pgf@pt@temp=\dimen295
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -603,14 +567,14 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen295
+\pgfarrowsep=\dimen296
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen296
-\pgf@sys@shading@range@num=\count330
-\pgf@shadingcount=\count331
+\pgf@max=\dimen297
+\pgf@sys@shading@range@num=\count332
+\pgf@shadingcount=\count333
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -649,8 +613,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen297
-\pgf@nodesepend=\dimen298
+\pgf@nodesepstart=\dimen298
+\pgf@nodesepend=\dimen299
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -658,13 +622,13 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
- (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen299
-\pgffor@skip=\dimen300
+\pgffor@iter=\dimen300
+\pgffor@skip=\dimen301
 \pgffor@stack=\toks39
 \pgffor@toks=\toks40
 ))
@@ -675,34 +639,34 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count332
-\pgfplotmarksize=\dimen301
+\pgf@plot@mark@count=\count334
+\pgfplotmarksize=\dimen302
 )
-\tikz@lastx=\dimen302
-\tikz@lasty=\dimen303
-\tikz@lastxsaved=\dimen304
-\tikz@lastysaved=\dimen305
-\tikz@lastmovetox=\dimen306
-\tikz@lastmovetoy=\dimen307
-\tikzleveldistance=\dimen308
-\tikzsiblingdistance=\dimen309
+\tikz@lastx=\dimen303
+\tikz@lasty=\dimen304
+\tikz@lastxsaved=\dimen305
+\tikz@lastysaved=\dimen306
+\tikz@lastmovetox=\dimen307
+\tikz@lastmovetoy=\dimen308
+\tikzleveldistance=\dimen309
+\tikzsiblingdistance=\dimen310
 \tikz@figbox=\box69
 \tikz@figbox@bg=\box70
 \tikz@tempbox=\box71
 \tikz@tempbox@bg=\box72
-\tikztreelevel=\count333
-\tikznumberofchildren=\count334
-\tikznumberofcurrentchild=\count335
-\tikz@fig@count=\count336
+\tikztreelevel=\count335
+\tikznumberofchildren=\count336
+\tikznumberofcurrentchild=\count337
+\tikz@fig@count=\count338
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count337
-\pgfmatrixcurrentcolumn=\count338
-\pgf@matrix@numberofcolumns=\count339
+\pgfmatrixcurrentrow=\count339
+\pgfmatrixcurrentcolumn=\count340
+\pgf@matrix@numberofcolumns=\count341
 )
-\tikz@expandcount=\count340
+\tikz@expandcount=\count342
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -710,14 +674,12 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
-\pgfplots@luabackend@table=\catcodetable14
 \t@pgfplots@toka=\toks41
 \t@pgfplots@tokb=\toks42
 \t@pgfplots@tokc=\toks43
-\pgfplots@tmpa=\dimen310
-\c@pgfplots@coordindex=\count341
-\c@pgfplots@scanlineindex=\count342
+\pgfplots@tmpa=\dimen311
+\c@pgfplots@coordindex=\count343
+\c@pgfplots@scanlineindex=\count344
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
 .code.tex))
@@ -733,30 +695,22 @@ Package pgfplots: loading complementary utilities for your pgf version...
 \t@pgf@tokc=\toks46
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
-soldpgfsupp_pgfutil-common-lists.tex)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibrar
-yluamath.code.tex)
-Package pgfplots info on input line 290: luamath library shipped with pgf 3.1.1
-0 is up-to-date
-)
+soldpgfsupp_pgfutil-common-lists.tex))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
 .tex
-Package pgfplots info on input line 82: Found new luatex: initializing lua comm
-ands instead of write18 (shell-escape)
-
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 liststructure.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 liststructureext.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 array.code.tex
-\c@pgfplotsarray@tmp=\count343
+\c@pgfplotsarray@tmp=\count345
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 matrix.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 shared.code.tex
-\c@pgfplotstable@counta=\count344
+\c@pgfplotstable@counta=\count346
 \t@pgfplotstable@a=\toks47
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
@@ -769,10 +723,10 @@ ta.code.tex))
 .code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
 s.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count345
+\c@pgfplotslibrarysurf@no=\count347
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
-.surfshading.pgfsys-luatex.def)))
+.surfshading.pgfsys-pdftex.def)))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
 code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
@@ -801,14 +755,14 @@ x)
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen311
-\pgfdecoratedremainingdistance=\dimen312
-\pgfdecoratedinputsegmentcompleteddistance=\dimen313
-\pgfdecoratedinputsegmentremainingdistance=\dimen314
-\pgf@decorate@distancetomove=\dimen315
-\pgf@decorate@repeatstate=\count346
-\pgfdecorationsegmentamplitude=\dimen316
-\pgfdecorationsegmentlength=\dimen317
+\pgfdecoratedcompleteddistance=\dimen312
+\pgfdecoratedremainingdistance=\dimen313
+\pgfdecoratedinputsegmentcompleteddistance=\dimen314
+\pgfdecoratedinputsegmentremainingdistance=\dimen315
+\pgf@decorate@distancetomove=\dimen316
+\pgf@decorate@repeatstate=\count348
+\pgfdecorationsegmentamplitude=\dimen317
+\pgfdecorationsegmentlength=\dimen318
 )
 \tikz@lib@dec@box=\box73
 )
@@ -822,13 +776,13 @@ s/tikzlibrarydecorations.pathreplacing.code.tex
 brarydecorations.pathreplacing.code.tex))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
 ts.contourlua.code.tex)
-\pgfplots@numplots=\count347
-\pgfplots@xmin@reg=\dimen318
-\pgfplots@xmax@reg=\dimen319
-\pgfplots@ymin@reg=\dimen320
-\pgfplots@ymax@reg=\dimen321
-\pgfplots@zmin@reg=\dimen322
-\pgfplots@zmax@reg=\dimen323
+\pgfplots@numplots=\count349
+\pgfplots@xmin@reg=\dimen319
+\pgfplots@xmax@reg=\dimen320
+\pgfplots@ymin@reg=\dimen321
+\pgfplots@ymax@reg=\dimen322
+\pgfplots@zmin@reg=\dimen323
+\pgfplots@zmax@reg=\dimen324
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryplotmarks.code.tex
@@ -864,29 +818,29 @@ Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
 Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
 \everycr=\toks48
 \minrowclearance=\skip80
-\rownum=\count348
+\rownum=\count350
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count349
+\lst@mode=\count351
 \lst@gtempboxa=\box74
 \lst@token=\toks49
-\lst@length=\count350
-\lst@currlwidth=\dimen324
-\lst@column=\count351
-\lst@pos=\count352
-\lst@lostspace=\dimen325
-\lst@width=\dimen326
-\lst@newlines=\count353
-\lst@lineno=\count354
-\lst@maxwidth=\dimen327
+\lst@length=\count352
+\lst@currlwidth=\dimen325
+\lst@column=\count353
+\lst@pos=\count354
+\lst@lostspace=\dimen326
+\lst@width=\dimen327
+\lst@newlines=\count355
+\lst@lineno=\count356
+\lst@maxwidth=\dimen328
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
-\c@lstnumber=\count355
-\lst@skipnumbers=\count356
+\c@lstnumber=\count357
+\lst@skipnumbers=\count358
 \lst@framebox=\box75
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
@@ -897,32 +851,32 @@ Package: listings 2024/02/21 1.10 (Carsten Heinz)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip81
-\enit@outerparindent=\dimen328
+\enit@outerparindent=\dimen329
 \enit@toks=\toks50
 \enit@inbox=\box76
-\enit@count@id=\count357
-\enitdp@description=\count358
+\enit@count@id=\count359
+\enitdp@description=\count360
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count359
+\c@tracingmulticols=\count361
 \mult@box=\box77
-\multicol@leftmargin=\dimen329
-\c@unbalance=\count360
-\c@collectmore=\count361
-\doublecol@number=\count362
-\multicoltolerance=\count363
-\multicolpretolerance=\count364
-\full@width=\dimen330
-\page@free=\dimen331
-\premulticols=\dimen332
-\postmulticols=\dimen333
+\multicol@leftmargin=\dimen330
+\c@unbalance=\count362
+\c@collectmore=\count363
+\doublecol@number=\count364
+\multicoltolerance=\count365
+\multicolpretolerance=\count366
+\full@width=\dimen331
+\page@free=\dimen332
+\premulticols=\dimen333
+\postmulticols=\dimen334
 \multicolsep=\skip82
 \multicolbaselineskip=\skip83
 \partial@page=\box78
 \last@line=\box79
 \mc@boxedresult=\box80
-\maxbalancingoverflow=\dimen334
+\maxbalancingoverflow=\dimen335
 \mult@rightbox=\box81
 \mult@grightbox=\box82
 \mult@firstbox=\box83
@@ -963,22 +917,22 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box118
 \@tempa=\box119
 \@tempa=\box120
-\c@minrows=\count365
-\c@columnbadness=\count366
-\c@finalcolumnbadness=\count367
-\last@try=\dimen335
-\multicolovershoot=\dimen336
-\multicolundershoot=\dimen337
+\c@minrows=\count367
+\c@columnbadness=\count368
+\c@finalcolumnbadness=\count369
+\last@try=\dimen336
+\multicolovershoot=\dimen337
+\multicolundershoot=\dimen338
 \mult@nat@firstbox=\box121
 \colbreak@box=\box122
-\mc@col@check@num=\count368
+\mc@col@check@num=\count370
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip84
-\multirow@cntb=\count369
+\multirow@cntb=\count371
 \multirow@dima=\skip85
-\bigstrutjot=\dimen338
+\bigstrutjot=\dimen339
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
@@ -1012,8 +966,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforefigskip=\skip112
 \cftfigindent=\skip113
 \cftfignumwidth=\skip114
-\c@lofdepth=\count370
-\c@lotdepth=\count371
+\c@lofdepth=\count372
+\c@lotdepth=\count373
 \cftbeforelottitleskip=\skip115
 \cftafterlottitleskip=\skip116
 \cftbeforetabskip=\skip117
@@ -1037,17 +991,17 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count372
+\etb@tempcnta=\count374
 )
 \tcb@titlebox=\box123
 \tcb@upperbox=\box124
 \tcb@lowerbox=\box125
 \tcb@phantombox=\box126
-\c@tcbbreakpart=\count373
-\c@tcblayer=\count374
-\c@tcolorbox@number=\count375
+\c@tcbbreakpart=\count375
+\c@tcblayer=\count376
+\c@tcolorbox@number=\count377
 \l__tcobox_tmpa_box=\box127
-\l__tcobox_tmpa_dim=\dimen339
+\l__tcobox_tmpa_dim=\dimen340
 \tcb@temp=\box128
 \tcb@temp=\box129
 \tcb@temp=\box130
@@ -1061,55 +1015,39 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip120
 \bibsep=\skip121
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count376
-)
-\c@example=\count377
-\cftbeforeexampleskip=\skip122
-\cftexampleindent=\skip123
-\cftexamplenumwidth=\skip124
-\c@expdepth=\count378
-\cftbeforeexptitleskip=\skip125
-\cftafterexptitleskip=\skip126
- (./tesis.aux
+\c@NAT@ctr=\count378
+) (./tesis.aux
 (./prelim/portada3.aux) (./prelim/abstract.aux) (./prelim/acknowledgment.aux)
 (./prelim/acronyms.aux) (./chapters/capitulo1.aux) (./chapters/capitulo2.aux)
 (./chapters/capitulo3.aux) (./chapters/capitulo4.aux) (./chapters/capitulo5.aux
 ) (./chapters/conclusion.aux))
-\openout1 = tesis.aux
+\openout1 = `tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-4.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count379
-\scratchdimen=\dimen340
+\scratchdimen=\dimen341
 \scratchbox=\box132
 \nofMPsegments=\count380
 \nofMParguments=\count381
 \everyMPshowfont=\toks53
 \MPscratchCnt=\count382
-\MPscratchDim=\dimen341
+\MPscratchDim=\dimen342
 \MPnumerator=\count383
 \makeMPintoPDFobject=\count384
 \everyMPtoPDFconversion=\toks54
@@ -1139,7 +1077,6 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks55
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -1154,25 +1091,25 @@ e
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip127
-\RaggedLeftLeftskip=\skip128
-\RaggedRightLeftskip=\skip129
-\CenteringRightskip=\skip130
-\RaggedLeftRightskip=\skip131
-\RaggedRightRightskip=\skip132
-\CenteringParfillskip=\skip133
-\RaggedLeftParfillskip=\skip134
-\RaggedRightParfillskip=\skip135
-\JustifyingParfillskip=\skip136
-\CenteringParindent=\skip137
-\RaggedLeftParindent=\skip138
-\RaggedRightParindent=\skip139
-\JustifyingParindent=\skip140
+\CenteringLeftskip=\skip122
+\RaggedLeftLeftskip=\skip123
+\RaggedRightLeftskip=\skip124
+\CenteringRightskip=\skip125
+\RaggedLeftRightskip=\skip126
+\RaggedRightRightskip=\skip127
+\CenteringParfillskip=\skip128
+\RaggedLeftParfillskip=\skip129
+\RaggedRightParfillskip=\skip130
+\JustifyingParfillskip=\skip131
+\CenteringParindent=\skip132
+\RaggedLeftParindent=\skip133
+\RaggedRightParindent=\skip134
+\JustifyingParindent=\skip135
 )
 *geometry* driver: auto-detecting
-*geometry* detected driver: luatex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: luatex
+* driver: pdftex
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1204,7 +1141,7 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package chemgreek Info: Activating mapping `default' on line 64.
+Package chemgreek Info: Activating mapping `default' on line 52.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
@@ -1213,23 +1150,24 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.7).
 
 \c@lstlisting=\count385
+\openout2 = `prelim/portada3.aux'.
 
-\openout2 = prelim/portada3.aux
 (./prelim/portada3.tex) [1
 
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-\openout2 = prelim/abstract.aux
- (./prel
-im/abstract.tex [2
+\openout2 = `prelim/abstract.aux'.
+
+ (./prelim/abstract.tex [2
 
 
 
 ]) [3] [4
 
 
-]
-\openout2 = prelim/acknowledgment.aux
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+\openout2 = `prelim/acknowledgment.aux'.
+
 
 (./prelim/acknowledgment.tex [5
 
@@ -1248,28 +1186,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [8])
 \tf@toc=\write4
+\openout4 = `tesis.toc'.
 
-\openout4 = tesis.toc
 
 [9] (./tesis.lof)
 \tf@lof=\write5
+\openout5 = `tesis.lof'.
 
-\openout5 = tesis.lof
  [10
 
 ] (./tesis.lot)
 \tf@lot=\write6
+\openout6 = `tesis.lot'.
 
-\openout6 = tesis.lot
  [11
 
 ]
-\openout2 = prelim/acronyms.aux
+\openout2 = `prelim/acronyms.aux'.
+
  (./prelim/acronyms.tex [12
 
 
 ]) [13]
-\openout2 = chapters/capitulo1.aux
+\openout2 = `chapters/capitulo1.aux'.
+
 
 (./chapters/capitulo1.tex
 Chapter 1.
@@ -1279,200 +1219,206 @@ Chapter 1.
 
 
 ] [2] [3] [4]) [5]
-\openout2 = chapters/capitulo2.aux
+\openout2 = `chapters/capitulo2.aux'.
+
  (./chapters/capitulo2.tex
 Chapter 2.
-<images/transformers_architecture.png, id=64, 343.2825pt x 325.215pt>
-File: images/transformers_architecture.png Graphic file (type png)
-<use images/transformers_architecture.png>
-Package luatex.def Info: images/transformers_architecture.png  used on input li
-ne 13.
-(luatex.def)             Requested size: 443.57848pt x 420.22879pt.
 [6
 
 
 
 
-] [7<./images/transformers_architecture.png>]
-<images/LLM_Arch_text_generation.png, id=72, 645.91313pt x 302.63063pt>
+]
+<images/transformers_architecture.png, id=70, 343.2825pt x 325.215pt>
+File: images/transformers_architecture.png Graphic file (type png)
+<use images/transformers_architecture.png>
+Package pdftex.def Info: images/transformers_architecture.png  used on input li
+ne 15.
+(pdftex.def)             Requested size: 443.57848pt x 420.22879pt.
+ [7 <./images/transformers_architecture.png>]
+<images/LLM_Arch_text_generation.png, id=76, 645.91313pt x 302.63063pt>
 File: images/LLM_Arch_text_generation.png Graphic file (type png)
 <use images/LLM_Arch_text_generation.png>
-Package luatex.def Info: images/LLM_Arch_text_generation.png  used on input lin
-e 28.
-(luatex.def)             Requested size: 443.57848pt x 207.83177pt.
- [8<./images/LLM_Arch_text_generation.png>]
-Overfull \hbox (4.78943pt too wide) in paragraph at lines 43--44
-[]\TU/lmr/m/n/12 These mod-els com-bine mask-ing and text gen-er-a-tion. They
+Package pdftex.def Info: images/LLM_Arch_text_generation.png  used on input lin
+e 30.
+(pdftex.def)             Requested size: 443.57848pt x 207.83177pt.
+ [8 <./images/LLM_Arch_text_generation.png>]
+Overfull \hbox (4.63458pt too wide) in paragraph at lines 45--46
+[]\OT1/cmr/m/n/12 These mod-els com-bine mask-ing and text gen-er-a-tion. They
  []
 
 [9]
-<images/gpt_example.png, id=81, 341.77687pt x 198.7425pt>
+<images/gpt_example.png, id=84, 341.77687pt x 198.7425pt>
 File: images/gpt_example.png Graphic file (type png)
 <use images/gpt_example.png>
-Package luatex.def Info: images/gpt_example.png  used on input line 57.
-(luatex.def)             Requested size: 399.21791pt x 232.16083pt.
+Package pdftex.def Info: images/gpt_example.png  used on input line 59.
+(pdftex.def)             Requested size: 399.21791pt x 232.16083pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10] [11<./images/gpt_example.png>] [12] [13]
-<images/Vector_example_update.png, id=95, 822.07124pt x 807.015pt>
+[10] [11 <./images/gpt_example.png>] [12] [13]
+<images/Vector_example_update.png, id=99, 822.07124pt x 807.015pt>
 File: images/Vector_example_update.png Graphic file (type png)
 <use images/Vector_example_update.png>
-Package luatex.def Info: images/Vector_example_update.png  used on input line 1
-10.
-(luatex.def)             Requested size: 377.0444pt x 370.13545pt.
+Package pdftex.def Info: images/Vector_example_update.png  used on input line 1
+12.
+(pdftex.def)             Requested size: 377.0444pt x 370.13545pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14] [15<./images/Vector_example_update.png>] [16] [17]
-<images/ths_architecture.png, id=109, 469.755pt x 195.58069pt>
+[14] [15 <./images/Vector_example_update.png>] [16] [17]
+<images/ths_architecture.png, id=113, 469.755pt x 195.58069pt>
 File: images/ths_architecture.png Graphic file (type png)
 <use images/ths_architecture.png>
-Package luatex.def Info: images/ths_architecture.png  used on input line 168.
-(luatex.def)             Requested size: 443.57848pt x 184.68147pt.
+Package pdftex.def Info: images/ths_architecture.png  used on input line 170.
+(pdftex.def)             Requested size: 443.57848pt x 184.68147pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18]
-<images/base_gpt_health.png, id=114, 318.18875pt x 163.61125pt>
+<images/base_gpt_health.png, id=118, 318.18875pt x 163.61125pt>
 File: images/base_gpt_health.png Graphic file (type png)
 <use images/base_gpt_health.png>
-Package luatex.def Info: images/base_gpt_health.png  used on input line 183.
-(luatex.def)             Requested size: 354.86412pt x 182.46942pt.
+Package pdftex.def Info: images/base_gpt_health.png  used on input line 185.
+(pdftex.def)             Requested size: 354.86412pt x 182.46942pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [19<./images/ths_architecture.png>] [20<./images/base_gpt_health.png>]
-\openout2 = chapters/capitulo3.aux
+[19 <./images/ths_architecture.png>]) [20 <./images/base_gpt_health.png>]
+\openout2 = `chapters/capitulo3.aux'.
+
 
 (./chapters/capitulo3.tex
 Chapter 3.
-<images/ETL_Pipeline.png, id=123, 247.97644pt x 292.6935pt>
+<images/ETL_Pipeline.png, id=127, 247.97644pt x 292.6935pt>
 File: images/ETL_Pipeline.png Graphic file (type png)
 <use images/ETL_Pipeline.png>
-Package luatex.def Info: images/ETL_Pipeline.png  used on input line 31.
-(luatex.def)             Requested size: 332.68385pt x 392.68512pt.
+Package pdftex.def Info: images/ETL_Pipeline.png  used on input line 31.
+(pdftex.def)             Requested size: 332.68385pt x 392.68512pt.
 [21
 
 
 
 
-] [22<./images/ETL_Pipeline.png>] [23]
-<images/Data_vectorization.png, id=134, 405.4347pt x 247.8861pt>
+] [22 <./images/ETL_Pipeline.png>] [23]
+<images/Data_vectorization.png, id=138, 405.4347pt x 247.8861pt>
 File: images/Data_vectorization.png Graphic file (type png)
 <use images/Data_vectorization.png>
-Package luatex.def Info: images/Data_vectorization.png  used on input line 80.
-(luatex.def)             Requested size: 399.21791pt x 244.09924pt.
- [24<./images/Data_vectorization.png>]
-<images/Table_diagram.png, id=139, 410.7345pt x 359.6637pt>
+Package pdftex.def Info: images/Data_vectorization.png  used on input line 80.
+(pdftex.def)             Requested size: 399.21791pt x 244.09924pt.
+ [24 <./images/Data_vectorization.png>]
+<images/Table_diagram.png, id=144, 410.7345pt x 359.6637pt>
 File: images/Table_diagram.png Graphic file (type png)
 <use images/Table_diagram.png>
-Package luatex.def Info: images/Table_diagram.png  used on input line 102.
-(luatex.def)             Requested size: 399.21791pt x 349.5868pt.
-[25]
-<images/LLM_Pipeline.png, id=143, 291.489pt x 397.0032pt>
+Package pdftex.def Info: images/Table_diagram.png  used on input line 102.
+(pdftex.def)             Requested size: 399.21791pt x 349.5868pt.
+ [25]
+<images/LLM_Pipeline.png, id=148, 291.489pt x 397.0032pt>
 File: images/LLM_Pipeline.png Graphic file (type png)
 <use images/LLM_Pipeline.png>
-Package luatex.def Info: images/LLM_Pipeline.png  used on input line 118.
-(luatex.def)             Requested size: 332.68385pt x 453.1396pt.
- [26<./images/Table_diagram.png>] [27<./images/LLM_Pipeline.png>] [28]
-[29]
-<images/THS_Frontend_Menu.png, id=160, 2567.5925pt x 1360.08125pt>
+Package pdftex.def Info: images/LLM_Pipeline.png  used on input line 118.
+(pdftex.def)             Requested size: 332.68385pt x 453.1396pt.
+ [26 <./images/Table_diagram.png>] [27 <./images/LLM_Pipeline.png>]
+[28] [29]
+<images/THS_Frontend_Menu.png, id=164, 2567.5925pt x 1360.08125pt>
 File: images/THS_Frontend_Menu.png Graphic file (type png)
 <use images/THS_Frontend_Menu.png>
-Package luatex.def Info: images/THS_Frontend_Menu.png  used on input line 175.
-(luatex.def)             Requested size: 411.57652pt x 218.01175pt.
- [30<./images/THS_Frontend_Menu.png>]
-<images/THS_Misleading.png, id=165, 1283.29437pt x 647.92062pt>
+Package pdftex.def Info: images/THS_Frontend_Menu.png  used on input line 174.
+(pdftex.def)             Requested size: 411.57652pt x 218.01175pt.
+ [30]
+<images/THS_Misleading.png, id=169, 1283.29437pt x 647.92062pt>
 File: images/THS_Misleading.png Graphic file (type png)
 <use images/THS_Misleading.png>
-Package luatex.def Info: images/THS_Misleading.png  used on input line 190.
-(luatex.def)             Requested size: 411.57652pt x 207.79361pt.
-<images/THS_Rebuttal_view.png, id=166, 769.87625pt x 1002.24437pt>
+Package pdftex.def Info: images/THS_Misleading.png  used on input line 189.
+(pdftex.def)             Requested size: 411.57652pt x 207.79361pt.
+ [31 <./images/THS_Frontend_Menu.png>]
+<images/THS_Rebuttal_view.png, id=174, 769.87625pt x 1002.24437pt>
 File: images/THS_Rebuttal_view.png Graphic file (type png)
 <use images/THS_Rebuttal_view.png>
-Package luatex.def Info: images/THS_Rebuttal_view.png  used on input line 204.
-(luatex.def)             Requested size: 332.68385pt x 433.11299pt.
- [31<./images/THS_Misleading.png>])
-[32<./images/THS_Rebuttal_view.png>]
-\openout2 = chapters/capitulo4.aux
+Package pdftex.def Info: images/THS_Rebuttal_view.png  used on input line 203.
+(pdftex.def)             Requested size: 332.68385pt x 433.11299pt.
+ [32 <./images/THS_Misleading.png>]) [33 <./images/THS_Rebuttal_view.png>]
+\openout2 = `chapters/capitulo4.aux'.
+
  (./chapters/capitulo4.tex
 Chapter 4.
-[33
+[34
 
 
 
 
-] [34] [35] [36] [37] [38] [39]
-Overfull \hbox (32.5336pt too wide) in paragraph at lines 193--205
+] [35] [36] [37] [38] [39] [40]
+Overfull \hbox (32.5336pt too wide) in paragraph at lines 195--207
  [][] 
  []
 
 
-Overfull \hbox (37.70149pt too wide) in paragraph at lines 215--227
+Overfull \hbox (37.8622pt too wide) in paragraph at lines 217--229
  [][] 
  []
 
-[40] [41] [42]
-Overfull \hbox (40.85747pt too wide) in paragraph at lines 277--289
+[41] [42] [43]
+Overfull \hbox (41.03725pt too wide) in paragraph at lines 279--291
  [][] 
  []
 
 
-Overfull \hbox (0.8496pt too wide) in paragraph at lines 331--332
-[]\TU/lmr/bx/n/12 Gra-di-ent Ac-cu-mu-la-tion\TU/lmr/m/n/12 : Ac-cu-mu-la-tion 
+Overfull \hbox (0.85pt too wide) in paragraph at lines 333--334
+[]\OT1/cmr/bx/n/12 Gradient Ac-cu-mu-la-tion\OT1/cmr/m/n/12 : Ac-cu-mu-la-tion 
 of mul-ti-ple batches re-sults dur-ing train-
  []
 
-[43] [44] [45]) [46]
-\openout2 = chapters/capitulo5.aux
+[44] [45] [46]) [47]
+\openout2 = `chapters/capitulo5.aux'.
+
  (./chapters/capitulo5.tex
 Chapter 5.
-[47
+[48
 
 
 
 
-] [48]
-<images/Health_related_training_time.png, id=231, 361.35pt x 252.945pt>
+] [49]
+<images/Health_related_training_time.png, id=239, 361.35pt x 252.945pt>
 File: images/Health_related_training_time.png Graphic file (type png)
 <use images/Health_related_training_time.png>
-Package luatex.def Info: images/Health_related_training_time.png  used on input
+Package pdftex.def Info: images/Health_related_training_time.png  used on input
  line 101.
-(luatex.def)             Requested size: 443.57848pt x 310.50682pt.
- [49] [50<./images/Health_related_training_time.png>] [51]
-<images/Misinformation_training_time.png, id=242, 439.533pt x 321.054pt>
+(pdftex.def)             Requested size: 443.57848pt x 310.50682pt.
+ [50] [51 <./images/Health_related_training_time.png>] [52]
+<images/Misinformation_training_time.png, id=250, 439.533pt x 321.054pt>
 File: images/Misinformation_training_time.png Graphic file (type png)
 <use images/Misinformation_training_time.png>
-Package luatex.def Info: images/Misinformation_training_time.png  used on input
+Package pdftex.def Info: images/Misinformation_training_time.png  used on input
  line 196.
-(luatex.def)             Requested size: 443.57848pt x 324.00723pt.
- [52]
-[53<./images/Misinformation_training_time.png>] [54]) [55]
-\openout2 = chapters/conclusion.aux
+(pdftex.def)             Requested size: 443.57848pt x 324.00723pt.
+ [53]
+[54 <./images/Misinformation_training_time.png>] [55]) [56]
+\openout2 = `chapters/conclusion.aux'.
+
 
 (./chapters/conclusion.tex
 Chapter 6.
-[56
+[57
 
 
 
 
 ]
-Overfull \hbox (5.05894pt too wide) in paragraph at lines 18--19
-[]\TU/lmr/bx/n/12 Pro-cess-ing Time: \TU/lmr/m/n/12 Dur-ing our ex-per-i-ment, 
+Overfull \hbox (4.87592pt too wide) in paragraph at lines 18--19
+[]\OT1/cmr/bx/n/12 Processing Time: \OT1/cmr/m/n/12 Dur-ing our ex-per-i-ment, 
 we no-ticed that the mis-in-for-ma-tion pipeline
  []
 
-) [57] (./tesis.bbl [58
+) [58] (./tesis.bbl [59
 
 
 
-] [59] [60] [61]) [62] (./tesis.aux
+] [60] [61] [62]) [63] (./tesis.aux
 (./prelim/portada3.aux) (./prelim/abstract.aux) (./prelim/acknowledgment.aux)
 (./prelim/acronyms.aux) (./chapters/capitulo1.aux) (./chapters/capitulo2.aux)
 (./chapters/capitulo3.aux) (./chapters/capitulo4.aux) (./chapters/capitulo5.aux
@@ -1481,31 +1427,28 @@ we no-ticed that the mis-in-for-ma-tion pipeline
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-)
-
-Here is how much of LuaTeX's memory you used:
- 35251 strings out of 476447
- 100000,1977958 words of node,token memory allocated
- 888 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 25 attribute, 117 glue_spe
-c, 25 attribute_list, 2 write nodes
-   avail lists: 2:885,3:254,4:52,5:339,6:86,7:5701,8:49,9:937,10:17,11:463
- 56168 multiletter control sequences out of 65536+600000
- 43 fonts using 3151263 bytes
- 99i,13n,102p,1556b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><
-/usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf
-></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regula
-r.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-bol
-d.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on tesis.pdf (75 pages, 2061495 bytes).
-
-PDF statistics: 323 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 131072)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+ ) 
+Here is how much of TeX's memory you used:
+ 34403 strings out of 474116
+ 838586 string characters out of 5743682
+ 1943187 words of memory out of 5000000
+ 56116 multiletter control sequences out of 15000+600000
+ 566000 words of font info for 65 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,13n,107p,1570b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
+cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on tesis.pdf (76 pages, 2097018 bytes).
+PDF statistics:
+ 331 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

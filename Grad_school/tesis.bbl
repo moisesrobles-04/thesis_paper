@@ -190,6 +190,10 @@ S.~Siwakoti, K.~Yadav, I.~Thange, N.~Bariletto, L.~Zanotti, A.~Ghoneim, and
 \bibitem{transformer-math-eleutherai}
 Q.~Anthony, S.~Biderman, and H.~Schoelkopf, ``Transformer math 101.''
 
+\bibitem{jin2023rethinkinglearningratetuning}
+H.~Jin, W.~Wei, X.~Wang, W.~Zhang, and Y.~Wu, ``Rethinking learning rate tuning
+  in the era of large language models,'' 2023.
+
 \bibitem{openai}
 ``{OpenAI}, url = {\url{https://openai.com}}, note = {Accessed: 2024-09-20}.''
 
