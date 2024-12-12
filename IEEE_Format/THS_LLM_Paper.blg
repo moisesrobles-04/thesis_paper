@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: THS_LLM_Paper.aux
+The style file: ieeetr.bst
+Database file #1: reference.bib
+I was expecting a `,' or a `}'---line 316 of file reference.bib
+ : 
+ : @misc{jin2023rethinkinglearningratetuning,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 372 of file reference.bib
+ : 
+ : @misc{openai,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 378 of file reference.bib
+ : 
+ : @misc{pgvector,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 392 of file reference.bib
+ : 
+ : @article{social_fact,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+"{" immediately follows a field part---line 451 of file reference.bib
+ :  url = \url
+ :            {blog.eleuther.ai/transformer-math/},
+I'm skipping whatever remains of this entry
+You've used 9 entries,
+            1876 wiz_defined-function locations,
+            515 strings with 5047 characters,
+and the built_in function-call counts, 1812 in all, are:
+= -- 146
+> -- 104
+< -- 0
++ -- 39
+- -- 30
+* -- 120
+:= -- 257
+add.period$ -- 7
+call.type$ -- 9
+change.case$ -- 9
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 65
+empty$ -- 191
+format.name$ -- 30
+if$ -- 442
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 2
+newline$ -- 31
+num.names$ -- 6
+pop$ -- 48
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 75
+stack$ -- 0
+substring$ -- 72
+swap$ -- 22
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 10
+width$ -- 10
+write$ -- 68
+(There were 5 error messages)

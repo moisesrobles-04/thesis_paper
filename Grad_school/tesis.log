@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  30 OCT 2024 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  10 DEC 2024 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1324,17 +1324,17 @@ Package pdftex.def Info: images/LLM_Pipeline.png  used on input line 118.
 (pdftex.def)             Requested size: 332.68385pt x 453.1396pt.
  [26 <./images/Table_diagram.png>] [27 <./images/LLM_Pipeline.png>]
 [28] [29]
-<images/THS_Frontend_Menu.png, id=164, 2567.5925pt x 1360.08125pt>
+<images/THS_Frontend_Menu.png, id=164, 849.1725pt x 438.63875pt>
 File: images/THS_Frontend_Menu.png Graphic file (type png)
 <use images/THS_Frontend_Menu.png>
 Package pdftex.def Info: images/THS_Frontend_Menu.png  used on input line 174.
-(pdftex.def)             Requested size: 411.57652pt x 218.01175pt.
+(pdftex.def)             Requested size: 411.57652pt x 212.59897pt.
  [30]
-<images/THS_Misleading.png, id=169, 1283.29437pt x 647.92062pt>
+<images/THS_Misleading.png, id=169, 849.1725pt x 438.63875pt>
 File: images/THS_Misleading.png Graphic file (type png)
 <use images/THS_Misleading.png>
 Package pdftex.def Info: images/THS_Misleading.png  used on input line 189.
-(pdftex.def)             Requested size: 411.57652pt x 207.79361pt.
+(pdftex.def)             Requested size: 411.57652pt x 212.59897pt.
  [31 <./images/THS_Frontend_Menu.png>]
 <images/THS_Rebuttal_view.png, id=174, 769.87625pt x 1002.24437pt>
 File: images/THS_Rebuttal_view.png Graphic file (type png)
@@ -1383,19 +1383,19 @@ Chapter 5.
 
 
 ] [49]
-<images/Health_related_training_time.png, id=239, 361.35pt x 252.945pt>
+<images/Health_related_training_time.png, id=239, 602.25pt x 397.485pt>
 File: images/Health_related_training_time.png Graphic file (type png)
 <use images/Health_related_training_time.png>
 Package pdftex.def Info: images/Health_related_training_time.png  used on input
  line 101.
-(pdftex.def)             Requested size: 443.57848pt x 310.50682pt.
+(pdftex.def)             Requested size: 443.57848pt x 292.7757pt.
  [50] [51 <./images/Health_related_training_time.png>] [52]
-<images/Misinformation_training_time.png, id=250, 439.533pt x 321.054pt>
+<images/Misinformation_training_time.png, id=250, 623.274pt x 365.292pt>
 File: images/Misinformation_training_time.png Graphic file (type png)
 <use images/Misinformation_training_time.png>
 Package pdftex.def Info: images/Misinformation_training_time.png  used on input
- line 196.
-(pdftex.def)             Requested size: 443.57848pt x 324.00723pt.
+ line 197.
+(pdftex.def)             Requested size: 443.57848pt x 259.98341pt.
  [53]
 [54 <./images/Misinformation_training_time.png>] [55]) [56]
 \openout2 = `chapters/conclusion.aux'.
@@ -1445,7 +1445,7 @@ local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/loc
 al/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesis.pdf (76 pages, 2097018 bytes).
+Output written on tesis.pdf (76 pages, 2354228 bytes).
 PDF statistics:
  331 PDF objects out of 1000 (max. 8388607)
  202 compressed objects within 3 object streams

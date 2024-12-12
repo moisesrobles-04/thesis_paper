@@ -7,11 +7,48 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{supertabular}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{indentfirst}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage{pgfplotstable}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{enumitem} % For list customization
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\usepackage{notoccite} % PREVENTS CITES IN CAPTIONS FROM MISNUMBERING YOUR REFERENCES https://tex.stackexchange.com/questions/302594/citation-inside-a-caption-dont-follow-order-of-appearance
+\pgfplotsset{compat=1.7}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % Use a recent version for compatibility
+
+\usepackage[numbers,sort&compress]{natbib}
+%\renewcommand{\bibname}{Bibliography} % or other title eg. Bibliography
+\bibliographystyle{ieeetr} %styles: abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt.
 \usepackage{subfiles} % Best loaded last in the preamble
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
 
-\title{FIGHTING HEALTH-RELATED DISINFORMATION IN SOCIAL MEDIA WITH LARGE LANGUAGE MODELS}
+\title{FIGHTING HEALTH-RELATED MISINFORMATION IN SOCIAL MEDIA WITH LARGE LANGUAGE MODELS}
 \author{
 	\IEEEauthorblockN{Moisés Robles Pagán}
 	\IEEEauthorblockA{
@@ -33,11 +70,11 @@
 \maketitle
 
 \begin{abstract}
-Combating disinformation in social media is an important problem, particularly when the disinformation target healthcare.  In our work, we are exploring how to finetune Large Language Models (LLM) to counteract health-related disinformation on social media. The base models that were finetuned for this project are Flan-T5, BERT, Mistral, GPT-J, and LlaMa-2. The process of finetuning was divided in two sections: 1) classifying if the text is health related, 2) verifying if the text contains disinformation. Then, we augmented the LLM with RAG to query trusted medical sources that can be used to debunk disinformation. The first part was done by using a dataset of around twelve thousand labeled tweets. Then, to determine misinformation a web scraper was design to gather data from social medias like Truth Social and classified by health professionals. For the final RAG step, we collected data from official health sources like the CDC and PubMed and stored them in a vectorize database, Chroma. Our current experiment on Flan-T5 shows that the system can classify if tweets are health related with a precision of 79\%, a recall of 82\%, and a F1 score of 80\%. This can help health experts combat and rebut disinformation in the different social media platforms.
+Combating disinformation in social media is a critical problem, notably when the disinformation targets healthcare. We explore how to fine-tune Large Language Models (LLM) to counteract health-related disinformation on social media. The fine-tuned base models for this project are T5, BERT, and LlaMa-2. We divide the fine-tuning into two sections: 1) classifying if the text is health-related and 2) verifying if the text contains disinformation. To rebut disinformation we use Retrieval Augmented Generation (RAG) to query trusted medical sources. Our experiment shows that the models can classify health-related with 94\% precision, 95\% recall, and 90\% F1. We also show that we classify disinformation texts with 99\% precision, 95\% recall, and 97\% F1. We present an investigation that can help health experts combat and rebut disinformation on different social media platforms.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Large Language Model, social media
+Artificial Intelligence, Large Language Model, Transformers, Vector Databases, Misinformation
 \end{IEEEkeywords}
 
 \subfile{chapters/Chap1_Introduction}
@@ -46,45 +83,27 @@ Large Language Model, social media
 
 \subfile{chapters/Chap3_Architecture}
 
-\section*{Acknowledgment}
+\subfile{chapters/Chap4_PerformanceEvaluation}
 
-The preferred spelling of the word ``acknowledgment'' in America is without 
-an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-acknowledgments in the unnumbered footnote on the first page.
+\subfile{chapters/Chap5_Conclusions}
+
 
 \section*{References}
 
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
+Please number citations consecutively within brackets \cite{9906925}.
 
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
-
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
-
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
-
-\begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
-\end{thebibliography}
-\vspace{12pt}
-\color{red}
-IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+\bibliography{reference} 
+%\begin{thebibliography}{00}
+%\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+%\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
+%\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
+%\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
+%\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
+%\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
+%\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+%\end{thebibliography}
+%\vspace{12pt}
+%\color{red}
+%IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
 
 \end{document}

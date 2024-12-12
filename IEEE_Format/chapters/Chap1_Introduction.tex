@@ -1,32 +1,16 @@
-\documentclass[chapters]{IEEEtran}
-% \IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage{caption}
 
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-
-\usepackage{biblatex}
-
-\graphicspath{ {./figures/} }
-\addbibresource{reference.bib}
-
-
-\begin{document}
 \section{Introduction}
 Lorem 
 
 \subsection{Contributions}
-The contributions in this research
+This paper provides the following original contributions:
+\begin{itemize}
+	\item{\textbf{Leveraging LLMs for Health Misinformation:}} Large Language Models are being used for different fields nowadays. However, these do not focus on health misinformation on social media. We present Large Language Models as a solution to classify and rebut health misinformation texts on social media and use research papers extracted from PubMed as context for the LLM.
+	\item{\textbf{Present a novel solution to misinformation rebuttal:}} For misinformation rebuttal, is necessary to have an understanding of what needs to be fact-checked. Also, it is important to have the necessary context for the correction. We extracted research papers that were added to a vector database. The database helped find similar chunks of texts to use as context for the misinformation rebuttal. That setup enable us to use RAG to answer health misinformation with peer-review documents.
+	\item{\textbf{Pipeline Interface:}} Developed a frontend application that showcase the full pipeline, allowing users to view the process.
+
+\end{itemize}
+
 
 \subsection{Paper Organization}
-This paper has the following organization. Section
-II contains the literature review on the transformer and the Large Language Models architectures, and the different use cases of these models for classification. For section III, we can observe the projects pipeline. Later, in section IV we have the methodology and experiment. Section V presents our results. Related works are presented in section VI. Ending with section VII, we have our conclusion with suggestions for future work.
-
-\end{document}
+This paper has the following organization. Section II contains the background on the transformer and the Large Language Models architectures, vector databases, and the Twitter Health Surveillance (THS). For section III, we can observe the system architecture for the data extraction and classification process. Later, in section IV we show the system performance. Related works are presented in section VI. Ending with section VII, we have our conclusion with suggestions for future work.

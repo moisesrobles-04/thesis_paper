@@ -1,0 +1,44 @@
+\begin{thebibliography}{1}
+
+\bibitem{9906925}
+T.~Yilmaz and {\"O}.~Ulusoy, ``Misinformation propagation in online social
+  networks: Game theoretic and reinforcement learning approaches,'' {\em IEEE
+  Transactions on Computational Social Systems}, vol.~10, no.~6,
+  pp.~3321--3332, 2023.
+
+\bibitem{pubmed}
+``{PubMed - National Library of Medicine}, url =
+  {\url{https://pubmed.ncbi.nlm.nih.gov}}, note = {Accessed: 2024-05-10}.''
+
+\bibitem{bioinformatics}
+D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
+  subset in BioC: about three million full-text articles and growing},'' {\em
+  Bioinformatics}, vol.~35, pp.~3533--3535, 01 2019.
+
+\bibitem{bge_embedding}
+S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
+  advance general chinese embedding,'' 2023.
+
+\bibitem{chroma}
+Chroma, ``The ai-native open-source embedding database,'' 2022.
+\newblock accessed: 04.27.2024.
+
+\bibitem{ollama}
+``{Get up and running with large language models.}, url =
+  {\url{https://ollama.com}}, note = {Accessed: 2024-09-29}.''
+
+\bibitem{zhang2020bertscoreevaluatingtextgeneration}
+T.~Zhang, V.~Kishore, F.~Wu, K.~Q. Weinberger, and Y.~Artzi, ``Bertscore:
+  Evaluating text generation with bert,'' 2020.
+
+\bibitem{huggingface}
+``{Hugging Face – The AI community building the future}, url =
+  {\url{https://huggingface.co}}, note = {Accessed: 2024-10-18}.''
+
+\bibitem{touvron2023llamaopenefficientfoundation}
+H.~Touvron, T.~Lavril, G.~Izacard, X.~Martinet, M.-A. Lachaux, T.~Lacroix,
+  B.~Rozière, N.~Goyal, E.~Hambro, F.~Azhar, A.~Rodriguez, A.~Joulin,
+  E.~Grave, and G.~Lample, ``Llama: Open and efficient foundation language
+  models,'' 2023.
+
+\end{thebibliography}
