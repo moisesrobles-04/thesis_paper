@@ -59,13 +59,38 @@ CUDA 11.7. To initialize and use the models we relied on  the Transformers 4.34.
 
 \subsection{Fine-tuning}
 
-The Large Language Models (LLM) used for this paper are pre-trained, meaning that the model learned how words relates to each other, the model is trained to understand a language. This process is computationally expensive and requires large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. This is called fine-tuning, in this case was used to teach the model to classify two types of texts: health-related and misinformation-related. 
-\newline
-\newline
-The health-related dataset consists of over 12,000 tweets extracted by the previous THS project. Said dataset was classified on three category: related, unrelated, and ambiguous tweets. A second dataset was created with data from different sources such as news, social medias, and blogs classified as misinformation and non-misinformation \textbf{\textit{[Insert References]}}. 
+%The Large Language Models (LLM) used for this paper are pre-trained, meaning that the model learned how words relates to each other, the model is trained to understand a language. This process is computationally expensive and requires large amount of data. Instead of creating a model from scratch, we can teach an existing model to learn a new task such as text classification, translation, generation, or other. This is called fine-tuning, in this case was used to teach the model to classify two types of texts: health-related and misinformation-related. 
+%\newline
+%\newline
+%The health-related dataset consists of over 12,000 tweets extracted by the previous THS project. Said dataset was classified on three category: related, unrelated, and ambiguous tweets. A second dataset was created with data from different sources such as news, social medias, and blogs classified as misinformation and non-misinformation \textbf{\textit{[Insert References]}}. 
 
-The models used for the classification process were Bert, T5, and LLaMa-2. 
+%The models used for the classification process were Bert, T5, and LLaMa-2. 
 
+The LLMs used for this paper are pre-trained base models, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language. This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we fine-tuned the models to achieved our classification goals. We taught the models to classify two types of texts: health-related and misinformation-related texts. 
+
+We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2 in their base form. Each one has a different architecture, as shown in Table \ref{table:LLM}. The architectures have their specialty; thus, we performed two processes of fine-tuning: sequence classification and CLM. BERT and LLaMa-2 were only trained on sequence classification, while T5 was trained on sequence and CLM. T5 was the only model capable of that because BERT encoder-only architecture does not allow text generation, and LLaMa-2 required more resources than the ones available. Because of the resource limitations, we fine-tuned the models using LoRA \textbf{\textit{[Insert LoRA References]}}. 
+
+\subsubsection{Parameter-Efficient Fine-Tuning (PEFT)}
+PEFT is a library that reduces the memory usage of a model to be fine-tuned. That library allows us to use the Low-Rank Adapter (LoRA) \cite{hu2021loralowrankadaptationlarge}. That adapter helps us reduce a model's trainable parameters. The LoRA hyperparameters used are found on Table \ref{table:LoRA}.
+
+\begin{table}[H]
+	\centering
+	\caption{LoRA Hyperparameters}
+	\begin{tabular}{|| c | c||} 
+		\hline
+		\textbf{Parameters} & \textbf{Value} \\
+		\hline
+		r & 16 \\
+		\hline
+		alpha & 32  \\
+		\hline
+		dropout & 0.05  \\
+		\hline
+		bias & all  \\
+		\hline
+	\end{tabular}
+	\label{table:LoRA}
+\end{table}
 
 \subsubsection{Training Parameters}
 After validating that we can fine-tune the models with our hardware, we must select the hyperparameters for our training. We present the parameters used in Table \ref{table:hyperparameters}, and the description for each are as follows::
@@ -73,37 +98,41 @@ After validating that we can fine-tune the models with our hardware, we must sel
 \begin{table}[!ht]
 	\centering
 	\caption{Fine-tuning Hyperparameters}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
-		\textbf{Parameter} & \textbf{value} \\ [1.5ex] 
+		\textbf{Parameter} & \textbf{value} \\ 
 		\hline
-		Learning Rate & 5E-6  \\ [1ex]
+		Learning Rate & 5E-6  \\
 		\hline
-		Batch size & 16  \\[1ex]
+		Batch size & 16  \\
 		\hline
-		Epochs & 20 \\[1ex]
+		Epochs & 20 \\
 		\hline
-		Gradient Accumulation & 8 \\[1ex]
+		Gradient Accumulation & 8 \\
 		\hline
-		Weight\_decay & 0.1 \\[1ex]
+		Weight\_decay & 0.1 \\
 		\hline
-		Evaluation Step & 50 \\[1ex]
+		Evaluation Step & 50 \\
 		\hline
-		Evaluation Batch & 2 \\[1ex]
+		Evaluation Batch & 2 \\
 		\hline
-		Evaluation Accumulation & 16 \\[1ex]
+		Evaluation Accumulation & 16 \\
 		\hline
-		Warm-Up & 450 \\[1ex]
+		Warm-Up & 450 \\
 		\hline
-		Metric & f1 \\[1ex]
+		Metric & f1 \\
 		\hline
 	\end{tabular}
+	}
 	\label{table:hyperparameters}
 \end{table}
 
-\subsection{Fine-tuning Results}
+%\subsection{Fine-tuning Results}
 
-\subsubsection{Health-Related Classification}
+%\subsubsection{Health-Related Classification}
+
+\subsection{Health-Related Classification Results}
 We present the results of the health classification process and compare them with the best overall model of the previous THS project \cite{8622504}. That work concluded
 that their best model is an LSTM, with no attention, and a GRU layer.
 
@@ -115,11 +144,11 @@ that their best model is an LSTM, with no attention, and a GRU layer.
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
 		\hline
+		LSTM GRU NO ATTENTION & 0.83  \\
+		\hline		
 		BERT & 0.85  \\
 		\hline
 		LLaMa-2 & 0.94 \\ 
-		\hline
-		LSTM GRU NO ATTENTION & 0.83  \\
 		\hline
 		T5 (Causal) & 0.85 \\
 		\hline
@@ -142,11 +171,11 @@ precision of 48\%.
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
 		\hline
+		LSTM GRU NO ATTENTION & 0.89  \\
+		\hline
 		BERT & 0.91  \\
 		\hline
 		LLaMa-2 & 0.84 \\ 
-		\hline
-		LSTM GRU NO ATTENTION & 0.89  \\
 		\hline
 		T5 (Causal) & 0.95 \\
 		\hline
@@ -170,11 +199,11 @@ lower than its precision.
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
 		\hline
+		LSTM GRU NO ATTENTION & 0.86  \\
+		\hline
 		BERT & 0.88  \\
 		\hline
 		LLaMa-2 & 0.89 \\ 
-		\hline
-		LSTM GRU NO ATTENTION & 0.86  \\
 		\hline
 		T5 (Causal) & 0.90 \\
 		\hline
@@ -216,8 +245,8 @@ train. Based on these results, we can infer that models with fewer parameters tr
 	\label{fig:HealthTime}
 \end{figure}
 
-
-\subsection{Misinformation Classification}
+%\subsection{Misinformation Classification}
+\subsection{Misinformation Classification Results}
 In this section, we present the misinformation classification results. However, in this section, we did not compare with the THS model because they did not train a model to classify
 misinformation.
 
@@ -245,7 +274,6 @@ Table \ref{table:MisinformationPrecision} shows the result for the precision met
 class because it is our project goal. Our best-performing models here were both T5 models, which have a precision of 99\%. The next model with the highest precision
 was LLaMa-2, with a score of 98\% precision. The lowest-performing model was BERT, which resulted in 90\% precision. Nonetheless, all models had a score of at least 90\%.
 
-
 \subsubsection{Recall}
 \begin{table}[H]
 	\centering
@@ -270,7 +298,6 @@ Table \ref{table:MisinformationRecall} shows the recall metric's results for the
 (Table \ref{table:MisinformationPrecision}), our model maintains a similar score. Here, the model with the best results was LLaMa-2, with a performance of 95\%.
 Next, we have BERT with 94\% and T5 (Causal) with a 92\% recall. Finally, T5 (Sequence) ended with 85\% in the recall.
 
-
 \subsubsection{F1}
 \begin{table}[H]
 	\centering
@@ -291,10 +318,8 @@ Next, we have BERT with 94\% and T5 (Causal) with a 92\% recall. Finally, T5 (Se
 	\label{table:MisinformationF1}
 \end{table}
 
-
 Table \ref{table:MisinformationF1}  shows the result for the F1 metric for the misinformation classification. This result balances precision and recall. The results show that the model
 with the best F1 was LLaMa-2 with a 97\%. Next is T5 (Causal) with a 96\% F1, and tied to last, we have BERT and T5 (Sequence) with 92\%. All models had an optimal F1 score over 90\%.
-
 
 \subsubsection{Training Time}
 
@@ -325,7 +350,7 @@ noticeable difference was T5 (Causal), which trained 4.23x faster for this datas
 	\label{fig:MisinformationTime}
 \end{figure}
 
-\subsection{BERTScore}
+\subsection{BERTScore Result}
 
 Our model BERTScores'  F1 is shown in Table \ref{table:BERTScore}. We calculate these values by taking the average score of the 71 texts classified as health-related and misinformation. The table shows that both models, had a 82\% F1 score. That means that the generated output are closely related but not exactly the same. 
 
@@ -344,9 +369,7 @@ Our model BERTScores'  F1 is shown in Table \ref{table:BERTScore}. We calculate 
 	\label{table:BERTScore}
 \end{table}
 
-
-
-\section{Discussion}
+\subsection{Discussion}
 
 The results present that most LLMs outperformed the THS model. We applied preprocessing techniques such as replacing links, mentions, and hashtags with special tokens. The training
 parameters for all models were 20 epochs, batch size of 16, 8bit initialization, and adamw\_8bit optimizer. Additionally, the LoRA hyperparameters were 16 for the rank, an alpha of 32, a dropout

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  12 DEC 2024 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  13 DEC 2024 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1231,12 +1231,12 @@ Underfull \hbox (badness 1648) in paragraph at lines 35--38
 \OT1/ptm/m/n/10 of text. Good for trans-la-tion and ques-tion and
  []
 
-<figures/LLM_Arch_text_generation.png, id=16, 645.91313pt x 302.63063pt>
-File: figures/LLM_Arch_text_generation.png Graphic file (type png)
-<use figures/LLM_Arch_text_generation.png>
-Package pdftex.def Info: figures/LLM_Arch_text_generation.png  used on input li
-ne 41.
-(pdftex.def)             Requested size: 443.57848pt x 207.83177pt.
+<figures/LLM_Arch_text_generation.jpeg, id=16, 2384.91pt x 1118.1775pt>
+File: figures/LLM_Arch_text_generation.jpeg Graphic file (type jpg)
+<use figures/LLM_Arch_text_generation.jpeg>
+Package pdftex.def Info: figures/LLM_Arch_text_generation.jpeg  used on input l
+ine 41.
+(pdftex.def)             Requested size: 332.68385pt x 155.98073pt.
 ) (./chapters/Chap3_Architecture.tex
 <figures/ETL_Pipeline.png, id=17, 247.97644pt x 292.6935pt>
 File: figures/ETL_Pipeline.png Graphic file (type png)
@@ -1248,31 +1248,44 @@ Package pdftex.def Info: figures/ETL_Pipeline.png  used on input line 12.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2 <./figures/transformers_architecture.png>]
-<figures/Data_vectorization.png, id=22, 405.4347pt x 247.8861pt>
-File: figures/Data_vectorization.png Graphic file (type png)
-<use figures/Data_vectorization.png>
-Package pdftex.def Info: figures/Data_vectorization.png  used on input line 63.
+<figures/Data_vectorization.jpeg, id=22, 1398.22375pt x 919.435pt>
+File: figures/Data_vectorization.jpeg Graphic file (type jpg)
+<use figures/Data_vectorization.jpeg>
+Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 63
+.
+(pdftex.def)             Requested size: 221.78923pt x 145.83592pt.
 
-(pdftex.def)             Requested size: 177.42868pt x 108.48393pt.
+Overfull \hbox (6.0pt too wide) in paragraph at lines 63--64
+ [] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7362) has occurred while \output is active []
 
- [3 <./figures/LLM_Arch_text_generation.png> <./figures/ETL_Pipeline.png> <./fi
-gures/Data_vectorization.png>]
-<figures/Table_diagram.png, id=29, 410.7345pt x 359.6637pt>
-File: figures/Table_diagram.png Graphic file (type png)
-<use figures/Table_diagram.png>
-Package pdftex.def Info: figures/Table_diagram.png  used on input line 85.
-(pdftex.def)             Requested size: 177.42868pt x 155.37129pt.
-<figures/LLM_Pipeline.png, id=30, 291.489pt x 397.0032pt>
-File: figures/LLM_Pipeline.png Graphic file (type png)
-<use figures/LLM_Pipeline.png>
-Package pdftex.def Info: figures/LLM_Pipeline.png  used on input line 101.
-(pdftex.def)             Requested size: 177.42868pt x 241.65668pt.
+ [3 <./figures/LLM_Arch_text_generation.jpeg> <./figures/ETL_Pipeline.png> <./f
+igures/Data_vectorization.jpeg>]
+<figures/Table_diagram.jpeg, id=27, 1154.3125pt x 1282.7925pt>
+File: figures/Table_diagram.jpeg Graphic file (type jpg)
+<use figures/Table_diagram.jpeg>
+Package pdftex.def Info: figures/Table_diagram.jpeg  used on input line 85.
+(pdftex.def)             Requested size: 221.78923pt x 246.47343pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 85--86
+ [] 
+ []
+
+<figures/LLM_Pipeline.jpeg, id=28, 1122.1925pt x 1120.185pt>
+File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
+<use figures/LLM_Pipeline.jpeg>
+Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 101.
+(pdftex.def)             Requested size: 221.78923pt x 221.38367pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 101--102
+ [] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1308,38 +1321,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--128
 
  []
 
-[4 <./figures/Table_diagram.png> <./figures/LLM_Pipeline.png>])
-(./chapters/Chap4_PerformanceEvaluation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 62--66
-
+[4 <./figures/Table_diagram.jpeg> <./figures/LLM_Pipeline.jpeg>])
+(./chapters/Chap4_PerformanceEvaluation.tex [5]
+Underfull \hbox (badness 7888) in paragraph at lines 74--75
+ \OT1/ptm/m/it/10 1) Parameter-Efficient Fine-Tuning (PEFT): [][]
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--66
-\OT1/ptm/m/n/10 mis-in-for-ma-tion and non-misinformation \OT1/ptm/b/it/10 [In-
-sert
- []
-
-[5]
-
-Package natbib Warning: Citation `8622504' on page 6 undefined on input line 10
-7.
 
 [6]
-Package pgfplots info on input line 211: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 240: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-Package pgfplots info on input line 320: Using 'lua backend=false' for axis: x 
+ [7]
+Package pgfplots info on input line 345: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7])
-(./chapters/Chap5_Conclusions.tex [8])
+) (./chapters/Chap5_Conclusions.tex [8])
 Underfull \hbox (badness 4686) in paragraph at lines 93--94
 []\OT1/ptm/m/n/10 Please num-ber ci-ta-tions con-sec-u-tively within
  []
 
-(./THS_LLM_Paper.bbl)
+(./THS_LLM_Paper.bbl
+Underfull \hbox (badness 6445) in paragraph at lines 4--8
+[]\OT1/ptm/m/n/10 T. Yil-maz and []O. Ulu-soy, ``Mis-in-for-ma-
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 4--8
+\OT1/ptm/m/n/10 tion prop-a-ga-tion in on-line so-cial net-works:
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 4--8
+\OT1/ptm/m/n/10 proaches,'' \OT1/ptm/m/it/10 IEEE Trans-ac-tions on Com-pu-ta-
+ []
+
+
+Underfull \hbox (badness 2689) in paragraph at lines 49--52
+[]\OT1/ptm/m/n/10 C. C. Garz[]on-Alfonso and M. Rodr[]^^Pguez-
+ []
+
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1351,9 +1370,6 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-
-Package natbib Warning: There were undefined citations.
-
 [9] (./THS_LLM_Paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1361,13 +1377,13 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 33940 strings out of 474116
- 827001 string characters out of 5743682
- 1952187 words of memory out of 5000000
- 55718 multiletter control sequences out of 15000+600000
+ 33945 strings out of 474116
+ 827107 string characters out of 5743682
+ 1951187 words of memory out of 5000000
+ 55722 multiletter control sequences out of 15000+600000
  600353 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,101p,1234b,2416s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,101p,1234b,2414s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
@@ -1376,9 +1392,9 @@ local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (9 pages, 478675 bytes).
+Output written on THS_LLM_Paper.pdf (9 pages, 732229 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
