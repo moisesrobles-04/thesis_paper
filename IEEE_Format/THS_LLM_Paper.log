@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  13 DEC 2024 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  13 DEC 2024 19:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1271,53 +1271,18 @@ igures/Data_vectorization.jpeg>]
 File: figures/Table_diagram.jpeg Graphic file (type jpg)
 <use figures/Table_diagram.jpeg>
 Package pdftex.def Info: figures/Table_diagram.jpeg  used on input line 85.
-(pdftex.def)             Requested size: 221.78923pt x 246.47343pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 85--86
- [] 
- []
-
+(pdftex.def)             Requested size: 199.60895pt x 221.81044pt.
 <figures/LLM_Pipeline.jpeg, id=28, 1122.1925pt x 1120.185pt>
 File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
 <use figures/LLM_Pipeline.jpeg>
 Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 101.
-(pdftex.def)             Requested size: 221.78923pt x 221.38367pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 101--102
- [] 
- []
+(pdftex.def)             Requested size: 199.60895pt x 199.24872pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--121
-
- []
-
-
-Underfull \hbox (badness 2913) in paragraph at lines 117--121
-\OT1/ptm/b/n/10 Input: \OT1/ptm/m/n/10 ``\OT1/ptm/m/it/10 #nih fauci, @cd-cdi-r
-ec-tor @sgot-tliebfda
- []
-
-
-Underfull \hbox (badness 3930) in paragraph at lines 117--121
-\OT1/ptm/m/it/10 &amp; @barda bright ex-pected to be grilled
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--121
-\OT1/ptm/m/it/10 to-mor-row over in-ef-fec-tive #flu vac-cine at
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--121
-\OT1/ptm/m/it/10 @housec-om-merce #sub-over-sight bets on fauci
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--128
+Underfull \hbox (badness 10000) in paragraph at lines 117--129
 
  []
 
@@ -1327,10 +1292,14 @@ Underfull \hbox (badness 7888) in paragraph at lines 74--75
  \OT1/ptm/m/it/10 1) Parameter-Efficient Fine-Tuning (PEFT): [][]
  []
 
-[6]
+
+Underfull \vbox (badness 5388) has occurred while \output is active []
+
+ [6]
 Package pgfplots info on input line 240: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [7]
+
+[7]
 Package pgfplots info on input line 345: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 ) (./chapters/Chap5_Conclusions.tex [8])
@@ -1377,11 +1346,11 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 33945 strings out of 474116
- 827107 string characters out of 5743682
- 1951187 words of memory out of 5000000
+ 33946 strings out of 474116
+ 827114 string characters out of 5743682
+ 1950187 words of memory out of 5000000
  55722 multiletter control sequences out of 15000+600000
- 600353 words of font info for 116 fonts, out of 8000000 for 9000
+ 601489 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,101p,1234b,2414s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1392,7 +1361,7 @@ local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (9 pages, 732229 bytes).
+Output written on THS_LLM_Paper.pdf (9 pages, 732206 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

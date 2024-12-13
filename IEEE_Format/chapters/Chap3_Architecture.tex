@@ -82,7 +82,7 @@ Now, with all papers vectorized, we upload the metadata into a Postgres database
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/Table_diagram.jpeg} %specify width
+		\includegraphics[width=0.45\textwidth]{figures/Table_diagram.jpeg} %specify width
 	\end{center}
 	\caption{Research Papers Schema Diagram} %specify caption
 	\label{fig:table}
@@ -98,7 +98,7 @@ After training the models and storing the context for the rebuttal, we create th
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/LLM_Pipeline.jpeg} %specify width
+		\includegraphics[width=0.45\textwidth]{figures/LLM_Pipeline.jpeg} %specify width
 	\end{center}
 	\caption{Misinformation Rebuttal LLM System Architecture} %specify caption
 	\label{fig:llm}
@@ -117,12 +117,13 @@ the final output will return that classification. When the result contains misin
 Before starting the search on the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama}. That tool allows us to execute locally a pre-trained LLM that generates text. Thus, we send a query to Ollama asking it to make a one-sentence query for the vector database related to the input.
 \newline
 \newline
+{\small
 \textbf{Input:} ``\textit{\#nih fauci, @cdcdirector @sgottliebfda \&amp; @barda bright expected to be grilled tomorrow over ineffective \#flu vaccine at @housecommerce \#suboversight bets on fauci saying universal \#influenza vax in 5, maybe 10 years? my preview here: \url{https://t.co/fsqefwhik7} \#cdc \#fda \#vaccines}"
-
+\newline
 \textbf{Output:} ``\textit{Flu vaccine effectiveness and future universal influenza vaccination strategies.}"
  \newline
- \newline
-The above example shows that Ollama can identify the topics of the original text. That tweet mentions that the flu vaccine is ineffective and asks how long it will take for a universal influenza vaccine. The LLM identified the topic and made a query that can help find
+ }
+\indent The above example shows that Ollama can identify the topics of the original text. That tweet mentions that the flu vaccine is ineffective and asks how long it will take for a universal influenza vaccine. The LLM identified the topic and made a query that can help find
 research papers related to it. However, it is essential to mention that the LLM output can vary. As mentioned previously, this is a statistical model and can have slight variations in its result. Now, this output is sent to the Chroma database to retrieve chunks of research
 papers. For this experiment, our model returns eight chunks that are closest in context to the query. We selected this number because it returns an appropriate amount of context without Ollama truncating the text. These chunks are then sent to another model to be analyzed and organized.
 
