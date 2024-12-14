@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  13 DEC 2024 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 DEC 2024 00:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1101,20 +1101,20 @@ Package: import 2020/04/01  v 6.2
 (./THS_LLM_Paper.aux)
 \openout1 = `THS_LLM_Paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 -- Lines per column: 52 (approximate, difference = 0.25346pt).
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1197,58 +1197,43 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 \c@lstlisting=\count385
-(./chapters/Chap1_Introduction.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+(./chapters/Chap1_Introduction.tex [1{/usr/local/texlive/2024/texmf-var/fonts/m
+ap/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips
+/base/8r.enc}
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-(./chapters/Chap2_LiteratureReview.tex [1{/usr/local/texlive/2024/texmf-var/fon
-ts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/d
-vips/base/8r.enc}
+(./chapters/Chap2_LiteratureReview.tex
+<figures/LLM_Arch_text_generation.png, id=13, 500.5902pt x 257.763pt>
+File: figures/LLM_Arch_text_generation.png Graphic file (type png)
+<use figures/LLM_Arch_text_generation.png>
+Package pdftex.def Info: figures/LLM_Arch_text_generation.png  used on input li
+ne 26.
+(pdftex.def)             Requested size: 221.78923pt x 114.2027pt.
 
-
-]
-<figures/transformers_architecture.png, id=14, 343.2825pt x 325.215pt>
-File: figures/transformers_architecture.png Graphic file (type png)
-<use figures/transformers_architecture.png>
-Package pdftex.def Info: figures/transformers_architecture.png  used on input l
-ine 15.
-(pdftex.def)             Requested size: 161.84192pt x 153.3225pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
- \OT1/ptm/m/it/10 3) Encoder-Decoder mod-els: [][] \OT1/ptm/m/n/10 The encoder-
-
+Overfull \hbox (6.0pt too wide) in paragraph at lines 26--27
+ [][] 
  []
 
-
-Underfull \hbox (badness 1648) in paragraph at lines 35--38
-\OT1/ptm/m/n/10 of text. Good for trans-la-tion and ques-tion and
- []
-
-<figures/LLM_Arch_text_generation.jpeg, id=16, 2384.91pt x 1118.1775pt>
-File: figures/LLM_Arch_text_generation.jpeg Graphic file (type jpg)
-<use figures/LLM_Arch_text_generation.jpeg>
-Package pdftex.def Info: figures/LLM_Arch_text_generation.jpeg  used on input l
-ine 41.
-(pdftex.def)             Requested size: 332.68385pt x 155.98073pt.
-) (./chapters/Chap3_Architecture.tex
-<figures/ETL_Pipeline.png, id=17, 247.97644pt x 292.6935pt>
+) (./chapters/Chap3_Architecture.tex [2 <./figures/LLM_Arch_text_generation.png
+>]
+<figures/ETL_Pipeline.png, id=20, 247.97644pt x 292.6935pt>
 File: figures/ETL_Pipeline.png Graphic file (type png)
 <use figures/ETL_Pipeline.png>
 Package pdftex.def Info: figures/ETL_Pipeline.png  used on input line 12.
 (pdftex.def)             Requested size: 177.42868pt x 209.4261pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2 <./figures/transformers_architecture.png>]
-<figures/Data_vectorization.jpeg, id=22, 1398.22375pt x 919.435pt>
+<figures/Data_vectorization.jpeg, id=21, 1398.22375pt x 919.435pt>
 File: figures/Data_vectorization.jpeg Graphic file (type jpg)
 <use figures/Data_vectorization.jpeg>
 Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 63
@@ -1259,28 +1244,17 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 63--64
  [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 7362) has occurred while \output is active []
-
- [3 <./figures/LLM_Arch_text_generation.jpeg> <./figures/ETL_Pipeline.png> <./f
-igures/Data_vectorization.jpeg>]
-<figures/Table_diagram.jpeg, id=27, 1154.3125pt x 1282.7925pt>
+[3 <./figures/ETL_Pipeline.png> <./figures/Data_vectorization.jpeg>]
+<figures/Table_diagram.jpeg, id=26, 1154.3125pt x 1282.7925pt>
 File: figures/Table_diagram.jpeg Graphic file (type jpg)
 <use figures/Table_diagram.jpeg>
 Package pdftex.def Info: figures/Table_diagram.jpeg  used on input line 85.
 (pdftex.def)             Requested size: 199.60895pt x 221.81044pt.
-<figures/LLM_Pipeline.jpeg, id=28, 1122.1925pt x 1120.185pt>
+<figures/LLM_Pipeline.jpeg, id=27, 1122.1925pt x 1120.185pt>
 File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
 <use figures/LLM_Pipeline.jpeg>
 Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 101.
 (pdftex.def)             Requested size: 199.60895pt x 199.24872pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--129
 
@@ -1292,38 +1266,21 @@ Underfull \hbox (badness 7888) in paragraph at lines 74--75
  \OT1/ptm/m/it/10 1) Parameter-Efficient Fine-Tuning (PEFT): [][]
  []
 
+[6]
+Underfull \hbox (badness 1533) in paragraph at lines 225--226
+\OT1/ptm/m/n/10 (Causal) model fin-ished in 26.15 hours. Lastly,
+ []
 
-Underfull \vbox (badness 5388) has occurred while \output is active []
-
- [6]
-Package pgfplots info on input line 240: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 241: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+Package pgfplots info on input line 352: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 
-[7]
-Package pgfplots info on input line 345: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-) (./chapters/Chap5_Conclusions.tex [8])
-Underfull \hbox (badness 4686) in paragraph at lines 93--94
-[]\OT1/ptm/m/n/10 Please num-ber ci-ta-tions con-sec-u-tively within
- []
+Underfull \vbox (badness 5592) has occurred while \output is active []
 
-(./THS_LLM_Paper.bbl
-Underfull \hbox (badness 6445) in paragraph at lines 4--8
-[]\OT1/ptm/m/n/10 T. Yil-maz and []O. Ulu-soy, ``Mis-in-for-ma-
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 4--8
-\OT1/ptm/m/n/10 tion prop-a-ga-tion in on-line so-cial net-works:
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 4--8
-\OT1/ptm/m/n/10 proaches,'' \OT1/ptm/m/it/10 IEEE Trans-ac-tions on Com-pu-ta-
- []
-
-
-Underfull \hbox (badness 2689) in paragraph at lines 49--52
+ [7])
+(./chapters/Chap5_Conclusions.tex [8]) (./THS_LLM_Paper.bbl
+Underfull \hbox (badness 2689) in paragraph at lines 9--12
 []\OT1/ptm/m/n/10 C. C. Garz[]on-Alfonso and M. Rodr[]^^Pguez-
  []
 
@@ -1346,13 +1303,13 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 33946 strings out of 474116
- 827114 string characters out of 5743682
- 1950187 words of memory out of 5000000
- 55722 multiletter control sequences out of 15000+600000
- 601489 words of font info for 117 fonts, out of 8000000 for 9000
+ 33942 strings out of 474116
+ 826858 string characters out of 5743682
+ 1952187 words of memory out of 5000000
+ 55720 multiletter control sequences out of 15000+600000
+ 600393 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,101p,1234b,2414s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,101p,1234b,2410s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
@@ -1361,10 +1318,10 @@ local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (9 pages, 732206 bytes).
+Output written on THS_LLM_Paper.pdf (9 pages, 577056 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

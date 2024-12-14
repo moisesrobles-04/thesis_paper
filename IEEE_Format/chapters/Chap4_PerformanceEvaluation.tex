@@ -68,10 +68,10 @@ CUDA 11.7. To initialize and use the models we relied on  the Transformers 4.34.
 
 The LLMs used for this paper are pre-trained base models, meaning that the model learned how words relate to each other. In other words, the model is trained to understand a language. This process is computationally expensive and requires a large amount of data. Instead of creating a model from scratch, we fine-tuned the models to achieved our classification goals. We taught the models to classify two types of texts: health-related and misinformation-related texts. 
 
-We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2 in their base form. Each one has a different architecture, as shown in Table \ref{table:LLM}. The architectures have their specialty; thus, we performed two processes of fine-tuning: sequence classification and CLM. BERT and LLaMa-2 were only trained on sequence classification, while T5 was trained on sequence and CLM. T5 was the only model capable of that because BERT encoder-only architecture does not allow text generation, and LLaMa-2 required more resources than the ones available. Because of the resource limitations, we fine-tuned the models using LoRA \textbf{\textit{[Insert LoRA References]}}. 
+We identified three models to perform these classification tasks. The models used for this experiment are Bert, T5, and LLaMa-2 in their base form. Each one has a different architecture, as shown in Table \ref{table:LLM}. The architectures have their specialty; thus, we performed two processes of fine-tuning: sequence classification and CLM. BERT and LLaMa-2 were only trained on sequence classification, while T5 was trained on sequence and CLM. T5 was the only model capable of that because BERT encoder-only architecture does not allow text generation, and LLaMa-2 required more resources than the ones available. Because of the resource limitations, we fine-tuned the models using LoRA \cite{hu2021loralowrankadaptationlarge}. 
 
 \subsubsection{Parameter-Efficient Fine-Tuning (PEFT)}
-PEFT is a library that reduces the memory usage of a model to be fine-tuned. That library allows us to use the Low-Rank Adapter (LoRA) \cite{hu2021loralowrankadaptationlarge}. That adapter helps us reduce a model's trainable parameters. The LoRA hyperparameters used are found on Table \ref{table:LoRA}.
+PEFT is a library that reduces the memory usage of a model to be fine-tuned. That library allows us to use the Low-Rank Adapter (LoRA). That adapter helps us reduce a model's trainable parameters. The LoRA hyperparameters used are found on Table \ref{table:LoRA}.
 
 \begin{table}[H]
 	\centering
@@ -140,6 +140,7 @@ that their best model is an LSTM, with no attention, and a GRU layer.
 \begin{table}[H]
 	\centering
 	\caption{Health Related Precision Result}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
@@ -155,18 +156,19 @@ that their best model is an LSTM, with no attention, and a GRU layer.
 		T5 (Sequence) & 0.48 \\
 		\hline
 	\end{tabular}
+	}
 	\label{table:HealthPrecision}
 \end{table}
 
 Table \ref{table:HealthPrecision} shows the result for the precision metric for the related classification. For clarity, we focus on this class because our project
 goal is to detect health-related misinformation. The best-performing model here was the LLaMa-2 model, which has a precision of 94\%. Tied for second place
-are BERT and T5 (Causal), with 85\% precision. Next is the THS model, with 83\% precision. Lastly, we have a T5 (Sequence) model with a relatively low
-precision of 48\%.
+are BERT and T5 (Causal), with 85\% precision. Next is the THS model, with 83\% precision. Lastly, we have a T5 (Sequence) model with a score  of 48\%.
 
 \subsubsection{Recall}
 \begin{table}[H]
 	\centering
 	\caption{Health Related Recall Result}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
@@ -182,19 +184,19 @@ precision of 48\%.
 		T5 (Sequence) & 0.44 \\
 		\hline
 	\end{tabular}
+	}
 	\label{table:HealthRecall}
 \end{table}
 
 Table \ref{table:HealthRecall} shows the result for the recall metric for the related classification. When comparing this metric with the THS investigation, there is a noticeable difference. Their results
-show that only the LSTM layer, no attention, and a GRU layer model was the only one with a result over 80\%. In contrast, most of our models had a score of at least 80\%. Comparing this result
-with the precision table (Table \ref{table:HealthPrecision}, our model did not score drastically lower. Here, our best model was T5 (Causal), with a performance of 95\% in recall. Next, we have
-BERT with 91\%, followed by the THS model with 89\%. Then, the model with the highest precision, LLaMa-2, ended with 84\%. Lastly, we have again the T5 (Sequence) model with a 44\%,
-lower than its precision.
+show that only the LSTM layer, no attention, and a GRU layer model was the only one with a result over 80\% \cite{8622504}. In contrast, most of our models had a score of at least 80\%. 
+Here, our best model was T5 (Causal), with a performance of 95\% in recall. Our model with the highest precision, LLaMa-2, ended with 84\%.
 
 \subsubsection{F1}
 \begin{table}[H]
 	\centering
 	\caption{Health Related F1 Result}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
@@ -210,6 +212,7 @@ lower than its precision.
 		T5 (Sequence) & 0.46 \\
 		\hline
 	\end{tabular}
+	}
 	\label{table:HealthF1}
 \end{table}
 
@@ -219,9 +222,7 @@ the THS model had an 86\%, ending in second to last place.
 
 \subsubsection{Training Time}
 
-In Figure \ref{fig:HealthTime}, we present our model's training time. As mentioned earlier, we trained each model for 20 epochs with a batch size of 16. BERT trained faster than
-any other model, which took 3.12 hours. The T5 (Sequence) model took 24.03 hours, while the T5 (Causal) model finished in 26.15 hours. Lastly, LLaMa-2 took 85.43 hours, over three days, to
-train. Based on these results, we can infer that models with fewer parameters train faster. BERT trained 27.4x faster than LLaMa-2.
+In Figure \ref{fig:HealthTime}, we present our model's training time. BERT trained faster than any other model, which took 3.12 hours. The T5 (Sequence) model took 24.03 hours, while the T5 (Causal) model finished in 26.15 hours. Lastly, LLaMa-2 took 85.43 hours, over three days, to train. Based on these results, we can infer that models with fewer parameters train faster. BERT trained 27.4x faster than LLaMa-2.
 
 \begin{figure}[H]
 	\centering
@@ -254,6 +255,7 @@ misinformation.
 \begin{table}[H]
 	\centering
 	\caption{Misinformation Precision Result}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
@@ -267,6 +269,7 @@ misinformation.
 		T5 (Sequence) & 0.99 \\
 		\hline
 	\end{tabular}
+	}
 	\label{table:MisinformationPrecision}
 \end{table}
 
@@ -278,6 +281,7 @@ was LLaMa-2, with a score of 98\% precision. The lowest-performing model was BER
 \begin{table}[H]
 	\centering
 	\caption{Misinformation Recall Result}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
@@ -291,6 +295,7 @@ was LLaMa-2, with a score of 98\% precision. The lowest-performing model was BER
 		T5 (Sequence) & 0.85 \\
 		\hline
 	\end{tabular}
+	}
 	\label{table:MisinformationRecall}
 \end{table}
 
@@ -302,6 +307,7 @@ Next, we have BERT with 94\% and T5 (Causal) with a 92\% recall. Finally, T5 (Se
 \begin{table}[H]
 	\centering
 	\caption{Misinformation F1 Result}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ [0.5ex] 
@@ -315,6 +321,7 @@ Next, we have BERT with 94\% and T5 (Causal) with a 92\% recall. Finally, T5 (Se
 		T5 (Sequence) & 0.92 \\
 		\hline
 	\end{tabular}
+	}
 	\label{table:MisinformationF1}
 \end{table}
 

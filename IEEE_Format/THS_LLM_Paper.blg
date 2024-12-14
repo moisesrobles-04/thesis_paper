@@ -27,45 +27,45 @@ I'm skipping whatever remains of this entry
  :  url = \url
  :            {blog.eleuther.ai/transformer-math/},
 I'm skipping whatever remains of this entry
-You've used 11 entries,
+You've used 14 entries,
             1876 wiz_defined-function locations,
-            525 strings with 5437 characters,
-and the built_in function-call counts, 2405 in all, are:
-= -- 195
-> -- 138
+            538 strings with 5782 characters,
+and the built_in function-call counts, 2742 in all, are:
+= -- 211
+> -- 169
 < -- 0
-+ -- 51
-- -- 40
-* -- 160
-:= -- 340
-add.period$ -- 9
-call.type$ -- 11
-change.case$ -- 11
++ -- 63
+- -- 49
+* -- 184
+:= -- 400
+add.period$ -- 12
+call.type$ -- 14
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 92
-empty$ -- 249
-format.name$ -- 40
-if$ -- 587
+cite$ -- 14
+duplicate$ -- 97
+empty$ -- 293
+format.name$ -- 49
+if$ -- 663
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 14
 missing$ -- 3
-newline$ -- 37
-num.names$ -- 8
-pop$ -- 62
+newline$ -- 46
+num.names$ -- 11
+pop$ -- 83
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 97
+skip$ -- 101
 stack$ -- 0
-substring$ -- 108
-swap$ -- 33
+substring$ -- 87
+swap$ -- 27
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 14
-width$ -- 13
-write$ -- 84
+while$ -- 17
+width$ -- 16
+write$ -- 104
 (There were 5 error messages)

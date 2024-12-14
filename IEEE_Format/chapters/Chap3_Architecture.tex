@@ -1,7 +1,7 @@
 
 \section{System Architectures}
 
-This section presents the general architectures of the systems we used for the development and experiments in our system. We illustrate the Extraction, Transformation, and Load (ETL) pipeline we used for the misinformation rebuttal. Additionally, we have our misinformation classification process, where we classify the health misinformation and refute it. Finally, we have the UI design where users interact with the texts and the results. 
+This section presents the general architectures of the systems we used for the development and experiments in our research. We illustrate the Extraction, Transformation, and Load (ETL) pipeline we used for the medical research papers. Additionally, we have our misinformation classification process, where we classify the health misinformation and refute it. Finally, we have the system's User Interface (UI).
 
 \subsection{Research Paper ETL Pipeline}
 
@@ -71,12 +71,12 @@ After retrieving the data, we need to vectorize the papers. Figure \ref{fig:vect
 Now, with all papers vectorized, we upload the metadata into a Postgres database. First, we validate that there are no duplicate records in the system. To prevent duplicates, we search for the paper's reference. If any is found, we delete the chunks from the vector database. Additionally, any research that did not contain at least an abstract was removed. That ensures that there is no repetition or inconsistency when doing the rebuttal. Later, we upload this data into the system following the schema found in Figure \ref{fig:table}. The tables in this schema are as follow:
 
 \begin{description}
-	\item{\textbf{Research:}}  The table contains the research paper data. Its attributes are title, which is the research paper title; context, the paper’s text; paper\_ref, the complete reference of the paper, used to prevent duplicates; and fullpaper, which is a boolean that is true if the paper contains an abstract, introduction, methodology, discussion, conclusion, and references.
-	\item{\textbf{Chunks:}} This table pairs the UUIDs from the paper's chunks and their respective research record.  
-	\item{\textbf{Keyword:}} Some research papers contain keywords that allow the reader to know the subjects mentioned in the paper. 
+	\item{\textbf{Research:}}  Contains the research paper's metadata. Its attributes are: title, paper's title; context, the paper’s text; paper\_ref, the reference of the paper; and fullpaper, a boolean that is true if the paper contains an abstract, introduction, methodology, discussion, conclusion, and references.
+	\item{\textbf{Chunks:}} Pairs the UUIDs from the paper's chunks and their respective research record.  
+	\item{\textbf{Keyword:}} Keywords that allow the reader to know the subjects mentioned in the paper. 
 	\item{\textbf{Author:}} Stores the first and last names of all authors identified in the research paper. 
 	\item{\textbf{Reference:}} All references that are present in the research paper.
-	\item{\textbf{Topic:}} This contains the different topics used to search the papers.
+	\item{\textbf{Topic:}} The topics used to search the papers.
 
 \end{description}
 
@@ -89,7 +89,7 @@ Now, with all papers vectorized, we upload the metadata into a Postgres database
 \end{figure}
 
 
-We started the search with 85,000 peer-reviewed papers. After finishing the filtering and data cleaning, we ended with 56,365 different research papers. 
+We started the search with 85,000 peer-reviewed papers. After finishing the filtering and data cleaning, we ended with 56,365 different peer-reviewed papers. 
 
 
 
@@ -107,11 +107,11 @@ After training the models and storing the context for the rebuttal, we create th
 
 \subsubsection{Health-related Classification}
 The first part of the pipeline is determining if the text is related to health. When the system receives the input text, it sends it to a model fine-tuned to classify health-related texts. This model determines whether the input is related, unrelated, or ambiguous.
-If the text is health-related, we continue to the next part of the pipeline. When the text is non-related or ambiguous, we end the process. We end this because the topics are out of the model's scope. 
+If the text is health-related, we go to the next part of the pipeline. When the text is non-related or ambiguous, we end the process because it is out of the model's scope. 
 
 \subsubsection{Misinformation Classification}
-After confirming that the text is health-related, we want to validate that it contains misinformation. The fine-tuned model can only return two possible results: misinformation or non-misinformation. If the model finds no misinformation after evaluating the text,
-the final output will return that classification. When the result contains misinformation, we start the search for research papers that be used to rebut the message.
+After confirming that the text is health-related, we validate that it contains misinformation. The fine-tuned model can only return two possible results: misinformation or non-misinformation. If the model finds no misinformation after evaluating the text,
+the final output will return that classification. When the result contains misinformation, we start the search for research papers to be used to rebut the message.
 
 \subsubsection{Context Finder}
 Before starting the search on the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama}. That tool allows us to execute locally a pre-trained LLM that generates text. Thus, we send a query to Ollama asking it to make a one-sentence query for the vector database related to the input.

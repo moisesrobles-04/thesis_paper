@@ -1,12 +1,38 @@
 
 \section{Introduction}
-Lorem 
+\noindent Nowadays, technology has advanced to the point that anyone can find any information in just a few seconds. Social media has been an essential
+element in the search for information. The issue with this is that anyone can find, search, share, and even write anything, accurate or not. However, this dilemma
+has caused problems in this modern era. If anyone can share anything, how can you be sure what is true? Users are susceptible to disinformation or misinformation.
+In this context, misinformation refers to messages with false information dispersed because the author misunderstood facts. In contrast, disinformation refers to
+messages with false information that are intentionally dispersed. The author of these messages has the intention of forming opinions based on false data. In either
+case, false information spreads to readers as facts. Most social media platforms recommend that users read from experts or official news outlets. Nevertheless,
+the overwhelming amount of data makes it complicated to keep up with everything.
+
+Currently, social media such as X (formerly known as Twitter) have ``Community Notes" which clarify tweets that are misleading or misinforming. However, this system
+depends totally on human interaction and is a slow and intricate process. On most occasions, when a ``Community Note" is added to a tweet, the disinformation has
+already been spread. The issue of detecting and preventing the spread of misinformation has not been an easy task, especially in the health field.  In recent times, it has
+been challenging for health officials to achieve the prevention of endemic or pandemics. Most of the time, these officials tend to make educational
+campaigns for the population. However, social media misinformation can reduce the effectiveness of these campaigns. In addition, this is harder to counteract because
+these can spread for longer times and reach different users \cite{article}. Some problems these experts have faced in the past years were misinformation
+about vaccines, users invalidating safe measurements, and other issues.
+
+The Twitter Health Surveillance (THS) system was designed to detect tweets related to health conditions \cite{8622504}. THS is a prototype system we are building at the University
+of Puerto Rico, Mayag\"uez (UPRM). The project is designed as an integrated platform to help health officials collect tweets, determine if they are related to a medical condition, extract
+metadata from them, and create a warehouse that can be used to analyze the data further. The THS Artificial Intelligence (AI) components used Long-Short Term Memory (LSTM)
+and Gated Recurrent Unit (GRU) to classify tweets as being medically related, unrelated, or ambiguous. The data they used was from the Twitter API system, then processed
+through the Hadoop ecosystem and stored in a Hive database.
+
+Searching for training data about this topic is not an easy task. A problem with social media text is the informality, slang terms, or special characters. However, we use the
+data from the THS project as our primary source for the health classification dataset. On the other hand, the misinformation dataset contains social media posts, articles,
+websites, and others \cite{stephencrone2022,coviddata,covidunesco}. Instead of using the THS architectures, we opted for Large Language Models (LLM). 
+
+We employ an LLM in this investigation, to detects health misinformation and provides context for its classification. Also, we did not preprocess the tweets because they could lose the context of the actual meaning when hashtags, mentions, and emojis are removed. We built the prototype using Python, PyTorch, Chroma, Ollama, and other open-source tools. In determining if a text is health-related, our system achieved a 90\% F1 score and a 97\% F1 if it contained misinformation. Additionally, our preliminary results show that using official health sources with Retrieval Augmented Generation (RAG) helps the LLM rebut correctly with an F1 BertScore of 82\%. Hence, our system proved that it is possible to classify and rebut health-related misinformation. 
 
 \subsection{Contributions}
 This paper provides the following original contributions:
 \begin{itemize}
 	\item{\textbf{Leveraging LLMs for Health Misinformation:}} Large Language Models are being used for different fields nowadays. However, these do not focus on health misinformation on social media. We present Large Language Models as a solution to classify and rebut health misinformation texts on social media and use research papers extracted from PubMed as context for the LLM.
-	\item{\textbf{Present a novel solution to misinformation rebuttal:}} For misinformation rebuttal, is necessary to have an understanding of what needs to be fact-checked. Also, it is important to have the necessary context for the correction. We extracted research papers that were added to a vector database. The database helped find similar chunks of texts to use as context for the misinformation rebuttal. That setup enable us to use RAG to answer health misinformation with peer-review documents.
+	\item{\textbf{Present a novel solution to misinformation rebuttal:}} For misinformation rebuttal, is necessary to have an understanding of what needs to be fact-checked. Also, it is important to have the necessary context for the correction. We extracted research papers that were added to a vector database. That setup enable us to use RAG to answer health misinformation with peer-review documents.
 	\item{\textbf{Pipeline Interface:}} Developed a frontend application that showcase the full pipeline, allowing users to view the process.
 
 \end{itemize}
