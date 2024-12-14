@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 DEC 2024 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 DEC 2024 19:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1548,7 +1548,7 @@ coord trafo unsupported.
  [6]
 Package pgfplots info on input line 336: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [7]) (./chapters/Chap5_Conclusions.tex)
+) (./chapters/Chap5_Conclusions.tex [7])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1568,9 +1568,6 @@ L3 programming layer <2024-02-20>
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -1597,7 +1594,7 @@ cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (8 pages, 613439 bytes).
+Output written on THS_LLM_Paper.pdf (8 pages, 613258 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream

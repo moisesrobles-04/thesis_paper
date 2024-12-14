@@ -371,17 +371,16 @@ as low as possible. A false negative is missing a misinformation post that could
 texts as misinformation is also bad, because users might get skeptical of the veracity of the system. Additionally, the process of classification is slow when rebutting, that is why we need a balance.
 
 Our model with the best result for the health-related classification (Table \ref{table:HealthF1}) was T5 (Causal), with a 90\% F1 score, while the THS model had 86\%. However, the trade-off
-for this model is that the training is computationally expensive. T5 (Causal) labels are texts instead of numbers, they must be embedded, which requires more processing power. Also,
-that model cannot have class weights because of the structure of the embedding. Additionally, the training time (Figure \ref{fig:HealthTime}) for T5 is more extensive
-when compared to BERT, 8.4x. Now, BERT had a slightly lower result with 88\%. Nonetheless, when we factor in the training time and processing power, this model is more efficient.
+for this model is that the training is computationally expensive. T5 (Causal) labels are texts instead of numbers, they must be embedded, which requires more processing power. Additionally,
+the training time (Figure \ref{fig:HealthTime}) for T5 is more extensive when compared to BERT. Now, BERT had a slightly lower result with 88\%. Nonetheless, when we factor in the
+training time and processing power, this model is more efficient.
 
 The model with the highest F1 score for the misinformation classification (Table \ref{table:MisinformationF1}) was LLaMa-2 with 97\%. However, it requires high computational power and is
-the model with the most extensive training time (Figure \ref{fig:MisinformationTime}). When compared to BERT, it takes 30.90x more time to train. However, LLaMa-2 outperform the
-other models by a slight margin. 
+the model with the most extensive training time (Figure \ref{fig:MisinformationTime}). However, LLaMa-2 outperform the other models by a slight margin. 
 
 For the BERTScore, our results shows that both models had an identical performance (Table \ref{table:BERTScore}). A possible reason is that the RAG process gives sufficient context to generate a
-coherent response. However, both models have their trade-offs. To use GPT-3.5-turbo, we must pay OpenAI to request their API. On the other hand, LLaMa-3.1 runs with Ollama, and we need
-sufficient memory to execute the model. The use case for each one depends on the user's hardware.
+coherent response. However, both models have their trade-offs. To use GPT-3.5-turbo, users must pay OpenAI to request their API. In contrast, LLaMa-3.1 runs with Ollama, and we need sufficient
+memory to run the model.
 
 This paper focuses on social media posts, and we know that there are frequent changes in how users interact. Additionally, when new diseases are found or named, we must retrain the
 models to find new patterns. Retraining can be costly if the model requires excessive resources and extensive training. Thus, we can say that BERT had overall results to help combat
