@@ -80,7 +80,7 @@ Now, with all papers vectorized, we upload the metadata into a Postgres database
 
 \end{description}
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[width=0.42\textwidth]{figures/Table_diagram.jpeg} %specify width
 	\end{center}
@@ -115,7 +115,6 @@ the final output will return that classification. When the result contains misin
 
 \subsubsection{Context Finder}
 Before starting the search on the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama}. That tool allows us to execute locally a pre-trained LLM that generates text. Thus, we send a query to Ollama asking it to make a one-sentence query for the vector database related to the input.
-\newline
 \newline
 {\small
 \textbf{Input:} ``\textit{\#nih fauci, @cdcdirector @sgottliebfda \&amp; @barda bright expected to be grilled tomorrow over ineffective \#flu vaccine at @housecommerce \#suboversight bets on fauci saying universal \#influenza vax in 5, maybe 10 years? my preview here: \url{https://t.co/fsqefwhik7} \#cdc \#fda \#vaccines}"

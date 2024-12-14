@@ -1,13 +1,12 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-\usepackage{cite}
+%\usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
-
 \usepackage{sidecap}
 \usepackage{wrapfig}
 \usepackage{float}
@@ -39,12 +38,15 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18} % Use a recent version for compatibility
-\usepackage[numbers,sort&compress]{natbib}
-%\renewcommand{\bibname}{Bibliography} % or other title eg. Bibliography
-\bibliographystyle{ieeetr} %styles: abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt.
+%\usepackage[numbers,sort&compress]{natbib}
+%\bibliographystyle{ieeetr} %styles: abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt.
+
+\usepackage[style=ieee,doi=false,isbn=false,url=false,eprint=false]{biblatex}
+\addbibresource{reference.bib}
+
 \usepackage{subfiles} % Best loaded last in the preamble
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     
 
 \title{\huge FIGHTING HEALTH-RELATED MISINFORMATION IN SOCIAL MEDIA WITH LARGE LANGUAGE MODELS}
@@ -86,9 +88,8 @@ Large Language Model, Misinformation, Transformers, Vector Databases
 
 \subfile{chapters/Chap5_Conclusions}
 
-\bibliography{reference} 
+\printbibliography
 
-%IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
 
 \end{document}
 

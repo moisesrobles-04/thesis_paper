@@ -1,71 +1,18 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: THS_LLM_Paper.aux
-The style file: ieeetr.bst
-Database file #1: reference.bib
-I was expecting a `,' or a `}'---line 316 of file reference.bib
- : 
- : @misc{jin2023rethinkinglearningratetuning,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 372 of file reference.bib
- : 
- : @misc{openai,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 378 of file reference.bib
- : 
- : @misc{pgvector,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 392 of file reference.bib
- : 
- : @article{social_fact,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-"{" immediately follows a field part---line 451 of file reference.bib
- :  url = \url
- :            {blog.eleuther.ai/transformer-math/},
-I'm skipping whatever remains of this entry
-You've used 14 entries,
-            1876 wiz_defined-function locations,
-            538 strings with 5782 characters,
-and the built_in function-call counts, 2742 in all, are:
-= -- 211
-> -- 169
-< -- 0
-+ -- 63
-- -- 49
-* -- 184
-:= -- 400
-add.period$ -- 12
-call.type$ -- 14
-change.case$ -- 14
-chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 97
-empty$ -- 293
-format.name$ -- 49
-if$ -- 663
-int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 3
-newline$ -- 46
-num.names$ -- 11
-pop$ -- 83
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 101
-stack$ -- 0
-substring$ -- 87
-swap$ -- 27
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 17
-width$ -- 16
-write$ -- 104
-(There were 5 error messages)
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'THS_LLM_Paper.blg'
+[65] biber-darwin:340> INFO - === Sat Dec 14, 2024, 12:32:18
+[78] Biber.pm:419> INFO - Reading 'THS_LLM_Paper.bcf'
+[160] Biber.pm:979> INFO - Found 14 citekeys in bib section 0
+[175] Biber.pm:4419> INFO - Processing section 0
+[184] Biber.pm:4610> INFO - Looking for bibtex file 'reference.bib' for section 0
+[187] bibtex.pm:1713> INFO - LaTeX decoding ...
+[224] bibtex.pm:1519> INFO - Found BibTeX data source 'reference.bib'
+[324] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[324] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[324] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[325] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[336] bbl.pm:660> INFO - Writing 'THS_LLM_Paper.bbl' with encoding 'UTF-8'
+[346] bbl.pm:763> INFO - Output to THS_LLM_Paper.bbl
+[346] Biber.pm:131> WARN - legacy month field 'October' in entry 'coviddata' is not an integer - this will probably not sort properly.
+[346] Biber.pm:131> WARN - legacy month field 'March' in entry 'covidunesco' is not an integer - this will probably not sort properly.
+[346] Biber.pm:133> INFO - WARNINGS: 2

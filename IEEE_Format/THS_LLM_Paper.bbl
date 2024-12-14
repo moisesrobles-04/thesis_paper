@@ -1,63 +1,607 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{article}
-S.~T and S.~Mathew, ``The disaster of misinformation: a review of research in
-  social media,'' {\em International Journal of Data Science and Analytics},
-  vol.~13, pp.~1--15, 05 2022.
 
-\bibitem{8622504}
-C.~C. Garzón-Alfonso and M.~Rodríguez-Martínez, ``Twitter health
-  surveillance (ths) system,'' in {\em 2018 IEEE International Conference on
-  Big Data (Big Data)}, pp.~1647--1654, 2018.
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{article}{article}{}
+      \name{author}{2}{}{%
+        {{hash=508783b66aa8dfa6f9c93a8bdb86a9db}{%
+           family={T},
+           familyi={T\bibinitperiod},
+           given={Sadiq},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1ea033a51918196adcf2f087fe625a81}{%
+           family={Mathew},
+           familyi={M\bibinitperiod},
+           given={Saji},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bbdc6f7f1941955d590f89c288f8907}
+      \strng{fullhash}{7bbdc6f7f1941955d590f89c288f8907}
+      \strng{bibnamehash}{7bbdc6f7f1941955d590f89c288f8907}
+      \strng{authorbibnamehash}{7bbdc6f7f1941955d590f89c288f8907}
+      \strng{authornamehash}{7bbdc6f7f1941955d590f89c288f8907}
+      \strng{authorfullhash}{7bbdc6f7f1941955d590f89c288f8907}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Data Science and Analytics}
+      \field{month}{05}
+      \field{title}{The disaster of misinformation: a review of research in social media}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/s41060-022-00311-6
+      \endverb
+    \endentry
+    \entry{8622504}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=6f159a94e7cf979d1b98a454a1bf0c07}{%
+           family={Garzón-Alfonso},
+           familyi={G\bibinithyphendelim A\bibinitperiod},
+           given={Cristian\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=74b264daf52b43120cf6224696cc9ad0}{%
+           family={Rodríguez-Martínez},
+           familyi={R\bibinithyphendelim M\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d7243036bda915c54e00ee07c0f44d8}
+      \strng{fullhash}{0d7243036bda915c54e00ee07c0f44d8}
+      \strng{bibnamehash}{0d7243036bda915c54e00ee07c0f44d8}
+      \strng{authorbibnamehash}{0d7243036bda915c54e00ee07c0f44d8}
+      \strng{authornamehash}{0d7243036bda915c54e00ee07c0f44d8}
+      \strng{authorfullhash}{0d7243036bda915c54e00ee07c0f44d8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Conference on Big Data (Big Data)}
+      \field{title}{Twitter Health Surveillance (THS) System}
+      \field{year}{2018}
+      \field{pages}{1647\bibrangedash 1654}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/BigData.2018.8622504
+      \endverb
+      \keyw{Twitter;Big Data;Tools;Diseases;Metadata;big data analytics;deep learning;disease detection}
+    \endentry
+    \entry{stephencrone2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=34044e3c4af42a6ad7f118dd852bd271}{%
+           family={Crone},
+           familyi={C\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{34044e3c4af42a6ad7f118dd852bd271}
+      \strng{fullhash}{34044e3c4af42a6ad7f118dd852bd271}
+      \strng{bibnamehash}{34044e3c4af42a6ad7f118dd852bd271}
+      \strng{authorbibnamehash}{34044e3c4af42a6ad7f118dd852bd271}
+      \strng{authornamehash}{34044e3c4af42a6ad7f118dd852bd271}
+      \strng{authorfullhash}{34044e3c4af42a6ad7f118dd852bd271}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monkeypox misinformation: Twitter dataset}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.34740/KAGGLE/DS/2352848
+      \endverb
+      \verb{urlraw}
+      \verb https://www.kaggle.com/ds/2352848
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/ds/2352848
+      \endverb
+    \endentry
+    \entry{coviddata}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9ef0270cfaa6af463ac8274d0ea2e71f}{%
+           family={Möbius},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Kaggle}%
+      }
+      \strng{namehash}{9ef0270cfaa6af463ac8274d0ea2e71f}
+      \strng{fullhash}{9ef0270cfaa6af463ac8274d0ea2e71f}
+      \strng{bibnamehash}{9ef0270cfaa6af463ac8274d0ea2e71f}
+      \strng{authorbibnamehash}{9ef0270cfaa6af463ac8274d0ea2e71f}
+      \strng{authornamehash}{9ef0270cfaa6af463ac8274d0ea2e71f}
+      \strng{authorfullhash}{9ef0270cfaa6af463ac8274d0ea2e71f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{COVID-19 Fake News Dataset}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/arashnic/covid19-fake-news/data?select=NewsFakeCOVID-19.csv
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/arashnic/covid19-fake-news/data?select=NewsFakeCOVID-19.csv
+      \endverb
+    \endentry
+    \entry{covidunesco}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=c7ce1920673abf21ba0be454fdfa8abd}{%
+           family={Siwakoti},
+           familyi={S\bibinitperiod},
+           given={Samikshya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fc82beda7a650befcfcaf6a24c88c0a4}{%
+           family={Yadav},
+           familyi={Y\bibinitperiod},
+           given={Kamya},
+           giveni={K\bibinitperiod}}}%
+        {{hash=29e21b9b80fcd42c6548db217eb83a4f}{%
+           family={Thange},
+           familyi={T\bibinitperiod},
+           given={Isra},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7700119d262c3c28ac703ffe0a216eaa}{%
+           family={Bariletto},
+           familyi={B\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a44d879a47f2183bd019f6588ba4b910}{%
+           family={Zanotti},
+           familyi={Z\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7cc88d760538c54e1021d66a2baa7802}{%
+           family={Ghoneim},
+           familyi={G\bibinitperiod},
+           given={Alaa},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dc8425f4982c7fc9096799238df800a5}{%
+           family={N.},
+           familyi={N\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Empirical Study of Conflict, Princeton University}%
+      }
+      \strng{namehash}{b99f35d8695951d495495d6defe29ce6}
+      \strng{fullhash}{91498e9801f6f91454a1a7c8319ce03a}
+      \strng{bibnamehash}{b99f35d8695951d495495d6defe29ce6}
+      \strng{authorbibnamehash}{b99f35d8695951d495495d6defe29ce6}
+      \strng{authornamehash}{b99f35d8695951d495495d6defe29ce6}
+      \strng{authorfullhash}{91498e9801f6f91454a1a7c8319ce03a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{Localized Misinformation in a Global Pandemic: Report on COVID-19 Narratives around the World}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 68}
+      \range{pages}{68}
+      \verb{urlraw}
+      \verb https://esoc.princeton.edu/publications/localized-misinformation-global-pandemic-report-covid-19-narratives-around-world
+      \endverb
+      \verb{url}
+      \verb https://esoc.princeton.edu/publications/localized-misinformation-global-pandemic-report-covid-19-narratives-around-world
+      \endverb
+    \endentry
+    \entry{pubmed}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2024-05-10}
+      \field{title}{PubMed - National Library of Medicine}
+      \verb{urlraw}
+      \verb \url{https://pubmed.ncbi.nlm.nih.gov}
+      \endverb
+      \verb{url}
+      \verb %5Curl%7Bhttps://pubmed.ncbi.nlm.nih.gov%7D
+      \endverb
+    \endentry
+    \entry{bioinformatics}{article}{}
+      \name{author}{4}{}{%
+        {{hash=549abbec4baa84a66bad944d6a4acdae}{%
+           family={Comeau},
+           familyi={C\bibinitperiod},
+           given={Donald\bibnamedelima C},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=b7220b39d07f4ac3f9cdc24cf93b9c90}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Chih-Hsuan},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=08bf6283358e5db8d2256a22162b0c21}{%
+           family={Islamaj\bibnamedelima Doğan},
+           familyi={I\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Rezarta},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3175f2725bdceeab4ed47c122439add7}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Zhiyong},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{55f1c63d4d83ca51d2e89f223c2d91b7}
+      \strng{fullhash}{d74226f9aeb736ce8a7f21e2d5cc0210}
+      \strng{bibnamehash}{d74226f9aeb736ce8a7f21e2d5cc0210}
+      \strng{authorbibnamehash}{d74226f9aeb736ce8a7f21e2d5cc0210}
+      \strng{authornamehash}{55f1c63d4d83ca51d2e89f223c2d91b7}
+      \strng{authorfullhash}{d74226f9aeb736ce8a7f21e2d5cc0210}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Interest in text mining full-text biomedical research articles is growing. To facilitate automated processing of nearly 3 million full-text articles (in PubMed Central® Open Access and Author Manuscript subsets) and to improve interoperability, we convert these articles to BioC, a community-driven simple data structure in either XML or JavaScript Object Notation format for conveniently sharing text and annotations.The resultant articles can be downloaded via both File Transfer Protocol for bulk access and a Web API for updates or a more focused collection. Since the availability of the Web API in 2017, our BioC collection has been widely used by the research community.https://www.ncbi.nlm.nih.gov/research/bionlp/APIs/BioC-PMC/.}}
+      \field{issn}{1367-4803}
+      \field{journaltitle}{Bioinformatics}
+      \field{month}{01}
+      \field{number}{18}
+      \field{title}{{PMC text mining subset in BioC: about three million full-text articles and growing}}
+      \field{volume}{35}
+      \field{year}{2019}
+      \field{pages}{3533\bibrangedash 3535}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btz070
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/bioinformatics/article-pdf/35/18/3533/48975610/bioinformatics\_35\_18\_3533.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/bioinformatics/btz070
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/bioinformatics/btz070
+      \endverb
+    \endentry
+    \entry{bge_embedding}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=d71b1119f50662a9107099735aa4912f}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Shitao},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7e48bdec050a7bea1bb0d4acff3023eb}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=6d65862b32d88d540bffb1875cb56520}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Peitian},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a2deb8466aa6f0edfe3cc805f9d776d8}{%
+           family={Muennighoff},
+           familyi={M\bibinitperiod},
+           given={Niklas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9d3267166f9c7452b40f61f97662d7b}
+      \strng{fullhash}{59f5d1c6c004a3915fe1efb94d8d20af}
+      \strng{bibnamehash}{59f5d1c6c004a3915fe1efb94d8d20af}
+      \strng{authorbibnamehash}{59f5d1c6c004a3915fe1efb94d8d20af}
+      \strng{authornamehash}{a9d3267166f9c7452b40f61f97662d7b}
+      \strng{authorfullhash}{59f5d1c6c004a3915fe1efb94d8d20af}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{C-Pack: Packaged Resources To Advance General Chinese Embedding}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2309.07597
+      \endverb
+    \endentry
+    \entry{chroma}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=12f586b0171cf0f06960a27796d811d6}{%
+           family={Chroma},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{12f586b0171cf0f06960a27796d811d6}
+      \strng{fullhash}{12f586b0171cf0f06960a27796d811d6}
+      \strng{bibnamehash}{12f586b0171cf0f06960a27796d811d6}
+      \strng{authorbibnamehash}{12f586b0171cf0f06960a27796d811d6}
+      \strng{authornamehash}{12f586b0171cf0f06960a27796d811d6}
+      \strng{authorfullhash}{12f586b0171cf0f06960a27796d811d6}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{accessed: 04.27.2024}
+      \field{title}{The AI-native open-source embedding database}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.trychroma.com/
+      \endverb
+      \verb{url}
+      \verb https://www.trychroma.com/
+      \endverb
+    \endentry
+    \entry{ollama}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c23e8db458397f37c8e8d98e94e55a18}{%
+           family={Ollama},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{fullhash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{bibnamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authorbibnamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authornamehash}{c23e8db458397f37c8e8d98e94e55a18}
+      \strng{authorfullhash}{c23e8db458397f37c8e8d98e94e55a18}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2024-09-29}
+      \field{title}{Get up and running with large language models.}
+      \verb{urlraw}
+      \verb \url{https://ollama.com}
+      \endverb
+      \verb{url}
+      \verb %5Curl%7Bhttps://ollama.com%7D
+      \endverb
+    \endentry
+    \entry{zhang2020bertscoreevaluatingtextgeneration}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=733e3732b7e3ce5cf2b04cf5e9bd9cf1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Tianyi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=68f7171bfe61e73c62ff3ffc4c84e5ab}{%
+           family={Kishore},
+           familyi={K\bibinitperiod},
+           given={Varsha},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5d3c3a632d3c15054a532172777a7e40}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=68a0238356fbd88b34be8886f25938a7}{%
+           family={Weinberger},
+           familyi={W\bibinitperiod},
+           given={Kilian\bibnamedelima Q.},
+           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=bda57b6734e461152eada7e447798ca8}{%
+           family={Artzi},
+           familyi={A\bibinitperiod},
+           given={Yoav},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b043f435ee4271bd22faf639e93050a}
+      \strng{fullhash}{0f3fc6c6b2643b223fd923710ae91526}
+      \strng{bibnamehash}{0f3fc6c6b2643b223fd923710ae91526}
+      \strng{authorbibnamehash}{0f3fc6c6b2643b223fd923710ae91526}
+      \strng{authornamehash}{5b043f435ee4271bd22faf639e93050a}
+      \strng{authorfullhash}{0f3fc6c6b2643b223fd923710ae91526}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{BERTScore: Evaluating Text Generation with BERT}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 1904.09675
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1904.09675
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1904.09675
+      \endverb
+    \endentry
+    \entry{huggingface}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2024-10-18}
+      \field{title}{Hugging Face – The AI community building the future}
+      \verb{urlraw}
+      \verb \url{https://huggingface.co}
+      \endverb
+      \verb{url}
+      \verb %5Curl%7Bhttps://huggingface.co%7D
+      \endverb
+    \endentry
+    \entry{hu2021loralowrankadaptationlarge}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=e6a95d07b8ae7f14e4eb777c6980a059}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Edward\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1701c0f05662e92cf52cfc8c16437496}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Yelong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ab0fdbc1586103dda7ac5e0852e5b2c3}{%
+           family={Wallis},
+           familyi={W\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=eaa5cc98b7f19b4ce07c832213a13b9d}{%
+           family={Allen-Zhu},
+           familyi={A\bibinithyphendelim Z\bibinitperiod},
+           given={Zeyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0d2c91b24f885b22d373a892a768abc8}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuanzhi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b654b88ecd4c3ff1ea29da275bce701c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shean},
+           giveni={S\bibinitperiod}}}%
+        {{hash=55f210233ac686af68eba11a97bd84e2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=05d71a9c5e7ac79222e01a55af0ccb93}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Weizhu},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e5ace118d6647e570574aea00d9ee34}
+      \strng{fullhash}{08f4b49735d5d145be00bc9c07f38975}
+      \strng{bibnamehash}{6e5ace118d6647e570574aea00d9ee34}
+      \strng{authorbibnamehash}{6e5ace118d6647e570574aea00d9ee34}
+      \strng{authornamehash}{6e5ace118d6647e570574aea00d9ee34}
+      \strng{authorfullhash}{08f4b49735d5d145be00bc9c07f38975}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{LoRA: Low-Rank Adaptation of Large Language Models}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2106.09685
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2106.09685
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2106.09685
+      \endverb
+    \endentry
+    \entry{touvron2023llamaopenefficientfoundation}{misc}{}
+      \name{author}{14}{}{%
+        {{hash=a2a13fcd633ec70c55a7f3f4812afdcf}{%
+           family={Touvron},
+           familyi={T\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c641a91d616b6eda08cbbdca7b7eb186}{%
+           family={Lavril},
+           familyi={L\bibinitperiod},
+           given={Thibaut},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a32ece3bc966e7e88747e905158c9a6a}{%
+           family={Izacard},
+           familyi={I\bibinitperiod},
+           given={Gautier},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7222f9d76b0fff504f39e7c9c2a526be}{%
+           family={Martinet},
+           familyi={M\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=08284515d256b832e9dba10a88af84f4}{%
+           family={Lachaux},
+           familyi={L\bibinitperiod},
+           given={Marie-Anne},
+           giveni={M\bibinithyphendelim A\bibinitperiod}}}%
+        {{hash=1d29ae55d8d993d9f195b3c97bd34f7c}{%
+           family={Lacroix},
+           familyi={L\bibinitperiod},
+           given={Timothée},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e0d9a8657c1043f53c54f3f5a6ff305f}{%
+           family={Rozière},
+           familyi={R\bibinitperiod},
+           given={Baptiste},
+           giveni={B\bibinitperiod}}}%
+        {{hash=78a420900f50a8470ad085fb05231bf6}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Naman},
+           giveni={N\bibinitperiod}}}%
+        {{hash=00ce63f55ae2ce6ea638e5f991996584}{%
+           family={Hambro},
+           familyi={H\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5373a3313da61427121b3e9733df1ed2}{%
+           family={Azhar},
+           familyi={A\bibinitperiod},
+           given={Faisal},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a829e25f1d50c3545ed8e99f12890acc}{%
+           family={Rodriguez},
+           familyi={R\bibinitperiod},
+           given={Aurelien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=977d047821122d1c2e7aa855c30c8cf2}{%
+           family={Joulin},
+           familyi={J\bibinitperiod},
+           given={Armand},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ebdea2c3aa9f759075733b20dce6b873}{%
+           family={Grave},
+           familyi={G\bibinitperiod},
+           given={Edouard},
+           giveni={E\bibinitperiod}}}%
+        {{hash=56509a94ba6cdaf0c71304d6cf806cee}{%
+           family={Lample},
+           familyi={L\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{44466e2ad959409445f448daeb4ad45f}
+      \strng{fullhash}{39aeaa201007bcb705db32778f923cb2}
+      \strng{bibnamehash}{44466e2ad959409445f448daeb4ad45f}
+      \strng{authorbibnamehash}{44466e2ad959409445f448daeb4ad45f}
+      \strng{authornamehash}{44466e2ad959409445f448daeb4ad45f}
+      \strng{authorfullhash}{39aeaa201007bcb705db32778f923cb2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{LLaMA: Open and Efficient Foundation Language Models}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2302.13971
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2302.13971
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2302.13971
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem{stephencrone2022}
-S.~Crone, ``Monkeypox misinformation: Twitter dataset,'' 2022.
-
-\bibitem{coviddata}
-M\"obius, ``Covid-19 fake news dataset,'' October 2023.
-
-\bibitem{covidunesco}
-S.~Siwakoti, K.~Yadav, I.~Thange, N.~Bariletto, L.~Zanotti, A.~Ghoneim, and
-  J.~N., ``Localized misinformation in a global pandemic: Report on covid-19
-  narratives around the world,'' March 2021.
-
-\bibitem{pubmed}
-``{PubMed - National Library of Medicine}, url =
-  {\url{https://pubmed.ncbi.nlm.nih.gov}}, note = {Accessed: 2024-05-10}.''
-
-\bibitem{bioinformatics}
-D.~C. Comeau, C.-H. Wei, R.~Islamaj~Doğan, and Z.~Lu, ``{PMC text mining
-  subset in BioC: about three million full-text articles and growing},'' {\em
-  Bioinformatics}, vol.~35, pp.~3533--3535, 01 2019.
-
-\bibitem{bge_embedding}
-S.~Xiao, Z.~Liu, P.~Zhang, and N.~Muennighoff, ``C-pack: Packaged resources to
-  advance general chinese embedding,'' 2023.
-
-\bibitem{chroma}
-Chroma, ``The ai-native open-source embedding database,'' 2022.
-\newblock accessed: 04.27.2024.
-
-\bibitem{ollama}
-``{Get up and running with large language models.}, url =
-  {\url{https://ollama.com}}, note = {Accessed: 2024-09-29}.''
-
-\bibitem{zhang2020bertscoreevaluatingtextgeneration}
-T.~Zhang, V.~Kishore, F.~Wu, K.~Q. Weinberger, and Y.~Artzi, ``Bertscore:
-  Evaluating text generation with bert,'' 2020.
-
-\bibitem{huggingface}
-``{Hugging Face – The AI community building the future}, url =
-  {\url{https://huggingface.co}}, note = {Accessed: 2024-10-18}.''
-
-\bibitem{touvron2023llamaopenefficientfoundation}
-H.~Touvron, T.~Lavril, G.~Izacard, X.~Martinet, M.-A. Lachaux, T.~Lacroix,
-  B.~Rozière, N.~Goyal, E.~Hambro, F.~Azhar, A.~Rodriguez, A.~Joulin,
-  E.~Grave, and G.~Lample, ``Llama: Open and efficient foundation language
-  models,'' 2023.
-
-\bibitem{hu2021loralowrankadaptationlarge}
-E.~J. Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, and
-  W.~Chen, ``Lora: Low-rank adaptation of large language models,'' 2021.
-
-\end{thebibliography}
