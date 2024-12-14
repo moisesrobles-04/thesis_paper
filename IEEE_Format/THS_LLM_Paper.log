@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 DEC 2024 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 DEC 2024 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1515,51 +1515,48 @@ Package pdftex.def Info: figures/ETL_Pipeline.png  used on input line 12.
 <figures/Data_vectorization.jpeg, id=21, 1398.22375pt x 919.435pt>
 File: figures/Data_vectorization.jpeg Graphic file (type jpg)
 <use figures/Data_vectorization.jpeg>
-Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 63
+Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 29
 .
 (pdftex.def)             Requested size: 221.78923pt x 145.83592pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 63--64
+Overfull \hbox (6.0pt too wide) in paragraph at lines 29--30
  [] 
  []
 
-[3 <./figures/ETL_Pipeline.png> <./figures/Data_vectorization.jpeg>]
-<figures/Table_diagram.jpeg, id=26, 1135.24126pt x 1275.76625pt>
+<figures/Table_diagram.jpeg, id=22, 1135.24126pt x 1275.76625pt>
 File: figures/Table_diagram.jpeg Graphic file (type jpg)
 <use figures/Table_diagram.jpeg>
-Package pdftex.def Info: figures/Table_diagram.jpeg  used on input line 85.
+Package pdftex.def Info: figures/Table_diagram.jpeg  used on input line 51.
 (pdftex.def)             Requested size: 186.30214pt x 209.36328pt.
+[3 <./figures/ETL_Pipeline.png> <./figures/Data_vectorization.jpeg>]
 <figures/LLM_Pipeline.jpeg, id=27, 1109.14375pt x 1099.10625pt>
 File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
 <use figures/LLM_Pipeline.jpeg>
-Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 101.
-(pdftex.def)             Requested size: 190.73549pt x 189.00905pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4 <./figures/Table_diagram.jpeg> <./figures/LLM_Pipeline.jpeg>])
-(./chapters/Chap4_PerformanceEvaluation.tex [5]
+Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 67.
+(pdftex.def)             Requested size: 186.30214pt x 184.61505pt.
+ [4 <./figures/Table_diagram.jpeg> <./figures/LLM_Pipeline.jpeg>])
+(./chapters/Chap4_PerformanceEvaluation.tex
 Underfull \hbox (badness 7888) in paragraph at lines 67--68
  \OT1/ptm/m/it/10 1) Parameter-Efficient Fine-Tuning (PEFT): [][]
  []
 
 
-Underfull \hbox (badness 3623) in paragraph at lines 89--90
+Underfull \hbox (badness 3623) in paragraph at lines 91--92
  \OT1/ptm/m/it/10 2) Train-ing Pa-ram-e-ters: [][] \OT1/ptm/m/n/10 The hy-per-p
 a-ram-e-ters
  []
 
-Package pgfplots info on input line 226: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-Package pgfplots info on input line 334: Using 'lua backend=false' for axis: x 
+ [5]
+Package pgfplots info on input line 228: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 
-[7]) (./chapters/Chap5_Conclusions.tex) [8]
+[6]
+Package pgfplots info on input line 336: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+ [7]) (./chapters/Chap5_Conclusions.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1571,29 +1568,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[9
-
-] (./THS_LLM_Paper.aux)
+[8] (./THS_LLM_Paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                THS_LLM_Paper
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'THS_LLM_Paper.run.xml'.
 \openout1 = `THS_LLM_Paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41132 strings out of 474116
- 976461 string characters out of 5743682
+ 41145 strings out of 474116
+ 976802 string characters out of 5743682
  1956187 words of memory out of 5000000
- 62841 multiletter control sequences out of 15000+600000
+ 62854 multiletter control sequences out of 15000+600000
  600393 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,101p,1234b,2412s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,101p,1234b,2410s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
 sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
@@ -1602,10 +1602,10 @@ cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (9 pages, 572553 bytes).
+Output written on THS_LLM_Paper.pdf (8 pages, 569414 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
