@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 DEC 2024 20:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  14 DEC 2024 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1554,29 +1554,12 @@ rt fine-
  []
 
 [5]
-Underfull \hbox (badness 7888) in paragraph at lines 114--115
- \OT1/ptm/m/it/10 1) Parameter-Efficient Fine-Tuning (PEFT): [][]
- []
-
-
-Underfull \hbox (badness 3623) in paragraph at lines 138--139
- \OT1/ptm/m/it/10 2) Train-ing Pa-ram-e-ters: [][] \OT1/ptm/m/n/10 The hy-per-p
-a-ram-e-ters
- []
-
-
-Underfull \vbox (badness 2762) has occurred while \output is active []
-
-Package pgfplots info on input line 275: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 298: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-
-Underfull \vbox (badness 3386) has occurred while \output is active []
-
  [6]
-Package pgfplots info on input line 383: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 406: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-
-[7]) (./chapters/Chap5_Conclusions.tex) [8]
+ [7]) (./chapters/Chap5_Conclusions.tex) [8]
 Underfull \hbox (badness 10000) in paragraph at lines 92--92
 []\OT1/ptm/m/n/10 D. Villanueva-Vega and M. Rodriguez-
  []
@@ -1599,24 +1582,15 @@ Before submitting the final camera ready copy, remember to:
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                THS_LLM_Paper
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'THS_LLM_Paper.run.xml'.
 \openout1 = `THS_LLM_Paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41151 strings out of 474116
- 977137 string characters out of 5743682
- 1958187 words of memory out of 5000000
- 62860 multiletter control sequences out of 15000+600000
+ 41150 strings out of 474116
+ 977125 string characters out of 5743682
+ 1960187 words of memory out of 5000000
+ 62859 multiletter control sequences out of 15000+600000
  600393 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,101p,1234b,2414s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1628,7 +1602,7 @@ cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (9 pages, 616470 bytes).
+Output written on THS_LLM_Paper.pdf (9 pages, 617039 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

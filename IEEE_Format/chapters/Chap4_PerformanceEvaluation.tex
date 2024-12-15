@@ -108,67 +108,90 @@ patterns. Thus, we use special tokens to replace elements with patterns that do 
 
 The LLMs used for this paper are pre-trained base models, meaning that the model learned how words relate to each other. Training models from scratch is computationally expensive and requires a large amount of data. Instead of that, we fine-tuned the models to achieved our classification goals. We taught the models to classify two types of texts: health-related and misinformation-related texts. 
 
-The models used for this experiment are Bert, T5, and LLaMa-2, Table \ref{table:LLM} shows their specifications. The architectures have their specialty; thus, we performed two processes of fine-tuning: sequence classification and CLM. BERT and LLaMa-2 were only trained on sequence classification, while T5 was trained on sequence and CLM. Because BERT architecture does not allow text generation and LLaMa-2 required more resources than the ones available they were not trained for CLM. Because of the limitations, we fine-tuned the models using LoRA. 
-
-\subsubsection{Parameter-Efficient Fine-Tuning (PEFT)}
-PEFT is a library that reduces the memory usage of a model to be fine-tuned. That library allows us to use LoRA, an adapter that reduces the number of trainable parameters of a model. The LoRA hyperparameters used are found on Table \ref{table:LoRA}.
+The models used for this experiment are Bert, T5, and LLaMa-2, Table \ref{table:LLM} shows their specifications. The architectures have their specialty; thus, we performed two processes of fine-tuning: sequence classification and CLM. BERT and LLaMa-2 were only trained on sequence classification, while T5 was trained on sequence and CLM. BERT architecture does not allow text generation and LLaMa-2 required more resources than the ones available, hence, they were not trained for CLM. Because of the limitations, we fine-tuned the models using LoRA.  The hyperparameters used for LoRA and for the training are found on Table \ref{table:hyperparameters}. 
 
 \begin{table}[H]
 	\centering
-	\caption{LoRA Hyperparameters}
+	\caption{Fine-tuning \& LoRA hyperparameters}
 	{\small
-	\begin{tabular}{|| c | c||} 
+	\begin{tabular}{||c | c | c||} 
 		\hline
-		\textbf{Parameters} & \textbf{Value} \\
+		\textbf{Type} & \textbf{Parameter} & \textbf{Value} \\
 		\hline
-		r & 16 \\
-		\hline
-		alpha & 32  \\
-		\hline
-		dropout & 0.05  \\
-		\hline
-		bias & all  \\
-		\hline
-	\end{tabular}
-	}
-	\label{table:LoRA}
-\end{table}
-
-\subsubsection{Training Parameters}
-The hyperparameters used for the training are shown in Table \ref{table:hyperparameters}.
-
-\begin{table}[H]
-	\centering
-	\caption{Fine-tuning Hyperparameters}
-	{\small
-	\begin{tabular}{||c | c||} 
-		\hline
-		\textbf{Parameter} & \textbf{value} \\ 
-		\hline
-		Learning Rate & 5E-6  \\
-		\hline
-		Batch size & 16  \\
-		\hline
-		Epochs & 20 \\
-		\hline
-		Gradient Accumulation & 8 \\
-		\hline
-		Weight\_decay & 0.1 \\
-		\hline
-		Evaluation Step & 50 \\
-		\hline
-		Evaluation Batch & 2 \\
-		\hline
-		Evaluation Accumulation & 16 \\
-		\hline
-		Warm-Up & 450 \\
-		\hline
-		Metric & f1 \\
+		\multirow{4}{4.75em}{LoRA} & r & 16  \\ \cline{2-3}
+		& alpha & 32  \\ \cline{2-3}
+		& dropout & 0.05 \\ \cline{2-3}
+		& bias & all \\
+		\hline 
+		\multirow{10}{4.75em}{Fine-tuning} & Learning Rate & 5E-6\\ \cline{2-3}
+		& Batch Size & 16 \\ \cline{2-3}
+		& Epochs & 20 \\ \cline{2-3}
+		& Gradient Accumulation & 8 \\ \cline{2-3}
+		& Weight Decay & 0.1 \\ \cline{2-3}
+		& Evaluation Step & 50 \\ \cline{2-3}
+		& Evaluation Batch & 2 \\ \cline{2-3}
+		& Evaluation Accumulation & 16 \\ \cline{2-3}
+		& Warm-Up & 450 \\ \cline{2-3}
+		& Metric & f1 \\ \cline{2-3}
 		\hline
 	\end{tabular}
 	}
 	\label{table:hyperparameters}
 \end{table}
+%
+%\begin{table}[H]
+%	\centering
+%	\caption{LoRA Hyperparameters}
+%	{\small
+%	\begin{tabular}{|| c | c||} 
+%		\hline
+%		\textbf{Parameters} & \textbf{Value} \\
+%		\hline
+%		r & 16 \\
+%		\hline
+%		alpha & 32  \\
+%		\hline
+%		dropout & 0.05  \\
+%		\hline
+%		bias & all  \\
+%		\hline
+%	\end{tabular}
+%	}
+%	\label{table:LoRA}
+%\end{table}
+%
+%\begin{table}[H]
+%	\centering
+%	\caption{Fine-tuning Hyperparameters}
+%	{\small
+%	\begin{tabular}{||c | c||} 
+%		\hline
+%		\textbf{Parameter} & \textbf{value} \\ 
+%		\hline
+%		Learning Rate & 5E-6  \\
+%		\hline
+%		Batch size & 16  \\
+%		\hline
+%		Epochs & 20 \\
+%		\hline
+%		Gradient Accumulation & 8 \\
+%		\hline
+%		Weight\_decay & 0.1 \\
+%		\hline
+%		Evaluation Step & 50 \\
+%		\hline
+%		Evaluation Batch & 2 \\
+%		\hline
+%		Evaluation Accumulation & 16 \\
+%		\hline
+%		Warm-Up & 450 \\
+%		\hline
+%		Metric & f1 \\
+%		\hline
+%	\end{tabular}
+%	}
+%	\label{table:hyperparameters}
+%\end{table}
 
 \subsection{Health-Related Classification Results}
 We present the results of the health classification process and compare them with the best overall model of the previous THS project \cite{8622504}. That work concluded
