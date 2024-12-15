@@ -2381,7 +2381,11 @@
     <bcf:citekey order="12" intorder="1">ollama</bcf:citekey>
     <bcf:citekey order="13" intorder="1">touvron2023llamaopenefficientfoundation</bcf:citekey>
     <bcf:citekey order="14" intorder="1">8622504</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">8622504</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">stephencrone2022</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">coviddata</bcf:citekey>
+    <bcf:citekey order="15" intorder="3">covidunesco</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">8622504</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">8622504</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

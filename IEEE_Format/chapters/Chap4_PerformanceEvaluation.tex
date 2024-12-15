@@ -57,6 +57,53 @@ CUDA 11.7. To initialize and use the models we relied on  the Transformers 4.34.
 \label{table:LLM}
 \end{table}
 
+\subsection{Datasets}
+
+\begin{table}[H]
+	\centering
+	\caption{Training Datasets}
+	{\scriptsize
+	\begin{tabular}{||c | c | c | c | c||} 
+		\hline
+		\textbf{Dataset} &
+		\textbf{Category} & \textbf{Label} & \textbf{\# records} & \textbf{Weights} \\
+		\hline
+		\multirow{3}{6.1em}{Health Related Dataset} & Unrelated & 0 & 3828 & 3.25  \\
+		& Related & 1 & 7848 & 1.58  \\ 
+		& Ambiguous & 2 & 765 & 16.26 \\
+		\hline
+		\multirow{2}{6.1em}{Misinformation Dataset} & Misinfo. & 0 & 3638 & 2.41\\ 
+		& Not Misinfo. & 1 & 5111 & 1.71 \\
+		\hline
+	\end{tabular}
+	}
+	\label{table:dataset}
+\end{table}
+
+\subsubsection{Health-related Dataset}
+The health-related dataset comprises of 12,441 tweets extracted from the THS project \cite{8622504}. Health professionals labeled the tweets in the dataset as related, unrelated, or ambiguous.
+As shown in Table \ref{table:dataset} this dataset is imbalanced; thus, we applied class weights to the loss function. That prevent the models from overfitting, mitigating the effects of class
+imbalance during training.
+
+\subsubsection{Misinformation Dataset}
+The misinformation dataset, with 8,749 texts, combines data from different sources such as news, social media, and blogs \cite{stephencrone2022,coviddata,covidunesco}. Only English-only records were extracted from these sources. Labels and weights for the dataset can be found on Table \ref{table:dataset}.
+
+\subsubsection{Data Preprocessing}
+Before we start fine-tuning the models, we preprocessed both datasets. To keep as much context as possible, we include links, mentions, and hashtags for the classification process.
+These elements are important for context because users can convey sentiments that could be relevant to text. However, these elements contain various characters, and the embedding might struggle with out-of-vocabulary or irregular
+patterns. Thus, we use special tokens to replace elements with patterns that do not contribute to semantic meaning, such as random strings in URLs. Any URL was replaced by \textit{[LINK]}, mentions by \textit{[MENTION]}, and hashtags by \textit{[HASHTAG]}. That allows us to keep the elements and give them some importance in the text. An example of this is shown below.
+
+{\footnotesize %
+\begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
+\textbf{Input:}  
+``listening to the experts talk about \#influenza at the @nmnh/@asmicrobiology \#flu program like https://t.co/ehn6n"
+
+\vspace{0.25em}
+\textbf{Output:}  
+``listening to the experts talk about [HASHTAG] at the [MENTION]/[MENTION] [HASTAG] program like [LINK]"
+\end{tcolorbox}
+}
+
 \subsection{Fine-tuning}
 
 The LLMs used for this paper are pre-trained base models, meaning that the model learned how words relate to each other. Training models from scratch is computationally expensive and requires a large amount of data. Instead of that, we fine-tuned the models to achieved our classification goals. We taught the models to classify two types of texts: health-related and misinformation-related texts. 

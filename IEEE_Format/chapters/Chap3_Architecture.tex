@@ -58,7 +58,6 @@ Now, with all papers vectorized, we upload the metadata into a Postgres database
 We started the search with 85,000 peer-reviewed papers. After finishing the filtering and data cleaning, we ended with 56,365 different peer-reviewed papers. 
 
 
-
 \subsection{Misinformation Rebuttal Pipeline}
 After training the models and storing the context for the rebuttal, we create the model pipeline. The pipeline shown in Figure \ref{fig:llm} shows the process of receiving a text, making the classifications, and returning an explanation of why it is misinformation.
 
@@ -80,14 +79,6 @@ Then, we validate if the input contains misinformation. The fine-tuned model can
 
 \subsubsection{Context Finder}
 Before we the query the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama}. That tool allows us to execute locally a pre-trained LLM that generates text. Thus, we send a query to Ollama asking it to make a one-sentence query for the vector database related to the input.
-%\newline
-%{\small
-%\textbf{Input:} ``\textit{\#nih fauci, @cdcdirector @sgottliebfda \&amp; @barda bright expected to be grilled tomorrow over ineffective \#flu vaccine at @housecommerce \#suboversight bets on fauci saying universal \#influenza vax in 5, maybe 10 years? my preview here: \url{https://t.co/fsqefwhik7} \#cdc \#fda \#vaccines}"
-%\newline
-%\textbf{Output:} ``\textit{Flu vaccine effectiveness and future universal influenza vaccination strategies.}"
-% \newline
-% }
-
 {\footnotesize %
 \begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
 \textbf{Input:}  
