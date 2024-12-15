@@ -19,14 +19,13 @@ about vaccines, users invalidating safe measurements, and other issues.
 The Twitter Health Surveillance (THS) system was designed to detect tweets related to health conditions \cite{8622504}. THS is a prototype system we are building at the University
 of Puerto Rico, Mayag\"uez (UPRM). The project is designed as an integrated platform to help health officials collect tweets, determine if they are related to a medical condition, extract
 metadata from them, and create a warehouse that can be used to analyze the data further. The THS Artificial Intelligence (AI) components used Long-Short Term Memory (LSTM)
-and Gated Recurrent Unit (GRU) to classify tweets as being medically related, unrelated, or ambiguous. The data they used was from the Twitter API system, then processed
-through the Hadoop ecosystem and stored in a Hive database.
+and Gated Recurrent Unit (GRU) to classify tweets as being medically related, unrelated, or ambiguous. 
 
 Searching for training data about this topic is not an easy task. A problem with social media text is the informality, slang terms, or special characters. However, we use the
 data from the THS project as our primary source for the health classification dataset. On the other hand, the misinformation dataset contains social media posts, articles,
 websites, and others \cite{stephencrone2022,coviddata,covidunesco}. Instead of using the THS architectures, we opted for Large Language Models (LLM). 
 
-We employ an LLM in this investigation, to detects health misinformation and provides context for its classification. Also, we did not preprocess the tweets because they could lose the context of the actual meaning when hashtags, mentions, and emojis are removed. We built the prototype using Python, PyTorch, Chroma, Ollama, and other open-source tools. In determining if a text is health-related, our system achieved a 90\% F1 score and a 97\% F1 if it contained misinformation. Additionally, our preliminary results show that using official health sources with Retrieval Augmented Generation (RAG) helps the LLM rebut correctly with an F1 BertScore of 82\%. Hence, our system proved that it is possible to classify and rebut health-related misinformation. 
+We employ an LLM in this investigation, to detects health misinformation and provides context for its classification. Also, we did not preprocess the tweets because they could lose the context of the actual meaning when special characters are removed. We built the prototype using PyTorch, Chroma, Ollama, and other open-source tools. In determining if a text is health-related, our system achieved a 90\% F1 score and a 97\% F1 for misinformation texts. Additionally, our preliminary results show that using official health sources with Retrieval Augmented Generation (RAG) helps the LLM rebut correctly with an F1 BertScore of 82\%. Hence, our system proved that it is possible to classify and rebut health-related misinformation. 
 
 \subsection{Contributions}
 This paper provides the following original contributions:
