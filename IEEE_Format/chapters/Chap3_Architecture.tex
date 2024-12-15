@@ -16,15 +16,15 @@ Our model must use credible sources of information to rebut misinformation. We i
 \end{figure}
 
 \subsubsection{Scraper}
-The first step of the pipeline was identifying what papers we needed to extract. We selected topics based on the datasets we used, some topics were \textit{allergy}, \textit{covid}, \textit{monkeypox}, \textit{zika}, \textit{vaccine}, and others. To extract them, we built a scraper in Python using Selenium and BeautifulSoup libraries. They were used to get the links for each paper. Each link contains the PMC ID and we extracted 5,000 identifiers for each topic.
+The first step of the pipeline was identifying what papers we needed to extract. We selected topics based on the datasets we used, some topics were \textit{allergy}, \textit{covid}, \textit{monkeypox}, \textit{zika}, \textit{vaccine}, and others. We built a scraper using Selenium and BeautifulSoup libraries to extract the links for each paper. Each link contains the PMC ID and we extracted 5,000 identifiers for each topic.
 
 \subsubsection{BioC API}
 Using the PubMed API, BioC, we made requests with the PMC that returned the documents as JSON. Later, the paper's sections -introduction, methodology, results, and others- were combined as one attribute, excluding references. We removed tables, figures, and references from the context to ensure the chunking process worked appropriately. After that, we stored the result into a new JSON that contains the paper's metadata and context. 
 
 \subsubsection{Vectorizing data}
-After retrieving the data, we vectorize the papers, Figure \ref{fig:vector} shows this process. First, each research paper’s context was split into chunks using LangChain. Then, we used an LLM, BAAI \cite{bge_embedding}, to embed these chunks. A universal unique identifier (UUID) is combined with each chunk and stored in a Chroma database. After storing the embedding, we added these UUIDs to their JSON. 
+Now, we vectorize the papers, Figure \ref{fig:vector} shows this process. First, each paper’s context was split into chunks using LangChain. Then, we used an LLM, BAAI \cite{bge_embedding}, to embed these chunks. A universal unique identifier (UUID) is combined with each chunk and stored in a Chroma database. After that, we added these UUIDs to their JSON. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\begin{center}
 		\includegraphics[width=0.42\textwidth]{figures/Data_vectorization.jpeg} %specify width
 	\end{center}
@@ -34,10 +34,10 @@ After retrieving the data, we vectorize the papers, Figure \ref{fig:vector} show
 
 
 \subsubsection{Store metadata}
-Now, with all papers vectorized, we upload the metadata into a Postgres database. Duplicates or any research that did not contain at least an abstract were removed. That ensures that there is no repetition or inconsistency when doing the rebuttal. Later, we upload the data into the database following the schema found in Figure \ref{fig:table}. The tables in this schema are as follow:
+Duplicates or any research that did not contain at least an abstract were removed. That ensures that there is no repetition or inconsistency when doing the rebuttal. Later, we upload the data into the database following the schema found in Figure \ref{fig:table}. The tables in this schema are as follow:
 
 \begin{description}
-	\item{\textbf{Research:}}  Contains the research paper's metadata. Its attributes are: \textit{title}, paper's title; \textit{context}, the paper’s text; \textit{paper\_ref}, the reference of the paper; and \textit{fullpaper}, a boolean that is true if the paper contains an abstract, introduction, methodology, discussion, conclusion, and references.
+	\item{\textbf{Research:}}  Contains the research paper's metadata. Its attributes are: \textit{title}, paper's title; \textit{context}, the paper’s text; \textit{paper\_ref}, the reference of the paper; and \textit{fullpaper}, a boolean that is false if the paper only contains an abstract.
 	\item{\textbf{Chunks:}} Pairs the UUIDs from the paper's chunks and their respective research record.  
 	\item{\textbf{Keyword:}} Keywords that allow the reader to know the subjects mentioned in the paper. 
 	\item{\textbf{Author:}} Full name of the paper's authors. 
@@ -48,7 +48,7 @@ Now, with all papers vectorized, we upload the metadata into a Postgres database
 
 \begin{figure}[htbp]
 	\begin{center}
-		\includegraphics[width=0.42\textwidth]{figures/Table_diagram.jpeg} %specify width
+		\includegraphics[width=0.4\textwidth]{figures/Table_diagram.jpeg} %specify width
 	\end{center}
 	\caption{Research Papers Schema Diagram} %specify caption
 	\label{fig:table}
@@ -63,7 +63,7 @@ After training the models and storing the context for the rebuttal, we create th
 
 \begin{figure}[htbp]
 	\begin{center}
-		\includegraphics[width=0.42\textwidth]{figures/LLM_Pipeline.jpeg} %specify width
+		\includegraphics[width=0.4\textwidth]{figures/LLM_Pipeline.jpeg} %specify width
 	\end{center}
 	\caption{Misinformation Rebuttal Pipeline} %specify caption
 	\label{fig:llm}

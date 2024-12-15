@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'THS_LLM_Paper.blg'
-[68] biber-darwin:340> INFO - === Sun Dec 15, 2024, 01:04:13
-[84] Biber.pm:419> INFO - Reading 'THS_LLM_Paper.bcf'
-[172] Biber.pm:979> INFO - Found 32 citekeys in bib section 0
-[188] Biber.pm:4419> INFO - Processing section 0
-[198] Biber.pm:4610> INFO - Looking for bibtex file 'reference.bib' for section 0
-[200] bibtex.pm:1713> INFO - LaTeX decoding ...
-[241] bibtex.pm:1519> INFO - Found BibTeX data source 'reference.bib'
-[489] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[490] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[490] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[490] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[514] bbl.pm:660> INFO - Writing 'THS_LLM_Paper.bbl' with encoding 'UTF-8'
-[545] bbl.pm:763> INFO - Output to THS_LLM_Paper.bbl
-[545] Biber.pm:131> WARN - legacy month field 'October' in entry 'coviddata' is not an integer - this will probably not sort properly.
-[545] Biber.pm:131> WARN - legacy month field 'March' in entry 'covidunesco' is not an integer - this will probably not sort properly.
-[546] Biber.pm:133> INFO - WARNINGS: 2
+[66] biber-darwin:340> INFO - === Sun Dec 15, 2024, 13:05:05
+[81] Biber.pm:419> INFO - Reading 'THS_LLM_Paper.bcf'
+[166] Biber.pm:979> INFO - Found 27 citekeys in bib section 0
+[182] Biber.pm:4419> INFO - Processing section 0
+[191] Biber.pm:4610> INFO - Looking for bibtex file 'reference.bib' for section 0
+[194] bibtex.pm:1713> INFO - LaTeX decoding ...
+[232] bibtex.pm:1519> INFO - Found BibTeX data source 'reference.bib'
+[433] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[433] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[433] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[433] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[455] bbl.pm:660> INFO - Writing 'THS_LLM_Paper.bbl' with encoding 'UTF-8'
+[482] bbl.pm:763> INFO - Output to THS_LLM_Paper.bbl
+[482] Biber.pm:131> WARN - legacy month field 'October' in entry 'coviddata' is not an integer - this will probably not sort properly.
+[482] Biber.pm:131> WARN - legacy month field 'March' in entry 'covidunesco' is not an integer - this will probably not sort properly.
+[482] Biber.pm:133> INFO - WARNINGS: 2

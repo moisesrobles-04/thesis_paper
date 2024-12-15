@@ -2370,42 +2370,37 @@
     <bcf:citekey order="3" intorder="1">stephencrone2022</bcf:citekey>
     <bcf:citekey order="3" intorder="2">coviddata</bcf:citekey>
     <bcf:citekey order="3" intorder="3">covidunesco</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">naveed2024comprehensiveoverviewlargelanguage</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Sherstinsky_2020</bcf:citekey>
     <bcf:citekey order="5" intorder="1">vaswani2023attentionneed</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Sherstinsky_2020</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">naveed2024comprehensiveoverviewlargelanguage</bcf:citekey>
     <bcf:citekey order="7" intorder="1">DBLP:journals/corr/abs-1810-04805</bcf:citekey>
     <bcf:citekey order="8" intorder="1">DBLP:journals/corr/abs-2005-14165</bcf:citekey>
     <bcf:citekey order="9" intorder="1">2020t5</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">koh2023groundinglanguagemodelsimages</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">inproceedings</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">chroma</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">pgvector</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">10455990</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">10683437</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">socialmedias</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">social_fact</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">article_vaccine</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">article</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">encyclopedia3040099</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">9906925</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">10100054</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">8622504</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">9581175</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">pubmed</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">bioinformatics</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">bge_embedding</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">ollama</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">zhang2020bertscoreevaluatingtextgeneration</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">huggingface</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">hu2021loralowrankadaptationlarge</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">ollama</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">touvron2023llamaopenefficientfoundation</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">8622504</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">stephencrone2022</bcf:citekey>
-    <bcf:citekey order="35" intorder="2">coviddata</bcf:citekey>
-    <bcf:citekey order="35" intorder="3">covidunesco</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">8622504</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">8622504</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">chroma</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">pgvector</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">10455990</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">10683437</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">article_vaccine</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">article</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">9906925</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">10100054</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">8622504</bcf:citekey>
+    <bcf:citekey order="18" intorder="2">9581175</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">pubmed</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">bioinformatics</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">bge_embedding</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">ollama</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">zhang2020bertscoreevaluatingtextgeneration</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">huggingface</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">hu2021loralowrankadaptationlarge</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">ollama</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">touvron2023llamaopenefficientfoundation</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">8622504</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">stephencrone2022</bcf:citekey>
+    <bcf:citekey order="29" intorder="2">coviddata</bcf:citekey>
+    <bcf:citekey order="29" intorder="3">covidunesco</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">8622504</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">8622504</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

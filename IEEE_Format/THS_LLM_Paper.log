@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 01:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 13:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1481,94 +1481,95 @@ s/base/8r.enc}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-(./chapters/Chap2_LiteratureReview.tex [2] [3]
-<figures/ths_architecture.jpeg, id=20, 1235.61626pt x 597.23125pt>
+(./chapters/Chap2_LiteratureReview.tex [2]
+<figures/ths_architecture.jpeg, id=17, 1235.61626pt x 597.23125pt>
 File: figures/ths_architecture.jpeg Graphic file (type jpg)
 <use figures/ths_architecture.jpeg>
-Package pdftex.def Info: figures/ths_architecture.jpeg  used on input line 88.
+Package pdftex.def Info: figures/ths_architecture.jpeg  used on input line 101.
+
 (pdftex.def)             Requested size: 186.30214pt x 90.04558pt.
-)
-(./chapters/Chap3_Architecture.tex
-<figures/ETL_Pipeline.jpeg, id=21, 880.28876pt x 948.54375pt>
+) (./chapters/Chap3_Architecture.tex
+<figures/ETL_Pipeline.jpeg, id=18, 880.28876pt x 948.54375pt>
 File: figures/ETL_Pipeline.jpeg Graphic file (type jpg)
 <use figures/ETL_Pipeline.jpeg>
 Package pdftex.def Info: figures/ETL_Pipeline.jpeg  used on input line 12.
 (pdftex.def)             Requested size: 177.42868pt x 191.18169pt.
- [4 <./figures/ths_architecture.jpeg> <./figures/ETL_Pipeline.jpeg>]
-<figures/Data_vectorization.jpeg, id=25, 1264.725pt x 909.3975pt>
+
+[3 <./figures/ths_architecture.jpeg>]
+<figures/Data_vectorization.jpeg, id=22, 1226.5825pt x 797.98125pt>
 File: figures/Data_vectorization.jpeg Graphic file (type jpg)
 <use figures/Data_vectorization.jpeg>
 Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 29
 .
-(pdftex.def)             Requested size: 186.30214pt x 133.94763pt.
-<figures/Table_diagram.jpeg, id=26, 1135.24126pt x 1275.76625pt>
+(pdftex.def)             Requested size: 186.30214pt x 121.20186pt.
+<figures/Table_diagram.jpeg, id=23, 1023.825pt x 1216.545pt>
 File: figures/Table_diagram.jpeg Graphic file (type jpg)
 <use figures/Table_diagram.jpeg>
 Package pdftex.def Info: figures/Table_diagram.jpeg  used on input line 51.
-(pdftex.def)             Requested size: 186.30214pt x 209.36328pt.
-<figures/LLM_Pipeline.jpeg, id=27, 1109.14375pt x 1099.10625pt>
+(pdftex.def)             Requested size: 177.42868pt x 210.8195pt.
+<figures/LLM_Pipeline.jpeg, id=24, 1026.83624pt x 1001.7425pt>
 File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
 <use figures/LLM_Pipeline.jpeg>
 Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 66.
-(pdftex.def)             Requested size: 186.30214pt x 184.61505pt.
- [5 <./figures/Data_vectorization.jpeg> <./figures/Table_diagram.jpeg>]
+(pdftex.def)             Requested size: 177.42868pt x 173.09119pt.
+ [4 <./figures/ETL_Pipeline.jpeg> <./figures/Data_vectorization.jpeg> <./figure
+s/Table_diagram.jpeg>]
 Underfull \hbox (badness 1590) in paragraph at lines 99--101
 []\OT1/ptm/m/n/10 The pipeline au-to-mates the clas-si-fi-ca-tion pro-
  []
 
 ) (./chapters/Chap4_PerformanceEvaluation.tex
-Overfull \hbox (1.24532pt too wide) in paragraph at lines 75--75
-[]|\OT1/ptm/m/n/7 Misinformation 
- []
-
-
-Overfull \hbox (0.68468pt too wide) in paragraph at lines 66--81
- [][] 
- []
-
-
-Underfull \hbox (badness 5203) in paragraph at lines 84--86
+Underfull \hbox (badness 5203) in paragraph at lines 63--64
  \OT1/ptm/m/it/10 1) Health-related Dataset: [][] \OT1/ptm/m/n/10 The health-re
 lated
  []
 
-[6 <./figures/LLM_Pipeline.jpeg>] [7]
-Package pgfplots info on input line 296: Using 'lua backend=false' for axis: x 
+[5 <./figures/LLM_Pipeline.jpeg>]
+Overfull \hbox (1.24532pt too wide) in paragraph at lines 81--81
+[]|\OT1/ptm/m/n/7 Misinformation 
+ []
+
+
+Overfull \hbox (0.68468pt too wide) in paragraph at lines 72--87
+ [][] 
+ []
+
+[6]
+Package pgfplots info on input line 295: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-Package pgfplots info on input line 404: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 403: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [8]) (./chapters/Chap5_Conclusions.tex)
-[9]
-Underfull \hbox (badness 6910) in paragraph at lines 93--93
+ [7]) (./chapters/Chap5_Conclusions.tex)
+Underfull \hbox (badness 6910) in paragraph at lines 91--91
 []\OT1/ptm/m/n/9 S. Crone, \OT1/ptm/m/it/9 Mon-key-pox mis-in-for-ma-tion: Twit
 -ter
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 \OT1/ptm/m/n/9 ``BERT: pre-training of deep bidi-rec-tional
  []
 
 
-Underfull \hbox (badness 5667) in paragraph at lines 93--93
+Underfull \hbox (badness 5667) in paragraph at lines 91--91
 []\OT1/ptm/m/n/9 T. B. Brown, B. Mann, N. Ry-der, \OT1/ptm/m/it/9 et al.\OT1/pt
 m/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 93--93
+Underfull \hbox (badness 3568) in paragraph at lines 91--91
 []\OT1/ptm/m/n/9 Chroma, \OT1/ptm/m/it/9 The ai-native open-source em-bed-ding
  []
 
@@ -1583,35 +1584,23 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (./THS_LLM_Paper.aux)
+[9] (./THS_LLM_Paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                THS_LLM_Paper
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'THS_LLM_Paper.run.xml'.
 \openout1 = `THS_LLM_Paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41207 strings out of 474116
- 980584 string characters out of 5743682
- 1963187 words of memory out of 5000000
- 62916 multiletter control sequences out of 15000+600000
+ 41191 strings out of 474116
+ 979804 string characters out of 5743682
+ 1962187 words of memory out of 5000000
+ 62900 multiletter control sequences out of 15000+600000
  601529 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,101p,1447b,2414s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,101p,1110b,2410s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
 sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
@@ -1620,10 +1609,10 @@ cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (10 pages, 614015 bytes).
+Output written on THS_LLM_Paper.pdf (9 pages, 592040 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

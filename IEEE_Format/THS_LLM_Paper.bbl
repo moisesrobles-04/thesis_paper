@@ -211,76 +211,43 @@
       \verb https://esoc.princeton.edu/publications/localized-misinformation-global-pandemic-report-covid-19-narratives-around-world
       \endverb
     \endentry
-    \entry{naveed2024comprehensiveoverviewlargelanguage}{misc}{}
-      \name{author}{9}{}{%
-        {{hash=66796972e59bdd4e8082c5a76a167cd3}{%
-           family={Naveed},
-           familyi={N\bibinitperiod},
-           given={Humza},
-           giveni={H\bibinitperiod}}}%
-        {{hash=f3e8487979c3d5c449bbcd133489fccd}{%
-           family={Khan},
-           familyi={K\bibinitperiod},
-           given={Asad\bibnamedelima Ullah},
-           giveni={A\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
-        {{hash=224492545ce925352b2ba75589d4918b}{%
-           family={Qiu},
-           familyi={Q\bibinitperiod},
-           given={Shi},
-           giveni={S\bibinitperiod}}}%
-        {{hash=02758b43b92b084b3c279e576d5be20e}{%
-           family={Saqib},
+    \entry{Sherstinsky_2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6f46a859f5b9b1e6c5f5bdc8e43a3c09}{%
+           family={Sherstinsky},
            familyi={S\bibinitperiod},
-           given={Muhammad},
-           giveni={M\bibinitperiod}}}%
-        {{hash=636b14101269d849fb13e7d49a7cec3e}{%
-           family={Anwar},
-           familyi={A\bibinitperiod},
-           given={Saeed},
-           giveni={S\bibinitperiod}}}%
-        {{hash=9b188d486913142cb26c6acb66a85531}{%
-           family={Usman},
-           familyi={U\bibinitperiod},
-           given={Muhammad},
-           giveni={M\bibinitperiod}}}%
-        {{hash=dae51cf934e0ef7645c0d9bad7d37367}{%
-           family={Akhtar},
-           familyi={A\bibinitperiod},
-           given={Naveed},
-           giveni={N\bibinitperiod}}}%
-        {{hash=2f11f27ecdb1aa875cfab05fcff91ac9}{%
-           family={Barnes},
-           familyi={B\bibinitperiod},
-           given={Nick},
-           giveni={N\bibinitperiod}}}%
-        {{hash=e66ddb661075e1ec2d86e6cc0fa46aef}{%
-           family={Mian},
-           familyi={M\bibinitperiod},
-           given={Ajmal},
+           given={Alex},
            giveni={A\bibinitperiod}}}%
       }
-      \strng{namehash}{6d0432fbdcdf05ad565c1a341dd32732}
-      \strng{fullhash}{284731eecb06d3d5e9bc985b5f5c8214}
-      \strng{bibnamehash}{6d0432fbdcdf05ad565c1a341dd32732}
-      \strng{authorbibnamehash}{6d0432fbdcdf05ad565c1a341dd32732}
-      \strng{authornamehash}{6d0432fbdcdf05ad565c1a341dd32732}
-      \strng{authorfullhash}{284731eecb06d3d5e9bc985b5f5c8214}
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
+      \strng{fullhash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
+      \strng{bibnamehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
+      \strng{authorbibnamehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
+      \strng{authornamehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
+      \strng{authorfullhash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.CL}
-      \field{eprinttype}{arXiv}
-      \field{title}{A Comprehensive Overview of Large Language Models}
-      \field{year}{2024}
-      \verb{eprint}
-      \verb 2307.06435
+      \field{issn}{0167-2789}
+      \field{journaltitle}{Physica D: Nonlinear Phenomena}
+      \field{month}{3}
+      \field{title}{Fundamentals of Recurrent Neural Network (RNN) and Long Short-Term Memory (LSTM) network}
+      \field{volume}{404}
+      \field{year}{2020}
+      \field{pages}{132306}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.physd.2019.132306
       \endverb
       \verb{urlraw}
-      \verb https://arxiv.org/abs/2307.06435
+      \verb http://dx.doi.org/10.1016/j.physd.2019.132306
       \endverb
       \verb{url}
-      \verb https://arxiv.org/abs/2307.06435
+      \verb http://dx.doi.org/10.1016/j.physd.2019.132306
       \endverb
     \endentry
     \entry{vaswani2023attentionneed}{misc}{}
@@ -350,43 +317,76 @@
       \verb https://arxiv.org/abs/1706.03762
       \endverb
     \endentry
-    \entry{Sherstinsky_2020}{article}{}
-      \name{author}{1}{}{%
-        {{hash=6f46a859f5b9b1e6c5f5bdc8e43a3c09}{%
-           family={Sherstinsky},
+    \entry{naveed2024comprehensiveoverviewlargelanguage}{misc}{}
+      \name{author}{9}{}{%
+        {{hash=66796972e59bdd4e8082c5a76a167cd3}{%
+           family={Naveed},
+           familyi={N\bibinitperiod},
+           given={Humza},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f3e8487979c3d5c449bbcd133489fccd}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Asad\bibnamedelima Ullah},
+           giveni={A\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=224492545ce925352b2ba75589d4918b}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Shi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=02758b43b92b084b3c279e576d5be20e}{%
+           family={Saqib},
            familyi={S\bibinitperiod},
-           given={Alex},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=636b14101269d849fb13e7d49a7cec3e}{%
+           family={Anwar},
+           familyi={A\bibinitperiod},
+           given={Saeed},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9b188d486913142cb26c6acb66a85531}{%
+           family={Usman},
+           familyi={U\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dae51cf934e0ef7645c0d9bad7d37367}{%
+           family={Akhtar},
+           familyi={A\bibinitperiod},
+           given={Naveed},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2f11f27ecdb1aa875cfab05fcff91ac9}{%
+           family={Barnes},
+           familyi={B\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e66ddb661075e1ec2d86e6cc0fa46aef}{%
+           family={Mian},
+           familyi={M\bibinitperiod},
+           given={Ajmal},
            giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier BV}%
-      }
-      \strng{namehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
-      \strng{fullhash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
-      \strng{bibnamehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
-      \strng{authorbibnamehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
-      \strng{authornamehash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
-      \strng{authorfullhash}{6f46a859f5b9b1e6c5f5bdc8e43a3c09}
+      \strng{namehash}{6d0432fbdcdf05ad565c1a341dd32732}
+      \strng{fullhash}{284731eecb06d3d5e9bc985b5f5c8214}
+      \strng{bibnamehash}{6d0432fbdcdf05ad565c1a341dd32732}
+      \strng{authorbibnamehash}{6d0432fbdcdf05ad565c1a341dd32732}
+      \strng{authornamehash}{6d0432fbdcdf05ad565c1a341dd32732}
+      \strng{authorfullhash}{284731eecb06d3d5e9bc985b5f5c8214}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0167-2789}
-      \field{journaltitle}{Physica D: Nonlinear Phenomena}
-      \field{month}{3}
-      \field{title}{Fundamentals of Recurrent Neural Network (RNN) and Long Short-Term Memory (LSTM) network}
-      \field{volume}{404}
-      \field{year}{2020}
-      \field{pages}{132306}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.physd.2019.132306
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{A Comprehensive Overview of Large Language Models}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2307.06435
       \endverb
       \verb{urlraw}
-      \verb http://dx.doi.org/10.1016/j.physd.2019.132306
+      \verb https://arxiv.org/abs/2307.06435
       \endverb
       \verb{url}
-      \verb http://dx.doi.org/10.1016/j.physd.2019.132306
+      \verb https://arxiv.org/abs/2307.06435
       \endverb
     \endentry
     \entry{DBLP:journals/corr/abs-1810-04805}{article}{}
@@ -692,95 +692,6 @@
       \verb http://jmlr.org/papers/v21/20-074.html
       \endverb
     \endentry
-    \entry{koh2023groundinglanguagemodelsimages}{misc}{}
-      \name{author}{3}{}{%
-        {{hash=1cc032e1ec820cdae5a17dcb867233d5}{%
-           family={Koh},
-           familyi={K\bibinitperiod},
-           given={Jing\bibnamedelima Yu},
-           giveni={J\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
-        {{hash=bd2be300d445e9f6db7808f9533e66cb}{%
-           family={Salakhutdinov},
-           familyi={S\bibinitperiod},
-           given={Ruslan},
-           giveni={R\bibinitperiod}}}%
-        {{hash=8c0d6317a5a127c222cb122f7818e15e}{%
-           family={Fried},
-           familyi={F\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{1fe74119abfaca2bf4ef0c0bfa45d4db}
-      \strng{fullhash}{1fe74119abfaca2bf4ef0c0bfa45d4db}
-      \strng{bibnamehash}{1fe74119abfaca2bf4ef0c0bfa45d4db}
-      \strng{authorbibnamehash}{1fe74119abfaca2bf4ef0c0bfa45d4db}
-      \strng{authornamehash}{1fe74119abfaca2bf4ef0c0bfa45d4db}
-      \strng{authorfullhash}{1fe74119abfaca2bf4ef0c0bfa45d4db}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.CL}
-      \field{eprinttype}{arXiv}
-      \field{title}{Grounding Language Models to Images for Multimodal Inputs and Outputs}
-      \field{year}{2023}
-      \verb{eprint}
-      \verb 2301.13823
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2301.13823
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2301.13823
-      \endverb
-    \endentry
-    \entry{inproceedings}{inproceedings}{}
-      \name{author}{5}{}{%
-        {{hash=bcd58104242dee75a32f71139098f457}{%
-           family={Deng},
-           familyi={D\bibinitperiod},
-           given={Xiang},
-           giveni={X\bibinitperiod}}}%
-        {{hash=75e76595a14b74bfe2f5aab0fce9aa33}{%
-           family={Bashlovkina},
-           familyi={B\bibinitperiod},
-           given={Vasilisa},
-           giveni={V\bibinitperiod}}}%
-        {{hash=a071bde31333f5cfdb0a4495d98424fd}{%
-           family={Han},
-           familyi={H\bibinitperiod},
-           given={Feng},
-           giveni={F\bibinitperiod}}}%
-        {{hash=3adf8158a37e1c742b40f77443392152}{%
-           family={Baumgartner},
-           familyi={B\bibinitperiod},
-           given={Simon},
-           giveni={S\bibinitperiod}}}%
-        {{hash=8bb857e6ac1bda082d225192ff0a9ff1}{%
-           family={Bendersky},
-           familyi={B\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{7744d19200834c54cd822f6282081035}
-      \strng{fullhash}{acec3159dc42e56da976cf3cf6645f7d}
-      \strng{bibnamehash}{acec3159dc42e56da976cf3cf6645f7d}
-      \strng{authorbibnamehash}{acec3159dc42e56da976cf3cf6645f7d}
-      \strng{authornamehash}{7744d19200834c54cd822f6282081035}
-      \strng{authorfullhash}{acec3159dc42e56da976cf3cf6645f7d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{04}
-      \field{title}{LLMs to the Moon? Reddit Market Sentiment Analysis with Large Language Models}
-      \field{year}{2023}
-      \field{pages}{1014\bibrangedash 1019}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1145/3543873.3587605
-      \endverb
-    \endentry
     \entry{chroma}{misc}{}
       \name{author}{1}{}{%
         {{hash=12f586b0171cf0f06960a27796d811d6}{%
@@ -909,93 +820,6 @@
       \endverb
       \keyw{Measurement;Industries;System performance;Benchmark testing;Feature extraction;Question answering (information retrieval);Noise robustness;Artificial Intelligence;Machine Learning;Large Language Models;Retrieval Augmented Generation}
     \endentry
-    \entry{socialmedias}{inbook}{}
-      \name{author}{1}{}{%
-        {{hash=ebe73de36fcd22c04f55cc1627746e3c}{%
-           family={Shen},
-           familyi={S\bibinitperiod},
-           given={Fuyuan},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{ebe73de36fcd22c04f55cc1627746e3c}
-      \strng{fullhash}{ebe73de36fcd22c04f55cc1627746e3c}
-      \strng{bibnamehash}{ebe73de36fcd22c04f55cc1627746e3c}
-      \strng{authorbibnamehash}{ebe73de36fcd22c04f55cc1627746e3c}
-      \strng{authornamehash}{ebe73de36fcd22c04f55cc1627746e3c}
-      \strng{authorfullhash}{ebe73de36fcd22c04f55cc1627746e3c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9781003179580}
-      \field{month}{10}
-      \field{title}{Introduction: Social Media as a News Source}
-      \field{year}{2021}
-      \field{pages}{1\bibrangedash 2}
-      \range{pages}{2}
-      \verb{doi}
-      \verb 10.4324/9781003179580-1
-      \endverb
-    \endentry
-    \entry{social_fact}{article}{}
-      \name{author}{5}{}{%
-        {{hash=d9fa7b94e796426add25fae62d4d8f7d}{%
-           family={Epstein},
-           familyi={E\bibinitperiod},
-           given={Ziv},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=57e39c2fa1d59ce3b8061214d6c03fda}{%
-           family={Sirlin},
-           familyi={S\bibinitperiod},
-           given={Nathaniel},
-           giveni={N\bibinitperiod}}}%
-        {{hash=33c2f850534c9b8d13a2e37e72dce615}{%
-           family={Arechar},
-           familyi={A\bibinitperiod},
-           given={Antonio},
-           giveni={A\bibinitperiod}}}%
-        {{hash=14ca11670fbe0c75690f2537879ddb4d}{%
-           family={Pennycook},
-           familyi={P\bibinitperiod},
-           given={Gordon},
-           giveni={G\bibinitperiod}}}%
-        {{hash=80990936dab3ca995e6c0d2e8eedfed4}{%
-           family={Rand},
-           familyi={R\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{c30ab57d45ad9a130839b29eeb036c4c}
-      \strng{fullhash}{b58d4f34434b4379ac9cc2f55d51d897}
-      \strng{bibnamehash}{b58d4f34434b4379ac9cc2f55d51d897}
-      \strng{authorbibnamehash}{b58d4f34434b4379ac9cc2f55d51d897}
-      \strng{authornamehash}{c30ab57d45ad9a130839b29eeb036c4c}
-      \strng{authorfullhash}{b58d4f34434b4379ac9cc2f55d51d897}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{There is widespread concern about misinformation circulating on social media. In particular, many argue that the context of social media itself may make people susceptible to the influence of false claims. Here, we test that claim by asking whether simply considering sharing news on social media reduces the extent to which people discriminate truth from falsehood when judging accuracy. In a large online experiment examining coronavirus disease 2019 (COVID-19) and political news (N\&nbsp;=\&nbsp;3157 Americans), we find support for this possibility. When judging the accuracy of headlines, participants were worse at discerning truth from falsehood if they both evaluated accuracy and indicated their sharing intentions, compared to just evaluating accuracy. These results suggest that people may be particularly vulnerable to believing false claims on social media, given that sharing is a core element of what makes social media “social.” Simply considering whether to share news on social media reduces the extent to which people discriminate truth from falsehood.}
-      \field{journaltitle}{Science Advances}
-      \field{number}{9}
-      \field{title}{The social media context interferes with truth discernment}
-      \field{volume}{9}
-      \field{year}{2023}
-      \field{pages}{eabo6169}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1126/sciadv.abo6169
-      \endverb
-      \verb{eprint}
-      \verb https://www.science.org/doi/pdf/10.1126/sciadv.abo6169
-      \endverb
-      \verb{urlraw}
-      \verb https://www.science.org/doi/abs/10.1126/sciadv.abo6169
-      \endverb
-      \verb{url}
-      \verb https://www.science.org/doi/abs/10.1126/sciadv.abo6169
-      \endverb
-    \endentry
     \entry{article_vaccine}{article}{}
       \name{author}{14}{}{%
         {{hash=15b9487683cce8730bb9d2188b6ec1ea}{%
@@ -1083,43 +907,6 @@
       \field{title}{COVID-19 vaccine rumors and conspiracy theories: The need for cognitive inoculation against misinformation to improve vaccine adherence}
       \field{year}{2021}
     \endentry
-    \entry{encyclopedia3040099}{article}{}
-      \name{author}{1}{}{%
-        {{hash=d13daf7a9917c187cd10c43a0bc6496d}{%
-           family={Benaissa\bibnamedelima Pedriza},
-           familyi={B\bibinitperiod\bibinitdelim P\bibinitperiod},
-           given={Samia},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{d13daf7a9917c187cd10c43a0bc6496d}
-      \strng{fullhash}{d13daf7a9917c187cd10c43a0bc6496d}
-      \strng{bibnamehash}{d13daf7a9917c187cd10c43a0bc6496d}
-      \strng{authorbibnamehash}{d13daf7a9917c187cd10c43a0bc6496d}
-      \strng{authornamehash}{d13daf7a9917c187cd10c43a0bc6496d}
-      \strng{authorfullhash}{d13daf7a9917c187cd10c43a0bc6496d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The effects of disinformation in the media and social networks have been extensively studied from the perspective of reception studies. However, the perception of this media phenomenon expressed by different types of audiences in distant geographic locations and with different media cultures has hardly been addressed by experts. This theoretical review study aims to analyze the relationship between the actual level of disinformation and the perception expressed by the audiences themselves. The results of the study reveal, firstly, that users of social networks and digital media do not perceive being surrounded by an excessively worrying volume of disinformation, a fact that contrasts with the data recorded, which are visibly higher. This situation reveals that the audience tends to normalize disinformation, which is intensively consumed on a daily basis and does not seem to worry the public in general terms, although some differences can be detected depending on variables such as gender, age or education. On the other hand, paradoxically, audiences visibly express rejection attitudes towards the channels that disseminate false information, with media outlets being the least trusted, despite recognizing that social networks are the place where more disinformation is generated and circulated at the same time.}
-      \field{issn}{2673-8392}
-      \field{journaltitle}{Encyclopedia}
-      \field{number}{4}
-      \field{title}{Disinformation Perception by Digital and Social Audiences: Threat Awareness, Decision-Making and Trust in Media Organizations}
-      \field{volume}{3}
-      \field{year}{2023}
-      \field{pages}{1387\bibrangedash 1400}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.3390/encyclopedia3040099
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2673-8392/3/4/99
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2673-8392/3/4/99
-      \endverb
-    \endentry
     \entry{9906925}{article}{}
       \name{author}{2}{}{%
         {{hash=3c322e14908de8251955fe3013e82143}{%
@@ -1139,8 +926,8 @@
       \strng{authorbibnamehash}{877ffab310a4e25c1d9db8914cbacb53}
       \strng{authornamehash}{877ffab310a4e25c1d9db8914cbacb53}
       \strng{authorfullhash}{877ffab310a4e25c1d9db8914cbacb53}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Computational Social Systems}
@@ -1179,8 +966,8 @@
       \strng{authorbibnamehash}{0dbd3872d41cd2cb2cab7f40e1e41d71}
       \strng{authornamehash}{0dbd3872d41cd2cb2cab7f40e1e41d71}
       \strng{authorfullhash}{0dbd3872d41cd2cb2cab7f40e1e41d71}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2023 International Conference on Innovative Data Communication Technologies and Application (ICIDCA)}
@@ -1212,8 +999,8 @@
       \strng{authorbibnamehash}{a488131a50ee57c3e07c45e4be6fc33a}
       \strng{authornamehash}{a488131a50ee57c3e07c45e4be6fc33a}
       \strng{authorfullhash}{a488131a50ee57c3e07c45e4be6fc33a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2021 IEEE International Conference on Digital Health (ICDH)}
@@ -1227,8 +1014,8 @@
       \keyw{Training;Social networking (online);Computational modeling;Data models;Real-time systems;Classification algorithms;Electronic healthcare;Deep Learning;tweets;similarity}
     \endentry
     \entry{pubmed}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2024-05-10}
       \field{title}{PubMed - National Library of Medicine}
@@ -1414,8 +1201,8 @@
       \endverb
     \endentry
     \entry{huggingface}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2024-10-18}
       \field{title}{Hugging Face – The AI community building the future}
@@ -1475,8 +1262,8 @@
       \strng{authorbibnamehash}{6e5ace118d6647e570574aea00d9ee34}
       \strng{authornamehash}{6e5ace118d6647e570574aea00d9ee34}
       \strng{authorfullhash}{08f4b49735d5d145be00bc9c07f38975}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CL}
@@ -1572,8 +1359,8 @@
       \strng{authorbibnamehash}{44466e2ad959409445f448daeb4ad45f}
       \strng{authornamehash}{44466e2ad959409445f448daeb4ad45f}
       \strng{authorfullhash}{39aeaa201007bcb705db32778f923cb2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CL}
