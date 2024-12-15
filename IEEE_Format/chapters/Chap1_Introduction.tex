@@ -10,44 +10,48 @@ the overwhelming amount of data makes it complicated to keep up with everything.
 
 Currently, social media such as X, %(formerly known as Twitter) 
 have ``Community Notes" which clarify tweets that are misleading or misinforming. However, this system
-depends totally on human interaction and is a slow and intricate process. On most occasions, when a ``Community Note" is added to a tweet, the disinformation has
-already been spread. 
-
+depends totally on human interaction and is a slow and intricate process, unable to keep up with the disinformation effort.
+% has
+%already been spread. 
 The issue of detecting and preventing the spread of misinformation has not been an easy task, especially in the health field.  In recent times, it has
-been challenging for health officials to prevent pandemics. Most of the time, these officials tend to make educational
+been challenging for health officials to manage pandemics. Often, these officials need to make educational
 campaigns for the population. However, social media misinformation can reduce the effectiveness of these campaigns \cite{article}. 
 %In addition, this is harder to counteract because
 %these can spread for longer times and reach different users \cite{article}. 
 Some problems these experts have faced in the past years were misinformation
-about vaccines, and users criticizing  safety measures.
+about vaccines, and social distancing measures.
 
 %The Twitter Health Surveillance (THS) system was designed to detect tweets related to health conditions \cite{8622504}. 
 %THS is a prototype system we are building at the University
-The Twitter Health Surveillance (THS) system is a prototype we are building at the University
+In this paper, we present enhancements to  the Twitter Health Surveillance (THS) system to detect and rebut misinformation. 
+THS is a prototype we are building at the University
 of Puerto Rico, Mayag\"uez (UPRM), designed to detect tweets related to health conditions \cite{8622504}. THS is an integrated platform to help health officials collect tweets, determine if they are related to a medical condition, extract
 metadata from them, and create a warehouse that can be used to analyze the data further.  THS has Artificial Intelligence (AI) components based on Long-Short Term Memory (LSTM)
-and Gated Recurrent Unit (GRU), used to classify tweets as being medically related, unrelated, or ambiguous. 
+and Gated Recurrent Unit (GRU), used to classify tweets as being medically related.%, unrelated, or ambiguous. 
 
-In this paper, we present enhancements to THS to detect and rebut misinformation. 
+%In this wor, we present enhancements to THS to detect and rebut misinformation. 
 %Searching for training data about this topic is not an easy task. A problem with social media text is the informality, slang terms, or special characters.  
-We use prior data from the THS project as our primary source for the health classification dataset. Likewise, the misinformation dataset contains social media posts, articles,
+In this work, we use prior data from the THS project as our primary source for the health classification dataset. Likewise, the misinformation dataset contains social media posts, articles,
 websites, and others \cite{stephencrone2022,coviddata,covidunesco}. 
 %However, we explore Instead of using the THS architectures, we opted for Large Language Models (LLM). 
-However, we explore  Large Language Models (LLM)  to detect health misinformation, provide context for its classification decisions, and provide a rebuttal.  A key feature is the use of 
+However, we explore  Large Language Models (LLM)  to detect health misinformation, provide context for its classification decisions, and provide a rebuttal to the tweet.  A key feature is the use of 
 curated medical datasets and Retrieval Augmented Generation (RAG) to help the LLM generate a rebuttal to the misinformation.
 %In this effort, we did not preprocess the tweets because they could lose the context of the actual meaning when special characters, links and hashtags are removed. 
-We built our prototype components using PyTorch, Chroma, Ollama, and other open-source tools. For the task of determining if a text is health-related, our system achieved a 90\% F1 score. In addition, it achieved a 97\% F1 for misinformation detection. Additionally, our initial results show that querying  official health sources with RAG helps the LLM rebut correctly with an F1 BertScore of 82\%. Hence, our system illustrates that it is possible to use LLM to classify and rebut health-related misinformation. 
+We built our new prototype components using PyTorch, Chroma, Ollama, and other open-source tools. For the task of determining if a text is health-related, our system achieved a 90\% F1 score. In addition, it achieved a 97\% F1 for misinformation detection. Additionally, our initial results show that querying  official health sources with RAG helps the LLM rebut appropriately  with an F1 BertScore of 82\%. This illustrates that it is possible to use LLM to fight health-related misinformation. 
 
 \subsection{Contributions}
 This paper provides the following original contributions:
 \begin{itemize}
 	\item{\textbf{Using LLMs for Health Misinformation Detection:}} 
 	%LLM are being used for different fields nowadays. However, these do not focus on health misinformation on social media.
-	 We present Large Language Models as a solution to classify and rebut health misinformation texts on social media and use research papers extracted from PubMed as context for the LLM.
-	\item{\textbf{Present a novel solution to misinformation rebuttal:}} To rebut misinformation, it is necessary to have an understanding of what needs to be fact-checked. Also, it is important to have the necessary context for the correction. We extracted biomedical research papers and added them to a vector database. This setup enable us to use RAG to rebut health misinformation with peer-review documents.
-	\item{\textbf{Pipeline Interface:}} Developed a frontend application that showcase the full pipeline, allowing users to interact with THS.
+	 We present LLM as a solution to classify and rebut health misinformation texts on social media and use research papers extracted from the NIH PubMed site as context for the LLM.
+	\item{\textbf{Present a novel solution to misinformation rebuttal:}} To rebut misinformation, it is necessary to have an understanding of what needs to be fact-checked. 
+	%Also, it is important to have the necessary context for the correction. 
+	We extracted biomedical research papers and added them to a vector database. This setup enable us to use RAG to rebut health misinformation with peer-review documents.
+	\item{\textbf{Pipeline Interface:}} We developed a frontend application that showcase the full pipeline, allowing users to interact with THS.
 \end{itemize}
 
 
 \subsection{Paper Organization}
-This paper has the following organization. Section II contains background on Large Language Models architectures, vector databases, and THS. In section III, we present the system architecture for the data extraction and classification process. Later, in section IV we show the system performance. Ending with section V, we have our conclusion with suggestions for future work.
+%This paper has the following organization. 
+Section II contains background on LLM  architectures, vector databases, and THS. In section III, we present the system architecture for the data extraction and classification process. Later, in section IV we show the system performance. Ending with section V, we have our conclusions. %with suggestions for future work.

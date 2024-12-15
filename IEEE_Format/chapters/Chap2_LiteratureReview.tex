@@ -15,9 +15,9 @@ Previous NLP techniques such as Recurrent Neural Network (RNN) could help in und
 LLM have different architectures, designed for performing specific tasks:
 
 \begin{itemize}
-\item{\textbf{Encoder-only models:}} These models are like BERT \cite{DBLP:journals/corr/abs-1810-04805}. This type of model predict text by masking specific words in a sentence. They are better for classification and sentiment analysis.
-\item{\textbf{Decoder-only models:}} For these model we have the well known GPT-3 \cite{DBLP:journals/corr/abs-2005-14165}. They receive one input and try to predict the entire text. They are good for summarizing and text-generation.
-\item{\textbf{Encoder-Decoder models:}} An example is T5 \cite{2020t5}. They mask entire sequences of text. The are good for translation and question  answering.
+\item{\textbf{Encoder-only models:}} These models are like BERT \cite{DBLP:journals/corr/abs-1810-04805}. This type of model predicts text by masking specific words in a sentence. They are better for classification and sentiment analysis.
+\item{\textbf{Decoder-only models:}} These models include the well known GPT-3 \cite{DBLP:journals/corr/abs-2005-14165}. They receive one input and try to predict the entire text. They are good for summarization and text-generation.
+\item{\textbf{Encoder-Decoder models:}} An example is T5 \cite{2020t5}. These mask entire sequences of text, and are good for translation and question  answering.
 \end{itemize}
 
 %\begin{figure}[htbp]
@@ -36,20 +36,21 @@ LLM have different architectures, designed for performing specific tasks:
 %That experiment showed the problem that users face when they use social media to make decisions. They clarified the importance of not taking the model for granted and how social media can cause a user to make a poor decision.
 
 \subsubsection{Challenges and Limitations}
-An issue with LLM is that they answer based on statistical relationships between words, and occasionally, their output could make no sense. Sometimes, they can generate a result that is not factual
-or valid; this phenomenon is called an {\em hallucination}. Without the proper context, they cannot differentiate between fact and fallacy. This context needs to be similar to the input that the model
-receives. 
+An issue with LLM is that they answer based on statistical relationships between words, and occasionally, their output could make no sense. They could generate a result that is not factual
+or valid; this phenomenon is called an {\em hallucination}. Without additional context, they cannot differentiate between fact and fallacy. %This context needs to be similar to the input that the model
+%receives. 
 %However, finding the necessary information is not optimal if done manually.
 
 \subsection{Vector Databases}
-We can reduce the hallucinations by providing context relating to the input text (e.g., premise). A solution to this is finding data from official, curated sources  on the topic associated with the premise text. That data can be stored
+We can reduce the hallucinations by providing textual context relating to the input text (e.g., premise). A solution to this is finding data from official, curated sources  on the topic associated with the premise text. That data can be stored
 in a vector database, which stores text data in a multi-dimensional vector representation.  Some database  engines support vector searches natively, like Chroma \cite{chroma}, while others have extensions,
 like Postgres with its pgvector  module \cite{pgvector}. These vector databases turn images, documents, and others data into numerical vectors known as {\em embeddings}. These embeddings are numerical vectors capturing semantic meaning \cite{10455990}.
  
-When querying the database, it will return text chunks that can function as context for an LLM to analyze. Thus, an LLM can use the retrieved chunks to generate a fact-checked answer.% from outside their initial training.
-The work in \cite{10683437}  tested LLM to answer a question that contained images and text. They evaluate the GPT3 base model, the base model with prompt engineering,
+When querying the database, it will return text chunks that can function as context for an LLM to analyze. This becomes additional input that the LLM can use to generate an answer. Thus, an LLM can use the retrieved chunks to generate a fact-checked answer. % from outside their initial training.
+ The work in \cite{10683437}  tested LLM to answer a question that contained images and text. They evaluate the GPT3 base model, the base model with prompt engineering,
 and a GPT3 with RAG. Their experiments showed that the base model's average success ratio was 40\%, the second model was 58\%, and the model with RAG ended with 75\%. Said experiment illustrates  that
-an LLM can have high performance when it receives the necessary context. Therefore, RAG can assist in providing expert-level responses.%, but human oversight is still imperative for complex topics. 
+an LLM can have high performance when it receives the necessary context. 
+%Therefore, RAG can assist in providing expert-level responses.%, but human oversight is still imperative for complex topics. 
 %Additionally,
 %in a world with many sources of information that can be misleading to people, this can help identify texts that are not factual. 
 
@@ -76,24 +77,30 @@ the other hand, the authors in \cite{10100054} used LSTM and BERT to classify mi
 
 When combatting misinformation, the difficulty arises when determining what is spreading and how experts can correct it. It requires  credible sources or an expert on the field, to verify the truth.
 %Some disinformation can be easier to identify such as hoaxes, but other things, such as conspiracy theories, require more resources to debunk. 
-These tasks are time-consuming and to refute it the
-explanation must be expressed so that any audience can understand it. 
+These tasks are time-consuming and the rebuttal
+%to refute it the
+%explanation 
+must be expressed so that any audience can understand it. 
 %These are a few reasons that health-related misinformation is hard to combat.
  %Experts in the field must be fast at identifying the 
 %misinformation and concise when correcting it. 
 LLM can combat misinformation by classifying it and rebutting it. 
 %For the classification process, it is possible to
 %fine-tune an LLM that determines if a text has misinformation. Additionally, it can generate rebuttals using RAG. With a vector database that contains peer-reviewed research, it can ensure that the information is factual. 
-This AI approach can reduce the dependency on experts and have a system that can act in real-time to prevent a significant spread of misinformation.
+This AI approach can reduce the dependency on experts and have a system that can act in real-time to mitigate misinformation.
 
 
 \subsection{Twitter Health Surveillance (THS)}
 The THS system classified tweets related to health issues \cite{8622504, 9581175}. The system utilized LSTM and GRU to classify tweets as being medical related, unrelated, or ambiguous.  The THS
-data extraction pipeline can be found on Figure \ref{ths_architecture}. They extracted data from the Twitter API and processed it through the Apache ecosystem. Later, a preprocessing phase
+data extraction pipeline can be found on Figure \ref{ths_architecture}. THS extracted data from the Twitter API and processed it through the Apache ecosystem. Later, a preprocessing phase
 for each tweet occurred, which removed hashtags, mentions, emojis, and web links. The classification agent trained with the resulting plain text. This version used recurrent neural network (RNN) and
-1-d convolutional neural networks (CNN) because of their advantages with sequential data. They tested various combination architectures, but the one with the highest result was an LSTM layer, with no attention,
-and a GRU layer; it had an F1 score of 86\%, a recall of 89\%, and a precision of 83\%.   However, these experiments removed special elements from the original text. %By then, tweets had a limitation of characters, making each one of the crucial. 
-Removing special characters, could remove information that the author of the text intended. 
+1-d convolutional neural networks (CNN) because of their advantages with sequential data. The authors tested various  architectures, and the one with the highest result was an LSTM layer (with no attention) followed by a
+and a GRU layer.  
+%T had an F1 score of 86\%, a recall of 89\%, and a precision of 83\%.   
+However, these experiments removed special elements from the original text,  %By then, tweets had a limitation of characters, making each one of the crucial. 
+%Removing special characters, 
+which could remove valuable insights. 
+% that the author of the text intended. 
 
  
   \begin{figure}[!h]
@@ -109,8 +116,8 @@ Removing special characters, could remove information that the author of the tex
 %for regular LSTM and bidirectional networks; in contrast, the raw tweet had a better result in CNN validation. All three models had similar results; the highest validation accuracy was the regular LSTM with 90\%,
 %followed by the other two with 87\%. Nonetheless, the training time for the CNN was the fastest, with regular LSTM in second place and the slowest being the bidirectional LSTM network. 
 
-However, both of these experiments removed special elements from the original text. By then, tweets had a limitation of characters, making each one of the crucial. Removing special
-characters, could remove information that the author of the text intended. 
+%However, both of these experiments removed special elements from the original text. By then, tweets had a limitation of characters, making each one of the crucial. Removing special
+%characters, could remove information that the author of the text intended. 
 
 
 %
