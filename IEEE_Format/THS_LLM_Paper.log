@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 13:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 13:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1531,25 +1531,25 @@ Underfull \hbox (badness 1590) in paragraph at lines 99--101
  []
 
 ) (./chapters/Chap4_PerformanceEvaluation.tex
-Underfull \hbox (badness 5203) in paragraph at lines 63--64
+Underfull \hbox (badness 5203) in paragraph at lines 64--65
  \OT1/ptm/m/it/10 1) Health-related Dataset: [][] \OT1/ptm/m/n/10 The health-re
 lated
  []
 
 [5 <./figures/LLM_Pipeline.jpeg>]
-Overfull \hbox (1.24532pt too wide) in paragraph at lines 81--81
+Overfull \hbox (1.24532pt too wide) in paragraph at lines 82--82
 []|\OT1/ptm/m/n/7 Misinformation 
  []
 
 
-Overfull \hbox (0.68468pt too wide) in paragraph at lines 72--87
+Overfull \hbox (0.68468pt too wide) in paragraph at lines 73--88
  [][] 
  []
 
 [6]
-Package pgfplots info on input line 295: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 297: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-Package pgfplots info on input line 403: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 406: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
  [7]) (./chapters/Chap5_Conclusions.tex)
 Underfull \hbox (badness 6910) in paragraph at lines 91--91
@@ -1594,13 +1594,13 @@ Package logreq Info: Writing requests to 'THS_LLM_Paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41191 strings out of 474116
- 979804 string characters out of 5743682
- 1962187 words of memory out of 5000000
- 62900 multiletter control sequences out of 15000+600000
+ 41192 strings out of 474116
+ 979840 string characters out of 5743682
+ 1961187 words of memory out of 5000000
+ 62901 multiletter control sequences out of 15000+600000
  601529 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,101p,1110b,2410s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,101p,1110b,2408s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
 sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
@@ -1609,7 +1609,7 @@ cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (9 pages, 592040 bytes).
+Output written on THS_LLM_Paper.pdf (9 pages, 591762 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream

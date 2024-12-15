@@ -12,31 +12,32 @@ To evaluate the models effectiveness we used the following metrics:
 \end{itemize}
 
 \subsubsection{Hardware}
-The node's specification can be found on Table \ref{table:hardware}.
-\begin{table}[htbp]
-\centering
-\caption{Cluster's Node Specifications}
-{\footnotesize
-\begin{tabular}{||c | c||} 
- \hline
-\textbf{Hardware} & \textbf{Description} \\ 
- \hline
- Hard Disk & 250GB  \\ 
- \hline
- RAM & 87.9GB  \\ 
- \hline
- Processor & Intel(R) Xeon(R) Silver 4214 @ 2.20GHz \\ 
- \hline
- GPU & NVIDIA TESLA V100s 32GB \\
- \hline
-\end{tabular}
-}
-\label{table:hardware}
-\end{table}
+The system was built on a cluster's node. The specifications are: an Intel(R) Xeon(R) Silver 4214 @ 2.20GHz processor, with 87.9GB of RAM, 250GB of Hard Disk, and a NVIDIA TESLA V100s 32GB GPU.
+%The node's specification can be found on Table \ref{table:hardware}.
+%\begin{table}[htbp]
+%\centering
+%\caption{Cluster's Node Specifications}
+%{\footnotesize
+%\begin{tabular}{||c | c||} 
+% \hline
+%\textbf{Hardware} & \textbf{Description} \\ 
+% \hline
+% Hard Disk & 250GB  \\ 
+% \hline
+% RAM & 87.9GB  \\ 
+% \hline
+% Processor & Intel(R) Xeon(R) Silver 4214 @ 2.20GHz \\ 
+% \hline
+% GPU & NVIDIA TESLA V100s 32GB \\
+% \hline
+%\end{tabular}
+%}
+%\label{table:hardware}
+%\end{table}
 
 \subsubsection{Software}
 Various software tools were used for the project. The training, ETL pipeline, and REST API were implemented with Python 3.9.19. To finetune the models we used PyTorch 2.0.1 with GPU support enabled for
-CUDA 11.7. To initialize and use the models we relied on  the Transformers 4.34.0 library. We imported Bert, T5, and LLaMa-2 base models from Hugging Face (HF) \cite{huggingface}. To reduce the model memory usage, we use the PEFT 0.12.0 and bitsandbytes library for Low-Rank Adapter (LoRA) \cite{hu2021loralowrankadaptationlarge}. Also, we used Postgres 14 to store our extracted research papers. In addition, we added Chroma 0.4.24 as our vector database. Next, for the RAG process, we installed Ollama \cite{ollama} and LangChain 0.1.16 to run LlaMa3.1 8B parameter model \cite{touvron2023llamaopenefficientfoundation}. Finally, to create the UI to show the results we used React.
+CUDA 11.7. To initialize and use the models we relied on  the Transformers 4.34.0 library. We imported the models from Hugging Face (HF) \cite{huggingface}. To reduce the model memory usage, we use PEFT 0.12.0 and bitsandbytes libraries for Low-Rank Adapter (LoRA) \cite{hu2021loralowrankadaptationlarge}. Also, we used Postgres 14 as our relational database and Chroma 0.4.24 as our vector database. Next, for the RAG process, we installed Ollama \cite{ollama} and LangChain 0.1.16 to run LlaMa3.1 8B parameter model \cite{touvron2023llamaopenefficientfoundation}. Finally, to create the UI to show the results we used React.
 
   \begin{table}[htbp]
 \centering
@@ -111,7 +112,7 @@ The models used for this experiment are Bert, T5, and LLaMa-2, Table \ref{table:
 \begin{table}[H]
 	\centering
 	\caption{Fine-tuning \& LoRA hyperparameters}
-	{\small
+	{\footnotesize
 	\begin{tabular}{||c | c | c||} 
 		\hline
 		\textbf{Type} & \textbf{Parameter} & \textbf{Value} \\
@@ -279,7 +280,7 @@ the lowest at 46\%. In contrast, the THS model, with an 86\%, ending in second t
 
 \begin{figure}[H]
 	\centering
-	\begin{tikzpicture}[scale=0.78]
+	\begin{tikzpicture}[scale=0.72]
     \begin{axis}[
         ybar,                        
         enlargelimits=0.1,        
@@ -290,9 +291,10 @@ the lowest at 46\%. In contrast, the THS model, with an 86\%, ending in second t
         ticklabel style={font=\small},
         nodes near coords,
         nodes near coords style={font=\footnotesize},
-        bar width=25pt,          
-        ymin=0                       
-    ]
+        bar width=28pt,          
+        ymin=6,
+        ymax=84
+        ]
         \addplot  [fill=black] coordinates {(Bert, 3.12) (LlaMa-2, 85.43) (T5 (Causal), 26.15) (T5 (Sequence), 24.03)};
     \end{axis}
 \end{tikzpicture}
@@ -387,7 +389,7 @@ However, all models had an F1 score of at least 90\%.
 
 \begin{figure}[H]
 	\centering
-	\begin{tikzpicture}[scale=0.78]
+	\begin{tikzpicture}[scale=0.72]
     \begin{axis}[
         ybar,                        
         enlargelimits=0.1,        
@@ -398,8 +400,9 @@ However, all models had an F1 score of at least 90\%.
         ticklabel style={font=\small},
         nodes near coords,    
        	nodes near coords style={font=\footnotesize},
-        bar width=25pt,          
-        ymin=0                       
+        bar width=28pt,          
+        ymin=3.5,
+        ymax=46.5    
     ]
         \addplot  [fill=black] coordinates {(Bert, 1.54) (LlaMa-2, 47.33) (T5 (Causal), 6.18) (T5 (Sequence), 3.48)};
     \end{axis}
@@ -418,6 +421,7 @@ Our model BERTScores'  F1 is shown in Table \ref{table:BERTScore}. We calculate 
 \begin{table}[H]
 	\centering
 	\caption{BERTScore F1 Results}
+	{\small
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\  
@@ -427,6 +431,7 @@ Our model BERTScores'  F1 is shown in Table \ref{table:BERTScore}. We calculate 
 		GPT-3.5-turbo & 82\% \\ 		
 		\hline
 		\end{tabular}
+	}
 	\label{table:BERTScore}
 \end{table}
 
