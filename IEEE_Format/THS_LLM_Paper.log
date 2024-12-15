@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 01:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 01:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1528,8 +1528,7 @@ Underfull \hbox (badness 1590) in paragraph at lines 99--101
 []\OT1/ptm/m/n/10 The pipeline au-to-mates the clas-si-fi-ca-tion pro-
  []
 
-) (./chapters/Chap4_PerformanceEvaluation.tex [6 <./figures/LLM_Pipeline.jpeg>]
-
+) (./chapters/Chap4_PerformanceEvaluation.tex
 Overfull \hbox (1.24532pt too wide) in paragraph at lines 75--75
 []|\OT1/ptm/m/n/7 Misinformation 
  []
@@ -1545,16 +1544,13 @@ Underfull \hbox (badness 5203) in paragraph at lines 84--86
 lated
  []
 
-[7]
+[6 <./figures/LLM_Pipeline.jpeg>] [7]
 Package pgfplots info on input line 296: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 Package pgfplots info on input line 404: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8])
-(./chapters/Chap5_Conclusions.tex [9])
+ [8]) (./chapters/Chap5_Conclusions.tex)
+[9]
 Underfull \hbox (badness 6910) in paragraph at lines 93--93
 []\OT1/ptm/m/n/9 S. Crone, \OT1/ptm/m/it/9 Mon-key-pox mis-in-for-ma-tion: Twit
 -ter
@@ -1611,7 +1607,7 @@ Package logreq Info: Writing requests to 'THS_LLM_Paper.run.xml'.
 Here is how much of TeX's memory you used:
  41207 strings out of 474116
  980584 string characters out of 5743682
- 1961187 words of memory out of 5000000
+ 1963187 words of memory out of 5000000
  62916 multiletter control sequences out of 15000+600000
  601529 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1624,7 +1620,7 @@ cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (10 pages, 615059 bytes).
+Output written on THS_LLM_Paper.pdf (10 pages, 614015 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream
