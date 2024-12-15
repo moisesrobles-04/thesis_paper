@@ -601,6 +601,39 @@
       \verb https://arxiv.org/abs/2302.13971
       \endverb
     \endentry
+    \entry{9581175}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=5e4d6f53606adb5ece009bb7ee06c50e}{%
+           family={Villanueva-Vega},
+           familyi={V\bibinithyphendelim V\bibinitperiod},
+           given={Danny},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c5aa725d76bdc9abdaea1ff5e330adc1}{%
+           family={Rodriguez-Martinez},
+           familyi={R\bibinithyphendelim M\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a488131a50ee57c3e07c45e4be6fc33a}
+      \strng{fullhash}{a488131a50ee57c3e07c45e4be6fc33a}
+      \strng{bibnamehash}{a488131a50ee57c3e07c45e4be6fc33a}
+      \strng{authorbibnamehash}{a488131a50ee57c3e07c45e4be6fc33a}
+      \strng{authornamehash}{a488131a50ee57c3e07c45e4be6fc33a}
+      \strng{authorfullhash}{a488131a50ee57c3e07c45e4be6fc33a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 IEEE International Conference on Digital Health (ICDH)}
+      \field{title}{Finding Similar Tweets in Health Related Topics}
+      \field{year}{2021}
+      \field{pages}{184\bibrangedash 190}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICDH52753.2021.00033
+      \endverb
+      \keyw{Training;Social networking (online);Computational modeling;Data models;Real-time systems;Classification algorithms;Electronic healthcare;Deep Learning;tweets;similarity}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
