@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 15:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  15 DEC 2024 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1481,13 +1481,13 @@ s/base/8r.enc}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1497,7 +1497,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <figures/ths_architecture.jpeg, id=17, 1235.61626pt x 597.23125pt>
 File: figures/ths_architecture.jpeg Graphic file (type jpg)
 <use figures/ths_architecture.jpeg>
-Package pdftex.def Info: figures/ths_architecture.jpeg  used on input line 101.
+Package pdftex.def Info: figures/ths_architecture.jpeg  used on input line 108.
 
 (pdftex.def)             Requested size: 186.30214pt x 90.04558pt.
 ) (./chapters/Chap3_Architecture.tex
@@ -1505,22 +1505,21 @@ Package pdftex.def Info: figures/ths_architecture.jpeg  used on input line 101.
 File: figures/ETL_Pipeline.jpeg Graphic file (type jpg)
 <use figures/ETL_Pipeline.jpeg>
 Package pdftex.def Info: figures/ETL_Pipeline.jpeg  used on input line 12.
-(pdftex.def)             Requested size: 177.42868pt x 191.18169pt.
+(pdftex.def)             Requested size: 155.25517pt x 167.28578pt.
 
-[3 <./figures/ths_architecture.jpeg>]
+[3 <./figures/ths_architecture.jpeg> <./figures/ETL_Pipeline.jpeg>]
 <figures/Data_vectorization.jpeg, id=22, 1226.5825pt x 797.98125pt>
 File: figures/Data_vectorization.jpeg Graphic file (type jpg)
 <use figures/Data_vectorization.jpeg>
-Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 29
+Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 30
 .
 (pdftex.def)             Requested size: 186.30214pt x 121.20186pt.
 <figures/LLM_Pipeline.jpeg, id=23, 1026.83624pt x 1001.7425pt>
 File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
 <use figures/LLM_Pipeline.jpeg>
 Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 66.
-(pdftex.def)             Requested size: 177.42868pt x 173.09119pt.
- [4 <./figures/ETL_Pipeline.jpeg> <./figures/Data_vectorization.jpeg> <./figure
-s/LLM_Pipeline.jpeg>]
+(pdftex.def)             Requested size: 155.25517pt x 151.44714pt.
+ [4 <./figures/Data_vectorization.jpeg> <./figures/LLM_Pipeline.jpeg>]
 Underfull \hbox (badness 1590) in paragraph at lines 98--100
 []\OT1/ptm/m/n/10 The pipeline au-to-mates the clas-si-fi-ca-tion pro-
  []
@@ -1537,33 +1536,46 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 106--107
  []
 
 ) (./chapters/Chap4_PerformanceEvaluation.tex
-Underfull \hbox (badness 5203) in paragraph at lines 64--65
+Underfull \hbox (badness 1406) in paragraph at lines 40--42
+ \OT1/ptm/m/it/10 3) Soft-ware: [][] \OT1/ptm/m/n/10 The train-ing, ETL pipelin
+e, and
+ []
+
+
+Underfull \hbox (badness 5203) in paragraph at lines 65--66
  \OT1/ptm/m/it/10 1) Health-related Dataset: [][] \OT1/ptm/m/n/10 The health-re
 lated
  []
 
-[5 <./figures/THS_Rebuttal_view.jpeg>]
-Overfull \hbox (1.24532pt too wide) in paragraph at lines 82--82
+
+Overfull \hbox (1.24532pt too wide) in paragraph at lines 84--84
 []|\OT1/ptm/m/n/7 Misinformation 
  []
 
 
-Overfull \hbox (0.68468pt too wide) in paragraph at lines 73--88
+Overfull \hbox (0.68468pt too wide) in paragraph at lines 75--90
  [][] 
  []
 
-[6]
-Package pgfplots info on input line 297: Using 'lua backend=false' for axis: x 
+[5 <./figures/THS_Rebuttal_view.jpeg>]
+Underfull \vbox (badness 1194) has occurred while \output is active []
+
+Package pgfplots info on input line 300: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-Package pgfplots info on input line 406: Using 'lua backend=false' for axis: x 
+
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+ [6]
+Package pgfplots info on input line 413: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [7]) (./chapters/Chap5_Conclusions.tex)
+
+[7]) (./chapters/Chap5_Conclusions.tex)
 Underfull \hbox (badness 6910) in paragraph at lines 91--91
 []\OT1/ptm/m/n/9 S. Crone, \OT1/ptm/m/it/9 Mon-key-pox mis-in-for-ma-tion: Twit
 -ter
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 91--91
 \OT1/ptm/m/n/9 ``BERT: pre-training of deep bidi-rec-tional
  []
@@ -1590,7 +1602,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[9] (./THS_LLM_Paper.aux)
+[8] (./THS_LLM_Paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1602,7 +1614,7 @@ Package logreq Info: Writing requests to 'THS_LLM_Paper.run.xml'.
 Here is how much of TeX's memory you used:
  41192 strings out of 474116
  979883 string characters out of 5743682
- 1962187 words of memory out of 5000000
+ 1959187 words of memory out of 5000000
  62901 multiletter control sequences out of 15000+600000
  601529 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1615,10 +1627,10 @@ cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on THS_LLM_Paper.pdf (9 pages, 898075 bytes).
+Output written on THS_LLM_Paper.pdf (8 pages, 895323 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
