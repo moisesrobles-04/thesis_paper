@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  18 FEB 2025 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.1)  18 FEB 2025 20:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1164,7 +1164,7 @@ File: figures/ths_architecture.jpeg Graphic file (type jpg)
 <use figures/ths_architecture.jpeg>
 Package pdftex.def Info: figures/ths_architecture.jpeg  used on input line 108.
 
-(pdftex.def)             Requested size: 399.21791pt x 192.95872pt.
+(pdftex.def)             Requested size: 354.86412pt x 171.52493pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1174,19 +1174,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figures/ETL_Pipeline.jpeg Graphic file (type jpg)
 <use figures/ETL_Pipeline.jpeg>
 Package pdftex.def Info: figures/ETL_Pipeline.jpeg  used on input line 12.
-(pdftex.def)             Requested size: 332.68385pt x 358.46748pt.
+(pdftex.def)             Requested size: 354.86412pt x 382.37785pt.
 <figures/Data_vectorization.jpeg, id=24, 1226.5825pt x 797.98125pt>
 File: figures/Data_vectorization.jpeg Graphic file (type jpg)
 <use figures/Data_vectorization.jpeg>
 Package pdftex.def Info: figures/Data_vectorization.jpeg  used on input line 30
 .
-(pdftex.def)             Requested size: 399.21791pt x 259.71829pt.
+(pdftex.def)             Requested size: 354.86412pt x 230.8607pt.
  [4 <./figures/ths_architecture.jpeg>]
 <figures/LLM_Pipeline.jpeg, id=28, 1026.83624pt x 1001.7425pt>
 File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
 <use figures/LLM_Pipeline.jpeg>
 Package pdftex.def Info: figures/LLM_Pipeline.jpeg  used on input line 66.
-(pdftex.def)             Requested size: 332.68385pt x 324.55362pt.
+(pdftex.def)             Requested size: 354.86412pt x 346.19766pt.
 
 [5 <./figures/ETL_Pipeline.jpeg>] [6 <./figures/Data_vectorization.jpeg>]
 <figures/THS_Rebuttal_view.jpeg, id=36, 596.2275pt x 374.8404pt>
@@ -1194,26 +1194,25 @@ File: figures/THS_Rebuttal_view.jpeg Graphic file (type jpg)
 <use figures/THS_Rebuttal_view.jpeg>
 Package pdftex.def Info: figures/THS_Rebuttal_view.jpeg  used on input line 106
 .
-(pdftex.def)             Requested size: 399.21791pt x 250.98161pt.
+(pdftex.def)             Requested size: 354.86412pt x 223.09857pt.
 )
-(./chapters/Chap4_PerformanceEvaluation.tex [7 <./figures/LLM_Pipeline.jpeg>]
-[8 <./figures/THS_Rebuttal_view.jpeg>]
-Overfull \hbox (4.61398pt too wide) in paragraph at lines 84--84
-[]|\OT1/cmr/m/n/7 Misinformation 
+(./chapters/Chap4_PerformanceEvaluation.tex
+Underfull \vbox (badness 7685) has occurred while \output is active []
+
+ [7 <./figures/LLM_Pipeline.jpeg>]
+Overfull \hbox (5.75003pt too wide) in paragraph at lines 84--84
+[]|\OT1/cmr/m/n/10 Misinformation 
  []
 
-
-Underfull \vbox (badness 3439) has occurred while \output is active []
+[8 <./figures/THS_Rebuttal_view.jpeg>]
+Underfull \vbox (badness 1515) has occurred while \output is active []
 
  [9]
 [10]
-Package pgfplots info on input line 300: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 246: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-
-Underfull \vbox (badness 2065) has occurred while \output is active []
-
  [11]
-Package pgfplots info on input line 413: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 359: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1356,33 +1355,28 @@ chapters/Chap5_Conclusions.tex
 THS_LLM_Paper.bbl
  ***********
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 33079 strings out of 474116
- 809579 string characters out of 5743682
+ 33077 strings out of 474116
+ 809560 string characters out of 5743682
  1946187 words of memory out of 5000000
- 54872 multiletter control sequences out of 15000+600000
- 565864 words of font info for 66 fonts, out of 8000000 for 9000
+ 54871 multiletter control sequences out of 15000+600000
+ 565554 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,101p,925b,2423s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
-r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
-local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/tex
-live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on THS_LLM_Paper.pdf (15 pages, 982085 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on THS_LLM_Paper.pdf (15 pages, 951901 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

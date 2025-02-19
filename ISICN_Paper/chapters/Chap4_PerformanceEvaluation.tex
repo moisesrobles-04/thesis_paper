@@ -43,7 +43,7 @@ CUDA 11.7. To initialize and use the models we relied on  the Transformers 4.34.
   \begin{table}[htbp]
 \centering
 \caption{LLM Specifications}
-{\scriptsize
+{
 \begin{tabular}{||c | c | c | c||} 
  \hline
 \textbf{Model} & \textbf{HF name} & \textbf{Architecture} & \textbf{Parameters} \\
@@ -71,7 +71,7 @@ Details about the dataset are found on Table \ref{table:dataset}.
 \begin{table}[htbp]
 	\centering
 	\caption{Training Datasets}
-	{\scriptsize
+	{
 	\begin{tabular}{||c | c | c | c | c||} 
 		\hline
 		\textbf{Dataset} &
@@ -94,7 +94,7 @@ To keep as much context as possible, we include links, mentions, and hashtags fo
 However, the embedding might struggle with out-of-vocabulary or irregular patterns. Thus, we use special tokens to replace elements with patterns that do not contribute
 to semantic meaning, such as random strings in URLs. The special character replacement is shown in the example below.
 
-{\footnotesize %
+{\small %
 \begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
 \textbf{Input:}  
 ``listening to the experts talk about \#influenza at the @nmnh/@asmicrobiology \#flu program like https://t.co/ehn6n"
@@ -115,7 +115,7 @@ BERT and LLaMa-2 were only trained on sequence classification, while T5 was trai
 \begin{table}[H]
 	\centering
 	\caption{Fine-tuning \& LoRA hyperparameters}
-	{\footnotesize
+	{
 	\begin{tabular}{||c | c | c||} 
 		\hline
 		\textbf{Type} & \textbf{Parameter} & \textbf{Value} \\
@@ -140,60 +140,6 @@ BERT and LLaMa-2 were only trained on sequence classification, while T5 was trai
 	}
 	\label{table:hyperparameters}
 \end{table}
-%
-%\begin{table}[H]
-%	\centering
-%	\caption{LoRA Hyperparameters}
-%	{\small
-%	\begin{tabular}{|| c | c||} 
-%		\hline
-%		\textbf{Parameters} & \textbf{Value} \\
-%		\hline
-%		r & 16 \\
-%		\hline
-%		alpha & 32  \\
-%		\hline
-%		dropout & 0.05  \\
-%		\hline
-%		bias & all  \\
-%		\hline
-%	\end{tabular}
-%	}
-%	\label{table:LoRA}
-%\end{table}
-%
-%\begin{table}[H]
-%	\centering
-%	\caption{Fine-tuning Hyperparameters}
-%	{\small
-%	\begin{tabular}{||c | c||} 
-%		\hline
-%		\textbf{Parameter} & \textbf{value} \\ 
-%		\hline
-%		Learning Rate & 5E-6  \\
-%		\hline
-%		Batch size & 16  \\
-%		\hline
-%		Epochs & 20 \\
-%		\hline
-%		Gradient Accumulation & 8 \\
-%		\hline
-%		Weight\_decay & 0.1 \\
-%		\hline
-%		Evaluation Step & 50 \\
-%		\hline
-%		Evaluation Batch & 2 \\
-%		\hline
-%		Evaluation Accumulation & 16 \\
-%		\hline
-%		Warm-Up & 450 \\
-%		\hline
-%		Metric & f1 \\
-%		\hline
-%	\end{tabular}
-%	}
-%	\label{table:hyperparameters}
-%\end{table}
 
 \subsection{Health-Related Classification Results}
 We present the results of the health classification process and compare them with the best overall model of the THS project \cite{8622504}.
@@ -203,7 +149,7 @@ Their best model is an LSTM, with no attention, and a GRU layer.
 \begin{table}[htbp]
 	\centering
 	\caption{Health Related Precision Result}
-	{\small
+	{
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ 
@@ -230,7 +176,7 @@ goal is to detect health-related misinformation. The best-performing model here 
 \begin{table}[htbp]
 	\centering
 	\caption{Health Related Recall Result}
-	{\small
+	{
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\
@@ -258,7 +204,7 @@ GRU model as the only one with a result over 80\% \cite{8622504}. In contrast, m
 \begin{table}[htbp]
 	\centering
 	\caption{Health Related F1 Result}
-	{\footnotesize
+	{
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\
@@ -319,7 +265,7 @@ In this section, we present the misinformation classification results. However, 
 \begin{table}[H]
 	\centering
 	\caption{Misinformation Precision Result}
-	{\footnotesize
+	{
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\  
@@ -344,7 +290,7 @@ class because it is our project goal. Our best-performing models were both T5 mo
 \begin{table}[H]
 	\centering
 	\caption{Misinformation Recall Result}
-	{\footnotesize
+	{
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\ 
@@ -371,7 +317,7 @@ with a performance of 95\%.
 \begin{table}[H]
 	\centering
 	\caption{Misinformation F1 Result}
-	{\footnotesize
+	{
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\  
@@ -428,7 +374,7 @@ Our model BERTScores'  F1 is shown in Table \ref{table:BERTScore}. We calculate 
 \begin{table}[H]
 	\centering
 	\caption{BERTScore F1 Results}
-	{\footnotesize
+	{
 	\begin{tabular}{||c | c||} 
 		\hline
 		\textbf{Model} & \textbf{Result} \\  
