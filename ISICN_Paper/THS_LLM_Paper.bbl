@@ -1,0 +1,164 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{article}
+S.~T, S.~Mathew, International Journal of Data Science and Analytics
+  \textbf{13}, 1 (2022).
+\newblock \doi{10.1007/s41060-022-00311-6}
+
+\bibitem{8622504}
+C.C. Garz\'on-Alfonso, M.~Rodr\'iguez-Mart\'inez, in \emph{2018 IEEE
+  International Conference on Big Data (Big Data)} (2018), pp. 1647--1654.
+\newblock \doi{10.1109/BigData.2018.8622504}
+
+\bibitem{stephencrone2022}
+S.~Crone.
+\newblock Monkeypox misinformation: Twitter dataset (2022).
+\newblock \doi{10.34740/KAGGLE/DS/2352848}.
+\newblock \urlprefix\url{https://www.kaggle.com/ds/2352848}
+
+\bibitem{coviddata}
+M\"obius.
+\newblock Covid-19 fake news dataset (2023).
+\newblock
+  \urlprefix\url{https://www.kaggle.com/datasets/arashnic/covid19-fake-news/data?select=NewsFakeCOVID-19.csv}
+
+\bibitem{covidunesco}
+S.~Siwakoti, K.~Yadav, I.~Thange, N.~Bariletto, L.~Zanotti, A.~Ghoneim, J.~N.
+\newblock Localized misinformation in a global pandemic: Report on covid-19
+  narratives around the world (2021).
+\newblock
+  \urlprefix\url{https://esoc.princeton.edu/publications/localized-misinformation-global-pandemic-report-covid-19-narratives-around-world}
+
+\bibitem{Sherstinsky_2020}
+A.~Sherstinsky, Physica D: Nonlinear Phenomena \textbf{404}, 132306 (2020).
+\newblock \doi{10.1016/j.physd.2019.132306}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1016/j.physd.2019.132306}
+
+\bibitem{vaswani2023attentionneed}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.N. Gomez,
+  L.~Kaiser, I.~Polosukhin.
+\newblock Attention is all you need (2023).
+\newblock \urlprefix\url{https://arxiv.org/abs/1706.03762}
+
+\bibitem{naveed2024comprehensiveoverviewlargelanguage}
+H.~Naveed, A.U. Khan, S.~Qiu, M.~Saqib, S.~Anwar, M.~Usman, N.~Akhtar,
+  N.~Barnes, A.~Mian.
+\newblock A comprehensive overview of large language models (2024).
+\newblock \urlprefix\url{https://arxiv.org/abs/2307.06435}
+
+\bibitem{DBLP:journals/corr/abs-1810-04805}
+J.~Devlin, M.~Chang, K.~Lee, K.~Toutanova, CoRR \textbf{abs/1810.04805} (2018).
+\newblock \urlprefix\url{http://arxiv.org/abs/1810.04805}
+
+\bibitem{DBLP:journals/corr/abs-2005-14165}
+T.B. Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, S.~Agarwal,
+  A.~Herbert{-}Voss, G.~Krueger, T.~Henighan, R.~Child, A.~Ramesh, D.M.
+  Ziegler, J.~Wu, C.~Winter, C.~Hesse, M.~Chen, E.~Sigler, M.~Litwin, S.~Gray,
+  B.~Chess, J.~Clark, C.~Berner, S.~McCandlish, A.~Radford, I.~Sutskever,
+  D.~Amodei, CoRR \textbf{abs/2005.14165} (2020).
+\newblock \urlprefix\url{https://arxiv.org/abs/2005.14165}
+
+\bibitem{2020t5}
+C.~Raffel, N.~Shazeer, A.~Roberts, K.~Lee, S.~Narang, M.~Matena, Y.~Zhou,
+  W.~Li, P.J. Liu, Journal of Machine Learning Research \textbf{21}(140), 1
+  (2020).
+\newblock \urlprefix\url{http://jmlr.org/papers/v21/20-074.html}
+
+\bibitem{chroma}
+Chroma.
+\newblock The ai-native open-source embedding database (2022).
+\newblock \urlprefix\url{https://www.trychroma.com/}.
+\newblock Accessed: 04.27.2024
+
+\bibitem{pgvector}
+pgvector.
+\newblock pgvector: Open-source vector similarity search for postgres (2024).
+\newblock \urlprefix\url{https://github.com/pgvector/pgvector}.
+\newblock Accessed: 10.1.2024
+
+\bibitem{10455990}
+P.N. Singh, S.~Talasila, S.V. Banakar, in \emph{2023 IEEE International
+  Conference on ICT in Business Industry \& Government (ICTBIG)} (2023), pp.
+  1--7.
+\newblock \doi{10.1109/ICTBIG59752.2023.10455990}
+
+\bibitem{10683437}
+T.~Sun, A.~Somalwar, H.~Chan, in \emph{2024 IEEE 99th Vehicular Technology
+  Conference (VTC2024-Spring)} (2024), pp. 1--5.
+\newblock \doi{10.1109/VTC2024-Spring62846.2024.10683437}
+
+\bibitem{10.1371/journal.pone.0251605}
+M.S. Islam, A.H.M. Kamal, A.~Kabir, D.L. Southern, S.H. Khan, S.M.M. Hasan,
+  T.~Sarkar, S.~Sharmin, S.~Das, T.~Roy, M.G.D. Harun, A.A. Chughtai,
+  N.~Homaira, H.~Seale, PLOS ONE \textbf{16}(5), 1 (2021).
+\newblock \doi{10.1371/journal.pone.0251605}.
+\newblock \urlprefix\url{https://doi.org/10.1371/journal.pone.0251605}
+
+\bibitem{9906925}
+T.~Yilmaz, {\"O}.~Ulusoy, IEEE Transactions on Computational Social Systems
+  \textbf{10}(6), 3321 (2023).
+\newblock \doi{10.1109/TCSS.2022.3208793}
+
+\bibitem{10100054}
+A.~Harbola, M.~Manchanda, D.~Negi, in \emph{2023 International Conference on
+  Innovative Data Communication Technologies and Application (ICIDCA)} (2023),
+  pp. 1073--1077.
+\newblock \doi{10.1109/ICIDCA56705.2023.10100054}
+
+\bibitem{9581175}
+D.~Villanueva-Vega, M.~Rodriguez-Martinez, in \emph{2021 IEEE International
+  Conference on Digital Health (ICDH)} (2021), pp. 184--190.
+\newblock \doi{10.1109/ICDH52753.2021.00033}
+
+\bibitem{pubmed}
+Pubmed - national library of medicine.
+\newblock \urlprefix\url{\url{https://pubmed.ncbi.nlm.nih.gov}}.
+\newblock Accessed: 2024-05-10
+
+\bibitem{bioinformatics}
+D.C. Comeau, C.H. Wei, R.~Islamaj~Doğan, Z.~Lu, Bioinformatics
+  \textbf{35}(18), 3533 (2019).
+\newblock \doi{10.1093/bioinformatics/btz070}.
+\newblock \urlprefix\url{https://doi.org/10.1093/bioinformatics/btz070}
+
+\bibitem{bge_embedding}
+S.~Xiao, Z.~Liu, P.~Zhang, N.~Muennighoff.
+\newblock C-pack: Packaged resources to advance general chinese embedding
+  (2023)
+
+\bibitem{ollama}
+Ollama.
+\newblock Get up and running with large language models.
+\newblock \urlprefix\url{\url{https://ollama.com}}.
+\newblock Accessed: 2024-09-29
+
+\bibitem{zhang2020bertscoreevaluatingtextgeneration}
+T.~Zhang, V.~Kishore, F.~Wu, K.Q. Weinberger, Y.~Artzi.
+\newblock Bertscore: Evaluating text generation with bert (2020).
+\newblock \urlprefix\url{https://arxiv.org/abs/1904.09675}
+
+\bibitem{huggingface}
+Hugging face – the ai community building the future.
+\newblock \urlprefix\url{\url{https://huggingface.co}}.
+\newblock Accessed: 2024-10-18
+
+\bibitem{hu2021loralowrankadaptationlarge}
+E.J. Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, W.~Chen.
+\newblock Lora: Low-rank adaptation of large language models (2021).
+\newblock \urlprefix\url{https://arxiv.org/abs/2106.09685}
+
+\bibitem{touvron2023llamaopenefficientfoundation}
+H.~Touvron, T.~Lavril, G.~Izacard, X.~Martinet, M.A. Lachaux, T.~Lacroix,
+  B.~Rozière, N.~Goyal, E.~Hambro, F.~Azhar, A.~Rodriguez, A.~Joulin,
+  E.~Grave, G.~Lample.
+\newblock Llama: Open and efficient foundation language models (2023).
+\newblock \urlprefix\url{https://arxiv.org/abs/2302.13971}
+
+\end{thebibliography}

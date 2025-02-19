@@ -1,0 +1,93 @@
+\documentclass{svproc}
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+%\usepackage{cite}
+\listfiles
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{supertabular}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{indentfirst}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage{pgfplotstable}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{enumitem} % For list customization
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\usepackage{notoccite} % PREVENTS CITES IN CAPTIONS FROM MISNUMBERING YOUR REFERENCES https://tex.stackexchange.com/questions/302594/citation-inside-a-caption-dont-follow-order-of-appearance
+\pgfplotsset{compat=1.7}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} % Use a recent version for compatibility
+\bibliographystyle{spphys}
+
+%\renewcommand*{\bibfont}{\small} % Adjust the font size for the bibliography
+%\addbibresource{reference.bib}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+%\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\mainmatter              % start of a contribution
+%
+\title{Fighting Health-Related Misinformation In Social Media With Large Language Models}
+%
+\titlerunning{Fighting Health-Related Misinformation}  % abbreviated title (for running head)
+%
+\author{Mois\'es Robles Pag\'an \and Manuel Rodr\'iguez Mart\'inez}
+%
+\authorrunning{Mois\'es Robles \and Manuel Rodr\'iguez} % abbreviated author list (for running head)
+%
+%
+\institute{University of Puerto Rico - Mayag\"uez, Mayag\"uez PR 00680, USA, \\
+\email{moises.robles@upr.edu, manuel.rodriguez7@upr.edu}}
+
+\maketitle              % typeset the title of the contribution
+
+
+\begin{abstract}
+Combating disinformation in social media is a critical problem, notably when the disinformation targets healthcare. We explore how to fine-tune and use Large Language Models (LLM) to counteract health-related disinformation on social media. The fine-tuned base models for this project are T5, BERT, and LlaMa-2. We divided the fine-tuning into two sections: 1) classifying if the text is health-related and 2) verifying if the text contains disinformation. To rebut disinformation we use Retrieval Augmented Generation (RAG) to query trusted medical sources. Our experiment shows that the models can classify health-related with 94\% precision, 95\% recall, and 90\% F1. We also show that we classify disinformation texts with 99\% precision, 95\% recall, and 97\% F1. We present a system that can help health experts combat and rebut disinformation on different social media platforms.
+\end{abstract}
+
+\subfile{chapters/Chap1_Introduction}
+
+\subfile{chapters/Chap2_LiteratureReview}
+
+\subfile{chapters/Chap3_Architecture}
+
+\subfile{chapters/Chap4_PerformanceEvaluation}
+
+\subfile{chapters/Chap5_Conclusions}
+
+%
+% ---- Bibliography ----
+%
+\bibliography{reference.bib}
+
+
+\end{document}
+
+
+
+
