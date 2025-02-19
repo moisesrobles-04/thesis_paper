@@ -92,18 +92,27 @@ Details about the dataset are found on Table \ref{table:dataset}.
 \subsubsection{Data Preprocessing}
 To keep as much context as possible, we include links, mentions, and hashtags for the classification process. These elements are important for context because users can convey sentiments that could be relevant to the text.
 However, the embedding might struggle with out-of-vocabulary or irregular patterns. Thus, we use special tokens to replace elements with patterns that do not contribute
-to semantic meaning, such as random strings in URLs. The special character replacement is shown in the example below.
+to semantic meaning, such as random strings in URLs. The special character replacement is shown in Figure \ref{fig:dpe}.
 
-{\small %
-\begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
-\textbf{Input:}  
-``listening to the experts talk about \#influenza at the @nmnh/@asmicrobiology \#flu program like https://t.co/ehn6n"
+%Data_preprocess_example
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{figures/Data_preprocess_example.png} %specify width
+	\end{center}
+	\caption{Data Preprocessing Example} %specify caption
+	\label{fig:dpe}
+\end{figure}
 
-\vspace{0.25em}
-\textbf{Output:}  
-``listening to the experts talk about [HASHTAG] at the [MENTION]/[MENTION] [HASTAG] program like [LINK]"
-\end{tcolorbox}
-}
+%{\small %
+%\begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
+%\textbf{Input:}  
+%``listening to the experts talk about \#influenza at the @nmnh/@asmicrobiology \#flu program like https://t.co/ehn6n"
+%
+%\vspace{0.25em}
+%\textbf{Output:}  
+%``listening to the experts talk about [HASHTAG] at the [MENTION]/[MENTION] [HASTAG] program like [LINK]"
+%\end{tcolorbox}
+%}
 \vspace{-0.55em}
 \subsection{Fine-tuning}
 The LLMs used for this paper are pre-trained base models. Training models from scratch is computationally expensive and requires a large amount of data. Instead of that, we fine-tuned the models to achieved our classification goals. We taught the models to classify two types of texts: health-related and misinformation-related texts. 

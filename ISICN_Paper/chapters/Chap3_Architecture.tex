@@ -79,17 +79,26 @@ Next, we validate if the input contains misinformation. The model  only returns 
 \subsubsection{Context Finder}
 Before we  query the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama} which runs the LLama 3.1 LLM. We send a query to Ollama asking it to make a one-sentence query for the vector database related to the input tweet.
 
-{\footnotesize %
-\begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
-\textbf{Input:}  
-``\#nih fauci, expected to be grilled tomorrow over ineffective \textit{...} universal \#influenza vax in 5, maybe 10 years?"
+%Context_finder_process
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{figures/Context_finder_process.png} %specify width
+	\end{center}
+	\caption{Context Finder Example} %specify caption
+	\label{fig:cfe}
+\end{figure}
 
-\vspace{0.25em}
-\textbf{Output:}  
-``Flu vaccine effectiveness and future universal influenza vaccination strategies."
-\end{tcolorbox}
-}
-\indent The above example shows that Ollama can identify the topics of the original text. That output is sent to the Chroma database to retrieve the research papers' chunks. In our current setup, our model returns eight chunks. We selected
+%{\footnotesize %
+%\begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
+%\textbf{Input:}  
+%``\#nih fauci, expected to be grilled tomorrow over ineffective \textit{...} universal \#influenza vax in 5, maybe 10 years?"
+%
+%\vspace{0.25em}
+%\textbf{Output:}  
+%``Flu vaccine effectiveness and future universal influenza vaccination strategies."
+%\end{tcolorbox}
+%}
+\indent Figure \ref{fig:cfe} shows that Ollama can identify the topics of the original text. That output is sent to the Chroma database to retrieve the research papers' chunks. In our current setup, our model returns eight chunks. We selected
 this number because it returns an appropriate amount of context without Ollama truncating the text. These chunks are then sent to another model to be analyzed and organized.
 
 \subsubsection{Organize and Rebut}
