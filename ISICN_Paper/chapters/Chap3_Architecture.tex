@@ -1,23 +1,20 @@
 
 \section{System Architecture}
 
-%This section presents the general architectures of the systems we used for the development and experiments in our research. We illustrate the Extraction, Transformation, and Load (ETL) pipeline we used for the medical research papers. Additionally, we have our misinformation classification process, where we classify the health misinformation and refute it. Finally, we have the system's User Interface (UI).
-
 \subsection{ETL Pipeline for Biomedical Papers}
 
 Our model must use credible sources of information to rebut misinformation. We identified NIH PubMed \cite{pubmed}, an online library that contains peer-reviewed medical literature. We worked to extract relevant papers and store them in a vector database. To extract these papers, we used the BioC API \cite{bioinformatics}, which has access to the PubMed library. The API needs the research paper's identifier, known as PubMed Central (PMC) ID. We designed a web scraper to get these identifiers. The pipeline in Figure \ref{fig:etl} shows the processes of data extraction. 
 
 \begin{figure}[!htb]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{figures/ETL_Pipeline.jpeg} %specify width
+		\includegraphics[width=0.8\textwidth]{figures/ETL_Pipeline.jpeg}
 	\end{center}
-	\caption{Medical Data Extraction Pipeline} %specify caption
+	\caption{Medical Data Extraction Pipeline} 
 	\label{fig:etl}
 \end{figure}
 
 \subsubsection{Scraper}
 The first step of the pipeline was identifying what papers we needed to extract. We selected topics based on our datasets: \textit{allergy}, \textit{covid}, \textit{monkeypox}, \textit{zika}, \textit{vaccine}, and others. We built our scraper using Selenium and BeautifulSoup libraries to extract the links for each paper, and get the PMC ID  from the link.  We extracted 5000 PMC IDs for each topic.
-%We extracted 5,000 IDs for each topic.
 
 \subsubsection{BioC API}
 Using the PubMed API, BioC, we made requests with the PMC ID that returned each document as JSON text. Later, the paper's sections -introduction, methodology, results, and others- were extracted, excluding references. We removed tables, figures, and references from the context to ensure the chunking process worked appropriately. After that, we stored the result into a new JSON that contains the paper's metadata and context. 
@@ -27,9 +24,9 @@ Next, we vectorized the papers, as shown in Figure \ref{fig:vector}. First, each
 
 \begin{figure}[!htb]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{figures/Data_vectorization.jpeg} %specify width
+		\includegraphics[width=0.8\textwidth]{figures/Data_vectorization.jpeg} 
 	\end{center}
-	\caption{Data Vectorization Process} %specify caption
+	\caption{Data Vectorization Process} 
 	\label{fig:vector}
 \end{figure}
 
@@ -46,15 +43,6 @@ Duplicates or any research that did not contain at least an abstract were remove
 
 \end{description}
 
-%\begin{figure}[htbp]
-%	\begin{center}
-%		\includegraphics[width=0.4\textwidth]{figures/Table_diagram.jpeg} %specify width
-%	\end{center}
-%	\caption{Research Papers Schema Diagram} %specify caption
-%	\label{fig:table}
-%\end{figure}
-
-
 We started the search with 85,000 peer-reviewed papers. After finishing the filtering and data cleaning, we ended with 56,365 different peer-reviewed papers. 
 
 
@@ -63,9 +51,9 @@ After training the models and storing the context for the rebuttal, we create th
 
 \begin{figure}[!htb]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{figures/LLM_Pipeline.jpeg} %specify width
+		\includegraphics[width=0.8\textwidth]{figures/LLM_Pipeline.jpeg} 
 	\end{center}
-	\caption{Misinformation Rebuttal Pipeline} %specify caption
+	\caption{Misinformation Rebuttal Pipeline}
 	\label{fig:llm}
 \end{figure}
 
@@ -79,25 +67,14 @@ Next, we validate if the input contains misinformation. The model  only returns 
 \subsubsection{Context Finder}
 Before we  query the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama} which runs the LLama 3.1 LLM. We send a query to Ollama asking it to make a one-sentence query for the vector database related to the input tweet.
 
-%Context_finder_process
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{figures/Context_finder_process.png} %specify width
+		\includegraphics[width=0.8\textwidth]{figures/Context_finder_process.png}
 	\end{center}
-	\caption{Context Finder Example} %specify caption
+	\caption{Context Finder Example} 
 	\label{fig:cfe}
 \end{figure}
 
-%{\footnotesize %
-%\begin{tcolorbox}[colback=gray!5,colframe=black!50,boxrule=0.4pt,arc=2pt,left=0.5mm,right=0.5mm,top=0.1mm,bottom=0.1mm,title=Example]
-%\textbf{Input:}  
-%``\#nih fauci, expected to be grilled tomorrow over ineffective \textit{...} universal \#influenza vax in 5, maybe 10 years?"
-%
-%\vspace{0.25em}
-%\textbf{Output:}  
-%``Flu vaccine effectiveness and future universal influenza vaccination strategies."
-%\end{tcolorbox}
-%}
 \indent Figure \ref{fig:cfe} shows that Ollama can identify the topics of the original text. That output is sent to the Chroma database to retrieve the research papers' chunks. In our current setup, our model returns eight chunks. We selected
 this number because it returns an appropriate amount of context without Ollama truncating the text. These chunks are then sent to another model to be analyzed and organized.
 
@@ -105,16 +82,16 @@ this number because it returns an appropriate amount of context without Ollama t
 The final part of our pipeline is using RAG to provide an answer that explains why the original text is misinformation. First, we retrieve the references of the chunks we use for the context. Then, we send the original tweet text, and the retrieved chunks  as context to Ollama so the model can generate an explanation that rebuts the misinformation. The final output is a JSON with the classifications, a 2-3 sentence rebuttal generated by Ollama, and references used for the rebuttal.
 
 The pipeline automates the classification process and rebuts misinformation using peer-reviewed research. By leveraging fine-tuned models, vector search, and RAG, the architecture provides concise, fact-based responses. Also, this
-approach has the ability to explain complex content in a manner accessible to non-technical readers. %This can assist professionals in the field to mitigate the spread of lies that can negatively impact public health.
+approach has the ability to explain complex content in a manner accessible to non-technical readers. 
 
 
 \subsection{User Interface (UI)}
-We built a UI where users  can interact with tweets and see the classification/rebuttal. When we select a tweet, a screen appears showing the original text, the classifications, and rebuttal; this is shown in Figure \ref{fig:frontendrebuttal}. The top of the screen shows the input text, number 1 shows the health classification, and number 2 shows the misinformation classification. Below that is the rebuttal and references generated by the model. %Lastly, we include the references of the research used for the rebuttal. 
+We built a UI where users  can interact with tweets and see the classification/rebuttal. When we select a tweet, a screen appears showing the original text, the classifications, and rebuttal; this is shown in Figure \ref{fig:frontendrebuttal}. The top of the screen shows the input text, number 1 shows the health classification, and number 2 shows the misinformation classification. Below that is the rebuttal and references generated by the model. 
 \begin{figure}[!htb]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{figures/THS_Rebuttal_view.jpeg} %specify width
+		\includegraphics[width=0.8\textwidth]{figures/THS_Rebuttal_view.jpeg} 
 	\end{center}
-	\caption{THS Frontend  - Rebuttal View} %specify caption
+	\caption{THS Frontend  - Rebuttal View} 
 	\label{fig:frontendrebuttal}
 \end{figure}
 
