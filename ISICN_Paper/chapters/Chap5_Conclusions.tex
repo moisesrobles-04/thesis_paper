@@ -6,11 +6,15 @@ We also presented how we extracted, processed, stored, and used medical research
 The research presents the performance results using health-related tweets and misinformation texts from different online sources. Our  initial results show that we can achieve an F1 score of 90\% for health-related classification and 97\% for misinformation classification. Additionally, we present that the model can refute misinformation using RAG. The misinformation rebuttal models achieve an F1 BERTScore of 82\%. Thus, the system can help health experts combat misinformation and reduce the risk of negatively impacting public health.
 
 \section{Future Work}
-Currently the system has should have more topics
-Optimized vector search
-LLaMa-2 and T5 can have scalability issues
+The current system can only refute misinformation based on the topic stored in the vector database. The system would struggle to identify health topics outside of its scope. 
+Thus, an orchestration system will be required to scale the system in different fields. Additionally, we noticed that the Misinformation Rebuttal Pipeline can take excessive time to process a request. 
+The vector database's search is the primary cause of the system's speed performance issue. Exploring different vector databases and similarity search algorithms can improve the processing time.
+Lastly, the model's generated rebuttal must be as useful as possible for non-technical readers. That rebuttal can include specific information about the disease, such as symptoms, treatment, statistics, and other relevant factors. For this effort, we need 
+collaboration from health experts. 
 
+\section{Acknowledgment}
+Research reported in this publication was supported by the National Library
+of Medicine, of the U.S. National Institutes of Health under award number
+R15LM012275. The content is solely the responsibility of the authors and does
+not necessarily represent the official views of the National Institutes of Health.
 
-%\section{Acknowledgment}
-%This research is supported by the United States (US) National Library of Medicine of the National Institutes of Health (NIH) under award number R15LM012275. The content is solely the responsibility of the authors and does not necessarily represent the official views of the NIH.
-%
