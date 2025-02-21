@@ -18,7 +18,7 @@ The system was built on a cluster's node. The specifications are: an Intel(R) Xe
 The training, ETL pipeline, and REST API were implemented with Python 3.9.19. To finetune the models we used PyTorch 2.0.1 with GPU support enabled for
 CUDA 11.7. To initialize and use the models we relied on  the Transformers 4.34.0 library. We imported the models from Hugging Face (HF) \cite{huggingface}. To fine-tune and reduce the model memory usage, we use PEFT 0.12.0 and bitsandbytes libraries for Low-Rank Adapter (LoRA) \cite{hu2021loralowrankadaptationlarge}. Postgres 14 was our relational database and Chroma 0.4.24 was our vector database. Next, for the RAG process, we installed Ollama \cite{ollama} and LangChain 0.1.16 to run LlaMa3.1 8B parameter model \cite{touvron2023llamaopenefficientfoundation}. Finally, to create the UI to show the results we used React.
 
-  \begin{table}[htbp]
+  \begin{table}[!htb]
 \centering
 \caption{LLM Specifications}
 {
@@ -46,7 +46,7 @@ The health-related dataset comprises of 12,441 tweets extracted from the THS pro
 The misinformation dataset, with 8,749 texts, combines data from different sources such as news, blogs, and others \cite{stephencrone2022,coviddata,covidunesco}. 
 Details about the dataset are found on Table \ref{table:dataset}.
 
-\begin{table}[htbp]
+\begin{table}[!htb]
 	\centering
 	\caption{Training Datasets}
 	{
@@ -72,7 +72,7 @@ To keep as much context as possible, we include links, mentions, and hashtags fo
 However, the embedding might struggle with out-of-vocabulary or irregular patterns. Thus, we use special tokens to replace elements with patterns that do not contribute
 to semantic meaning, such as random strings in URLs. The special character replacement is shown in Figure \ref{fig:dpe}.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{figures/Data_preprocess_example.png}
 	\end{center}
@@ -87,7 +87,7 @@ The LLMs used for this paper are pre-trained base models. Training models from s
 The models we used  are BERT, T5, and LLaMa-2, Table \ref{table:LLM} shows their specifications. 
 BERT and LLaMa-2 were only trained on sequence classification, while T5 was trained on sequence and Causal Language Modeling (CLM). BERT  does not allow for text generation and LLaMa-2 required more resources than the ones available, hence, they were not trained for CLM.  We fine-tuned the models using LoRA, and the hyper-parameters used for LoRA and for the training are found on Table \ref{table:hyperparameters}. 
 
-\begin{table}[H]
+\begin{table}[!htb]
 	\centering
 	\caption{Fine-tuning \& LoRA hyperparameters}
 	{
@@ -121,7 +121,7 @@ We present the results of the health classification process and compare them wit
 Their best model is an LSTM, with no attention, and a GRU layer.
 
 \subsubsection{Precision}
-\begin{table}[htbp]
+\begin{table}[htb]
 	\centering
 	\caption{Health Related Precision Result}
 	{
@@ -148,7 +148,7 @@ Table \ref{table:HealthPrecision} shows the result for the precision metric for 
 goal is to detect health-related misinformation. The best-performing model here was LLaMa-2, with a score of 94\%. Most models outperform the THS model.
 
 \subsubsection{Recall}
-\begin{table}[htbp]
+\begin{table}[htb]
 	\centering
 	\caption{Health Related Recall Result}
 	{
@@ -176,7 +176,7 @@ GRU model as the only one with a result over 80\% \cite{8622504}. In contrast, m
 (Causal), with a recall of 95\%.
 
 \subsubsection{F1}
-\begin{table}[htbp]
+\begin{table}[!htb]
 	\centering
 	\caption{Health Related F1 Result}
 	{
@@ -202,7 +202,7 @@ GRU model as the only one with a result over 80\% \cite{8622504}. In contrast, m
 Table \ref{table:HealthF1} shows the result for the F1 metric for the related classification. The results show that T5 (Causal) had the highest F1 at 90\%, while T5 (Sequence)
 the lowest at 46\%. In contrast, the THS model, with an 86\%, ending in second to last place.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
 	\centering
 	\begin{tikzpicture}[scale=0.9]
     \begin{axis}[
@@ -234,7 +234,7 @@ In Figure \ref{fig:HealthTime}, we present our model's training time. BERT train
 In this section, we present the misinformation classification results. However, we did not compare the performance against the THS model because they did not train a model to classify misinformation.
 
 \subsubsection{Precision}
-\begin{table}[H]
+\begin{table}[!htb]
 	\centering
 	\caption{Misinformation Precision Result}
 	{
@@ -259,7 +259,7 @@ Table \ref{table:MisinformationPrecision} shows the result for the precision met
 class because it is our project goal. Our best-performing models were both T5 models with a precision of 99\%. Nonetheless, all models had a score of at least 90\%.
 
 \subsubsection{Recall}
-\begin{table}[H]
+\begin{table}[!htb]
 	\centering
 	\caption{Misinformation Recall Result}
 	{
@@ -285,7 +285,7 @@ Here, the model with the best results was LLaMa-2,
 with a performance of 95\%. 
 
 \subsubsection{F1}
-\begin{table}[H]
+\begin{table}[!htb]
 	\centering
 	\caption{Misinformation F1 Result}
 	{
@@ -311,7 +311,7 @@ However, all models had an F1 score of at least 90\%.
 
 \subsubsection{Training Time}
 
-\begin{figure}[H]
+\begin{figure}[!htb]
 	\centering
 	\begin{tikzpicture}[scale=0.9]
     \begin{axis}[
@@ -342,7 +342,7 @@ and T5 (Causal) with 6.18 hours. Finally, LLaMa-2 took almost 2 days to train, 3
 
 Our model BERTScores'  F1 is shown in Table \ref{table:BERTScore}. We calculate these values by taking the average score of the 71 texts classified as health-related and misinformation. The table shows that both models, had a 82\% F1 score. That means that the generated output are closely related to the tweet. 
 
-\begin{table}[H]
+\begin{table}[!htb]
 	\centering
 	\caption{BERTScore F1 Results}
 	{

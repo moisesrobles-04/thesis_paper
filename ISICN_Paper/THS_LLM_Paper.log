@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  21 FEB 2025 18:41
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.10.1)  21 FEB 2025 19:14
  restricted system commands enabled.
  file:line:error style messages enabled.
 **THS_LLM_Paper.tex
@@ -1196,12 +1196,12 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 \c@lstlisting=\count395
-LaTeX Font Info:    Trying to load font information for U+msa on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1212,50 +1212,49 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./cha
 pters/Chap2_LiteratureReview.tex [2]
-<figures/ths_architecture.jpeg, id=19, 296.5479pt x 143.3355pt>
+[3]
+<figures/ths_architecture.jpeg, id=22, 296.5479pt x 143.3355pt>
 File: figures/ths_architecture.jpeg Graphic file (type jpg)
 <use figures/ths_architecture.jpeg>
-Package luatex.def Info: figures/ths_architecture.jpeg  used on input line 108.
-
+Package luatex.def Info: figures/ths_architecture.jpeg  used on input line 70.
 (luatex.def)             Requested size: 354.86412pt x 171.53148pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (./chapters/Chap3_Architecture.tex [3]
+) (./chapters/Chap3_Architecture.tex
 <figures/ETL_Pipeline.jpeg, id=23, 211.2693pt x 227.6505pt>
 File: figures/ETL_Pipeline.jpeg Graphic file (type jpg)
 <use figures/ETL_Pipeline.jpeg>
 Package luatex.def Info: figures/ETL_Pipeline.jpeg  used on input line 10.
-(luatex.def)             Requested size: 354.86412pt x 382.412pt.
-<figures/Data_vectorization.jpeg, id=24, 294.3798pt x 191.5155pt>
+(luatex.def)             Requested size: 332.68385pt x 358.50974pt.
+ [4<./figures/ths_architecture.jpeg>]
+<figures/Data_vectorization.jpeg, id=27, 294.3798pt x 191.5155pt>
 File: figures/Data_vectorization.jpeg Graphic file (type jpg)
 <use figures/Data_vectorization.jpeg>
 Package luatex.def Info: figures/Data_vectorization.jpeg  used on input line 27
 .
 (luatex.def)             Requested size: 354.86412pt x 230.86653pt.
- [4<./figures/ths_architecture.jpeg>]
-<figures/LLM_Pipeline.jpeg, id=28, 246.4407pt x 240.4182pt>
+
+[5<./figures/ETL_Pipeline.jpeg>]
+<figures/LLM_Pipeline.jpeg, id=31, 246.4407pt x 240.4182pt>
 File: figures/LLM_Pipeline.jpeg Graphic file (type jpg)
 <use figures/LLM_Pipeline.jpeg>
 Package luatex.def Info: figures/LLM_Pipeline.jpeg  used on input line 54.
-(luatex.def)             Requested size: 354.86412pt x 346.1946pt.
-
-[5<./figures/ETL_Pipeline.jpeg>]
+(luatex.def)             Requested size: 332.68385pt x 324.55421pt.
 <figures/Context_finder_process.png, id=32, 1859.94875pt x 440.64626pt>
 File: figures/Context_finder_process.png Graphic file (type png)
 <use figures/Context_finder_process.png>
 Package luatex.def Info: figures/Context_finder_process.png  used on input line
  72.
 (luatex.def)             Requested size: 354.86412pt x 84.06656pt.
- [6<./figures/Data_vectorization.jpeg><./figures/Context_finder_process.png>]
-<figures/THS_Rebuttal_view.jpeg, id=37, 596.2275pt x 374.8404pt>
+ [6<./figures/Data_vectorization.jpeg>]
+<figures/THS_Rebuttal_view.jpeg, id=36, 596.2275pt x 374.8404pt>
 File: figures/THS_Rebuttal_view.jpeg Graphic file (type jpg)
 <use figures/THS_Rebuttal_view.jpeg>
 Package luatex.def Info: figures/THS_Rebuttal_view.jpeg  used on input line 92.
 
 (luatex.def)             Requested size: 354.86412pt x 223.09857pt.
- [7<./figures/LLM_Pipeline.jpeg>])
+
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [7<./figures/LLM_Pipeline.jpeg><./figures/Context_finder_process.png>])
 (./chapters/Chap4_PerformanceEvaluation.tex [8<./figures/THS_Rebuttal_view.jpeg>
 ]
 <figures/Data_preprocess_example.png, id=44, 1862.96pt x 419.5675pt>
@@ -1264,17 +1263,14 @@ File: figures/Data_preprocess_example.png Graphic file (type png)
 Package luatex.def Info: figures/Data_preprocess_example.png  used on input lin
 e 77.
 (luatex.def)             Requested size: 354.86412pt x 79.91711pt.
- [9<./figures/Data_preprocess_example.png>] [10]
+ [9] [10<./figures/Data_preprocess_example.png>]
 Package pgfplots info on input line 221: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
  [11]
 Package pgfplots info on input line 330: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-[13]) (./chapters/Chap5_Conclusions.tex) (./THS_LLM_Paper.bbl
+ [12] [13])
+(./chapters/Chap5_Conclusions.tex) (./THS_LLM_Paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 32--37
 []\TU/lmr/m/n/9 S. Si-wakoti, K. Ya-dav, I. Thange, N. Bar-iletto, L. Zan-otti, A. Ghoneim,
  []
@@ -1296,18 +1292,22 @@ rinceton.edu/publications/
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 )
 
 Here is how much of LuaTeX's memory you used:
  33732 strings out of 476447
- 100000,1977958 words of node,token memory allocated
+ 125002,1977958 words of node,token memory allocated
  1450 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 8 disc, 7 glue, 7 kern, 73 glyph, 13 attribute, 107
  glue_spec, 13 attribute_list, 2 write nodes
-   avail lists: 2:1644,3:685,4:100,5:517,6:46,7:10073,8:120,9:1034,10:21,11:808
+   avail lists: 2:2687,3:888,4:108,5:486,6:50,7:10726,8:120,9:898,10:24,11:837
  54850 multiletter control sequences out of 65536+600000
  55 fonts using 3895567 bytes
- 99i,11n,97p,926b,2495s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,97p,926b,2499s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf
 ></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf
 ></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.o
@@ -1319,7 +1319,7 @@ lar.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-b
 old.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9
 .pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 >
-Output written on THS_LLM_Paper.pdf (15 pages, 942020 bytes).
+Output written on THS_LLM_Paper.pdf (15 pages, 943756 bytes).
 
 PDF statistics: 128 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

@@ -7,7 +7,7 @@ Our model must use credible sources of information to rebut misinformation. We i
 
 \begin{figure}[!htb]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{figures/ETL_Pipeline.jpeg}
+		\includegraphics[width=0.75\textwidth]{figures/ETL_Pipeline.jpeg}
 	\end{center}
 	\caption{Medical Data Extraction Pipeline} 
 	\label{fig:etl}
@@ -51,7 +51,7 @@ After training the models and storing the context for the rebuttal, we create th
 
 \begin{figure}[!htb]
 	\begin{center}
-		\includegraphics[width=0.8\textwidth]{figures/LLM_Pipeline.jpeg} 
+		\includegraphics[width=0.75\textwidth]{figures/LLM_Pipeline.jpeg} 
 	\end{center}
 	\caption{Misinformation Rebuttal Pipeline}
 	\label{fig:llm}
@@ -67,7 +67,7 @@ Next, we validate if the input contains misinformation. The model  only returns 
 \subsubsection{Context Finder}
 Before we  query the vector database, we must understand the topic of the text. To automate this process and generate a query as precise as possible, we use Ollama \cite{ollama} which runs the LLama 3.1 LLM. We send a query to Ollama asking it to make a one-sentence query for the vector database related to the input tweet.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{figures/Context_finder_process.png}
 	\end{center}
